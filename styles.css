@@ -90,6 +90,23 @@ body {
 }
 .nav-cta:hover { background: rgba(255, 255, 255, 0.12); }
 
+.nav-lang {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.nav-lang button {
+  background: transparent; border: 0; padding: 2px 4px;
+  cursor: pointer; font-family: inherit;
+  color: var(--text-3); font-weight: 600; font-size: 12px;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.nav-lang button:hover { color: var(--text-2); }
+.nav-lang button.active { color: var(--text); }
+.nav-lang-sep { color: var(--text-3); font-size: 12px; }
+
 section {
   position: relative; z-index: 1;
   padding: 120px 40px;
