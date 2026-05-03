@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Editor / OS junk
+*.swp
+.vscode/
+.idea/
+
+# Never commit secrets to a marketing-site repo
+.env
+.env.*
+
+# PSD site lives in its own repo — never let it cross-pollinate
+poopscoopdude/
