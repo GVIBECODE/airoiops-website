@@ -6,12 +6,12 @@ const translations = {
     'nav.proof': 'Proof',
     'nav.book': 'Book Call',
 
-    'hero.badge': 'AI Assessments for Small Business',
-    'hero.h1': 'AI that pays for <span class="grad">itself.</span><br>In 30 days. Guaranteed.',
-    'hero.lede': "We audit your operations, identify the three highest-leverage automations, and ship the first one live in seven days. Working code. Real ROI. Or you don't pay.",
+    'hero.badge': 'Now booking 3 case-study spots at no charge',
+    'hero.h1': 'Real AI ROI. <span class="grad">In 7 days.</span><br>Owned by you.',
+    'hero.lede': 'We audit your operations, identify the three highest-leverage automations, and ship the first one live in seven days. Working code, deployed in your stack, owned by you.',
     'hero.cta_primary': 'Book a Free Discovery Call',
     'hero.cta_ghost': 'See the Assessment',
-    'hero.trust': '$999 fixed price · 7-day delivery · ROI guarantee',
+    'hero.trust': '$1,000 fixed price · 7-day delivery · You own everything',
 
     'roi.title': 'Live ROI Calculator',
     'roi.hours_label': 'Hours / week on repetitive work',
@@ -23,10 +23,10 @@ const translations = {
     'stats.days': 'days to ship',
     'stats.automations': 'automations identified',
     'stats.price': 'fixed price',
-    'stats.refund': 'ROI or refund',
+    'stats.refund': 'code you own',
 
     'assessment.kicker': 'The Assessment',
-    'assessment.h2': 'What you actually get for <span class="grad">$999</span>.',
+    'assessment.h2': 'What you actually get for <span class="grad">$1,000</span>.',
     'assessment.lede': 'No 90-day discovery phase. No slide deck disguised as a deliverable. A working automation, deployed in your stack, owned by you.',
     'assessment.c1_title': 'Operations Audit',
     'assessment.c1_body': 'Deep-dive on your tools, workflows, and data. We map every recurring task in your business and tag it for automation potential.',
@@ -66,7 +66,7 @@ const translations = {
     'about.cta': 'Book Your Discovery Call',
 
     'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
-    'final.body': 'The discovery call is free. The Assessment is $999. The ROI is guaranteed.',
+    'final.body': 'The discovery call is free. The Assessment is $1,000. You own everything we ship.',
     'final.cta': 'Book a Free Discovery Call',
     'final.sub': 'No spam. No agency rates. No 90-day discovery phases.',
 
@@ -80,12 +80,12 @@ const translations = {
     'nav.proof': 'Prueba',
     'nav.book': 'Agendar',
 
-    'hero.badge': 'Evaluaciones de IA para pequeñas empresas',
-    'hero.h1': 'IA que se paga <span class="grad">sola.</span><br>En 30 días. Garantizado.',
-    'hero.lede': 'Auditamos tus operaciones, identificamos las tres automatizaciones de mayor impacto, y lanzamos la primera en vivo en siete días. Código funcional. ROI real. O no pagas.',
+    'hero.badge': 'Aceptando 3 casos de estudio sin costo',
+    'hero.h1': 'ROI real con IA. <span class="grad">En 7 días.</span><br>Tuyo para siempre.',
+    'hero.lede': 'Auditamos tus operaciones, identificamos las tres automatizaciones de mayor impacto, y lanzamos la primera en vivo en siete días. Código funcional, desplegado en tu stack, tuyo para siempre.',
     'hero.cta_primary': 'Agenda una llamada gratis',
     'hero.cta_ghost': 'Ver la evaluación',
-    'hero.trust': '$999 precio fijo · entrega en 7 días · garantía de ROI',
+    'hero.trust': '$1,000 precio fijo · entrega en 7 días · tú eres dueño de todo',
 
     'roi.title': 'Calculadora de ROI en vivo',
     'roi.hours_label': 'Horas / semana en trabajo repetitivo',
@@ -97,10 +97,10 @@ const translations = {
     'stats.days': 'días para entregar',
     'stats.automations': 'automatizaciones identificadas',
     'stats.price': 'precio fijo',
-    'stats.refund': 'ROI o reembolso',
+    'stats.refund': 'código tuyo',
 
     'assessment.kicker': 'La evaluación',
-    'assessment.h2': 'Lo que realmente obtienes por <span class="grad">$999</span>.',
+    'assessment.h2': 'Lo que realmente obtienes por <span class="grad">$1,000</span>.',
     'assessment.lede': 'Sin fase de descubrimiento de 90 días. Sin presentación disfrazada de entregable. Una automatización funcional, desplegada en tu stack, tuya.',
     'assessment.c1_title': 'Auditoría de operaciones',
     'assessment.c1_body': 'Análisis profundo de tus herramientas, flujos y datos. Mapeamos cada tarea recurrente en tu negocio y la etiquetamos por potencial de automatización.',
@@ -140,7 +140,7 @@ const translations = {
     'about.cta': 'Agenda tu llamada de descubrimiento',
 
     'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
-    'final.body': 'La llamada de descubrimiento es gratis. La evaluación es $999. El ROI está garantizado.',
+    'final.body': 'La llamada de descubrimiento es gratis. La evaluación es $1,000. Tú eres dueño de todo lo que entregamos.',
     'final.cta': 'Agenda una llamada gratis',
     'final.sub': 'Sin spam. Sin tarifas de agencia. Sin fases de descubrimiento de 90 días.',
 
