@@ -181,12 +181,79 @@
     <div class="final-inner">
       <div class="final-glow"></div>
       <h2 data-i18n="final.h2">Ready to see what AI can <span class="grad">actually</span> do for your business?</h2>
-      <p data-i18n="final.body">The discovery call is free. The Assessment is $1,000. You own everything we ship.</p>
-      <!-- TODO: replace href with Tally short-form URL once form is live (see proposals/airoiops-qualifier-short.md). Tally form will then redirect to Calendly. -->
-      <a href="mailto:gianny@airoiops.com?subject=Discovery%20Call%20Request" class="btn btn-primary glow big">
-        <span data-i18n="final.cta">Book a Free Discovery Call</span>
-        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <p data-i18n="final.body">Tell us about your business. We will review and send you a Calendly link within 1 business day.</p>
+
+      <form name="assessment-qualifier" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="qual-form">
+        <input type="hidden" name="form-name" value="assessment-qualifier" />
+        <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+
+        <div class="qual-row">
+          <label class="qual-field">
+            <span data-i18n="form.first_label">First name</span>
+            <input type="text" name="first_name" required autocomplete="given-name" />
+          </label>
+          <label class="qual-field">
+            <span data-i18n="form.last_label">Last name</span>
+            <input type="text" name="last_name" required autocomplete="family-name" />
+          </label>
+        </div>
+
+        <div class="qual-row">
+          <label class="qual-field">
+            <span data-i18n="form.email_label">Email</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="qual-field">
+            <span data-i18n="form.business_label">Business name</span>
+            <input type="text" name="business" required autocomplete="organization" />
+          </label>
+        </div>
+
+        <label class="qual-field">
+          <span data-i18n="form.what_label">In one sentence, what does your business do?</span>
+          <input type="text" name="what" maxlength="200" data-i18n-placeholder="form.what_ph" placeholder="We do [X] for [Y] in [Z]." required />
+        </label>
+
+        <label class="qual-field">
+          <span data-i18n="form.team_label">How big is the team?</span>
+          <select name="team_size" required>
+            <option value="" data-i18n="form.select_default">Select...</option>
+            <option data-i18n="form.team_solo">Solo / just me</option>
+            <option data-i18n="form.team_small">2-5 people</option>
+            <option data-i18n="form.team_med">6-20 people</option>
+            <option data-i18n="form.team_lg">21-50 people</option>
+            <option data-i18n="form.team_xl">50+ people</option>
+          </select>
+        </label>
+
+        <label class="qual-field">
+          <span data-i18n="form.timesink_label">What's the #1 task that eats your time every week?</span>
+          <textarea name="time_sink" rows="3" maxlength="500" data-i18n-placeholder="form.timesink_ph" placeholder="Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'." required></textarea>
+        </label>
+
+        <label class="qual-field">
+          <span data-i18n="form.aitools_label">What AI tools are you using today? (Check any that apply)</span>
+          <div class="qual-checks">
+            <label><input type="checkbox" name="ai_tools" value="none" /><span data-i18n="form.ai_none">None / haven't started</span></label>
+            <label><input type="checkbox" name="ai_tools" value="chatgpt_occasional" /><span data-i18n="form.ai_occ">ChatGPT / Claude (occasional)</span></label>
+            <label><input type="checkbox" name="ai_tools" value="chatgpt_daily" /><span data-i18n="form.ai_daily">ChatGPT / Claude (daily)</span></label>
+            <label><input type="checkbox" name="ai_tools" value="custom_gpt" /><span data-i18n="form.ai_gpt">Custom GPTs trained on my data</span></label>
+            <label><input type="checkbox" name="ai_tools" value="zapier_make" /><span data-i18n="form.ai_zap">Zapier or Make automations</span></label>
+            <label><input type="checkbox" name="ai_tools" value="voice_agent" /><span data-i18n="form.ai_voice">AI voice agent (Retell, Vapi)</span></label>
+          </div>
+        </label>
+
+        <label class="qual-field">
+          <span data-i18n="form.outcome_label">If this delivers, what does "worth it" look like to you?</span>
+          <textarea name="outcome" rows="3" maxlength="500" data-i18n-placeholder="form.outcome_ph" placeholder="10 hours back per week? $5k/mo new revenue? Stop missing leads at night?" required></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary glow big qual-submit">
+          <span data-i18n="form.submit">Submit and get your Calendly link</span>
+          <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+
       <div class="final-sub" data-i18n="final.sub">No spam. No agency rates. No 90-day discovery phases.</div>
     </div>
   </section>

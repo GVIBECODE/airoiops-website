@@ -66,9 +66,48 @@ const translations = {
     'about.cta': 'Book Your Discovery Call',
 
     'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
-    'final.body': 'The discovery call is free. The Assessment is $1,000. You own everything we ship.',
+    'final.body': 'Tell us about your business. We will review and send you a Calendly link within 1 business day.',
     'final.cta': 'Book a Free Discovery Call',
     'final.sub': 'No spam. No agency rates. No 90-day discovery phases.',
+
+    'form.first_label': 'First name',
+    'form.last_label': 'Last name',
+    'form.email_label': 'Email',
+    'form.business_label': 'Business name',
+    'form.what_label': 'In one sentence, what does your business do?',
+    'form.what_ph': 'We do [X] for [Y] in [Z].',
+    'form.team_label': 'How big is the team?',
+    'form.select_default': 'Select...',
+    'form.team_solo': 'Solo / just me',
+    'form.team_small': '2-5 people',
+    'form.team_med': '6-20 people',
+    'form.team_lg': '21-50 people',
+    'form.team_xl': '50+ people',
+    'form.timesink_label': "What's the #1 task that eats your time every week?",
+    'form.timesink_ph': "Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'.",
+    'form.aitools_label': 'What AI tools are you using today? (Check any that apply)',
+    'form.ai_none': "None / haven't started",
+    'form.ai_occ': 'ChatGPT / Claude (occasional)',
+    'form.ai_daily': 'ChatGPT / Claude (daily)',
+    'form.ai_gpt': 'Custom GPTs trained on my data',
+    'form.ai_zap': 'Zapier or Make automations',
+    'form.ai_voice': 'AI voice agent (Retell, Vapi)',
+    'form.outcome_label': 'If this delivers, what does "worth it" look like to you?',
+    'form.outcome_ph': '10 hours back per week? $5k/mo new revenue? Stop missing leads at night?',
+    'form.submit': 'Submit and get your Calendly link',
+
+    'thanks.title': 'Got it — AIROIOPS',
+    'thanks.home': 'Home',
+    'thanks.badge': 'Application received',
+    'thanks.h1': 'Got it. <span class="grad">Talk soon.</span>',
+    'thanks.lede': "We'll review your answers and send a Calendly link within 1 business day. Watch your inbox.",
+    'thanks.s1_title': 'Email with a Calendly link',
+    'thanks.s1_body': "You'll get an email from Gianny with a Calendly link. Pick a 30-minute slot that works for you.",
+    'thanks.s2_title': 'Optional pre-call form',
+    'thanks.s2_body': "If you want to dig deeper before the call, fill the longer questionnaire we'll send. About 10 minutes. Saves us 15 on the call.",
+    'thanks.s3_title': '30-minute discovery call',
+    'thanks.s3_body': 'We learn your business, your tools, your time sinks. Free, no commitment. You leave with a clearer view of what AI can actually do for you.',
+    'thanks.cta': 'Back to home',
 
     'footer.location': 'Built in Las Vegas, NV'
   },
@@ -140,9 +179,48 @@ const translations = {
     'about.cta': 'Agenda tu llamada de descubrimiento',
 
     'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
-    'final.body': 'La llamada de descubrimiento es gratis. La evaluación es $1,000. Tú eres dueño de todo lo que entregamos.',
+    'final.body': 'Cuéntanos sobre tu negocio. Lo revisaremos y te enviaremos un enlace de Calendly dentro de 1 día hábil.',
     'final.cta': 'Agenda una llamada gratis',
     'final.sub': 'Sin spam. Sin tarifas de agencia. Sin fases de descubrimiento de 90 días.',
+
+    'form.first_label': 'Nombre',
+    'form.last_label': 'Apellido',
+    'form.email_label': 'Correo electrónico',
+    'form.business_label': 'Nombre del negocio',
+    'form.what_label': 'En una oración, ¿qué hace tu negocio?',
+    'form.what_ph': 'Hacemos [X] para [Y] en [Z].',
+    'form.team_label': '¿Qué tan grande es el equipo?',
+    'form.select_default': 'Selecciona...',
+    'form.team_solo': 'Solo yo',
+    'form.team_small': '2-5 personas',
+    'form.team_med': '6-20 personas',
+    'form.team_lg': '21-50 personas',
+    'form.team_xl': '50+ personas',
+    'form.timesink_label': '¿Cuál es la tarea #1 que te consume tiempo cada semana?',
+    'form.timesink_ph': "Sé específico. 'Seguimiento de leads' o 'enviar facturas' es mejor que 'cosas administrativas'.",
+    'form.aitools_label': '¿Qué herramientas de IA usas hoy? (Marca las que apliquen)',
+    'form.ai_none': 'Ninguna / no he empezado',
+    'form.ai_occ': 'ChatGPT / Claude (ocasional)',
+    'form.ai_daily': 'ChatGPT / Claude (diario)',
+    'form.ai_gpt': 'GPTs personalizados con mis datos',
+    'form.ai_zap': 'Automatizaciones en Zapier o Make',
+    'form.ai_voice': 'Agente de voz IA (Retell, Vapi)',
+    'form.outcome_label': 'Si esto entrega valor, ¿cómo se ve "vale la pena" para ti?',
+    'form.outcome_ph': '¿10 horas recuperadas por semana? ¿$5k/mes en nuevos ingresos? ¿Dejar de perder leads de noche?',
+    'form.submit': 'Enviar y recibir tu enlace de Calendly',
+
+    'thanks.title': 'Recibido — AIROIOPS',
+    'thanks.home': 'Inicio',
+    'thanks.badge': 'Solicitud recibida',
+    'thanks.h1': 'Recibido. <span class="grad">Hablamos pronto.</span>',
+    'thanks.lede': 'Revisaremos tus respuestas y te enviaremos un enlace de Calendly dentro de 1 día hábil. Revisa tu correo.',
+    'thanks.s1_title': 'Correo con un enlace de Calendly',
+    'thanks.s1_body': 'Recibirás un correo de Gianny con un enlace de Calendly. Elige un espacio de 30 minutos que te funcione.',
+    'thanks.s2_title': 'Formulario opcional pre-llamada',
+    'thanks.s2_body': 'Si quieres profundizar antes de la llamada, llena el cuestionario más largo que te enviaremos. Toma unos 10 minutos. Nos ahorra 15 minutos en la llamada.',
+    'thanks.s3_title': 'Llamada de descubrimiento de 30 minutos',
+    'thanks.s3_body': 'Aprendemos tu negocio, tus herramientas, tus pérdidas de tiempo. Gratis, sin compromiso. Sales con una visión más clara de lo que la IA puede hacer por ti.',
+    'thanks.cta': 'Volver al inicio',
 
     'footer.location': 'Hecho en Las Vegas, NV'
   }
@@ -170,6 +248,11 @@ function applyLang(lang) {
       else el.innerHTML = val;
     }
   });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = t[key];
+    if (val !== undefined) el.setAttribute('placeholder', val);
+  });
   document.querySelectorAll('.nav-lang button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
@@ -182,12 +265,14 @@ const rate = document.getElementById('rate');
 const hoursOut = document.getElementById('hours-out');
 const rateOut = document.getElementById('rate-out');
 const roiNum = document.getElementById('roi-num');
+const hasRoiCalc = hours && rate && hoursOut && rateOut && roiNum;
 
 let displayed = 23400;
 
 function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
 
 function animateTo(target) {
+  if (!hasRoiCalc) return;
   const start = displayed;
   const diff = target - start;
   const dur = 450;
@@ -203,6 +288,7 @@ function animateTo(target) {
 }
 
 function calc() {
+  if (!hasRoiCalc) return;
   const h = +hours.value;
   const r = +rate.value;
   const annual = h * r * 52 * 0.6;
@@ -212,8 +298,10 @@ function calc() {
   animateTo(annual);
 }
 
-hours.addEventListener('input', calc);
-rate.addEventListener('input', calc);
+if (hasRoiCalc) {
+  hours.addEventListener('input', calc);
+  rate.addEventListener('input', calc);
+}
 
 document.querySelectorAll('.nav-lang button').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
