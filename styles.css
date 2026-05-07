@@ -413,6 +413,9 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01e
   border-radius: 28px;
   padding: 56px 48px;
   position: relative; overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .proof-card::before {
   content: ''; position: absolute;
@@ -513,6 +516,9 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01e
   border: 1px solid var(--border-strong);
   border-radius: 32px;
   position: relative; overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .final-glow {
   position: absolute; inset: 0;

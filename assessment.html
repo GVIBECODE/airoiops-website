@@ -102,6 +102,9 @@
       border: 1px solid var(--border-strong); border-radius: 28px;
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       position: relative; overflow: hidden;
+      isolation: isolate;
+      transform: translateZ(0);
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
     }
     .intake-hero::before { content: ''; position: absolute; top: -120px; right: -120px;
       width: 380px; height: 380px;
