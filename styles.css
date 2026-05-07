@@ -695,3 +695,69 @@ footer {
 }
 .thanks-item h3 { margin: 0 0 4px; font-size: 16px; font-weight: 600; }
 .thanks-item p { margin: 0; font-size: 14px; color: var(--text-2); line-height: 1.5; }
+
+/* --- Hybrid funnel: secondary "skip the call" CTAs --- */
+.cta-alt {
+  margin: 22px 0 0;
+  font-size: 14px;
+  color: var(--text-3);
+}
+.cta-alt a {
+  color: var(--text-2);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 1px;
+  margin-left: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.cta-alt a:hover { color: var(--text); border-bottom-color: var(--grad-3); }
+
+.final-alt {
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: var(--text-3);
+}
+.final-alt a {
+  color: var(--text-2);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 1px;
+  margin-left: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.final-alt a:hover { color: var(--text); border-bottom-color: var(--grad-3); }
+
+.thanks-alt {
+  margin: 56px auto 0;
+  max-width: 540px;
+  padding: 32px 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+}
+.thanks-alt-divider {
+  position: absolute; top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  padding: 0 16px;
+}
+.thanks-alt-divider span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+.thanks-alt h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.thanks-alt p {
+  margin: 0 0 22px;
+  color: var(--text-2);
+  font-size: 14.5px;
+  line-height: 1.55;
+}

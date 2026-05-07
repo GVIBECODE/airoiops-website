@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title data-i18n="thanks.title">Got it — AIROIOPS</title>
-  <meta name="description" content="Application received. Calendly link incoming.">
-  <meta name="robots" content="noindex">
+  <title data-i18n="intake_thanks.title">Got your intake — AIROIOPS</title>
   <meta name="theme-color" content="#050714">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Inter,system-ui' font-size='44' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +23,12 @@
   <nav class="nav">
     <a href="/" class="logo">AIROI<span>OPS</span></a>
     <div class="nav-links">
-      <a href="/" class="nav-cta" data-i18n="thanks.home">Home</a>
+      <a href="/" data-i18n="thanks.home">Home</a>
+      <div class="nav-lang" role="group" aria-label="Language">
+        <button data-lang="en" type="button" aria-label="English">EN</button>
+        <span class="nav-lang-sep" aria-hidden="true">·</span>
+        <button data-lang="es" type="button" aria-label="Español">ES</button>
+      </div>
     </div>
   </nav>
 
@@ -33,52 +36,41 @@
     <div class="thanks-inner">
       <div class="badge">
         <span class="badge-dot"></span>
-        <span data-i18n="thanks.badge">Application received</span>
+        <span data-i18n="intake_thanks.badge">Intake received</span>
       </div>
-      <h1 data-i18n="thanks.h1">Got it. <span class="grad">Now book your call.</span></h1>
-      <p class="lede" data-i18n="thanks.lede">Pick a 30-minute slot below. We'll have your answers in front of us when we hop on, so we can spend the time on solutions, not background.</p>
+      <h1 data-i18n="intake_thanks.h1">Got it. <span class="grad">Report inbound.</span></h1>
+      <p class="lede" data-i18n="intake_thanks.lede">Your custom AI Roadmap Report will hit your inbox inside 48 hours. While you wait, you can pre-book your 20-minute walk-through so we can move straight to action when the report is ready.</p>
 
       <a href="https://calendly.com/gianny-airoiops/airoiops-discovery-call" target="_blank" rel="noopener" class="btn btn-primary glow big">
-        <span data-i18n="thanks.book_cta">Book your 30-min Discovery Call</span>
+        <span data-i18n="intake_thanks.book_cta">Pre-book your walk-through</span>
         <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
 
-      <div class="thanks-list">
+      <div class="thanks-list" style="margin-top:48px">
         <div class="thanks-item">
-          <div class="thanks-num">1</div>
+          <div class="thanks-num">01</div>
           <div>
-            <h3 data-i18n="thanks.s1_title">Pick a slot</h3>
-            <p data-i18n="thanks.s1_body">Use the button above. Calendly shows you my real availability and confirms the slot instantly.</p>
+            <h3 data-i18n="intake_thanks.s1_title">We read every word</h3>
+            <p data-i18n="intake_thanks.s1_body">Your answers go straight to Gianny. No assistant, no AI summarizer, no template — a real custom analysis.</p>
           </div>
         </div>
         <div class="thanks-item">
-          <div class="thanks-num">2</div>
+          <div class="thanks-num">02</div>
           <div>
-            <h3 data-i18n="thanks.s2_title">Confirmation in your inbox</h3>
-            <p data-i18n="thanks.s2_body">You'll get a confirmation email with the Google Meet link and a calendar invite. Add it so you don't miss the call.</p>
+            <h3 data-i18n="intake_thanks.s2_title">Custom report in 48 hours</h3>
+            <p data-i18n="intake_thanks.s2_body">12–18 pages. Quick Wins you can ship yourself. Upsell options if you want hands-on help. Numbers tied to your actual operation.</p>
           </div>
         </div>
         <div class="thanks-item">
-          <div class="thanks-num">3</div>
+          <div class="thanks-num">03</div>
           <div>
-            <h3 data-i18n="thanks.s3_title">30-minute discovery call</h3>
-            <p data-i18n="thanks.s3_body">We learn your business, your tools, your time sinks. Free, no commitment. You leave with a clearer view of what AI can actually do for you.</p>
+            <h3 data-i18n="intake_thanks.s3_title">20-minute walk-through</h3>
+            <p data-i18n="intake_thanks.s3_body">Live call to walk through the report. You leave with a clear next step — whether you build it yourself or hire us.</p>
           </div>
         </div>
       </div>
 
-      <div class="thanks-alt">
-        <div class="thanks-alt-divider"><span data-i18n="thanks.alt_or">or</span></div>
-        <h3 data-i18n="thanks.alt_h3">No time for a call right now?</h3>
-        <p data-i18n="thanks.alt_body">Skip the call entirely. Fill the deep-dive intake on your own time and we'll have your custom AI Roadmap Report in your inbox inside 48 hours, plus a 20-min walk-through whenever you're ready.</p>
-        <a href="/assessment" class="btn btn-ghost">
-          <span data-i18n="thanks.alt_cta">Fill the deep-dive intake →</span>
-        </a>
-      </div>
-
-      <a href="/" class="btn btn-ghost" style="margin-top:24px">
-        <span data-i18n="thanks.cta">Back to home</span>
-      </a>
+      <a href="/" class="btn btn-ghost" style="margin-top:32px"><span data-i18n="thanks.cta">Back to home</span></a>
     </div>
   </section>
 
