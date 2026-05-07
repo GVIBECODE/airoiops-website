@@ -10,5 +10,5 @@
 .env
 .env.*
 
-# PSD site lives in its own repo — never let it cross-pollinate
+# PSD site lives in its own repo. Never let it cross-pollinate
 poopscoopdude/

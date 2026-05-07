@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+Disallow: /assessment-thanks.html
+
+Sitemap: https://airoiops.com/sitemap.xml
