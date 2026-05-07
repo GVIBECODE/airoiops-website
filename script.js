@@ -70,7 +70,7 @@ const translations = {
 
     'proof.kicker': 'Proof Case',
     'proof.h2': 'We use this on our own businesses <span class="grad">first.</span>',
-    'proof.tag': 'CASE STUDY · POOP SCOOP DUDE · LAS VEGAS',
+    'proof.tag': 'CASE STUDY · LAS VEGAS RESIDENTIAL SERVICE · 2026',
     'proof.h3': '1,000+ unconverted leads, recovered with one automation.',
     'proof.body': 'A real Las Vegas service business sitting on a year of lead-gen ad spend with no follow-up system. We ran our own Assessment on it, identified lead recovery as the #1 ROI play, and built the upsell ourselves to validate the playbook. The Assessment was the same one we sell. The build proved the upsell menu.',
     'proof.m1': 'leads in queue',
@@ -320,7 +320,7 @@ const translations = {
 
     'proof.kicker': 'Caso de prueba',
     'proof.h2': 'Lo usamos primero en nuestros propios <span class="grad">negocios.</span>',
-    'proof.tag': 'CASO DE ESTUDIO · POOP SCOOP DUDE · LAS VEGAS',
+    'proof.tag': 'CASO DE ESTUDIO · SERVICIO RESIDENCIAL EN LAS VEGAS · 2026',
     'proof.h3': '1,000+ leads sin convertir, recuperados con una automatización.',
     'proof.body': 'Un negocio real de servicios en Las Vegas con un año de inversión en publicidad sin sistema de seguimiento. Hicimos nuestra propia evaluación, identificamos la recuperación de leads como la jugada #1 de ROI, y construimos el upsell nosotros mismos para validar el playbook. La evaluación fue la misma que vendemos. La construcción probó el menú de upsells.',
     'proof.m1': 'leads en cola',
@@ -529,6 +529,9 @@ function applyLang(lang) {
   });
   document.querySelectorAll('.nav-lang button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.querySelectorAll('a[href="/case-study"], a[href="/case-study-es"]').forEach(a => {
+    a.href = lang === 'es' ? '/case-study-es' : '/case-study';
   });
   try { localStorage.setItem('lang', lang); } catch (e) {}
   calc();
