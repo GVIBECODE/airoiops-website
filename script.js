@@ -36,13 +36,13 @@ const translations = {
     'assessment.c2_title': 'Quick Wins You Can Ship',
     'assessment.c2_body': '5-7 DIY recommendations ranked by ROI and effort. Tools you can subscribe to, integrations you can configure in an afternoon, prompts you can paste into ChatGPT today.',
     'assessment.c3_title': 'Upsell Menu',
-    'assessment.c3_body': "Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is fixed-price, scoped before you commit.",
+    'assessment.c3_body': "Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.",
     'assessment.c4_title': '90-Day Roadmap',
     'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Quarterly milestones, prioritized backlog, no fluff.',
 
     'upsells.kicker': 'Optional Builds',
     'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
-    'upsells.lede': "The Assessment is the deliverable. Quick Wins are deliberately DIY. But if you'd rather hand off the bigger plays, every upsell is fixed-price, scoped before you commit, and built in your stack. You own every credential.",
+    'upsells.lede': "The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.",
     'upsells.zap_title': 'Zapier Automation',
     'upsells.zap_body': 'Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.',
     'upsells.gpt_title': 'Custom GPT',
@@ -98,6 +98,8 @@ const translations = {
     'faq.a5': 'Yes. Every Quick Win is scoped against your actual stack (CRM, email, scheduling, billing, ads). Builds run inside the tools you already pay for, not on a new platform. You own every credential.',
     'faq.q6': 'Do I need technical skills to ship the Quick Wins?',
     'faq.a6': 'No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work.',
+    'faq.q7': 'How are the bigger AI builds priced?',
+    'faq.a7': 'Each build has a floor price ($1,500 for Zapier automation, $2,500 for a Custom GPT, $3,500 for a Speed-to-Lead AI agent, $4,500 for a process optimization). We charge the floor or 20% of projected first-year ROI, whichever is greater. The $1,000 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit.',
 
     'footer.area': 'Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.',
 
@@ -284,13 +286,13 @@ const translations = {
     'assessment.c2_title': 'Quick Wins listos para lanzar',
     'assessment.c2_body': '5-7 recomendaciones DIY clasificadas por ROI y esfuerzo. Herramientas a las que puedes suscribirte, integraciones que puedes configurar en una tarde, prompts que puedes pegar en ChatGPT hoy.',
     'assessment.c3_title': 'Menú de upsells',
-    'assessment.c3_body': 'Construcciones opcionales con precios para las jugadas grandes: Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier. Elige lo que quieres, salta lo que no. Cada construcción es a precio fijo, con alcance definido antes de comprometerte.',
+    'assessment.c3_body': 'Construcciones opcionales con precios para las jugadas grandes: Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier. Elige lo que quieres, salta lo que no. Cada construcción se define en alcance antes de comprometerte, con un precio piso transparente más un porcentaje de tu ROI proyectado.',
     'assessment.c4_title': 'Hoja de ruta de 90 días',
     'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos trimestrales, backlog priorizado, sin relleno.',
 
     'upsells.kicker': 'Construcciones opcionales',
     'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
-    'upsells.lede': 'La evaluación es el entregable. Los Quick Wins son DIY a propósito. Pero si prefieres delegar las jugadas más grandes, cada upsell es a precio fijo, con alcance definido antes de comprometerte, y construido en tu stack. Tú eres dueño de cada credencial.',
+    'upsells.lede': 'La evaluación es el entregable. Los Quick Wins son DIY a propósito. Si prefieres delegar las jugadas más grandes, cada construcción tiene un precio piso abajo. Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación pone tu número de ROI en papel antes de que haya contrato. Construido en tu stack. Tú eres dueño de cada credencial.',
     'upsells.zap_title': 'Automatización en Zapier',
     'upsells.zap_body': 'Automatización multi-paso entre las herramientas que ya pagas. Conecta 2-5 apps, maneja los traspasos de datos, corre en tu cuenta de Zapier.',
     'upsells.gpt_title': 'GPT personalizado',
@@ -346,6 +348,8 @@ const translations = {
     'faq.a5': 'Sí. Cada Quick Win se diseña sobre tu stack actual (CRM, correo, agendas, cobros, anuncios). Las construcciones corren dentro de las herramientas que ya pagas, no en una nueva plataforma. Tú eres dueño de cada credencial.',
     'faq.q6': '¿Necesito conocimientos técnicos para lanzar los Quick Wins?',
     'faq.a6': 'No. Los Quick Wins se eligen para que un operador no técnico los pueda configurar en una tarde. Si puedes pegar un prompt en ChatGPT o hacer clic en una configuración de Zapier, los puedes lanzar. Las construcciones más grandes con código o automatización multi-paso son los upsells, donde nosotros nos encargamos del trabajo técnico.',
+    'faq.q7': '¿Cómo se cotizan las construcciones de IA más grandes?',
+    'faq.a7': 'Cada construcción tiene un precio piso ($1,500 para automatización en Zapier, $2,500 para un GPT personalizado, $3,500 para un agente Speed-to-Lead, $4,500 para optimización de procesos). Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación de $1,000 cuantifica tu ROI por escrito antes de cualquier contrato de construcción, así que los números están en papel antes de que te comprometas.',
 
     'footer.area': 'Atendiendo Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston y clientes remotos en todo el país.',
 

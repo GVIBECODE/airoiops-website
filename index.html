@@ -109,12 +109,13 @@
           "AI for service businesses"
         ],
         "makesOffer": [
-          { "@type": "Offer", "name": "AI Business Assessment", "price": "1000", "priceCurrency": "USD", "url": "https://airoiops.com/#assessment" },
-          { "@type": "Offer", "name": "Zapier Automation Build", "price": "1500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells" },
-          { "@type": "Offer", "name": "Custom GPT", "price": "2500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells" },
-          { "@type": "Offer", "name": "Speed-to-Lead AI Agent", "price": "3500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells" },
-          { "@type": "Offer", "name": "Process Optimization", "price": "4500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells" },
-          { "@type": "Offer", "name": "Monthly Retainer", "price": "750", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells" }
+          { "@type": "Offer", "name": "AI Business Assessment", "price": "1000", "priceCurrency": "USD", "url": "https://airoiops.com/#assessment", "description": "Fixed price diagnostic. Quantifies projected ROI in writing before any build contract." },
+          { "@type": "Offer", "name": "Zapier Automation Build", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 1500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $1,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
+          { "@type": "Offer", "name": "Custom GPT", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 2500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $2,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
+          { "@type": "Offer", "name": "Speed-to-Lead AI Agent", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 3500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $3,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
+          { "@type": "Offer", "name": "Process Optimization", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 4500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $4,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
+          { "@type": "Offer", "name": "AI Workshop", "price": "1500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells", "description": "Per-session live training. Fixed price." },
+          { "@type": "Offer", "name": "Monthly Retainer", "price": "750", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells", "description": "Monthly recurring. Cancel anytime." }
         ],
         "sameAs": []
       },
@@ -194,6 +195,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are the bigger AI builds priced?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each build has a floor price ($1,500 for Zapier automation, $2,500 for a Custom GPT, $3,500 for a Speed-to-Lead AI agent, $4,500 for a process optimization). We charge the floor or 20% of projected first-year ROI, whichever is greater. The $1,000 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit."
             }
           }
         ]
@@ -301,7 +310,7 @@
       <div class="card">
         <div class="card-num">03</div>
         <h3 data-i18n="assessment.c3_title">Upsell Menu</h3>
-        <p data-i18n="assessment.c3_body">Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is fixed-price, scoped before you commit.</p>
+        <p data-i18n="assessment.c3_body">Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.</p>
       </div>
       <div class="card">
         <div class="card-num">04</div>
@@ -314,25 +323,25 @@
   <section id="upsells" class="upsells">
     <div class="kicker" data-i18n="upsells.kicker">Optional Builds</div>
     <h2 data-i18n="upsells.h2">If you want us to <span class="grad">build it</span>, here's the menu.</h2>
-    <p class="section-lede" data-i18n="upsells.lede">The Assessment is the deliverable. Quick Wins are deliberately DIY. But if you'd rather hand off the bigger plays, every upsell is fixed-price, scoped before you commit, and built in your stack. You own every credential.</p>
+    <p class="section-lede" data-i18n="upsells.lede">The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.</p>
     <div class="grid">
       <div class="card">
-        <div class="card-num">$1,500</div>
+        <div class="card-num">$1,500<span class="card-num-suf">+</span></div>
         <h3 data-i18n="upsells.zap_title">Zapier Automation</h3>
         <p data-i18n="upsells.zap_body">Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.</p>
       </div>
       <div class="card">
-        <div class="card-num">$2,500</div>
+        <div class="card-num">$2,500<span class="card-num-suf">+</span></div>
         <h3 data-i18n="upsells.gpt_title">Custom GPT</h3>
         <p data-i18n="upsells.gpt_body">A ChatGPT trained on your SOPs, FAQs, pricing, and product docs. Lives in your OpenAI workspace. Use it on your site, in support, or for staff training.</p>
       </div>
       <div class="card">
-        <div class="card-num">$3,500</div>
+        <div class="card-num">$3,500<span class="card-num-suf">+</span></div>
         <h3 data-i18n="upsells.s2l_title">Speed-to-Lead AI Agent</h3>
         <p data-i18n="upsells.s2l_body">AI voice + SMS agent that responds to inbound leads in under 60 seconds. Books appointments, qualifies fit, hands off hot leads to you. Lives in your CRM.</p>
       </div>
       <div class="card">
-        <div class="card-num">$4,500</div>
+        <div class="card-num">$4,500<span class="card-num-suf">+</span></div>
         <h3 data-i18n="upsells.po_title">Process Optimization</h3>
         <p data-i18n="upsells.po_body">End-to-end audit of one bottleneck workflow plus the automation rebuild. Best for ops with 5+ tools and a lot of manual data hand-offs.</p>
       </div>
@@ -414,6 +423,10 @@
       <details class="faq-item">
         <summary data-i18n="faq.q6">Do I need technical skills to ship the Quick Wins?</summary>
         <p data-i18n="faq.a6">No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q7">How are the bigger AI builds priced?</summary>
+        <p data-i18n="faq.a7">Each build has a floor price ($1,500 for Zapier automation, $2,500 for a Custom GPT, $3,500 for a Speed-to-Lead AI agent, $4,500 for a process optimization). We charge the floor or 20% of projected first-year ROI, whichever is greater. The $1,000 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit.</p>
       </details>
     </div>
   </section>

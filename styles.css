@@ -375,6 +375,14 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01e
   border: 1px solid rgba(6, 182, 212, 0.22);
   margin-bottom: 18px;
 }
+.card-num-suf {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 500;
+  vertical-align: top;
+}
 .card p { color: var(--text-2); margin: 0; font-size: 15px; }
 
 .steps {
