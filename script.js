@@ -580,6 +580,15 @@ if (hasRoiCalc) {
   rate.addEventListener('input', calc);
 }
 
+document.addEventListener('submit', (e) => {
+  const form = e.target;
+  if (!(form instanceof HTMLFormElement)) return;
+  const langField = form.querySelector('input[name="language"]');
+  if (!langField) return;
+  const active = (document.documentElement.lang || currentLang || 'en').toLowerCase();
+  langField.value = active.startsWith('es') ? 'es' : 'en';
+}, true);
+
 document.querySelectorAll('.nav-lang button').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
