@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIROIOPS / chat assessment</title>
+  <meta name="description" content="A conversational AI Business Assessment from AIROIOPS. $1,000 flat. 12 to 18 page roadmap in 48 hours. Las Vegas plus remote nationwide.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#fafaf9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%231b6cff'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3E%E2%97%8F%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       NAV STRIP
+       ========================================================== -->
+  <header class="topbar">
+    <a href="/" class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">airoiops</span>
+      <span class="brand-slash">/</span>
+      <span class="brand-tag">chat</span>
+    </a>
+    <nav class="topnav">
+      <a href="/case-study" class="topnav-link">Proof case</a>
+      <a href="#fallback" class="topnav-link">Plain version</a>
+      <span class="topnav-status"><span class="dot-pulse" aria-hidden="true"></span> online</span>
+    </nav>
+  </header>
+
+  <!-- ==========================================================
+       CHAT HERO
+       ========================================================== -->
+  <main class="chat-stage" id="chat-stage">
+    <div class="chat-shell" role="region" aria-label="Conversational AI demo">
+
+      <!-- thread header -->
+      <div class="chat-head">
+        <div class="chat-head-left">
+          <div class="agent-avatar" aria-hidden="true">
+            <span class="agent-avatar-glyph">◐</span>
+          </div>
+          <div class="chat-head-meta">
+            <div class="chat-head-name">AIROIOPS assistant</div>
+            <div class="chat-head-sub"><span class="dot-pulse small" aria-hidden="true"></span> ready to scope your assessment</div>
+          </div>
+        </div>
+        <div class="chat-head-right">
+          <span class="kbd">esc</span>
+          <span class="chat-head-hint">to skim plain text</span>
+        </div>
+      </div>
+
+      <!-- thread body, rendered by script.js -->
+      <div class="chat-thread" id="chat-thread" aria-live="polite" aria-atomic="false"></div>
+
+      <!-- preset prompts row -->
+      <div class="chat-presets" id="chat-presets" aria-label="Suggested questions">
+        <!-- chips injected by JS -->
+      </div>
+
+      <!-- composer -->
+      <form class="chat-composer" id="chat-composer" autocomplete="off">
+        <button type="button" class="composer-icon" aria-label="Restart conversation" id="composer-restart" title="restart">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 10 9 10"/></svg>
+        </button>
+        <input
+          id="chat-input"
+          type="text"
+          name="chat-input"
+          placeholder="Ask anything, or tap a chip above"
+          aria-label="Ask the AIROIOPS assistant"
+          maxlength="240"
+        />
+        <button type="submit" class="composer-send" aria-label="Send">
+          <span>send</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <!-- legend strip -->
+      <div class="chat-legend">
+        <span class="legend-pill">$1,000 flat</span>
+        <span class="legend-dot" aria-hidden="true">·</span>
+        <span class="legend-pill">48 hour turnaround</span>
+        <span class="legend-dot" aria-hidden="true">·</span>
+        <span class="legend-pill">12 to 18 page roadmap</span>
+        <span class="legend-dot" aria-hidden="true">·</span>
+        <span class="legend-pill">Las Vegas + remote</span>
+      </div>
+    </div>
+
+    <!-- side strip: keystroke hint + scroll cue -->
+    <aside class="stage-side" aria-hidden="true">
+      <div class="side-block">
+        <div class="side-label">demo</div>
+        <div class="side-text">this page is the product. talking to it is the assessment in miniature.</div>
+      </div>
+      <div class="side-block">
+        <div class="side-label">scroll</div>
+        <div class="side-text">a plain-text version sits below if you'd rather read.</div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ==========================================================
+       FALLBACK SECTION (no JS / scrollers / a11y)
+       ========================================================== -->
+  <section class="fallback" id="fallback">
+    <div class="fallback-inner">
+
+      <header class="fb-head">
+        <div class="fb-eyebrow">plain version, same content</div>
+        <h1 class="fb-title">An <em>AI Business Assessment</em><br>built by an operator who runs a real one.</h1>
+        <p class="fb-lede">Tell AIROIOPS about your business. We deliver a 12 to 18 page custom AI roadmap in 48 hours. Flat $1,000. No agency retainer. No 90 day discovery. Las Vegas plus remote nationwide.</p>
+      </header>
+
+      <!-- ===== offer ===== -->
+      <section class="fb-card">
+        <div class="fb-card-tag">01 / the assessment</div>
+        <h2 class="fb-h2">$1,000 flat. 48 hours. A real roadmap.</h2>
+        <ul class="fb-list">
+          <li><strong>Discovery call</strong> &mdash; one focused 60 minute working session, not a sales pitch.</li>
+          <li><strong>Tooling audit</strong> &mdash; what you already pay for, what's redundant, what's missing.</li>
+          <li><strong>Roadmap</strong> &mdash; 12 to 18 pages, ranked by ROI, with estimated payback windows.</li>
+          <li><strong>Build floor</strong> &mdash; if I cannot point to 20% ROI inside the roadmap, you don't pay.</li>
+        </ul>
+      </section>
+
+      <!-- ===== build ladder ===== -->
+      <section class="fb-card">
+        <div class="fb-card-tag">02 / optional builds</div>
+        <h2 class="fb-h2">If a recommendation hits, we can build it.</h2>
+        <div class="fb-grid">
+          <div class="fb-tile">
+            <div class="fb-tile-price">$1,500+</div>
+            <div class="fb-tile-name">Zapier automation</div>
+            <div class="fb-tile-body">Glue your existing tools. CRM, forms, email, billing. Most common starter.</div>
+          </div>
+          <div class="fb-tile">
+            <div class="fb-tile-price">$2,500+</div>
+            <div class="fb-tile-name">Custom GPT</div>
+            <div class="fb-tile-body">Trained on your SOPs, voice, and historical data. Lives in ChatGPT or Claude.</div>
+          </div>
+          <div class="fb-tile">
+            <div class="fb-tile-price">$3,500+</div>
+            <div class="fb-tile-name">Speed-to-Lead agent</div>
+            <div class="fb-tile-body">Voice or SMS agent that answers leads in 60 seconds, 24/7.</div>
+          </div>
+          <div class="fb-tile">
+            <div class="fb-tile-price">$4,500+</div>
+            <div class="fb-tile-name">Process optimization</div>
+            <div class="fb-tile-body">A workflow rebuilt end-to-end. Best for ops drag and recurring drudgery.</div>
+          </div>
+        </div>
+        <p class="fb-note">All build prices are floors. Final scope ladders up only when a 20% ROI case is on the table.</p>
+      </section>
+
+      <!-- ===== retainer ===== -->
+      <section class="fb-card">
+        <div class="fb-card-tag">03 / monthly retainer</div>
+        <h2 class="fb-h2">$1,500 / month if you want a long-term operator.</h2>
+        <p class="fb-p">Ongoing tuning, new automations as your team grows, and a standing slot to think with you. Cancel any month.</p>
+      </section>
+
+      <!-- ===== proof ===== -->
+      <section class="fb-card fb-proof">
+        <div class="fb-card-tag">04 / proof case</div>
+        <h2 class="fb-h2">A Las Vegas residential service business, run by the same operator.</h2>
+        <ul class="fb-stats">
+          <li><span class="fb-stat-num">1,000+</span><span class="fb-stat-label">unconverted leads recovered</span></li>
+          <li><span class="fb-stat-num">$4,500+</span><span class="fb-stat-label">monthly ad waste eliminated</span></li>
+          <li><span class="fb-stat-num">13 hrs</span><span class="fb-stat-label">/ week of operator time returned</span></li>
+          <li><span class="fb-stat-num">$4,168</span><span class="fb-stat-label">/ month new recurring revenue</span></li>
+        </ul>
+        <p class="fb-p"><a href="/case-study" class="fb-link">Read the full case study &rarr;</a></p>
+      </section>
+
+      <!-- ===== faq ===== -->
+      <section class="fb-card">
+        <div class="fb-card-tag">05 / faq</div>
+        <h2 class="fb-h2">Six questions everyone asks.</h2>
+        <dl class="fb-faq">
+          <dt>Is it really $1,000? No upsell trap?</dt>
+          <dd>Flat $1,000 for the assessment. Builds and retainer are optional and you choose them only if the roadmap surfaces a clear payback.</dd>
+
+          <dt>How fast is &ldquo;48 hours&rdquo;?</dt>
+          <dd>From the discovery call. You book, we talk, you have the deliverable two business days later.</dd>
+
+          <dt>Do you only work with Las Vegas businesses?</dt>
+          <dd>Las Vegas, Henderson, Summerlin, Pahrump in person if useful. Remote anywhere in the US. Same price.</dd>
+
+          <dt>What's actually in the 12 to 18 pages?</dt>
+          <dd>Tooling audit, ranked opportunity list, build estimates with ROI math, suggested first 3 plays, and a 90 day plan.</dd>
+
+          <dt>Can you work with the tools we already have?</dt>
+          <dd>Yes. Most of the time we recommend keeping what works and replacing one or two things, not a stack rip and replace.</dd>
+
+          <dt>Do I need to be technical?</dt>
+          <dd>No. The whole point is that an operator who knows operations does the AI work, so you don't have to.</dd>
+        </dl>
+      </section>
+
+      <!-- ===== form ===== -->
+      <section class="fb-card fb-form-card">
+        <div class="fb-card-tag">06 / book the assessment</div>
+        <h2 class="fb-h2">Same form, no chat. Same Netlify destination.</h2>
+        <p class="fb-p">If you skipped the chat above, this submits to the exact same place. We review and send a Calendly link inside one business day.</p>
+
+        <form name="assessment-qualifier" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="fb-form" id="fallback-form">
+          <input type="hidden" name="form-name" value="assessment-qualifier" />
+          <input type="hidden" name="language" value="en" />
+          <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+
+          <div class="fb-row">
+            <label class="fb-field">
+              <span>First name</span>
+              <input type="text" name="first_name" required autocomplete="given-name" />
+            </label>
+            <label class="fb-field">
+              <span>Last name</span>
+              <input type="text" name="last_name" required autocomplete="family-name" />
+            </label>
+          </div>
+
+          <div class="fb-row">
+            <label class="fb-field">
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="fb-field">
+              <span>Business name</span>
+              <input type="text" name="business" required autocomplete="organization" />
+            </label>
+          </div>
+
+          <label class="fb-field">
+            <span>In one sentence, what does your business do?</span>
+            <input type="text" name="what" maxlength="200" placeholder="We do [X] for [Y] in [Z]." required />
+          </label>
+
+          <label class="fb-field">
+            <span>How big is the team?</span>
+            <select name="team_size" required>
+              <option value="">Select...</option>
+              <option>Solo / just me</option>
+              <option>2-5 people</option>
+              <option>6-20 people</option>
+              <option>21-50 people</option>
+              <option>50+ people</option>
+            </select>
+          </label>
+
+          <label class="fb-field">
+            <span>What's the #1 task that eats your time every week?</span>
+            <textarea name="time_sink" rows="3" maxlength="500" placeholder="Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'." required></textarea>
+          </label>
+
+          <fieldset class="fb-field fb-checks">
+            <legend>What AI tools are you using today?</legend>
+            <label><input type="checkbox" name="ai_tools" value="None" /><span>None / haven't started</span></label>
+            <label><input type="checkbox" name="ai_tools" value="ChatGPT occasional" /><span>ChatGPT / Claude (occasional)</span></label>
+            <label><input type="checkbox" name="ai_tools" value="ChatGPT daily" /><span>ChatGPT / Claude (daily)</span></label>
+            <label><input type="checkbox" name="ai_tools" value="Custom GPTs" /><span>Custom GPTs trained on my data</span></label>
+            <label><input type="checkbox" name="ai_tools" value="Zapier or Make" /><span>Zapier or Make automations</span></label>
+            <label><input type="checkbox" name="ai_tools" value="AI voice agent" /><span>AI voice agent (Retell, Vapi)</span></label>
+          </fieldset>
+
+          <fieldset class="fb-field fb-checks">
+            <legend>How did you hear about us?</legend>
+            <label><input type="radio" name="heard_from" value="Google search" required /><span>Google search</span></label>
+            <label><input type="radio" name="heard_from" value="LinkedIn" /><span>LinkedIn</span></label>
+            <label><input type="radio" name="heard_from" value="Instagram" /><span>Instagram</span></label>
+            <label><input type="radio" name="heard_from" value="Facebook" /><span>Facebook</span></label>
+            <label><input type="radio" name="heard_from" value="Skool community" /><span>Skool community</span></label>
+            <label><input type="radio" name="heard_from" value="Friend or referral" /><span>Friend or referral</span></label>
+            <label><input type="radio" name="heard_from" value="Other" /><span>Other</span></label>
+            <input type="text" name="heard_from_other" id="fb-heard-other" maxlength="200" placeholder="Tell us where you heard about us" />
+          </fieldset>
+
+          <label class="fb-field">
+            <span>If this delivers, what does &ldquo;worth it&rdquo; look like to you?</span>
+            <textarea name="outcome" rows="3" maxlength="500" placeholder="10 hours back per week? $5k/mo new revenue? Stop missing leads at night?" required></textarea>
+          </label>
+
+          <button type="submit" class="fb-submit">
+            Submit and get your Calendly link
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+      </section>
+
+      <footer class="fb-foot">
+        <div>airoiops &middot; built in las vegas, nv</div>
+        <div>ai &middot; roi &middot; ops</div>
+        <div>&copy; 2026 AIROIOPS</div>
+      </footer>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
