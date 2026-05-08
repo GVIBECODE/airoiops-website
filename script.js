@@ -149,6 +149,7 @@ const translations = {
     'form.heard_skool': 'Skool community',
     'form.heard_referral': 'Friend or referral',
     'form.heard_other': 'Other',
+    'form.heard_other_ph': 'Tell us where you heard about us',
     'form.submit': 'Submit and get your Calendly link',
 
     'thanks.title': 'Got it | AIROIOPS',
@@ -193,6 +194,7 @@ const translations = {
     'intake.heard_skool': 'Skool community',
     'intake.heard_referral': 'Friend or referral',
     'intake.heard_other': 'Other',
+    'intake.heard_other_ph': 'Tell us where you heard about us',
     'intake.contact_name': 'Your name',
     'intake.business_name': 'Business name',
     'intake.email': 'Best email',
@@ -421,6 +423,7 @@ const translations = {
     'form.heard_skool': 'Comunidad de Skool',
     'form.heard_referral': 'Amigo o referido',
     'form.heard_other': 'Otro',
+    'form.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
     'form.submit': 'Enviar y recibir tu enlace de Calendly',
 
     'thanks.title': 'Recibido | AIROIOPS',
@@ -465,6 +468,7 @@ const translations = {
     'intake.heard_skool': 'Comunidad de Skool',
     'intake.heard_referral': 'Amigo o referido',
     'intake.heard_other': 'Otro',
+    'intake.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
     'intake.contact_name': 'Tu nombre',
     'intake.business_name': 'Nombre del negocio',
     'intake.email': 'Correo electrónico',
@@ -636,6 +640,21 @@ document.addEventListener('submit', (e) => {
 document.querySelectorAll('.nav-lang button').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
+
+function syncHeardOtherInput() {
+  const checked = document.querySelector('input[name="heard_from"]:checked');
+  const value = checked ? checked.value : null;
+  document.querySelectorAll('.heard-other-input').forEach(input => {
+    const isOther = value === 'Other';
+    input.classList.toggle('is-visible', isOther);
+    input.required = isOther;
+    if (!isOther) input.value = '';
+  });
+}
+document.querySelectorAll('input[name="heard_from"]').forEach(radio => {
+  radio.addEventListener('change', syncHeardOtherInput);
+});
+syncHeardOtherInput();
 
 applyLang(detectLang());
 

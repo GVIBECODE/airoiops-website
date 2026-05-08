@@ -122,4 +122,20 @@
       if (btn) btn.textContent = "Submitting...";
     });
   }
+
+  // ---- Heard-from: show free-text input when "Other" is selected ----
+  function syncHeardOther() {
+    const checked = document.querySelector('input[name="heard_from"]:checked');
+    const value = checked ? checked.value : null;
+    document.querySelectorAll(".bf-other-input").forEach(function (input) {
+      const isOther = value === "Other";
+      input.classList.toggle("is-visible", isOther);
+      input.required = isOther;
+      if (!isOther) input.value = "";
+    });
+  }
+  document.querySelectorAll('input[name="heard_from"]').forEach(function (radio) {
+    radio.addEventListener("change", syncHeardOther);
+  });
+  syncHeardOther();
 })();

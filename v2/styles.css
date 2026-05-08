@@ -1297,6 +1297,24 @@ section.offer, section.how, section.menu, section.proof, section.bio, section.fa
   grid-template-columns: 1fr 1fr;
   gap: 10px 20px;
 }
+
+.bf-other-input {
+  display: none;
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+.bf-other-input::placeholder { color: rgba(0,0,0,0.45); font-style: italic; }
+.bf-other-input:focus { outline: none; border-color: var(--accent); }
+.bf-other-input.is-visible { display: block; }
+
 .bf-checks label {
   display: inline-flex;
   align-items: center;
