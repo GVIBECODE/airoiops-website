@@ -39,6 +39,8 @@ const translations = {
     'assessment.c3_body': "Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.",
     'assessment.c4_title': '90-Day Roadmap',
     'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Quarterly milestones, prioritized backlog, no fluff.',
+    'assessment.cta': 'Book your free Discovery Call',
+    'assessment.cta_alt': 'Or skip the call, fill the intake',
 
     'upsells.kicker': 'Optional Builds',
     'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
@@ -55,6 +57,8 @@ const translations = {
     'upsells.ws_body': 'Live training for you and your team. Walk in with no AI experience, leave with working tools you actually use the next day.',
     'upsells.ret_title': 'Monthly Retainer',
     'upsells.ret_body': 'Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.',
+    'upsells.cta': 'Book a call to scope a build',
+    'upsells.cta_alt': 'See a real build in action',
 
     'how.kicker': 'How it works',
     'how.h2': '48 hours. Three steps. <span class="grad">Real ROI.</span>',
@@ -67,6 +71,7 @@ const translations = {
     'how.day3': 'Day 2-3',
     'how.s3_title': 'Roadmap Delivered',
     'how.s3_body': '12-18 page custom report plus a 20-min walk-through call. Clear next step. DIY the Quick Wins, or hand off an upsell to us.',
+    'how.cta': 'Start your 48-hour roadmap',
 
     'proof.kicker': 'Proof Case',
     'proof.h2': 'We use this on our own businesses <span class="grad">first.</span>',
@@ -100,6 +105,7 @@ const translations = {
     'faq.a6': 'No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work.',
     'faq.q7': 'How are the bigger AI builds priced?',
     'faq.a7': 'Each build has a floor price ($1,500 for Zapier automation, $2,500 for a Custom GPT, $3,500 for a Speed-to-Lead AI agent, $4,500 for a process optimization). We charge the floor or 20% of projected first-year ROI, whichever is greater. The $1,000 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit.',
+    'faq.cta': 'Still got questions? Book a free call',
 
     'footer.area': 'Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.',
 
@@ -135,6 +141,14 @@ const translations = {
     'form.ai_voice': 'AI voice agent (Retell, Vapi)',
     'form.outcome_label': 'If this delivers, what does "worth it" look like to you?',
     'form.outcome_ph': '10 hours back per week? $5k/mo new revenue? Stop missing leads at night?',
+    'form.heard_label': 'How did you hear about us?',
+    'form.heard_google': 'Google search',
+    'form.heard_linkedin': 'LinkedIn',
+    'form.heard_instagram': 'Instagram',
+    'form.heard_facebook': 'Facebook',
+    'form.heard_skool': 'Skool community',
+    'form.heard_referral': 'Friend or referral',
+    'form.heard_other': 'Other',
     'form.submit': 'Submit and get your Calendly link',
 
     'thanks.title': 'Got it | AIROIOPS',
@@ -171,6 +185,14 @@ const translations = {
 
     'intake.s0_title': 'How to reach you',
     'intake.s0_sub': 'Just enough to send your report and follow up.',
+    'intake.heard_label': 'How did you hear about us?',
+    'intake.heard_google': 'Google search',
+    'intake.heard_linkedin': 'LinkedIn',
+    'intake.heard_instagram': 'Instagram',
+    'intake.heard_facebook': 'Facebook',
+    'intake.heard_skool': 'Skool community',
+    'intake.heard_referral': 'Friend or referral',
+    'intake.heard_other': 'Other',
     'intake.contact_name': 'Your name',
     'intake.business_name': 'Business name',
     'intake.email': 'Best email',
@@ -289,6 +311,8 @@ const translations = {
     'assessment.c3_body': 'Construcciones opcionales con precios para las jugadas grandes: Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier. Elige lo que quieres, salta lo que no. Cada construcción se define en alcance antes de comprometerte, con un precio piso transparente más un porcentaje de tu ROI proyectado.',
     'assessment.c4_title': 'Hoja de ruta de 90 días',
     'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos trimestrales, backlog priorizado, sin relleno.',
+    'assessment.cta': 'Agenda tu llamada gratis',
+    'assessment.cta_alt': 'O salta la llamada, llena el cuestionario',
 
     'upsells.kicker': 'Construcciones opcionales',
     'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
@@ -305,6 +329,8 @@ const translations = {
     'upsells.ws_body': 'Entrenamiento en vivo para ti y tu equipo. Llegas sin experiencia con IA, sales con herramientas funcionales que usas al día siguiente.',
     'upsells.ret_title': 'Retainer mensual',
     'upsells.ret_body': 'Optimización continua, nuevas construcciones y mantenimiento del stack de IA. Cancela cuando quieras. La mayoría de clientes empieza esto después de su primer upsell.',
+    'upsells.cta': 'Agenda una llamada para definir una construcción',
+    'upsells.cta_alt': 'Ver una construcción real en acción',
 
     'how.kicker': 'Cómo funciona',
     'how.h2': '48 horas. Tres pasos. <span class="grad">ROI real.</span>',
@@ -317,6 +343,7 @@ const translations = {
     'how.day3': 'Día 2-3',
     'how.s3_title': 'Hoja de ruta entregada',
     'how.s3_body': 'Reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos. Siguiente paso claro. Haz tú los Quick Wins, o delega un upsell a nosotros.',
+    'how.cta': 'Empieza tu hoja de ruta de 48 horas',
 
     'proof.kicker': 'Caso de prueba',
     'proof.h2': 'Lo usamos primero en nuestros propios <span class="grad">negocios.</span>',
@@ -350,6 +377,7 @@ const translations = {
     'faq.a6': 'No. Los Quick Wins se eligen para que un operador no técnico los pueda configurar en una tarde. Si puedes pegar un prompt en ChatGPT o hacer clic en una configuración de Zapier, los puedes lanzar. Las construcciones más grandes con código o automatización multi-paso son los upsells, donde nosotros nos encargamos del trabajo técnico.',
     'faq.q7': '¿Cómo se cotizan las construcciones de IA más grandes?',
     'faq.a7': 'Cada construcción tiene un precio piso ($1,500 para automatización en Zapier, $2,500 para un GPT personalizado, $3,500 para un agente Speed-to-Lead, $4,500 para optimización de procesos). Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación de $1,000 cuantifica tu ROI por escrito antes de cualquier contrato de construcción, así que los números están en papel antes de que te comprometas.',
+    'faq.cta': '¿Aún tienes preguntas? Agenda una llamada gratis',
 
     'footer.area': 'Atendiendo Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston y clientes remotos en todo el país.',
 
@@ -385,6 +413,14 @@ const translations = {
     'form.ai_voice': 'Agente de voz IA (Retell, Vapi)',
     'form.outcome_label': 'Si esto entrega valor, ¿cómo se ve "vale la pena" para ti?',
     'form.outcome_ph': '¿10 horas recuperadas por semana? ¿$5k/mes en nuevos ingresos? ¿Dejar de perder leads de noche?',
+    'form.heard_label': '¿Cómo te enteraste de nosotros?',
+    'form.heard_google': 'Búsqueda en Google',
+    'form.heard_linkedin': 'LinkedIn',
+    'form.heard_instagram': 'Instagram',
+    'form.heard_facebook': 'Facebook',
+    'form.heard_skool': 'Comunidad de Skool',
+    'form.heard_referral': 'Amigo o referido',
+    'form.heard_other': 'Otro',
     'form.submit': 'Enviar y recibir tu enlace de Calendly',
 
     'thanks.title': 'Recibido | AIROIOPS',
@@ -421,6 +457,14 @@ const translations = {
 
     'intake.s0_title': 'Cómo contactarte',
     'intake.s0_sub': 'Lo mínimo para enviarte el reporte y dar seguimiento.',
+    'intake.heard_label': '¿Cómo te enteraste de nosotros?',
+    'intake.heard_google': 'Búsqueda en Google',
+    'intake.heard_linkedin': 'LinkedIn',
+    'intake.heard_instagram': 'Instagram',
+    'intake.heard_facebook': 'Facebook',
+    'intake.heard_skool': 'Comunidad de Skool',
+    'intake.heard_referral': 'Amigo o referido',
+    'intake.heard_other': 'Otro',
     'intake.contact_name': 'Tu nombre',
     'intake.business_name': 'Nombre del negocio',
     'intake.email': 'Correo electrónico',

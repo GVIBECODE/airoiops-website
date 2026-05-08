@@ -545,6 +545,12 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01e
 .final p { color: var(--text-2); font-size: 18px; margin: 0 0 36px; }
 .final-sub { margin-top: 24px; color: var(--text-3); font-size: 13px; }
 
+.section-cta {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  justify-content: center; align-items: center;
+  margin-top: 48px;
+}
+
 .faq {
   max-width: 920px; margin: 0 auto;
   padding: 100px 40px 60px;
