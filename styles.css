@@ -551,6 +551,27 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01e
   margin-top: 48px;
 }
 
+.heard-other-input {
+  display: none;
+  margin-top: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.heard-other-input::placeholder { color: var(--text-3); }
+.heard-other-input:focus {
+  outline: none;
+  border-color: var(--grad-3);
+  background: var(--surface-strong);
+}
+.heard-other-input.is-visible { display: block; }
+
 .faq {
   max-width: 920px; margin: 0 auto;
   padding: 100px 40px 60px;
