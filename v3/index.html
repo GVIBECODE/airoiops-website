@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>AIROIOPS // OPERATOR TERMINAL v3.1.4</title>
+<meta name="description" content="AI Business Assessment. $1,000 fixed. 48 hour roadmap. Las Vegas operator." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=VT323&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="topbar" role="banner">
+  <div class="topbar-row">
+    <span class="brand">AIROIOPS</span>
+    <span class="sep">::</span>
+    <span class="dim">OPERATOR_TERMINAL</span>
+    <span class="sep">::</span>
+    <span class="dim">v3.1.4</span>
+    <span class="grow"></span>
+    <span class="dim hide-sm">SESSION</span>
+    <span id="sessionId">SES-00000</span>
+    <span class="sep hide-sm">::</span>
+    <span class="dim hide-sm">UPTIME</span>
+    <span id="uptime" class="hide-sm">00:00:00</span>
+    <span class="sep">::</span>
+    <span id="clock">--:--:-- LV</span>
+    <span class="led-pulse" aria-hidden="true"></span>
+  </div>
+  <nav class="topbar-row navrow" aria-label="primary">
+    <a href="#offer">[F1] OFFER</a>
+    <a href="#proof">[F2] PROOF</a>
+    <a href="#menu">[F3] PRICE_MENU</a>
+    <a href="#how">[F4] PROTOCOL</a>
+    <a href="#geo">[F5] GEO</a>
+    <a href="#faq">[F6] FAQ</a>
+    <a href="#submit" class="cta">[F12] BOOT_ASSESSMENT</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-h">
+  <pre class="ascii ascii-logo" aria-hidden="true">
+ +--------------------------------------------------------+
+ |   _   ___ ___  ___ ___ ___  ___  ___                  |
+ |  /_\ |_ _| _ \/ _ \_ _/ _ \| _ \/ __|                 |
+ | / _ \ | ||   / (_) | | (_) |  _/\__ \                 |
+ |/_/ \_\___|_|_\\___/___\___/|_|  |___/                 |
+ |                                                        |
+ |  AI . ROI . OPS  ::  LAS VEGAS  ::  EST 2026          |
+ +--------------------------------------------------------+</pre>
+
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="prompt-line">
+        <span class="prompt">AIROIOPS&gt;</span>
+        <span id="typed" class="typed"></span><span class="caret" aria-hidden="true">_</span>
+      </div>
+      <h1 id="hero-h" class="hero-h">
+        <span class="kw">EXEC</span> AI_BUSINESS_ASSESSMENT
+        <span class="dim">--fixed-price=$1000 --turnaround=48h</span>
+      </h1>
+      <p class="hero-sub">
+        We map every workflow. We tag where AI cuts hours and recovers revenue. You get a 12 to 18 page roadmap, a 20 minute walkthrough call, and 5 to 7 quick wins you can deploy yourself. No retainer trap. No vague decks. No fluff.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#submit">
+          <span class="bracket">[</span> EXECUTE &gt; START_ASSESSMENT <span class="bracket">]</span>
+        </a>
+        <a class="btn btn-ghost" href="#menu">
+          <span class="bracket">[</span> VIEW PRICE_MENU <span class="bracket">]</span>
+        </a>
+      </div>
+
+      <ul class="hero-meta" aria-label="assessment metadata">
+        <li><span class="k">price.fixed</span> = <span class="v">$1,000</span></li>
+        <li><span class="k">delivery.sla</span> = <span class="v">48h</span></li>
+        <li><span class="k">format</span> = <span class="v">12-18pg PDF + call</span></li>
+        <li><span class="k">guarantee</span> = <span class="v">shared dashboards</span></li>
+      </ul>
+    </div>
+
+    <aside class="hero-right" aria-label="live ticker">
+      <pre class="ascii box-title" aria-hidden="true">+-- LIVE.OPS_TICKER ---------------+</pre>
+      <ul class="ticker">
+        <li><span class="t-k">ASSESSMENTS_DELIVERED</span><span class="t-dots"></span><span class="t-v" data-roll="11">000011</span></li>
+        <li><span class="t-k">HOURS_RECLAIMED_WK</span><span class="t-dots"></span><span class="t-v" data-roll="143">000143</span></li>
+        <li><span class="t-k">AD_WASTE_DETECTED</span><span class="t-dots"></span><span class="t-v t-money" data-roll="48750">$048,750</span></li>
+        <li><span class="t-k">PROJECTED_NET_ROI_MO</span><span class="t-dots"></span><span class="t-v t-money" data-roll="4168">$004,168</span></li>
+        <li><span class="t-k">UNCONVERTED_LEADS_FOUND</span><span class="t-dots"></span><span class="t-v" data-roll="1042">001,042</span></li>
+        <li><span class="t-k">QUICK_WINS_SHIPPED</span><span class="t-dots"></span><span class="t-v" data-roll="63">000063</span></li>
+      </ul>
+      <pre class="ascii box-foot" aria-hidden="true">+----------------------------------+</pre>
+      <div class="ticker-note">
+        <span class="led-dot"></span> live counters. simulated until session connects to ops feed.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="offer" class="section" aria-labelledby="offer-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 01 // THE_OFFER ////////////////////////////////</pre>
+  <h2 id="offer-h" class="sec-h">$1,000 fixed. 48 hours. real roadmap.</h2>
+
+  <div class="grid-3">
+    <article class="card">
+      <pre class="ascii card-head" aria-hidden="true">+-- 01 --+</pre>
+      <h3>DEEP DISCOVERY</h3>
+      <p>60 to 90 minute audit call. We map your stack, your team, your workflows, your customer touchpoints. Recorded. Transcribed.</p>
+      <ul class="kv">
+        <li><span>format</span><b>1:1 video</b></li>
+        <li><span>artifacts</span><b>recording + notes</b></li>
+        <li><span>scope</span><b>end-to-end ops</b></li>
+      </ul>
+    </article>
+    <article class="card">
+      <pre class="ascii card-head" aria-hidden="true">+-- 02 --+</pre>
+      <h3>CUSTOM ROADMAP</h3>
+      <p>12 to 18 page PDF. Not a template. Every recommendation tied to a dollar number, an hour count, or a revenue lever specific to your business.</p>
+      <ul class="kv">
+        <li><span>length</span><b>12-18 pages</b></li>
+        <li><span>delivery</span><b>48h sla</b></li>
+        <li><span>format</span><b>PDF + Loom</b></li>
+      </ul>
+    </article>
+    <article class="card">
+      <pre class="ascii card-head" aria-hidden="true">+-- 03 --+</pre>
+      <h3>QUICK WINS + CALL</h3>
+      <p>5 to 7 DIY recommendations you can ship without us. Plus a 20 minute walkthrough where we answer everything and prioritize the build queue.</p>
+      <ul class="kv">
+        <li><span>quick_wins</span><b>5-7 included</b></li>
+        <li><span>call</span><b>20 min walkthrough</b></li>
+        <li><span>followup</span><b>email q&amp;a</b></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="proof" class="section" aria-labelledby="proof-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 02 // PROOF_CASE ////////////////////////////////</pre>
+  <h2 id="proof-h" class="sec-h">case study :: Las Vegas residential service business</h2>
+
+  <div class="proof-grid">
+    <div class="proof-stats">
+      <div class="stat">
+        <span class="stat-k">UNCONVERTED_LEADS</span>
+        <span class="stat-v">1,042</span>
+        <span class="stat-d">sitting in CRM, never contacted past day 3</span>
+      </div>
+      <div class="stat">
+        <span class="stat-k">AD_WASTE_DETECTED</span>
+        <span class="stat-v">$4,500+</span>
+        <span class="stat-d">wrong-zip clicks burning monthly</span>
+      </div>
+      <div class="stat">
+        <span class="stat-k">HOURS_RECLAIMABLE</span>
+        <span class="stat-v">13/wk</span>
+        <span class="stat-d">manual replies, scheduling, intake</span>
+      </div>
+      <div class="stat">
+        <span class="stat-k">PROJECTED_NET_ROI</span>
+        <span class="stat-v">$4,168/mo</span>
+        <span class="stat-d">conservative, post-build</span>
+      </div>
+    </div>
+    <aside class="proof-side">
+      <pre class="ascii box-title" aria-hidden="true">+-- AUDIT_LOG ---------------------+</pre>
+      <ul class="auditlog">
+        <li><span class="lg-t">[00:00:01]</span> connect.crm OK</li>
+        <li><span class="lg-t">[00:00:14]</span> scan.leads found=1042 cold=988</li>
+        <li><span class="lg-t">[00:01:02]</span> ad_audit zip=89109 cpl=$58 conv=0</li>
+        <li><span class="lg-t">[00:02:11]</span> workflow.intake manual_steps=7</li>
+        <li><span class="lg-t">[00:04:45]</span> savings.calc total=$4168/mo</li>
+        <li><span class="lg-t">[00:05:00]</span> roadmap.export pages=14</li>
+        <li class="ok"><span class="lg-t">[DONE]</span> assessment.complete sla=46h</li>
+      </ul>
+      <pre class="ascii box-foot" aria-hidden="true">+----------------------------------+</pre>
+      <a class="link-cta" href="/case-study">read full case study /case-study &raquo;</a>
+    </aside>
+  </div>
+</section>
+
+<section id="menu" class="section" aria-labelledby="menu-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 03 // PRICE_MENU ////////////////////////////////</pre>
+  <h2 id="menu-h" class="sec-h">price menu :: ticker view</h2>
+  <p class="sec-sub">tabular. monospaced. column-aligned. no sales pages, no popups.</p>
+
+  <div class="menu-table" role="table" aria-label="price menu">
+    <div class="m-head" role="row">
+      <span role="columnheader">SYM</span>
+      <span role="columnheader">PRODUCT</span>
+      <span role="columnheader" class="ralign">FLOOR</span>
+      <span role="columnheader" class="ralign">UNIT</span>
+      <span role="columnheader" class="ralign hide-sm">CHG</span>
+      <span role="columnheader">STATUS</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">ABA</span>
+      <span class="name">AI Business Assessment</span>
+      <span class="ralign val">$1,000</span>
+      <span class="ralign unit">fixed</span>
+      <span class="ralign chg up hide-sm">+0.0%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">ZAP</span>
+      <span class="name">Zapier or Make Build</span>
+      <span class="ralign val">$1,500+</span>
+      <span class="ralign unit">project</span>
+      <span class="ralign chg up hide-sm">+1.2%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">GPT</span>
+      <span class="name">Custom GPT or Agent</span>
+      <span class="ralign val">$2,500+</span>
+      <span class="ralign unit">project</span>
+      <span class="ralign chg up hide-sm">+0.8%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">S2L</span>
+      <span class="name">Speed-to-Lead System</span>
+      <span class="ralign val">$3,500+</span>
+      <span class="ralign unit">project</span>
+      <span class="ralign chg up hide-sm">+2.4%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">OPT</span>
+      <span class="name">Process Optimization</span>
+      <span class="ralign val">$4,500+</span>
+      <span class="ralign unit">project</span>
+      <span class="ralign chg up hide-sm">+1.7%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+
+    <div class="m-row" role="row">
+      <span class="sym">RTN</span>
+      <span class="name">Monthly Retainer</span>
+      <span class="ralign val">$1,500</span>
+      <span class="ralign unit">/mo</span>
+      <span class="ralign chg flat hide-sm">+0.0%</span>
+      <span class="status ok">LIVE</span>
+    </div>
+  </div>
+
+  <p class="footnote">
+    <span class="dim">*</span> all build pricing = floor or 20% projected first-year ROI, whichever greater. you do not pay more than projected return. exact quote on your roadmap.
+  </p>
+</section>
+
+<section id="how" class="section" aria-labelledby="how-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 04 // PROTOCOL //////////////////////////////////</pre>
+  <h2 id="how-h" class="sec-h">protocol :: how the 48 hours run</h2>
+
+  <ol class="protocol">
+    <li>
+      <pre class="ascii p-num" aria-hidden="true">[01]</pre>
+      <h3>QUALIFY</h3>
+      <p>Submit the form below. 60 seconds. We review fit and reply within one business day with a calendar link.</p>
+    </li>
+    <li>
+      <pre class="ascii p-num" aria-hidden="true">[02]</pre>
+      <h3>DISCOVER</h3>
+      <p>Audit call, 60 to 90 minutes. We dig into your tools, your team, your customer flow, your ad spend, your unfinished automations.</p>
+    </li>
+    <li>
+      <pre class="ascii p-num" aria-hidden="true">[03]</pre>
+      <h3>BUILD ROADMAP</h3>
+      <p>We compile findings, calculate dollar and hour numbers, prioritize wins, write your custom 12 to 18 page roadmap. SLA: 48 hours from call.</p>
+    </li>
+    <li>
+      <pre class="ascii p-num" aria-hidden="true">[04]</pre>
+      <h3>WALKTHROUGH</h3>
+      <p>20 minute call. We walk every recommendation. You decide what you build, what we build, what you skip. No upsell pressure.</p>
+    </li>
+    <li>
+      <pre class="ascii p-num" aria-hidden="true">[05]</pre>
+      <h3>SHIP (OPTIONAL)</h3>
+      <p>Want us to build it? Floor or 20% first-year ROI, whichever greater. Want to ship yourself? You already have the quick wins.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="geo" class="section" aria-labelledby="geo-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 05 // GEO_INDEX /////////////////////////////////</pre>
+  <h2 id="geo-h" class="sec-h">coverage :: Las Vegas + suburbs + remote nationwide</h2>
+
+  <div class="geo-grid">
+    <div class="geo-card">
+      <pre class="ascii card-head" aria-hidden="true">+-- LV_METRO --+</pre>
+      <h3>VEGAS + SUBURBS</h3>
+      <ul class="zips">
+        <li>Las Vegas</li>
+        <li>Henderson</li>
+        <li>Summerlin</li>
+        <li>North Las Vegas</li>
+        <li>Spring Valley</li>
+        <li>Boulder City</li>
+      </ul>
+    </div>
+    <div class="geo-card">
+      <pre class="ascii card-head" aria-hidden="true">+-- REMOTE --+</pre>
+      <h3>NATIONWIDE</h3>
+      <p>Remote engagements across the US. Async-first. Your timezone, our calendar.</p>
+      <ul class="zips">
+        <li>Audit calls via Zoom or Meet</li>
+        <li>Roadmaps delivered as PDF</li>
+        <li>Build work async + Loom</li>
+      </ul>
+    </div>
+    <div class="geo-card">
+      <pre class="ascii card-head" aria-hidden="true">+-- OPERATOR --+</pre>
+      <h3>WHO RUNS IT</h3>
+      <p>Gianny. Operator-founder. Runs a real Las Vegas service business in parallel. We use AIROIOPS on our own ops first. Then yours.</p>
+      <p class="dim">no agency middlemen. no juniors. no slide decks.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section" aria-labelledby="faq-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 06 // FAQ ///////////////////////////////////////</pre>
+  <h2 id="faq-h" class="sec-h">faq :: rapid fire</h2>
+
+  <div class="faq">
+    <details>
+      <summary><span class="q">Q.</span> What do I actually get for $1,000?</summary>
+      <p>A 60-90 minute discovery call, a custom 12 to 18 page AI roadmap delivered in 48 hours, 5 to 7 quick wins you can ship yourself, and a 20 minute walkthrough call. Fixed price. No surprises.</p>
+    </details>
+    <details>
+      <summary><span class="q">Q.</span> Will you try to upsell me?</summary>
+      <p>We will quote builds if your roadmap calls for them. You can hire us, hire someone else, or ship the wins yourself. The roadmap is yours either way.</p>
+    </details>
+    <details>
+      <summary><span class="q">Q.</span> What does build pricing look like?</summary>
+      <p>Floor pricing or 20% of projected first-year ROI, whichever is greater. You see exact numbers in your roadmap. No retainer trap. No project drift.</p>
+    </details>
+    <details>
+      <summary><span class="q">Q.</span> Do you offer money-back guarantees?</summary>
+      <p>No. We use shared dashboards instead. You watch the numbers move in real time. If the numbers do not move, we do not get paid the milestone.</p>
+    </details>
+    <details>
+      <summary><span class="q">Q.</span> Are you remote-friendly?</summary>
+      <p>Yes. Las Vegas based, working nationwide. All discovery and walkthrough calls are video. Roadmaps and deliverables are async.</p>
+    </details>
+    <details>
+      <summary><span class="q">Q.</span> What size businesses do you work with?</summary>
+      <p>Solo operators through 50 person teams. The smaller you are, the bigger the leverage from one well-placed automation. The bigger you are, the more buried waste we usually find.</p>
+    </details>
+  </div>
+</section>
+
+<section id="submit" class="section section-form" aria-labelledby="form-h">
+  <pre class="ascii section-head" aria-hidden="true">// SECTION 07 // BOOT_SEQUENCE /////////////////////////////</pre>
+  <h2 id="form-h" class="sec-h">boot the assessment :: qualifier form</h2>
+  <p class="sec-sub">60 seconds. fields are required unless marked optional. we reply within one business day.</p>
+
+  <form name="assessment-qualifier"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/thanks.html"
+        class="opform"
+        novalidate>
+    <input type="hidden" name="form-name" value="assessment-qualifier" />
+    <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="first_name">[01] FIRST NAME</label>
+        <input type="text" id="first_name" name="first_name" autocomplete="given-name" required />
+      </div>
+      <div class="field">
+        <label for="last_name">[02] LAST NAME</label>
+        <input type="text" id="last_name" name="last_name" autocomplete="family-name" required />
+      </div>
+      <div class="field">
+        <label for="email">[03] EMAIL</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="business">[04] BUSINESS NAME</label>
+        <input type="text" id="business" name="business" autocomplete="organization" required />
+      </div>
+      <div class="field full">
+        <label for="what">[05] WHAT DOES THE BUSINESS DO?</label>
+        <input type="text" id="what" name="what" placeholder="one sentence is fine" required />
+      </div>
+      <div class="field">
+        <label for="team_size">[06] TEAM SIZE</label>
+        <select id="team_size" name="team_size" required>
+          <option value="">-- select --</option>
+          <option>Solo / just me</option>
+          <option>2-5 people</option>
+          <option>6-20 people</option>
+          <option>21-50 people</option>
+          <option>50+ people</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="time_sink">[07] BIGGEST TIME SINK RIGHT NOW</label>
+        <textarea id="time_sink" name="time_sink" rows="3" placeholder="what are you doing manually that you wish you weren't" required></textarea>
+      </div>
+
+      <fieldset class="field full">
+        <legend>[08] AI TOOLS YOU USE TODAY</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="ai_tools" value="None" /> <span>None</span></label>
+          <label><input type="checkbox" name="ai_tools" value="ChatGPT occasional" /> <span>ChatGPT occasional</span></label>
+          <label><input type="checkbox" name="ai_tools" value="ChatGPT daily" /> <span>ChatGPT daily</span></label>
+          <label><input type="checkbox" name="ai_tools" value="Custom GPTs" /> <span>Custom GPTs</span></label>
+          <label><input type="checkbox" name="ai_tools" value="Zapier or Make" /> <span>Zapier or Make</span></label>
+          <label><input type="checkbox" name="ai_tools" value="AI voice agent" /> <span>AI voice agent</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field full">
+        <legend>[09] HOW DID YOU HEAR ABOUT US?</legend>
+        <div class="radios">
+          <label><input type="radio" name="heard_from" value="Google search" /> <span>Google search</span></label>
+          <label><input type="radio" name="heard_from" value="LinkedIn" /> <span>LinkedIn</span></label>
+          <label><input type="radio" name="heard_from" value="Instagram" /> <span>Instagram</span></label>
+          <label><input type="radio" name="heard_from" value="Facebook" /> <span>Facebook</span></label>
+          <label><input type="radio" name="heard_from" value="Skool community" /> <span>Skool community</span></label>
+          <label><input type="radio" name="heard_from" value="Friend or referral" /> <span>Friend or referral</span></label>
+          <label><input type="radio" name="heard_from" value="Other" /> <span>Other</span></label>
+        </div>
+        <div class="field full sub" id="otherWrap">
+          <label for="heard_from_other">specify (Other)</label>
+          <input type="text" id="heard_from_other" name="heard_from_other" />
+        </div>
+      </fieldset>
+
+      <div class="field full">
+        <label for="outcome">[10] WHAT'S THE OUTCOME YOU WANT FROM THIS ASSESSMENT?</label>
+        <textarea id="outcome" name="outcome" rows="3" placeholder="more revenue, fewer hours, both, something specific..." required></textarea>
+      </div>
+    </div>
+
+    <div class="form-foot">
+      <button class="btn btn-primary big" type="submit">
+        <span class="bracket">[</span> EXECUTE &gt; SUBMIT_ASSESSMENT_REQUEST <span class="bracket">]</span>
+      </button>
+      <p class="dim small">no spam, no list-resale, no drip funnel. one operator reads every submission.</p>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <pre class="ascii foot-rule" aria-hidden="true">================================================================</pre>
+  <div class="foot-row">
+    <span>(c) 2026 AIROIOPS</span>
+    <span class="sep">::</span>
+    <span>Las Vegas, NV</span>
+    <span class="sep">::</span>
+    <span>operator: Gianny</span>
+    <span class="grow"></span>
+    <a href="/case-study">case study</a>
+    <span class="sep">::</span>
+    <a href="#submit">start assessment</a>
+  </div>
+  <pre class="ascii foot-end" aria-hidden="true">// END_OF_LINE ////////////////////////////////////////////////</pre>
+</footer>
+
+<div class="statusbar" role="status" aria-live="polite">
+  <span class="sb-cell"><span class="led-dot"></span><span class="sb-k">CONN</span> <span class="sb-v">OK</span></span>
+  <span class="sb-cell hide-xs"><span class="sb-k">AI_SPEND_TRACKED</span> <span id="sbSpend" class="sb-v">$8,983</span></span>
+  <span class="sb-cell hide-xs"><span class="sb-k">WASTE_DETECTED</span> <span id="sbWaste" class="sb-v">$4,500</span></span>
+  <span class="sb-cell"><span class="sb-k">LAST_LEAD</span> <span id="sbLead" class="sb-v">14 MIN AGO</span></span>
+  <span class="sb-cell hide-sm"><span class="sb-k">QUEUE</span> <span id="sbQueue" class="sb-v">3</span></span>
+  <span class="grow"></span>
+  <span class="sb-cell"><span class="sb-k">F12</span> <a href="#submit" class="sb-v">BOOT</a></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
