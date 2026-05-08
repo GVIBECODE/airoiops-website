@@ -636,7 +636,7 @@ footer {
   .about-grid { grid-template-columns: 1fr; gap: 56px; }
   .nav { padding: 14px 20px; }
   .nav-links { gap: 20px; }
-  .nav-links a:not(.nav-cta) { display: none; }
+  .nav-links > a:not(.nav-cta) { display: none; }
   section { padding: 80px 24px; }
   .stats { padding: 60px 24px; }
   .proof-card { padding: 40px 28px; }
