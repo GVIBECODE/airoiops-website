@@ -14,17 +14,18 @@
 
   <style>
     :root {
-      --bg: #0A0A0B;
-      --bg-elev: #131316;
-      --bg-elev-2: #1B1B1F;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.16);
-      --text-1: #F5F5F7;
-      --text-2: rgba(245, 245, 247, 0.72);
-      --text-3: rgba(245, 245, 247, 0.48);
-      --accent: #F5A623;
-      --accent-soft: rgba(245, 166, 35, 0.12);
-      --accent-glow: rgba(245, 166, 35, 0.35);
+      --bg: #0A0907;
+      --bg-elev: #14130F;
+      --bg-elev-2: #1B1A16;
+      --line: rgba(250, 246, 235, 0.06);
+      --line-strong: rgba(250, 246, 235, 0.13);
+      --text-1: #FAF6EB;
+      --text-2: rgba(250, 246, 235, 0.66);
+      --text-3: rgba(250, 246, 235, 0.40);
+      --accent: #E8DFD2;
+      --accent-soft: rgba(232, 223, 210, 0.07);
+      --accent-glow: rgba(232, 223, 210, 0.18);
+      --gold: #C9A66B;
       --max: 1200px;
       --radius: 14px;
       --radius-sm: 8px;
@@ -44,29 +45,16 @@
       overflow-x: hidden;
     }
 
-    /* Background warmth */
+    /* Subtle warmth — almost imperceptible, just keeps the dark from feeling flat */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(900px 600px at 85% -10%, rgba(245, 166, 35, 0.10), transparent 60%),
-        radial-gradient(700px 500px at -10% 30%, rgba(245, 166, 35, 0.05), transparent 60%);
+        radial-gradient(1100px 700px at 80% -20%, rgba(250, 246, 235, 0.025), transparent 65%),
+        radial-gradient(900px 600px at -10% 110%, rgba(250, 246, 235, 0.015), transparent 60%);
       pointer-events: none;
       z-index: 0;
-    }
-
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-      background-size: 56px 56px;
-      pointer-events: none;
-      z-index: 0;
-      mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85), transparent 70%);
     }
 
     main, nav, footer { position: relative; z-index: 1; }
@@ -131,17 +119,19 @@
     }
     .nav-links a:hover { color: var(--text-1); }
     .nav-cta {
-      padding: 9px 16px;
-      border: 1px solid var(--accent);
-      color: var(--accent) !important;
+      padding: 9px 18px;
+      border: 1px solid var(--line-strong);
+      color: var(--text-1) !important;
       border-radius: 999px;
-      font-weight: 600 !important;
+      font-weight: 500 !important;
       font-size: 13px !important;
-      transition: all 0.18s;
+      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
     }
     .nav-cta:hover {
-      background: var(--accent);
+      background: var(--text-1);
       color: var(--bg) !important;
+      border-color: var(--text-1);
     }
     @media (max-width: 760px) {
       .nav-links a:not(.nav-cta) { display: none; }
@@ -161,13 +151,14 @@
       cursor: pointer;
     }
     .btn-primary {
-      background: var(--accent);
+      background: var(--text-1);
       color: var(--bg);
-      box-shadow: 0 0 0 1px var(--accent), 0 12px 40px -8px var(--accent-glow);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 14px 50px -12px rgba(250,246,235,0.18);
     }
     .btn-primary:hover {
+      background: #fff;
       transform: translateY(-1px);
-      box-shadow: 0 0 0 1px var(--accent), 0 18px 60px -8px var(--accent-glow);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 22px 80px -10px rgba(250,246,235,0.28);
     }
     .btn-ghost {
       background: transparent;
@@ -193,33 +184,37 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent);
-      padding: 6px 12px;
-      border: 1px solid var(--accent-soft);
-      background: var(--accent-soft);
-      border-radius: 999px;
-      margin-bottom: 20px;
+      color: var(--text-3);
+      margin-bottom: 24px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
     }
     .eyebrow.plain {
       color: var(--text-3);
-      background: transparent;
-      border: 1px solid var(--line);
-      padding: 6px 12px;
     }
     h2.section-h2 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      font-size: clamp(32px, 5vw, 56px);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      font-size: clamp(34px, 5vw, 60px);
       line-height: 1.05;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       max-width: 900px;
+    }
+    h2.section-h2 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
     }
     .section-lede {
       font-size: clamp(16px, 1.4vw, 20px);
@@ -264,33 +259,24 @@
       margin-bottom: 28px;
     }
     .badge-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
       border-radius: 50%;
-      box-shadow: 0 0 0 4px var(--accent-soft);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); }
-      50% { box-shadow: 0 0 0 8px transparent; }
     }
     .hero h1 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      font-size: clamp(44px, 6.4vw, 84px);
-      line-height: 0.98;
-      margin-bottom: 24px;
-    }
-    .hero h1 .accent {
-      color: var(--accent);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      font-size: clamp(46px, 6.6vw, 88px);
+      line-height: 1.02;
+      margin-bottom: 28px;
     }
     .hero h1 em {
       font-family: 'Fraunces', serif;
       font-style: italic;
-      font-weight: 400;
-      color: var(--text-2);
+      font-weight: 300;
+      color: var(--accent);
     }
     .hero-lede {
       font-size: clamp(17px, 1.4vw, 21px);
@@ -394,7 +380,7 @@
       height: 18px;
       background: var(--accent);
       border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.18);
+      box-shadow: 0 0 0 4px rgba(232, 223, 210, 0.10);
       cursor: pointer;
     }
     .roi-card input[type="range"]::-moz-range-thumb {
@@ -418,13 +404,13 @@
       border-top: 1px solid var(--line);
     }
     .roi-num {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
       letter-spacing: -0.02em;
-      font-size: 44px;
-      color: var(--accent);
+      font-size: 48px;
+      color: var(--text-1);
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .roi-sub {
       font-size: 13px;
@@ -683,10 +669,10 @@
       margin-bottom: 20px;
     }
     .proof-card h3 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      font-size: clamp(24px, 3vw, 36px);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.018em;
+      font-size: clamp(26px, 3vw, 38px);
       line-height: 1.15;
       margin-bottom: 20px;
     }
@@ -711,10 +697,10 @@
       gap: 4px;
     }
     .proof-metrics span:first-child {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 32px;
-      color: var(--accent);
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 38px;
+      color: var(--text-1);
       letter-spacing: -0.02em;
       line-height: 1;
     }
@@ -749,10 +735,10 @@
       transform: translateY(-2px);
     }
     .build-price {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 28px;
-      color: var(--accent);
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 32px;
+      color: var(--text-1);
       letter-spacing: -0.02em;
       margin-bottom: 12px;
     }
@@ -829,17 +815,16 @@
       .about-card { padding: 36px 28px; }
     }
     .about-card h2 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      font-size: clamp(28px, 3.5vw, 40px);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      font-size: clamp(30px, 3.6vw, 44px);
       line-height: 1.1;
       margin-bottom: 24px;
     }
     .about-card h2 em {
-      font-family: 'Fraunces', serif;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 300;
       color: var(--accent);
     }
     .about-card p {
@@ -859,17 +844,16 @@
       text-align: center;
     }
     .final h2 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      font-size: clamp(36px, 5.4vw, 64px);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      font-size: clamp(38px, 5.4vw, 68px);
       line-height: 1.05;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .final h2 em {
-      font-family: 'Fraunces', serif;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 300;
       color: var(--accent);
     }
     .final-sub {
@@ -1012,8 +996,8 @@
     /* Reveal-on-scroll */
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(12px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .reveal.in {
       opacity: 1;
@@ -1043,18 +1027,26 @@
 
     /* Banner top: which version */
     .preview-banner {
-      background: var(--accent);
-      color: var(--bg);
+      background: rgba(250, 246, 235, 0.04);
+      color: var(--text-3);
+      border-bottom: 1px solid var(--line);
       text-align: center;
-      padding: 8px 16px;
+      padding: 9px 16px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
     .preview-banner a {
-      text-decoration: underline;
-      margin-left: 6px;
+      color: var(--text-1);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line-strong);
+      margin-left: 8px;
+      padding-bottom: 1px;
+    }
+    .preview-banner a:hover {
+      border-bottom-color: var(--accent);
     }
   </style>
 </head>
