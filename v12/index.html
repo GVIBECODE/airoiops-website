@@ -47,16 +47,48 @@
       overflow-x: hidden;
     }
 
-    /* Subtle warmth — almost imperceptible, just keeps the dark from feeling flat */
-    body::before {
+    /* Slow-drifting ambient orbs — adds depth without distraction */
+    body::before, body::after {
       content: '';
       position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(1100px 700px at 80% -20%, rgba(250, 246, 235, 0.025), transparent 65%),
-        radial-gradient(900px 600px at -10% 110%, rgba(250, 246, 235, 0.015), transparent 60%);
+      inset: -20%;
       pointer-events: none;
       z-index: 0;
+      will-change: transform;
+    }
+    body::before {
+      background: radial-gradient(720px 540px at 80% 15%, rgba(250, 246, 235, 0.030), transparent 65%);
+      animation: drift1 36s ease-in-out infinite alternate;
+    }
+    body::after {
+      background: radial-gradient(640px 480px at 15% 85%, rgba(107, 160, 132, 0.045), transparent 65%);
+      animation: drift2 44s ease-in-out infinite alternate;
+    }
+    @keyframes drift1 {
+      0%   { transform: translate(0%, 0%) scale(1); }
+      100% { transform: translate(-3%, 5%) scale(1.05); }
+    }
+    @keyframes drift2 {
+      0%   { transform: translate(0%, 0%) scale(1); }
+      100% { transform: translate(4%, -4%) scale(1.08); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body::before, body::after { animation: none; }
+    }
+
+    /* Scroll progress hairline */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--emerald) 50%, transparent);
+      transform-origin: left center;
+      transform: scaleX(var(--p, 0));
+      z-index: 100;
+      transition: transform 0.12s ease-out;
+      pointer-events: none;
     }
 
     main, nav, footer { position: relative; z-index: 1; }
@@ -232,6 +264,29 @@
       min-height: calc(100vh - 60px);
       display: flex;
       align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, var(--emerald-soft), transparent 60%);
+      filter: blur(50px);
+      left: var(--mx, 50%);
+      top: var(--my, 50%);
+      transform: translate(-50%, -50%);
+      transition: left 0.55s cubic-bezier(0.22, 1, 0.36, 1), top 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0;
+      z-index: 0;
+    }
+    .hero:hover .hero-glow { opacity: 1; }
+    .hero > * { position: relative; z-index: 1; }
+    .hero > .hero-glow { z-index: 0; }
+    @media (max-width: 920px) {
+      .hero-glow { display: none; }
     }
     .hero-grid {
       max-width: var(--max);
@@ -1075,6 +1130,7 @@
   <main>
 
     <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-grid">
         <div>
           <span class="badge">
@@ -1299,9 +1355,9 @@
           <h3>1,000+ unconverted leads, recovered with one automation.</h3>
           <p>A real Las Vegas service business sitting on a year of lead-gen ad spend with no follow-up system. We ran our own Assessment on it, identified lead recovery as the #1 ROI play, and built the upsell ourselves to validate the playbook. The Assessment was the same one we sell. The build proved the upsell menu.</p>
           <div class="proof-metrics">
-            <div><span>1,000+</span><span>Leads in queue</span></div>
-            <div><span>$9k</span><span>Monthly baseline</span></div>
-            <div><span>+30%</span><span>Projected lift</span></div>
+            <div><span data-target="1000" data-suffix="+" data-comma>1,000+</span><span>Leads in queue</span></div>
+            <div><span data-target="9" data-prefix="$" data-suffix="k">$9k</span><span>Monthly baseline</span></div>
+            <div><span data-target="30" data-prefix="+" data-suffix="%">+30%</span><span>Projected lift</span></div>
           </div>
           <a href="/case-study" class="btn btn-ghost">Read the full case study</a>
         </div>
@@ -1505,11 +1561,74 @@
   </footer>
 
   <script>
+    // Stagger reveals within grids — sibling cards animate in sequence
+    document.querySelectorAll('.problems-grid, .outcomes-grid, .assessment-grid, .surface-grid, .process-grid, .builds-grid').forEach(grid => {
+      [...grid.children].forEach((child, i) => {
+        if (child.classList.contains('reveal')) {
+          child.style.transitionDelay = `${Math.min(i * 90, 540)}ms`;
+        }
+      });
+    });
+
     // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Scroll progress hairline
+    const sp = document.createElement('div');
+    sp.className = 'scroll-progress';
+    document.body.prepend(sp);
+    let spTick = false;
+    window.addEventListener('scroll', () => {
+      if (spTick) return;
+      spTick = true;
+      requestAnimationFrame(() => {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        const ratio = max > 0 ? Math.min(1, scrollY / max) : 0;
+        sp.style.setProperty('--p', ratio.toFixed(3));
+        spTick = false;
+      });
+    }, { passive: true });
+
+    // Hero cursor-following glow
+    const hero = document.querySelector('.hero');
+    const heroGlow = document.querySelector('.hero-glow');
+    if (hero && heroGlow && matchMedia('(hover: hover)').matches) {
+      hero.addEventListener('pointermove', e => {
+        const rect = hero.getBoundingClientRect();
+        heroGlow.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+        heroGlow.style.setProperty('--my', `${e.clientY - rect.top}px`);
+      });
+    }
+
+    // Number count-up on view
+    function animateNum(el) {
+      const target = +el.dataset.target;
+      const pre = el.dataset.prefix || '';
+      const suf = el.dataset.suffix || '';
+      const useComma = el.hasAttribute('data-comma');
+      const dur = 1500;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v = Math.round(target * eased);
+        el.textContent = pre + (useComma ? v.toLocaleString() : v) + suf;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const numIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !e.target.dataset.animated) {
+          e.target.dataset.animated = '1';
+          animateNum(e.target);
+        }
+      });
+    }, { threshold: 0.55 });
+    document.querySelectorAll('[data-target]').forEach(el => numIO.observe(el));
 
     // ROI calc
     const hours = document.getElementById('hours');
