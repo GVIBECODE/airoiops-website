@@ -28,6 +28,18 @@ const translations = {
     'stats.price': 'fixed price',
     'stats.refund': 'yours forever',
 
+    'problems.kicker': "What you're actually fighting",
+    'problems.h2': "Most AI consulting <span class=\"grad\">won't say this out loud.</span>",
+    'problems.lede': 'Four leaks are eating most small businesses right now. The tech stack is incidental. The leak is the problem.',
+    'problems.c1_title': 'Hours burned on manual work',
+    'problems.c1_body': "Quotes, follow-ups, invoices, inbox triage, scheduling. Most of it doesn't need you. Most of it doesn't get done well anyway. The day ends and you wonder where it went.",
+    'problems.c2_title': 'Money leaking out the back door',
+    'problems.c2_body': "Dead ad spend. Leads who texted at 9pm and never heard back. $50-an-hour labor on $0 work. Every leak is small. Stack them up and they're a whole employee's salary.",
+    'problems.c3_title': 'No system that closes the loop',
+    'problems.c3_body': "Lead drops in. Sits. Goes cold. Or you scramble at midnight to send a quote you'll forget you sent. Selling, but not converting, is the most expensive way to grow.",
+    'problems.c4_title': 'Tools built for enterprise, not you',
+    'problems.c4_body': "Most \"AI for business\" is sold by people who've never run one. Wrong stack, wrong price, wrong language. By the time you finish onboarding, the quarter's over.",
+
     'outcomes.kicker': 'What you actually get back',
     'outcomes.h2': "Forget the tools. <span class=\"grad\">This is what you're buying.</span>",
     'outcomes.lede': "The roadmap, the report, the automations. None of that is why you'd hire us. You're buying these four things. Everything else is just how we deliver them.",
@@ -55,10 +67,31 @@ const translations = {
     'assessment.c2_body': '5-7 DIY recommendations ranked by ROI and effort. Tools you can subscribe to, integrations you can configure in an afternoon, prompts you can paste into ChatGPT today.',
     'assessment.c3_title': 'Upsell Menu',
     'assessment.c3_body': "Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.",
-    'assessment.c4_title': '90-Day Roadmap',
-    'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Quarterly milestones, prioritized backlog, no fluff.',
+    'assessment.c4_title': 'AI Roadmap',
+    'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Phased milestones, prioritized backlog, no fluff.',
     'assessment.cta': 'Book your free Discovery Call',
     'assessment.cta_alt': 'Or skip the call, fill the intake',
+
+    'surface.kicker': 'Where AI lands hardest',
+    'surface.h2': "Pick the leak. <span class=\"grad\">We've got a play for it.</span>",
+    'surface.lede': "AI doesn't transform anything on its own. Plugged into the right hole in your ops, it pays for itself fast.",
+    'surface.dept_sales': 'Sales',
+    'surface.dept_ops': 'Ops',
+    'surface.dept_support': 'Support',
+    'surface.dept_finance': 'Finance',
+    'surface.dept_marketing': 'Marketing',
+    'surface.c1_title': 'Lead Recovery',
+    'surface.c1_body': "Recover the leads that already paid you to acquire. We've recovered over a thousand on a single audit.",
+    'surface.c2_title': 'Speed-to-Lead',
+    'surface.c2_body': 'AI voice and SMS agent that responds to inbound leads in under 60 seconds. Books appointments while you sleep.',
+    'surface.c3_title': 'Quote and Proposal Automation',
+    'surface.c3_body': 'Pull data from a form, draft a quote, send the contract, and follow up. The whole back-office stops eating you.',
+    'surface.c4_title': 'Customer Support',
+    'surface.c4_body': "A custom GPT trained on your FAQs, pricing, and SOPs. 24/7 answers that don't sound like a chatbot.",
+    'surface.c5_title': 'Bookkeeping and Receipts',
+    'surface.c5_body': 'Auto-categorize, sync to QuickBooks, never sit in a spreadsheet on a Sunday again.',
+    'surface.c6_title': 'Marketing Engine',
+    'surface.c6_body': "Replace the agency that's been billing you for three months with no leads. Local SEO, ads audit, content engine.",
 
     'upsells.kicker': 'Optional Builds',
     'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
@@ -116,7 +149,7 @@ const translations = {
     'faq.q3': 'Do you only serve small businesses in Las Vegas?',
     'faq.a3': 'We are based in Las Vegas and we work with small business owners across Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, and Indian Springs. The entire assessment runs over email and one short call, so we also serve remote clients anywhere in the United States.',
     'faq.q4': 'What is included in the AI Business Assessment?',
-    'faq.a4': 'An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a 90-day roadmap with quarterly milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.',
+    'faq.a4': 'An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a sequenced AI roadmap with prioritized milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.',
     'faq.q5': 'Will the AI tools work with the software I already use?',
     'faq.a5': 'Yes. Every Quick Win is scoped against your actual stack (CRM, email, scheduling, billing, ads). Builds run inside the tools you already pay for, not on a new platform. You own every credential.',
     'faq.q6': 'Do I need technical skills to ship the Quick Wins?',
@@ -320,6 +353,18 @@ const translations = {
     'stats.price': 'precio fijo',
     'stats.refund': 'tuyo para siempre',
 
+    'problems.kicker': 'Contra qué peleas en realidad',
+    'problems.h2': 'La mayoría de la consultoría de IA <span class="grad">no dirá esto en voz alta.</span>',
+    'problems.lede': 'Cuatro fugas se están comiendo a la mayoría de los pequeños negocios. El stack tecnológico es accesorio. La fuga es el problema.',
+    'problems.c1_title': 'Horas quemadas en trabajo manual',
+    'problems.c1_body': 'Cotizaciones, seguimientos, facturas, triaje del inbox, programación. La mayoría no te necesita a ti. La mayoría no se hace bien de todos modos. Termina el día y te preguntas a dónde se fue.',
+    'problems.c2_title': 'Dinero fugándose por la puerta de atrás',
+    'problems.c2_body': 'Gasto publicitario muerto. Leads que mandaron mensaje a las 9pm y nunca recibieron respuesta. Mano de obra de $50 por hora en trabajo de $0. Cada fuga es pequeña. Súmalas y son el salario completo de un empleado.',
+    'problems.c3_title': 'Sin sistema que cierre el círculo',
+    'problems.c3_body': 'Entra un lead. Se queda. Se enfría. O corres a medianoche a enviar una cotización que olvidarás haber enviado. Vender, pero no convertir, es la forma más cara de crecer.',
+    'problems.c4_title': 'Herramientas hechas para empresas grandes, no para ti',
+    'problems.c4_body': 'La mayoría del "IA para negocios" la venden personas que nunca han manejado uno. Stack equivocado, precio equivocado, lenguaje equivocado. Para cuando terminas el onboarding, el trimestre ya acabó.',
+
     'outcomes.kicker': 'Lo que realmente recibes',
     'outcomes.h2': 'Olvídate de las herramientas. <span class="grad">Esto es lo que estás comprando.</span>',
     'outcomes.lede': 'La hoja de ruta, el reporte, las automatizaciones. Nada de eso es por lo que nos contratarías. Lo que compras son estas cuatro cosas. Todo lo demás es solo cómo las entregamos.',
@@ -347,10 +392,31 @@ const translations = {
     'assessment.c2_body': '5-7 recomendaciones DIY clasificadas por ROI y esfuerzo. Herramientas a las que puedes suscribirte, integraciones que puedes configurar en una tarde, prompts que puedes pegar en ChatGPT hoy.',
     'assessment.c3_title': 'Menú de upsells',
     'assessment.c3_body': 'Construcciones opcionales con precios para las jugadas grandes: Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier. Elige lo que quieres, salta lo que no. Cada construcción se define en alcance antes de comprometerte, con un precio piso transparente más un porcentaje de tu ROI proyectado.',
-    'assessment.c4_title': 'Hoja de ruta de 90 días',
-    'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos trimestrales, backlog priorizado, sin relleno.',
+    'assessment.c4_title': 'Hoja de ruta IA',
+    'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos por fases, backlog priorizado, sin relleno.',
     'assessment.cta': 'Agenda tu llamada gratis',
     'assessment.cta_alt': 'O salta la llamada, llena el cuestionario',
+
+    'surface.kicker': 'Dónde la IA aterriza más fuerte',
+    'surface.h2': 'Elige la fuga. <span class="grad">Tenemos una jugada para ella.</span>',
+    'surface.lede': 'La IA no transforma nada por sí sola. Conectada al hoyo correcto en tus operaciones, se paga sola rápido.',
+    'surface.dept_sales': 'Ventas',
+    'surface.dept_ops': 'Operaciones',
+    'surface.dept_support': 'Soporte',
+    'surface.dept_finance': 'Finanzas',
+    'surface.dept_marketing': 'Marketing',
+    'surface.c1_title': 'Recuperación de Leads',
+    'surface.c1_body': 'Recupera los leads que ya pagaste para adquirir. Hemos recuperado más de mil en una sola auditoría.',
+    'surface.c2_title': 'Speed-to-Lead',
+    'surface.c2_body': 'Agente de IA de voz y SMS que responde a los leads entrantes en menos de 60 segundos. Agenda citas mientras duermes.',
+    'surface.c3_title': 'Automatización de Cotizaciones y Propuestas',
+    'surface.c3_body': 'Extrae datos de un formulario, redacta una cotización, envía el contrato y haz seguimiento. Toda la oficina trasera deja de comerte.',
+    'surface.c4_title': 'Soporte al Cliente',
+    'surface.c4_body': 'Un GPT personalizado entrenado en tus FAQs, precios y SOPs. Respuestas 24/7 que no suenan como un chatbot.',
+    'surface.c5_title': 'Contabilidad y Recibos',
+    'surface.c5_body': 'Categoriza automáticamente, sincroniza con QuickBooks, nunca más sentado frente a una hoja de cálculo un domingo.',
+    'surface.c6_title': 'Motor de Marketing',
+    'surface.c6_body': 'Reemplaza a la agencia que te ha estado facturando por tres meses sin leads. SEO local, auditoría de anuncios, motor de contenido.',
 
     'upsells.kicker': 'Construcciones opcionales',
     'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
@@ -408,7 +474,7 @@ const translations = {
     'faq.q3': '¿Solo atienden a pequeñas empresas en Las Vegas?',
     'faq.a3': 'Estamos basados en Las Vegas y trabajamos con dueños de pequeñas empresas en Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, e Indian Springs. Toda la evaluación se hace por correo y una llamada corta, así que también atendemos clientes remotos en cualquier parte de Estados Unidos.',
     'faq.q4': '¿Qué incluye la Evaluación de Negocio con IA?',
-    'faq.a4': 'Una auditoría de operaciones de tus herramientas y flujos, 5-7 Quick Wins DIY que puedes lanzar tú mismo, un menú transparente de upsells para las construcciones más grandes (agentes Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier), y una hoja de ruta de 90 días con hitos trimestrales. Todo en un reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos.',
+    'faq.a4': 'Una auditoría de operaciones de tus herramientas y flujos, 5-7 Quick Wins DIY que puedes lanzar tú mismo, un menú transparente de upsells para las construcciones más grandes (agentes Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier), y una hoja de ruta IA secuenciada con hitos priorizados. Todo en un reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos.',
     'faq.q5': '¿Las herramientas de IA funcionarán con el software que ya uso?',
     'faq.a5': 'Sí. Cada Quick Win se diseña sobre tu stack actual (CRM, correo, agendas, cobros, anuncios). Las construcciones corren dentro de las herramientas que ya pagas, no en una nueva plataforma. Tú eres dueño de cada credencial.',
     'faq.q6': '¿Necesito conocimientos técnicos para lanzar los Quick Wins?',
@@ -745,3 +811,39 @@ navLinks.forEach(link => {
     }
   });
 });
+
+/* --- Mobile nav drawer toggle --- */
+(function setupMobileNav() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  const toggle = nav.querySelector('.nav-toggle');
+  const links = nav.querySelector('.nav-links');
+  const backdrop = nav.querySelector('.nav-backdrop');
+  if (!toggle || !links) return;
+
+  function close() {
+    nav.classList.remove('is-open');
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-locked');
+  }
+  function open() {
+    nav.classList.add('is-open');
+    links.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('nav-locked');
+  }
+  toggle.addEventListener('click', () => {
+    if (nav.classList.contains('is-open')) close(); else open();
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  if (backdrop) backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) close();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
+  });
+})();

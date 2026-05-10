@@ -54,7 +54,7 @@
         "url": "https://airoiops.com/",
         "logo": "https://airoiops.com/og-image.png",
         "image": "https://airoiops.com/og-image.png",
-        "priceRange": "$500 - $4,500",
+        "priceRange": "$750 - $4,500",
         "currenciesAccepted": "USD",
         "paymentAccepted": "Credit Card, Bank Transfer",
         "address": {
@@ -112,7 +112,7 @@
         ],
         "makesOffer": [
           { "@type": "Offer", "name": "AI Business Assessment", "price": "1000", "priceCurrency": "USD", "url": "https://airoiops.com/#assessment", "description": "Fixed price diagnostic. Quantifies projected ROI in writing before any build contract." },
-          { "@type": "Offer", "name": "Forensic Ad Audit", "price": "500", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells", "description": "Fixed price diagnostic. 6-8 page audit of 6-12 months of paid ad spend, mapped against the operator's actual paying-customer ledger. 48-hour turnaround." },
+          { "@type": "Offer", "name": "Forensic Ad Audit", "price": "750", "priceCurrency": "USD", "url": "https://airoiops.com/#upsells", "description": "Fixed price diagnostic. 6-8 page audit of 6-12 months of paid ad spend, mapped against the operator's actual paying-customer ledger. 48-hour turnaround." },
           { "@type": "Offer", "name": "Zapier Automation Build", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 1500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $1,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
           { "@type": "Offer", "name": "Custom GPT", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 2500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $2,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
           { "@type": "Offer", "name": "Speed-to-Lead AI Agent", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 3500, "priceCurrency": "USD" }, "url": "https://airoiops.com/#upsells", "description": "Floor price $3,500. Charged at the floor or 20% of projected first-year ROI, whichever is greater." },
@@ -135,7 +135,7 @@
         "name": "AI Business Assessment",
         "provider": { "@id": "https://airoiops.com/#business" },
         "serviceType": "AI consulting",
-        "description": "A 12-18 page custom AI Roadmap delivered in 48 hours. Includes operations audit, 5-7 DIY Quick Wins ranked by ROI, transparent upsell menu, and a 90-day roadmap.",
+        "description": "A 12-18 page custom AI Roadmap delivered in 48 hours. Includes operations audit, 5-7 DIY Quick Wins ranked by ROI, transparent upsell menu, and a sequenced AI roadmap.",
         "areaServed": [
           { "@type": "City", "name": "Las Vegas" },
           { "@type": "Country", "name": "United States" }
@@ -180,7 +180,7 @@
             "name": "What is included in the AI Business Assessment?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a 90-day roadmap with quarterly milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call."
+              "text": "An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a sequenced AI roadmap with prioritized milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call."
             }
           },
           {
@@ -224,11 +224,16 @@
 
   <nav class="nav">
     <a href="#" class="logo">AIROI<span>OPS</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-backdrop" aria-hidden="true"></div>
     <div class="nav-links">
       <a href="#assessment" data-i18n="nav.assessment">Assessment</a>
       <a href="#upsells" data-i18n="nav.builds">Builds</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
       <a href="#proof" data-i18n="nav.proof">Proof</a>
+      <a href="/customers/" data-i18n="nav.customers">Customers</a>
       <div class="nav-lang" role="group" aria-label="Language">
         <button data-lang="en" type="button" aria-label="English">EN</button>
         <span class="nav-lang-sep" aria-hidden="true">·</span>
@@ -294,6 +299,34 @@
     <div class="stat"><div class="num" data-target="100" data-suffix="%">100%</div><div class="lbl" data-i18n="stats.refund">yours forever</div></div>
   </section>
 
+  <section id="problems" class="assessment">
+    <div class="kicker" data-i18n="problems.kicker">What you're actually fighting</div>
+    <h2 data-i18n="problems.h2">Most AI consulting <span class="grad">won't say this out loud.</span></h2>
+    <p class="section-lede" data-i18n="problems.lede">Four leaks are eating most small businesses right now. The tech stack is incidental. The leak is the problem.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-num">10-15 hrs<span class="card-num-suf"> /wk</span></div>
+        <h3 data-i18n="problems.c1_title">Hours burned on manual work</h3>
+        <p data-i18n="problems.c1_body">Quotes, follow-ups, invoices, inbox triage, scheduling. Most of it doesn't need you. Most of it doesn't get done well anyway. The day ends and you wonder where it went.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">$20-50k<span class="card-num-suf"> /yr</span></div>
+        <h3 data-i18n="problems.c2_title">Money leaking out the back door</h3>
+        <p data-i18n="problems.c2_body">Dead ad spend. Leads who texted at 9pm and never heard back. $50-an-hour labor on $0 work. Every leak is small. Stack them up and they're a whole employee's salary.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">~78%<span class="card-num-suf"> cold</span></div>
+        <h3 data-i18n="problems.c3_title">No system that closes the loop</h3>
+        <p data-i18n="problems.c3_body">Lead drops in. Sits. Goes cold. Or you scramble at midnight to send a quote you'll forget you sent. Selling, but not converting, is the most expensive way to grow.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">$20k+<span class="card-num-suf"> floor</span></div>
+        <h3 data-i18n="problems.c4_title">Tools built for enterprise, not you</h3>
+        <p data-i18n="problems.c4_body">Most "AI for business" is sold by people who've never run one. Wrong stack, wrong price, wrong language. By the time you finish onboarding, the quarter's over.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="outcomes" class="assessment">
     <div class="kicker" data-i18n="outcomes.kicker">What you actually get back</div>
     <h2 data-i18n="outcomes.h2">Forget the tools. <span class="grad">This is what you're buying.</span></h2>
@@ -351,8 +384,8 @@
       </div>
       <div class="card">
         <div class="card-num">04</div>
-        <h3 data-i18n="assessment.c4_title">90-Day Roadmap</h3>
-        <p data-i18n="assessment.c4_body">The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Quarterly milestones, prioritized backlog, no fluff.</p>
+        <h3 data-i18n="assessment.c4_title">AI Roadmap</h3>
+        <p data-i18n="assessment.c4_body">The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Phased milestones, prioritized backlog, no fluff.</p>
       </div>
     </div>
     <div class="section-cta">
@@ -364,13 +397,51 @@
     </div>
   </section>
 
+  <section id="surface" class="assessment">
+    <div class="kicker" data-i18n="surface.kicker">Where AI lands hardest</div>
+    <h2 data-i18n="surface.h2">Pick the leak. <span class="grad">We've got a play for it.</span></h2>
+    <p class="section-lede" data-i18n="surface.lede">AI doesn't transform anything on its own. Plugged into the right hole in your ops, it pays for itself fast.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_sales">Sales</span></div>
+        <h3 data-i18n="surface.c1_title">Lead Recovery</h3>
+        <p data-i18n="surface.c1_body">Recover the leads that already paid you to acquire. We've recovered over a thousand on a single audit.</p>
+      </div>
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_sales">Sales</span></div>
+        <h3 data-i18n="surface.c2_title">Speed-to-Lead</h3>
+        <p data-i18n="surface.c2_body">AI voice and SMS agent that responds to inbound leads in under 60 seconds. Books appointments while you sleep.</p>
+      </div>
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_ops">Ops</span></div>
+        <h3 data-i18n="surface.c3_title">Quote and Proposal Automation</h3>
+        <p data-i18n="surface.c3_body">Pull data from a form, draft a quote, send the contract, and follow up. The whole back-office stops eating you.</p>
+      </div>
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_support">Support</span></div>
+        <h3 data-i18n="surface.c4_title">Customer Support</h3>
+        <p data-i18n="surface.c4_body">A custom GPT trained on your FAQs, pricing, and SOPs. 24/7 answers that don't sound like a chatbot.</p>
+      </div>
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_finance">Finance</span></div>
+        <h3 data-i18n="surface.c5_title">Bookkeeping and Receipts</h3>
+        <p data-i18n="surface.c5_body">Auto-categorize, sync to QuickBooks, never sit in a spreadsheet on a Sunday again.</p>
+      </div>
+      <div class="card">
+        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_marketing">Marketing</span></div>
+        <h3 data-i18n="surface.c6_title">Marketing Engine</h3>
+        <p data-i18n="surface.c6_body">Replace the agency that's been billing you for three months with no leads. Local SEO, ads audit, content engine.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="upsells" class="upsells">
     <div class="kicker" data-i18n="upsells.kicker">Optional Builds</div>
     <h2 data-i18n="upsells.h2">If you want us to <span class="grad">build it</span>, here's the menu.</h2>
     <p class="section-lede" data-i18n="upsells.lede">The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.</p>
     <div class="grid">
       <div class="card">
-        <div class="card-num">$500</div>
+        <div class="card-num">$750</div>
         <h3 data-i18n="upsells.audit_title">Forensic Ad Audit</h3>
         <p data-i18n="upsells.audit_body">Full forensic pull of your last 6-12 months of paid ad spend (Google, Meta, or both). We map every reported conversion to your actual paying-customer ledger and surface the waste your last agency missed. 6-8 page audit report in 48 hours.</p>
       </div>
@@ -451,6 +522,22 @@
       </div>
       <a href="/case-study" class="btn btn-ghost" data-i18n="proof.cta">Read the full case study</a>
     </div>
+
+    <div class="proof-card" style="margin-top: 24px;">
+      <div class="proof-tag">CUSTOMER STORY · POOP SCOOP DUDE · LAS VEGAS</div>
+      <h3>The rebuild: 4 disconnected systems consolidated into one AI operating system.</h3>
+      <p>The same Las Vegas residential service from the assessment, rebuilt all the way through. Subpar Zapier automation retired. Sweep&amp;Go to QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.</p>
+      <div class="proof-metrics">
+        <div><span data-target="4" data-suffix=" → 1">4 → 1</span><span>systems consolidated</span></div>
+        <div><span data-target="4500" data-prefix="$" data-suffix="+" data-comma>$4,500+</span><span>ad waste reallocated</span></div>
+        <div><span data-target="100" data-suffix="%">100%</span><span>inbound texts answered</span></div>
+      </div>
+      <a href="/customers/poop-scoop-dude" class="btn btn-ghost">See the full rebuild</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 28px;">
+      <a href="/customers/" class="btn btn-ghost" style="font-size: 14px;">Browse all customer stories</a>
+    </div>
   </section>
 
   <section id="faq" class="faq">
@@ -471,7 +558,7 @@
       </details>
       <details class="faq-item">
         <summary data-i18n="faq.q4">What is included in the AI Business Assessment?</summary>
-        <p data-i18n="faq.a4">An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a 90-day roadmap with quarterly milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.</p>
+        <p data-i18n="faq.a4">An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a sequenced AI roadmap with prioritized milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq.q5">Will the AI tools work with the software I already use?</summary>
