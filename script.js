@@ -232,6 +232,7 @@ const translations = {
     'form.heard_referral': 'Friend or referral',
     'form.heard_other': 'Other',
     'form.heard_other_ph': 'Tell us where you heard about us',
+    'form.referral_ph': 'Their name, so we can thank them',
     'form.submit': 'Submit and get your Calendly link',
 
     'thanks.title': 'Got it | AIROIOPS',
@@ -277,6 +278,7 @@ const translations = {
     'intake.heard_referral': 'Friend or referral',
     'intake.heard_other': 'Other',
     'intake.heard_other_ph': 'Tell us where you heard about us',
+    'intake.referral_ph': 'Their name, so we can thank them',
     'intake.contact_name': 'Your name',
     'intake.business_name': 'Business name',
     'intake.email': 'Best email',
@@ -588,6 +590,7 @@ const translations = {
     'form.heard_referral': 'Amigo o referido',
     'form.heard_other': 'Otro',
     'form.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'form.referral_ph': 'Su nombre, para poder agradecerle',
     'form.submit': 'Enviar y recibir tu enlace de Calendly',
 
     'thanks.title': 'Recibido | AIROIOPS',
@@ -633,6 +636,7 @@ const translations = {
     'intake.heard_referral': 'Amigo o referido',
     'intake.heard_other': 'Otro',
     'intake.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'intake.referral_ph': 'Su nombre, para poder agradecerle',
     'intake.contact_name': 'Tu nombre',
     'intake.business_name': 'Nombre del negocio',
     'intake.email': 'Correo electrónico',
@@ -813,6 +817,12 @@ function syncHeardOtherInput() {
     input.classList.toggle('is-visible', isOther);
     input.required = isOther;
     if (!isOther) input.value = '';
+  });
+  document.querySelectorAll('.referral-input').forEach(input => {
+    const isReferral = value === 'Friend or referral';
+    input.classList.toggle('is-visible', isReferral);
+    input.required = isReferral;
+    if (!isReferral) input.value = '';
   });
 }
 document.querySelectorAll('input[name="heard_from"]').forEach(radio => {
