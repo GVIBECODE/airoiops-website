@@ -28,24 +28,6 @@ const translations = {
     'stats.price': 'fixed price',
     'stats.refund': 'yours forever',
 
-    'outcomes.kicker': 'What you actually get back',
-    'outcomes.h2': "Forget the tools. <span class=\"grad\">This is what you're buying.</span>",
-    'outcomes.lede': "The roadmap, the report, the automations. None of that is why you'd hire us. You're buying these four things. Everything else is just how we deliver them.",
-    'outcomes.c1_label': 'Time',
-    'outcomes.c1_title': 'Your nights and weekends back',
-    'outcomes.c1_body': "Most operators we work with were burning 10 to 15 hours a week on quotes, follow-ups, invoices, and inbox triage. Most of that work doesn't need you. Get those hours back for family, for sleep, or for the moves only you can make.",
-    'outcomes.c2_label': 'Money',
-    'outcomes.c2_title': "The leaks you didn't know you had",
-    'outcomes.c2_body': 'Dead ad spend. Leads who texted at 9pm and never heard back. Manual work paid at $50 an hour that should cost zero. The audit usually finds $20k to $50k a year in leak on the first pass. Plug it once, keep the savings every year after.',
-    'outcomes.c3_label': 'Freedom',
-    'outcomes.c3_title': "A business that doesn't need you for everything",
-    'outcomes.c3_body': "Lead follow-up runs without you. Quotes go out without you. The small stuff stops eating the day so you can work on the business instead of in it. The point isn't to do AI. It's to be free of the $20-an-hour tasks that have been holding you hostage.",
-    'outcomes.c4_label': 'Leverage',
-    'outcomes.c4_title': 'Compounding, not one-time',
-    'outcomes.c4_body': "An employee costs you again every month. The plays we install keep paying every month at zero extra cost. Year two is pure margin. That's the difference between hiring help and building leverage.",
-    'outcomes.cta': 'Book a free Discovery Call',
-    'outcomes.cta_alt': 'See how we deliver it',
-
     'assessment.kicker': 'The Assessment',
     'assessment.h2': 'What you actually get for <span class="grad">$1,000</span>.',
     'assessment.lede': "No 90-day discovery phase. No slide deck disguised as a deliverable. A 12-18 page custom roadmap with Quick Wins you can ship yourself, plus transparent pricing for the upsells if you'd rather hand off.",
@@ -63,8 +45,6 @@ const translations = {
     'upsells.kicker': 'Optional Builds',
     'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
     'upsells.lede': "The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.",
-    'upsells.audit_title': 'Forensic Ad Audit',
-    'upsells.audit_body': "Full forensic pull of your last 6-12 months of paid ad spend (Google, Meta, or both). We map every reported conversion to your actual paying-customer ledger and surface the waste your last agency missed. 6-8 page audit report in 48 hours.",
     'upsells.zap_title': 'Zapier Automation',
     'upsells.zap_body': 'Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.',
     'upsells.gpt_title': 'Custom GPT',
@@ -73,6 +53,8 @@ const translations = {
     'upsells.s2l_body': 'AI voice + SMS agent that responds to inbound leads in under 60 seconds. Books appointments, qualifies fit, hands off hot leads to you. Lives in your CRM.',
     'upsells.po_title': 'Process Optimization',
     'upsells.po_body': 'End-to-end audit of one bottleneck workflow plus the automation rebuild. Best for ops with 5+ tools and a lot of manual data hand-offs.',
+    'upsells.ws_title': 'AI Workshop',
+    'upsells.ws_body': 'Live training for you and your team. Walk in with no AI experience, leave with working tools you actually use the next day.',
     'upsells.ret_title': 'Monthly Retainer',
     'upsells.ret_body': 'Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.',
     'upsells.cta': 'Book a call to scope a build',
@@ -167,7 +149,6 @@ const translations = {
     'form.heard_skool': 'Skool community',
     'form.heard_referral': 'Friend or referral',
     'form.heard_other': 'Other',
-    'form.heard_other_ph': 'Tell us where you heard about us',
     'form.submit': 'Submit and get your Calendly link',
 
     'thanks.title': 'Got it | AIROIOPS',
@@ -212,7 +193,6 @@ const translations = {
     'intake.heard_skool': 'Skool community',
     'intake.heard_referral': 'Friend or referral',
     'intake.heard_other': 'Other',
-    'intake.heard_other_ph': 'Tell us where you heard about us',
     'intake.contact_name': 'Your name',
     'intake.business_name': 'Business name',
     'intake.email': 'Best email',
@@ -320,24 +300,6 @@ const translations = {
     'stats.price': 'precio fijo',
     'stats.refund': 'tuyo para siempre',
 
-    'outcomes.kicker': 'Lo que realmente recibes',
-    'outcomes.h2': 'Olvídate de las herramientas. <span class="grad">Esto es lo que estás comprando.</span>',
-    'outcomes.lede': 'La hoja de ruta, el reporte, las automatizaciones. Nada de eso es por lo que nos contratarías. Lo que compras son estas cuatro cosas. Todo lo demás es solo cómo las entregamos.',
-    'outcomes.c1_label': 'Tiempo',
-    'outcomes.c1_title': 'Tus noches y fines de semana de vuelta',
-    'outcomes.c1_body': 'La mayoría de los operadores con los que trabajamos quemaban 10 a 15 horas a la semana en cotizaciones, seguimientos, facturas y bandeja de entrada. La mayor parte de ese trabajo no te necesita. Recupera esas horas para tu familia, para dormir, o para las jugadas que solo tú puedes hacer.',
-    'outcomes.c2_label': 'Dinero',
-    'outcomes.c2_title': 'Las fugas que no sabías que tenías',
-    'outcomes.c2_body': 'Gasto en anuncios desperdiciado. Leads que escribieron a las 9pm y nunca recibieron respuesta. Trabajo manual pagado a $50 la hora que debería costar cero. La auditoría suele encontrar de $20k a $50k al año en fugas en la primera pasada. Tápalas una vez, conserva el ahorro cada año después.',
-    'outcomes.c3_label': 'Libertad',
-    'outcomes.c3_title': 'Un negocio que no te necesita para todo',
-    'outcomes.c3_body': 'El seguimiento de leads corre sin ti. Las cotizaciones salen sin ti. Lo pequeño deja de comerte el día para que puedas trabajar sobre el negocio en lugar de dentro de él. El punto no es hacer IA. Es liberarte de las tareas de $20 la hora que te han tenido como rehén.',
-    'outcomes.c4_label': 'Palanca',
-    'outcomes.c4_title': 'Compuesto, no de una sola vez',
-    'outcomes.c4_body': 'Un empleado te cuesta de nuevo cada mes. Las jugadas que instalamos siguen pagando cada mes sin costo extra. El año dos es puro margen. Esa es la diferencia entre contratar ayuda y construir palanca.',
-    'outcomes.cta': 'Agenda tu llamada gratis',
-    'outcomes.cta_alt': 'Mira cómo lo entregamos',
-
     'assessment.kicker': 'La evaluación',
     'assessment.h2': 'Lo que realmente obtienes por <span class="grad">$1,000</span>.',
     'assessment.lede': 'Sin fase de descubrimiento de 90 días. Sin presentación disfrazada de entregable. Una hoja de ruta personalizada de 12-18 páginas con Quick Wins que puedes lanzar tú mismo, más precios transparentes para los upsells si prefieres delegar.',
@@ -355,8 +317,6 @@ const translations = {
     'upsells.kicker': 'Construcciones opcionales',
     'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
     'upsells.lede': 'La evaluación es el entregable. Los Quick Wins son DIY a propósito. Si prefieres delegar las jugadas más grandes, cada construcción tiene un precio piso abajo. Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación pone tu número de ROI en papel antes de que haya contrato. Construido en tu stack. Tú eres dueño de cada credencial.',
-    'upsells.audit_title': 'Auditoría Forense de Anuncios',
-    'upsells.audit_body': 'Análisis forense completo de tus últimos 6-12 meses de gasto publicitario pagado (Google, Meta, o ambos). Mapeamos cada conversión reportada contra tu libro real de clientes pagados y revelamos el desperdicio que tu última agencia no detectó. Reporte de auditoría de 6-8 páginas en 48 horas.',
     'upsells.zap_title': 'Automatización en Zapier',
     'upsells.zap_body': 'Automatización multi-paso entre las herramientas que ya pagas. Conecta 2-5 apps, maneja los traspasos de datos, corre en tu cuenta de Zapier.',
     'upsells.gpt_title': 'GPT personalizado',
@@ -365,6 +325,8 @@ const translations = {
     'upsells.s2l_body': 'Agente de voz + SMS con IA que responde a leads entrantes en menos de 60 segundos. Agenda citas, califica el fit, te pasa los leads calientes. Vive en tu CRM.',
     'upsells.po_title': 'Optimización de procesos',
     'upsells.po_body': 'Auditoría de extremo a extremo de un flujo cuello de botella, más la reconstrucción automatizada. Ideal para operaciones con 5+ herramientas y muchos traspasos manuales.',
+    'upsells.ws_title': 'Taller de IA',
+    'upsells.ws_body': 'Entrenamiento en vivo para ti y tu equipo. Llegas sin experiencia con IA, sales con herramientas funcionales que usas al día siguiente.',
     'upsells.ret_title': 'Retainer mensual',
     'upsells.ret_body': 'Optimización continua, nuevas construcciones y mantenimiento del stack de IA. Cancela cuando quieras. La mayoría de clientes empieza esto después de su primer upsell.',
     'upsells.cta': 'Agenda una llamada para definir una construcción',
@@ -459,7 +421,6 @@ const translations = {
     'form.heard_skool': 'Comunidad de Skool',
     'form.heard_referral': 'Amigo o referido',
     'form.heard_other': 'Otro',
-    'form.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
     'form.submit': 'Enviar y recibir tu enlace de Calendly',
 
     'thanks.title': 'Recibido | AIROIOPS',
@@ -504,7 +465,6 @@ const translations = {
     'intake.heard_skool': 'Comunidad de Skool',
     'intake.heard_referral': 'Amigo o referido',
     'intake.heard_other': 'Otro',
-    'intake.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
     'intake.contact_name': 'Tu nombre',
     'intake.business_name': 'Nombre del negocio',
     'intake.email': 'Correo electrónico',
@@ -676,21 +636,6 @@ document.addEventListener('submit', (e) => {
 document.querySelectorAll('.nav-lang button').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
-
-function syncHeardOtherInput() {
-  const checked = document.querySelector('input[name="heard_from"]:checked');
-  const value = checked ? checked.value : null;
-  document.querySelectorAll('.heard-other-input').forEach(input => {
-    const isOther = value === 'Other';
-    input.classList.toggle('is-visible', isOther);
-    input.required = isOther;
-    if (!isOther) input.value = '';
-  });
-}
-document.querySelectorAll('input[name="heard_from"]').forEach(radio => {
-  radio.addEventListener('change', syncHeardOtherInput);
-});
-syncHeardOtherInput();
 
 applyLang(detectLang());
 
