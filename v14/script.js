@@ -1,0 +1,783 @@
+const translations = {
+  en: {
+    'meta.title': 'AI Consulting for Small Business in Las Vegas | AIROIOPS',
+    'nav.assessment': 'Assessment',
+    'nav.builds': 'Builds',
+    'nav.how': 'How it works',
+    'nav.proof': 'Proof',
+    'nav.book': 'Book Call',
+
+    'hero.badge': 'Now booking 3 case-study spots at no charge',
+    'hero.h1': 'Real AI ROI. <span class="grad">In 48 hours.</span><br>Yours to keep.',
+    'hero.lede': "We audit your operations, find your highest-leverage AI plays, and deliver a custom 12-18 page AI Roadmap inside 48 hours. Quick Wins you can ship yourself, transparent pricing for the bigger builds you'd rather hand off.",
+    'hero.cta_primary': 'Book a Free Discovery Call',
+    'hero.cta_ghost': 'See the Assessment',
+    'hero.cta_alt_pre': 'Too busy for a call?',
+    'hero.cta_alt_link': 'Skip it and fill the intake on your own time →',
+    'hero.trust': '$1,000 fixed price · 48-hour delivery · DIY or hand off, your call',
+
+    'roi.title': 'Live ROI Calculator',
+    'roi.hours_label': 'Hours / week on repetitive work',
+    'roi.rate_label': 'Effective hourly cost',
+    'roi.subtext': 'Potential annual savings if we automate 60% of this',
+    'roi.hours_unit': 'hrs',
+    'roi.rate_unit': '/hr',
+
+    'stats.days': 'hour turnaround',
+    'stats.automations': 'Quick Wins per report',
+    'stats.price': 'fixed price',
+    'stats.refund': 'yours forever',
+
+    'outcomes.kicker': 'What you actually get back',
+    'outcomes.h2': "Forget the tools. <span class=\"grad\">This is what you're buying.</span>",
+    'outcomes.lede': "The roadmap, the report, the automations. None of that is why you'd hire us. You're buying these four things. Everything else is just how we deliver them.",
+    'outcomes.c1_label': 'Time',
+    'outcomes.c1_title': 'Your nights and weekends back',
+    'outcomes.c1_body': "Most operators we work with were burning 10 to 15 hours a week on quotes, follow-ups, invoices, and inbox triage. Most of that work doesn't need you. Get those hours back for family, for sleep, or for the moves only you can make.",
+    'outcomes.c2_label': 'Money',
+    'outcomes.c2_title': "The leaks you didn't know you had",
+    'outcomes.c2_body': 'Dead ad spend. Leads who texted at 9pm and never heard back. Manual work paid at $50 an hour that should cost zero. The audit usually finds $20k to $50k a year in leak on the first pass. Plug it once, keep the savings every year after.',
+    'outcomes.c3_label': 'Freedom',
+    'outcomes.c3_title': "A business that doesn't need you for everything",
+    'outcomes.c3_body': "Lead follow-up runs without you. Quotes go out without you. The small stuff stops eating the day so you can work on the business instead of in it. The point isn't to do AI. It's to be free of the $20-an-hour tasks that have been holding you hostage.",
+    'outcomes.c4_label': 'Leverage',
+    'outcomes.c4_title': 'Compounding, not one-time',
+    'outcomes.c4_body': "An employee costs you again every month. The plays we install keep paying every month at zero extra cost. Year two is pure margin. That's the difference between hiring help and building leverage.",
+    'outcomes.cta': 'Book a free Discovery Call',
+    'outcomes.cta_alt': 'See how we deliver it',
+
+    'assessment.kicker': 'The Assessment',
+    'assessment.h2': 'What you actually get for <span class="grad">$1,000</span>.',
+    'assessment.lede': "No 90-day discovery phase. No slide deck disguised as a deliverable. A 12-18 page custom roadmap with Quick Wins you can ship yourself, plus transparent pricing for the upsells if you'd rather hand off.",
+    'assessment.c1_title': 'Operations Audit',
+    'assessment.c1_body': 'Deep-dive on your tools, workflows, and data. We map every recurring task in your business and tag it for AI leverage.',
+    'assessment.c2_title': 'Quick Wins You Can Ship',
+    'assessment.c2_body': '5-7 DIY recommendations ranked by ROI and effort. Tools you can subscribe to, integrations you can configure in an afternoon, prompts you can paste into ChatGPT today.',
+    'assessment.c3_title': 'Upsell Menu',
+    'assessment.c3_body': "Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.",
+    'assessment.c4_title': '90-Day Roadmap',
+    'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Quarterly milestones, prioritized backlog, no fluff.',
+    'assessment.cta': 'Book your free Discovery Call',
+    'assessment.cta_alt': 'Or skip the call, fill the intake',
+
+    'upsells.kicker': 'Optional Builds',
+    'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
+    'upsells.lede': "The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.",
+    'upsells.audit_title': 'Forensic Ad Audit',
+    'upsells.audit_body': "Full forensic pull of your last 6-12 months of paid ad spend (Google, Meta, or both). We map every reported conversion to your actual paying-customer ledger and surface the waste your last agency missed. 6-8 page audit report in 48 hours.",
+    'upsells.zap_title': 'Zapier Automation',
+    'upsells.zap_body': 'Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.',
+    'upsells.gpt_title': 'Custom GPT',
+    'upsells.gpt_body': 'A ChatGPT trained on your SOPs, FAQs, pricing, and product docs. Lives in your OpenAI workspace. Use it on your site, in support, or for staff training.',
+    'upsells.s2l_title': 'Speed-to-Lead AI Agent',
+    'upsells.s2l_body': 'AI voice + SMS agent that responds to inbound leads in under 60 seconds. Books appointments, qualifies fit, hands off hot leads to you. Lives in your CRM.',
+    'upsells.po_title': 'Process Optimization',
+    'upsells.po_body': 'End-to-end audit of one bottleneck workflow plus the automation rebuild. Best for ops with 5+ tools and a lot of manual data hand-offs.',
+    'upsells.ret_title': 'Monthly Retainer',
+    'upsells.ret_body': 'Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.',
+    'upsells.cta': 'Book a call to scope a build',
+    'upsells.cta_alt': 'See a real build in action',
+
+    'how.kicker': 'How it works',
+    'how.h2': '48 hours. Three steps. <span class="grad">Real ROI.</span>',
+    'how.day1': 'Day 1',
+    'how.s1_title': 'Tell Us About Your Business',
+    'how.s1_body': 'Free 45-min discovery call OR fill the deep-dive intake on your own time. Either way, we learn your business, tools, and biggest time sinks.',
+    'how.day2': 'Day 1-2',
+    'how.s2_title': 'Audit &amp; Map',
+    'how.s2_body': "We dig in. Map your workflows. Score Quick Wins by ROI. Build your upsell menu so you know what's DIY and what's worth handing off.",
+    'how.day3': 'Day 2-3',
+    'how.s3_title': 'Roadmap Delivered',
+    'how.s3_body': '12-18 page custom report plus a 20-min walk-through call. Clear next step. DIY the Quick Wins, or hand off an upsell to us.',
+    'how.cta': 'Start your 48-hour roadmap',
+
+    'proof.kicker': 'Proof Case',
+    'proof.h2': 'We use this on our own businesses <span class="grad">first.</span>',
+    'proof.tag': 'CASE STUDY · LAS VEGAS RESIDENTIAL SERVICE · 2026',
+    'proof.h3': '1,000+ unconverted leads, recovered with one automation.',
+    'proof.body': 'A real Las Vegas service business sitting on a year of lead-gen ad spend with no follow-up system. We ran our own Assessment on it, identified lead recovery as the #1 ROI play, and built the upsell ourselves to validate the playbook. The Assessment was the same one we sell. The build proved the upsell menu.',
+    'proof.m1': 'leads in queue',
+    'proof.m2': 'monthly baseline',
+    'proof.m3': 'projected lift',
+    'proof.cta': 'Read the full case study',
+
+    'about.kicker': "Who's behind this",
+    'about.h2': 'Built by an operator. <span class="grad">For operators.</span>',
+    'about.body1': "I'm Gianny. I run a residential service business in Las Vegas, and I'm building AIROIOPS to bring real AI leverage to small business owners, the people who actually need it most and get sold to last.",
+    'about.body2': "The Assessment isn't a deck. It's the same playbook I run on my own ops, delivering a custom AI Roadmap in 48 hours. The Quick Wins are yours to ship today; the upsells are there if you'd rather hand off.",
+    'about.cta': 'Book Your Discovery Call',
+
+    'faq.kicker': 'FAQ',
+    'faq.h2': 'Common questions about <span class="grad">AI for small business.</span>',
+    'faq.q1': 'How much does an AI assessment cost for a small business?',
+    'faq.a1': 'Our AI Business Assessment is $1,000 flat. That includes the operations audit, the custom 12-18 page AI Roadmap delivered in 48 hours, and a 20-minute walk-through call. No retainers, no surprise charges, no 90-day discovery phase.',
+    'faq.q2': 'How long does the AI assessment take?',
+    'faq.a2': '48 hours from the time you complete the intake. You can fill the deep-dive intake on your own time or book a 45-minute discovery call. Either way, your custom roadmap lands in your inbox 48 hours later.',
+    'faq.q3': 'Do you only serve small businesses in Las Vegas?',
+    'faq.a3': 'We are based in Las Vegas and we work with small business owners across Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, and Indian Springs. The entire assessment runs over email and one short call, so we also serve remote clients anywhere in the United States.',
+    'faq.q4': 'What is included in the AI Business Assessment?',
+    'faq.a4': 'An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent upsell menu for the bigger builds (Speed-to-Lead AI agents, Custom GPTs, Zapier automations), and a 90-day roadmap with quarterly milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.',
+    'faq.q5': 'Will the AI tools work with the software I already use?',
+    'faq.a5': 'Yes. Every Quick Win is scoped against your actual stack (CRM, email, scheduling, billing, ads). Builds run inside the tools you already pay for, not on a new platform. You own every credential.',
+    'faq.q6': 'Do I need technical skills to ship the Quick Wins?',
+    'faq.a6': 'No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work.',
+    'faq.q7': 'How are the bigger AI builds priced?',
+    'faq.a7': 'Each build has a floor price ($1,500 for Zapier automation, $2,500 for a Custom GPT, $3,500 for a Speed-to-Lead AI agent, $4,500 for a process optimization). We charge the floor or 20% of projected first-year ROI, whichever is greater. The $1,000 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit.',
+    'faq.cta': 'Still got questions? Book a free call',
+
+    'footer.area': 'Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.',
+
+
+    'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
+    'final.body': 'Tell us about your business. We will review and send you a Calendly link within 1 business day.',
+    'final.cta': 'Book a Free Discovery Call',
+    'final.alt_pre': 'Prefer to skip the call?',
+    'final.alt_link': 'Fill the deep-dive intake instead →',
+    'final.sub': 'No spam. No agency rates. No 90-day discovery phases.',
+
+    'form.first_label': 'First name',
+    'form.last_label': 'Last name',
+    'form.email_label': 'Email',
+    'form.business_label': 'Business name',
+    'form.what_label': 'In one sentence, what does your business do?',
+    'form.what_ph': 'We do [X] for [Y] in [Z].',
+    'form.team_label': 'How big is the team?',
+    'form.select_default': 'Select...',
+    'form.team_solo': 'Solo / just me',
+    'form.team_small': '2-5 people',
+    'form.team_med': '6-20 people',
+    'form.team_lg': '21-50 people',
+    'form.team_xl': '50+ people',
+    'form.timesink_label': "What's the #1 task that eats your time every week?",
+    'form.timesink_ph': "Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'.",
+    'form.aitools_label': 'What AI tools are you using today? (Check any that apply)',
+    'form.ai_none': "None / haven't started",
+    'form.ai_occ': 'ChatGPT / Claude (occasional)',
+    'form.ai_daily': 'ChatGPT / Claude (daily)',
+    'form.ai_gpt': 'Custom GPTs trained on my data',
+    'form.ai_zap': 'Zapier or Make automations',
+    'form.ai_voice': 'AI voice agent (Retell, Vapi)',
+    'form.outcome_label': 'If this delivers, what does "worth it" look like to you?',
+    'form.outcome_ph': '10 hours back per week? $5k/mo new revenue? Stop missing leads at night?',
+    'form.heard_label': 'How did you hear about us?',
+    'form.heard_google': 'Google search',
+    'form.heard_linkedin': 'LinkedIn',
+    'form.heard_instagram': 'Instagram',
+    'form.heard_facebook': 'Facebook',
+    'form.heard_skool': 'Skool community',
+    'form.heard_referral': 'Friend or referral',
+    'form.heard_other': 'Other',
+    'form.heard_other_ph': 'Tell us where you heard about us',
+    'form.submit': 'Submit and get your Calendly link',
+
+    'thanks.title': 'Got it | AIROIOPS',
+    'thanks.home': 'Home',
+    'thanks.badge': 'Application received',
+    'thanks.h1': 'Got it. <span class="grad">Now book your call.</span>',
+    'thanks.lede': "Pick a 30-minute slot below. We'll have your answers in front of us when we hop on, so we can spend the time on solutions, not background.",
+    'thanks.book_cta': 'Book your 30-min Discovery Call',
+    'thanks.s1_title': 'Pick a slot',
+    'thanks.s1_body': 'Use the button above. Calendly shows you my real availability and confirms the slot instantly.',
+    'thanks.s2_title': 'Confirmation in your inbox',
+    'thanks.s2_body': "You'll get a confirmation email with the Google Meet link and a calendar invite. Add it so you don't miss the call.",
+    'thanks.s3_title': '30-minute discovery call',
+    'thanks.s3_body': 'We learn your business, your tools, your time sinks. Free, no commitment. You leave with a clearer view of what AI can actually do for you.',
+    'thanks.alt_or': 'or',
+    'thanks.alt_h3': 'No time for a call right now?',
+    'thanks.alt_body': "Skip the call entirely. Fill the deep-dive intake on your own time and we'll have your custom AI Roadmap Report in your inbox inside 48 hours, plus a 20-min walk-through whenever you're ready.",
+    'thanks.alt_cta': 'Fill the deep-dive intake →',
+    'thanks.cta': 'Back to home',
+
+    'footer.location': 'Built in Las Vegas, NV',
+
+    'intake.meta_title': 'AI Business Assessment Intake | AIROIOPS',
+    'intake.back': 'Back to airoiops.com',
+    'intake.eyebrow': 'AI Business Assessment · Self-Serve Intake',
+    'intake.h1': 'Tell us how your business <span class="grad">actually</span> runs.',
+    'intake.lede': 'Skip the call. Fill this on your own time. We turn your answers into a custom 12-18 page AI Roadmap Report inside 48 hours, plus a 20-minute walk-through.',
+    'intake.meta_time_label': 'Time to fill:',
+    'intake.meta_time_val': '~12 minutes',
+    'intake.meta_turn_label': 'Turnaround:',
+    'intake.meta_turn_val': '48 hours',
+    'intake.meta_get_label': 'You get:',
+    'intake.meta_get_val': 'Custom roadmap · Quick Wins · Upsell options',
+
+    'intake.s0_title': 'How to reach you',
+    'intake.s0_sub': 'Just enough to send your report and follow up.',
+    'intake.heard_label': 'How did you hear about us?',
+    'intake.heard_google': 'Google search',
+    'intake.heard_linkedin': 'LinkedIn',
+    'intake.heard_instagram': 'Instagram',
+    'intake.heard_facebook': 'Facebook',
+    'intake.heard_skool': 'Skool community',
+    'intake.heard_referral': 'Friend or referral',
+    'intake.heard_other': 'Other',
+    'intake.heard_other_ph': 'Tell us where you heard about us',
+    'intake.contact_name': 'Your name',
+    'intake.business_name': 'Business name',
+    'intake.email': 'Best email',
+    'intake.phone': 'Best phone (text-friendly?)',
+
+    'intake.s1_title': 'The big questions',
+    'intake.s1_sub': 'Most important section. Bullet points are fine. The rawer the better.',
+    'intake.magic_fix': 'If you could magically fix ONE thing about your operations tomorrow, what would it be?',
+    'intake.biggest_timesuck': "What's the single biggest time-suck in your week?",
+    'intake.biggest_timesuck_help': "The thing you do over and over that you wish you didn't have to.",
+    'intake.lead_flow': 'Walk me through what happens when a new lead comes in. Call/click to payment.',
+    'intake.lead_flow_help': 'Every step. Who does what. Where the data lives.',
+    'intake.time_back': 'If I gave you back 10 hours a week, what would you do with them?',
+
+    'intake.s2_title': 'Quick snapshot',
+    'intake.business_what': 'What does your business do, in one or two sentences?',
+    'intake.business_age': 'How long have you been running it?',
+    'intake.business_age_ph': 'e.g. 14 months, 4 years',
+    'intake.team_size': 'Team size (including you)',
+    'intake.team_size_ph': 'solo, 3, 12…',
+    'intake.industry': 'Industry / what you sell',
+    'intake.region': 'City / region you serve',
+
+    'intake.s3_title': 'Money & marketing',
+    'intake.lead_to_customer_time': 'Lead-to-customer time, on average',
+    'intake.lead_to_customer_time_ph': 'e.g. 1-2 days, 3 weeks',
+    'intake.lead_conversion': '% of leads that become paying customers',
+    'intake.lead_conversion_ph': 'best guess is fine',
+    'intake.attribution': 'How do you track which marketing source produces customers?',
+    'intake.attribution_help': 'Pixel, spreadsheet, gut feel. "I have no idea" is a real answer.',
+    'intake.marketing_spend': "Monthly marketing spend, and what's working",
+    'intake.cost_pain': 'Where does money go that you wish was lower?',
+    'intake.cost_pain_help': 'Software subs, ad spend, contractors, anything.',
+
+    'intake.s4_title': 'Tools & systems',
+    'intake.tools_list': 'What software does your business run on right now?',
+    'intake.tools_list_help': 'List everything: CRM, email, scheduling, billing, accounting, ads. Even the spreadsheets.',
+    'intake.tools_feel': 'Which tools do you love, and which feel like a hassle?',
+    'intake.data_flow': 'How does data flow between tools? Automatically, or manual copy/paste?',
+    'intake.customer_comms': 'Main channel you use with customers',
+    'intake.customer_comms_ph': 'email, text, phone, DMs',
+    'intake.docs_storage': 'Where you store docs & SOPs',
+    'intake.docs_storage_ph': 'Drive, Notion, mostly in my head…',
+    'intake.spreadsheet_creep': "What gets done in a spreadsheet that probably shouldn't be?",
+
+    'intake.s5_title': 'Bottlenecks & headaches',
+    'intake.last_breakdown': 'Last time something went wrong because of a process breakdown. What happened?',
+    'intake.repeat_questions': 'Top 3-5 questions customers ask you over and over',
+    'intake.manual_reports': 'Reports or numbers you build manually every week or month?',
+    'intake.vacation_break': 'What breaks when you go on vacation?',
+    'intake.bus_factor': "If you disappeared tomorrow, what's something only YOU know how to do?",
+    'intake.hate_ranked': "Ranked list. Parts of the job you wish you didn't have to do anymore.",
+    'intake.hate_ranked_help': '#1 = most-want-out-of. Add as many as you want.',
+
+    'intake.s6_title': 'Wrap up',
+    'intake.open_field': "Anything I didn't ask that's important for me to know?",
+    'intake.call_windows': 'Best windows for the 20-minute walk-through call',
+    'intake.call_windows_help': '2-3 options in the next 7-10 days.',
+    'intake.timezone': 'Timezone',
+    'intake.timezone_ph': 'e.g. PT, MT, ET',
+    'intake.website': 'Your website (if any)',
+
+    'intake.submit_note': "You'll get a confirmation email and your custom AI Roadmap Report inside 48 hours.",
+    'intake.submit': 'Send my answers',
+
+    'intake_thanks.title': 'Got your intake | AIROIOPS',
+    'intake_thanks.badge': 'Intake received',
+    'intake_thanks.h1': 'Got it. <span class="grad">Report inbound.</span>',
+    'intake_thanks.lede': 'Your custom AI Roadmap Report will hit your inbox inside 48 hours. While you wait, pre-book your 20-minute walk-through so we move straight to action when the report is ready.',
+    'intake_thanks.book_cta': 'Pre-book your walk-through',
+    'intake_thanks.s1_title': 'We read every word',
+    'intake_thanks.s1_body': 'Your answers go straight to Gianny. No assistant, no AI summarizer, no template. A real custom analysis.',
+    'intake_thanks.s2_title': 'Custom report in 48 hours',
+    'intake_thanks.s2_body': '12-18 pages. Quick Wins you can ship yourself. Upsell options if you want hands-on help. Numbers tied to your actual operation.',
+    'intake_thanks.s3_title': '20-minute walk-through',
+    'intake_thanks.s3_body': 'Live call to walk through the report. You leave with a clear next step, whether you build it yourself or hire us.'
+  },
+
+  es: {
+    'meta.title': 'Consultoría de IA para Pequeñas Empresas en Las Vegas | AIROIOPS',
+    'nav.assessment': 'Evaluación',
+    'nav.builds': 'Construcciones',
+    'nav.how': 'Cómo funciona',
+    'nav.proof': 'Prueba',
+    'nav.book': 'Agendar',
+
+    'hero.badge': 'Aceptando 3 casos de estudio sin costo',
+    'hero.h1': 'ROI real con IA. <span class="grad">En 48 horas.</span><br>Tuyo para siempre.',
+    'hero.lede': 'Auditamos tus operaciones, encontramos las jugadas de IA con mayor impacto, y entregamos una hoja de ruta personalizada de 12-18 páginas en 48 horas. Quick Wins que puedes lanzar tú mismo, precios transparentes para las construcciones más grandes que prefieras delegar.',
+    'hero.cta_primary': 'Agenda una llamada gratis',
+    'hero.cta_ghost': 'Ver la evaluación',
+    'hero.cta_alt_pre': '¿Sin tiempo para una llamada?',
+    'hero.cta_alt_link': 'Sáltala y llena el cuestionario a tu ritmo →',
+    'hero.trust': '$1,000 precio fijo · entrega en 48 horas · DIY o lo delegas, tú decides',
+
+    'roi.title': 'Calculadora de ROI en vivo',
+    'roi.hours_label': 'Horas / semana en trabajo repetitivo',
+    'roi.rate_label': 'Costo efectivo por hora',
+    'roi.subtext': 'Ahorro anual potencial si automatizamos el 60% de esto',
+    'roi.hours_unit': 'hrs',
+    'roi.rate_unit': '/hr',
+
+    'stats.days': 'horas para entregar',
+    'stats.automations': 'Quick Wins por reporte',
+    'stats.price': 'precio fijo',
+    'stats.refund': 'tuyo para siempre',
+
+    'outcomes.kicker': 'Lo que realmente recibes',
+    'outcomes.h2': 'Olvídate de las herramientas. <span class="grad">Esto es lo que estás comprando.</span>',
+    'outcomes.lede': 'La hoja de ruta, el reporte, las automatizaciones. Nada de eso es por lo que nos contratarías. Lo que compras son estas cuatro cosas. Todo lo demás es solo cómo las entregamos.',
+    'outcomes.c1_label': 'Tiempo',
+    'outcomes.c1_title': 'Tus noches y fines de semana de vuelta',
+    'outcomes.c1_body': 'La mayoría de los operadores con los que trabajamos quemaban 10 a 15 horas a la semana en cotizaciones, seguimientos, facturas y bandeja de entrada. La mayor parte de ese trabajo no te necesita. Recupera esas horas para tu familia, para dormir, o para las jugadas que solo tú puedes hacer.',
+    'outcomes.c2_label': 'Dinero',
+    'outcomes.c2_title': 'Las fugas que no sabías que tenías',
+    'outcomes.c2_body': 'Gasto en anuncios desperdiciado. Leads que escribieron a las 9pm y nunca recibieron respuesta. Trabajo manual pagado a $50 la hora que debería costar cero. La auditoría suele encontrar de $20k a $50k al año en fugas en la primera pasada. Tápalas una vez, conserva el ahorro cada año después.',
+    'outcomes.c3_label': 'Libertad',
+    'outcomes.c3_title': 'Un negocio que no te necesita para todo',
+    'outcomes.c3_body': 'El seguimiento de leads corre sin ti. Las cotizaciones salen sin ti. Lo pequeño deja de comerte el día para que puedas trabajar sobre el negocio en lugar de dentro de él. El punto no es hacer IA. Es liberarte de las tareas de $20 la hora que te han tenido como rehén.',
+    'outcomes.c4_label': 'Palanca',
+    'outcomes.c4_title': 'Compuesto, no de una sola vez',
+    'outcomes.c4_body': 'Un empleado te cuesta de nuevo cada mes. Las jugadas que instalamos siguen pagando cada mes sin costo extra. El año dos es puro margen. Esa es la diferencia entre contratar ayuda y construir palanca.',
+    'outcomes.cta': 'Agenda tu llamada gratis',
+    'outcomes.cta_alt': 'Mira cómo lo entregamos',
+
+    'assessment.kicker': 'La evaluación',
+    'assessment.h2': 'Lo que realmente obtienes por <span class="grad">$1,000</span>.',
+    'assessment.lede': 'Sin fase de descubrimiento de 90 días. Sin presentación disfrazada de entregable. Una hoja de ruta personalizada de 12-18 páginas con Quick Wins que puedes lanzar tú mismo, más precios transparentes para los upsells si prefieres delegar.',
+    'assessment.c1_title': 'Auditoría de operaciones',
+    'assessment.c1_body': 'Análisis profundo de tus herramientas, flujos y datos. Mapeamos cada tarea recurrente en tu negocio y la etiquetamos por potencial de IA.',
+    'assessment.c2_title': 'Quick Wins listos para lanzar',
+    'assessment.c2_body': '5-7 recomendaciones DIY clasificadas por ROI y esfuerzo. Herramientas a las que puedes suscribirte, integraciones que puedes configurar en una tarde, prompts que puedes pegar en ChatGPT hoy.',
+    'assessment.c3_title': 'Menú de upsells',
+    'assessment.c3_body': 'Construcciones opcionales con precios para las jugadas grandes: Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier. Elige lo que quieres, salta lo que no. Cada construcción se define en alcance antes de comprometerte, con un precio piso transparente más un porcentaje de tu ROI proyectado.',
+    'assessment.c4_title': 'Hoja de ruta de 90 días',
+    'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos trimestrales, backlog priorizado, sin relleno.',
+    'assessment.cta': 'Agenda tu llamada gratis',
+    'assessment.cta_alt': 'O salta la llamada, llena el cuestionario',
+
+    'upsells.kicker': 'Construcciones opcionales',
+    'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
+    'upsells.lede': 'La evaluación es el entregable. Los Quick Wins son DIY a propósito. Si prefieres delegar las jugadas más grandes, cada construcción tiene un precio piso abajo. Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación pone tu número de ROI en papel antes de que haya contrato. Construido en tu stack. Tú eres dueño de cada credencial.',
+    'upsells.audit_title': 'Auditoría Forense de Anuncios',
+    'upsells.audit_body': 'Análisis forense completo de tus últimos 6-12 meses de gasto publicitario pagado (Google, Meta, o ambos). Mapeamos cada conversión reportada contra tu libro real de clientes pagados y revelamos el desperdicio que tu última agencia no detectó. Reporte de auditoría de 6-8 páginas en 48 horas.',
+    'upsells.zap_title': 'Automatización en Zapier',
+    'upsells.zap_body': 'Automatización multi-paso entre las herramientas que ya pagas. Conecta 2-5 apps, maneja los traspasos de datos, corre en tu cuenta de Zapier.',
+    'upsells.gpt_title': 'GPT personalizado',
+    'upsells.gpt_body': 'Un ChatGPT entrenado con tus procesos, FAQs, precios y documentos. Vive en tu workspace de OpenAI. Úsalo en tu sitio, en soporte, o para entrenar al equipo.',
+    'upsells.s2l_title': 'Agente IA Speed-to-Lead',
+    'upsells.s2l_body': 'Agente de voz + SMS con IA que responde a leads entrantes en menos de 60 segundos. Agenda citas, califica el fit, te pasa los leads calientes. Vive en tu CRM.',
+    'upsells.po_title': 'Optimización de procesos',
+    'upsells.po_body': 'Auditoría de extremo a extremo de un flujo cuello de botella, más la reconstrucción automatizada. Ideal para operaciones con 5+ herramientas y muchos traspasos manuales.',
+    'upsells.ret_title': 'Retainer mensual',
+    'upsells.ret_body': 'Optimización continua, nuevas construcciones y mantenimiento del stack de IA. Cancela cuando quieras. La mayoría de clientes empieza esto después de su primer upsell.',
+    'upsells.cta': 'Agenda una llamada para definir una construcción',
+    'upsells.cta_alt': 'Ver una construcción real en acción',
+
+    'how.kicker': 'Cómo funciona',
+    'how.h2': '48 horas. Tres pasos. <span class="grad">ROI real.</span>',
+    'how.day1': 'Día 1',
+    'how.s1_title': 'Cuéntanos sobre tu negocio',
+    'how.s1_body': 'Llamada gratis de 45 min O llena el cuestionario a tu ritmo. De cualquier forma, aprendemos tu negocio, tus herramientas, y tus mayores pérdidas de tiempo.',
+    'how.day2': 'Día 1-2',
+    'how.s2_title': 'Auditar y mapear',
+    'how.s2_body': 'Investigamos a fondo. Mapeamos tus flujos. Calificamos Quick Wins por ROI. Construimos tu menú de upsells para que sepas qué es DIY y qué vale la pena delegar.',
+    'how.day3': 'Día 2-3',
+    'how.s3_title': 'Hoja de ruta entregada',
+    'how.s3_body': 'Reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos. Siguiente paso claro. Haz tú los Quick Wins, o delega un upsell a nosotros.',
+    'how.cta': 'Empieza tu hoja de ruta de 48 horas',
+
+    'proof.kicker': 'Caso de prueba',
+    'proof.h2': 'Lo usamos primero en nuestros propios <span class="grad">negocios.</span>',
+    'proof.tag': 'CASO DE ESTUDIO · SERVICIO RESIDENCIAL EN LAS VEGAS · 2026',
+    'proof.h3': '1,000+ leads sin convertir, recuperados con una automatización.',
+    'proof.body': 'Un negocio real de servicios en Las Vegas con un año de inversión en publicidad sin sistema de seguimiento. Hicimos nuestra propia evaluación, identificamos la recuperación de leads como la jugada #1 de ROI, y construimos el upsell nosotros mismos para validar el playbook. La evaluación fue la misma que vendemos. La construcción probó el menú de upsells.',
+    'proof.m1': 'leads en cola',
+    'proof.m2': 'base mensual',
+    'proof.m3': 'aumento proyectado',
+    'proof.cta': 'Leer el caso completo',
+
+    'about.kicker': 'Quién está detrás',
+    'about.h2': 'Construido por un operador. <span class="grad">Para operadores.</span>',
+    'about.body1': 'Soy Gianny. Manejo un negocio de servicios residenciales en Las Vegas, y estoy construyendo AIROIOPS para traer ventaja real de IA a dueños de pequeñas empresas, la gente que más lo necesita y a la que le venden de último.',
+    'about.body2': 'La evaluación no es una presentación. Es el mismo playbook que ejecuto en mis propias operaciones, entregando una hoja de ruta personalizada de IA en 48 horas. Los Quick Wins son tuyos para lanzar hoy; los upsells están ahí si prefieres delegar.',
+    'about.cta': 'Agenda tu llamada de descubrimiento',
+
+    'faq.kicker': 'Preguntas frecuentes',
+    'faq.h2': 'Preguntas comunes sobre <span class="grad">IA para pequeñas empresas.</span>',
+    'faq.q1': '¿Cuánto cuesta una evaluación de IA para una pequeña empresa?',
+    'faq.a1': 'Nuestra Evaluación de Negocio con IA cuesta $1,000 fijo. Incluye la auditoría de operaciones, la hoja de ruta personalizada de 12-18 páginas entregada en 48 horas, y una llamada de repaso de 20 minutos. Sin retainers, sin cargos sorpresa, sin fase de descubrimiento de 90 días.',
+    'faq.q2': '¿Cuánto tarda la evaluación de IA?',
+    'faq.a2': '48 horas desde que completas el cuestionario. Puedes llenar el cuestionario detallado a tu ritmo o agendar una llamada de 45 minutos. De cualquier forma, tu hoja de ruta personalizada llega a tu correo 48 horas después.',
+    'faq.q3': '¿Solo atienden a pequeñas empresas en Las Vegas?',
+    'faq.a3': 'Estamos basados en Las Vegas y trabajamos con dueños de pequeñas empresas en Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, e Indian Springs. Toda la evaluación se hace por correo y una llamada corta, así que también atendemos clientes remotos en cualquier parte de Estados Unidos.',
+    'faq.q4': '¿Qué incluye la Evaluación de Negocio con IA?',
+    'faq.a4': 'Una auditoría de operaciones de tus herramientas y flujos, 5-7 Quick Wins DIY que puedes lanzar tú mismo, un menú transparente de upsells para las construcciones más grandes (agentes Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier), y una hoja de ruta de 90 días con hitos trimestrales. Todo en un reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos.',
+    'faq.q5': '¿Las herramientas de IA funcionarán con el software que ya uso?',
+    'faq.a5': 'Sí. Cada Quick Win se diseña sobre tu stack actual (CRM, correo, agendas, cobros, anuncios). Las construcciones corren dentro de las herramientas que ya pagas, no en una nueva plataforma. Tú eres dueño de cada credencial.',
+    'faq.q6': '¿Necesito conocimientos técnicos para lanzar los Quick Wins?',
+    'faq.a6': 'No. Los Quick Wins se eligen para que un operador no técnico los pueda configurar en una tarde. Si puedes pegar un prompt en ChatGPT o hacer clic en una configuración de Zapier, los puedes lanzar. Las construcciones más grandes con código o automatización multi-paso son los upsells, donde nosotros nos encargamos del trabajo técnico.',
+    'faq.q7': '¿Cómo se cotizan las construcciones de IA más grandes?',
+    'faq.a7': 'Cada construcción tiene un precio piso ($1,500 para automatización en Zapier, $2,500 para un GPT personalizado, $3,500 para un agente Speed-to-Lead, $4,500 para optimización de procesos). Cobramos el piso o el 20% del ROI proyectado del primer año, lo que sea mayor. La Evaluación de $1,000 cuantifica tu ROI por escrito antes de cualquier contrato de construcción, así que los números están en papel antes de que te comprometas.',
+    'faq.cta': '¿Aún tienes preguntas? Agenda una llamada gratis',
+
+    'footer.area': 'Atendiendo Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston y clientes remotos en todo el país.',
+
+
+    'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
+    'final.body': 'Cuéntanos sobre tu negocio. Lo revisaremos y te enviaremos un enlace de Calendly dentro de 1 día hábil.',
+    'final.cta': 'Agenda una llamada gratis',
+    'final.alt_pre': '¿Prefieres saltar la llamada?',
+    'final.alt_link': 'Llena el cuestionario completo →',
+    'final.sub': 'Sin spam. Sin tarifas de agencia. Sin fases de descubrimiento de 90 días.',
+
+    'form.first_label': 'Nombre',
+    'form.last_label': 'Apellido',
+    'form.email_label': 'Correo electrónico',
+    'form.business_label': 'Nombre del negocio',
+    'form.what_label': 'En una oración, ¿qué hace tu negocio?',
+    'form.what_ph': 'Hacemos [X] para [Y] en [Z].',
+    'form.team_label': '¿Qué tan grande es el equipo?',
+    'form.select_default': 'Selecciona...',
+    'form.team_solo': 'Solo yo',
+    'form.team_small': '2-5 personas',
+    'form.team_med': '6-20 personas',
+    'form.team_lg': '21-50 personas',
+    'form.team_xl': '50+ personas',
+    'form.timesink_label': '¿Cuál es la tarea #1 que te consume tiempo cada semana?',
+    'form.timesink_ph': "Sé específico. 'Seguimiento de leads' o 'enviar facturas' es mejor que 'cosas administrativas'.",
+    'form.aitools_label': '¿Qué herramientas de IA usas hoy? (Marca las que apliquen)',
+    'form.ai_none': 'Ninguna / no he empezado',
+    'form.ai_occ': 'ChatGPT / Claude (ocasional)',
+    'form.ai_daily': 'ChatGPT / Claude (diario)',
+    'form.ai_gpt': 'GPTs personalizados con mis datos',
+    'form.ai_zap': 'Automatizaciones en Zapier o Make',
+    'form.ai_voice': 'Agente de voz IA (Retell, Vapi)',
+    'form.outcome_label': 'Si esto entrega valor, ¿cómo se ve "vale la pena" para ti?',
+    'form.outcome_ph': '¿10 horas recuperadas por semana? ¿$5k/mes en nuevos ingresos? ¿Dejar de perder leads de noche?',
+    'form.heard_label': '¿Cómo te enteraste de nosotros?',
+    'form.heard_google': 'Búsqueda en Google',
+    'form.heard_linkedin': 'LinkedIn',
+    'form.heard_instagram': 'Instagram',
+    'form.heard_facebook': 'Facebook',
+    'form.heard_skool': 'Comunidad de Skool',
+    'form.heard_referral': 'Amigo o referido',
+    'form.heard_other': 'Otro',
+    'form.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'form.submit': 'Enviar y recibir tu enlace de Calendly',
+
+    'thanks.title': 'Recibido | AIROIOPS',
+    'thanks.home': 'Inicio',
+    'thanks.badge': 'Solicitud recibida',
+    'thanks.h1': 'Recibido. <span class="grad">Ahora agenda tu llamada.</span>',
+    'thanks.lede': 'Elige un espacio de 30 minutos abajo. Tendremos tus respuestas a la vista cuando nos conectemos, para enfocarnos en soluciones, no en contexto.',
+    'thanks.book_cta': 'Agenda tu llamada de 30 min',
+    'thanks.s1_title': 'Elige un espacio',
+    'thanks.s1_body': 'Usa el botón arriba. Calendly te muestra mi disponibilidad real y confirma el espacio al instante.',
+    'thanks.s2_title': 'Confirmación en tu correo',
+    'thanks.s2_body': 'Recibirás un correo de confirmación con el enlace de Google Meet y una invitación de calendario. Añádela para no olvidar la llamada.',
+    'thanks.s3_title': 'Llamada de descubrimiento de 30 minutos',
+    'thanks.s3_body': 'Aprendemos tu negocio, tus herramientas, tus pérdidas de tiempo. Gratis, sin compromiso. Sales con una visión más clara de lo que la IA puede hacer por ti.',
+    'thanks.alt_or': 'o',
+    'thanks.alt_h3': '¿Sin tiempo para una llamada ahora?',
+    'thanks.alt_body': 'Salta la llamada por completo. Llena el cuestionario a tu ritmo y tendrás tu reporte personalizado de IA en tu correo en 48 horas, más una llamada de repaso de 20 minutos cuando estés listo.',
+    'thanks.alt_cta': 'Llena el cuestionario completo →',
+    'thanks.cta': 'Volver al inicio',
+
+    'footer.location': 'Hecho en Las Vegas, NV',
+
+    'intake.meta_title': 'Evaluación de Negocio con IA | AIROIOPS',
+    'intake.back': 'Volver a airoiops.com',
+    'intake.eyebrow': 'Evaluación de Negocio con IA · Formulario',
+    'intake.h1': 'Cuéntanos cómo <span class="grad">realmente</span> funciona tu negocio.',
+    'intake.lede': 'Sin llamada. Llénalo a tu ritmo. Convertimos tus respuestas en un reporte personalizado de 12-18 páginas con tu hoja de ruta de IA en 48 horas, más una llamada de 20 minutos para repasarlo.',
+    'intake.meta_time_label': 'Tiempo para llenar:',
+    'intake.meta_time_val': '~12 minutos',
+    'intake.meta_turn_label': 'Entrega:',
+    'intake.meta_turn_val': '48 horas',
+    'intake.meta_get_label': 'Recibes:',
+    'intake.meta_get_val': 'Hoja de ruta personalizada · Quick Wins · Opciones de upsell',
+
+    'intake.s0_title': 'Cómo contactarte',
+    'intake.s0_sub': 'Lo mínimo para enviarte el reporte y dar seguimiento.',
+    'intake.heard_label': '¿Cómo te enteraste de nosotros?',
+    'intake.heard_google': 'Búsqueda en Google',
+    'intake.heard_linkedin': 'LinkedIn',
+    'intake.heard_instagram': 'Instagram',
+    'intake.heard_facebook': 'Facebook',
+    'intake.heard_skool': 'Comunidad de Skool',
+    'intake.heard_referral': 'Amigo o referido',
+    'intake.heard_other': 'Otro',
+    'intake.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'intake.contact_name': 'Tu nombre',
+    'intake.business_name': 'Nombre del negocio',
+    'intake.email': 'Correo electrónico',
+    'intake.phone': 'Teléfono (¿recibe mensajes?)',
+
+    'intake.s1_title': 'Las preguntas grandes',
+    'intake.s1_sub': 'La sección más importante. Las viñetas están bien. Cuanto más crudo, mejor.',
+    'intake.magic_fix': 'Si pudieras arreglar mágicamente UNA cosa de tus operaciones mañana, ¿qué sería?',
+    'intake.biggest_timesuck': '¿Cuál es la cosa que más tiempo te quita en tu semana?',
+    'intake.biggest_timesuck_help': 'Eso que haces una y otra vez y desearías no tener que hacer.',
+    'intake.lead_flow': 'Explícame qué pasa cuando entra un nuevo lead. Desde la llamada/clic hasta el pago.',
+    'intake.lead_flow_help': 'Cada paso. Quién hace qué. Dónde vive la información.',
+    'intake.time_back': 'Si te devolviera 10 horas a la semana, ¿qué harías con ellas?',
+
+    'intake.s2_title': 'Foto rápida',
+    'intake.business_what': 'En una o dos oraciones, ¿qué hace tu negocio?',
+    'intake.business_age': '¿Cuánto tiempo llevas operándolo?',
+    'intake.business_age_ph': 'ej. 14 meses, 4 años',
+    'intake.team_size': 'Tamaño del equipo (incluyéndote)',
+    'intake.team_size_ph': 'solo yo, 3, 12…',
+    'intake.industry': 'Industria / qué vendes',
+    'intake.region': 'Ciudad / región que atiendes',
+
+    'intake.s3_title': 'Dinero y marketing',
+    'intake.lead_to_customer_time': 'Tiempo promedio de lead a cliente',
+    'intake.lead_to_customer_time_ph': 'ej. 1-2 días, 3 semanas',
+    'intake.lead_conversion': '% de leads que se convierten en clientes que pagan',
+    'intake.lead_conversion_ph': 'una estimación está bien',
+    'intake.attribution': '¿Cómo sabes qué fuente de marketing trae clientes?',
+    'intake.attribution_help': 'Pixel, hoja de cálculo, intuición. "No tengo idea" es una respuesta válida.',
+    'intake.marketing_spend': 'Gasto mensual en marketing, y qué está funcionando',
+    'intake.cost_pain': '¿Dónde se va el dinero que desearías que fuera menor?',
+    'intake.cost_pain_help': 'Suscripciones de software, publicidad, contratistas, lo que sea.',
+
+    'intake.s4_title': 'Herramientas y sistemas',
+    'intake.tools_list': '¿Qué software usa tu negocio hoy?',
+    'intake.tools_list_help': 'Lista todo: CRM, correo, agendas, cobros, contabilidad, anuncios. Incluso las hojas de cálculo.',
+    'intake.tools_feel': '¿Qué herramientas amas, y cuáles sientes que son una molestia?',
+    'intake.data_flow': '¿Cómo fluyen los datos entre herramientas? ¿Automático, o copiar/pegar manual?',
+    'intake.customer_comms': 'Canal principal con clientes',
+    'intake.customer_comms_ph': 'correo, texto, llamada, DMs',
+    'intake.docs_storage': 'Dónde guardas documentos y procesos',
+    'intake.docs_storage_ph': 'Drive, Notion, mayormente en mi cabeza…',
+    'intake.spreadsheet_creep': '¿Qué se hace en una hoja de cálculo que probablemente no debería?',
+
+    'intake.s5_title': 'Cuellos de botella y dolores de cabeza',
+    'intake.last_breakdown': 'La última vez que algo salió mal por un proceso roto. ¿Qué pasó?',
+    'intake.repeat_questions': 'Las 3-5 preguntas que tus clientes te hacen una y otra vez',
+    'intake.manual_reports': '¿Reportes o números que armas a mano cada semana o mes?',
+    'intake.vacation_break': '¿Qué se rompe cuando te vas de vacaciones?',
+    'intake.bus_factor': 'Si desaparecieras mañana, ¿qué cosa solo TÚ sabes hacer?',
+    'intake.hate_ranked': 'Lista en orden. Partes del trabajo que ya no quisieras hacer.',
+    'intake.hate_ranked_help': '#1 = la que más quieres soltar. Añade las que quieras.',
+
+    'intake.s6_title': 'Cierre',
+    'intake.open_field': '¿Algo que no te pregunté y crees que es importante que sepa?',
+    'intake.call_windows': 'Mejores horarios para la llamada de 20 minutos',
+    'intake.call_windows_help': '2-3 opciones en los próximos 7-10 días.',
+    'intake.timezone': 'Zona horaria',
+    'intake.timezone_ph': 'ej. PT, MT, ET',
+    'intake.website': 'Tu sitio web (si tienes)',
+
+    'intake.submit_note': 'Recibirás un correo de confirmación y tu reporte personalizado en 48 horas.',
+    'intake.submit': 'Enviar mis respuestas',
+
+    'intake_thanks.title': 'Recibido | AIROIOPS',
+    'intake_thanks.badge': 'Formulario recibido',
+    'intake_thanks.h1': 'Recibido. <span class="grad">Reporte en camino.</span>',
+    'intake_thanks.lede': 'Tu reporte personalizado de IA llegará a tu correo en 48 horas. Mientras tanto, agenda tu llamada de 20 minutos para que cuando esté listo, vayamos directo a la acción.',
+    'intake_thanks.book_cta': 'Agenda tu llamada de repaso',
+    'intake_thanks.s1_title': 'Leemos cada palabra',
+    'intake_thanks.s1_body': 'Tus respuestas le llegan directo a Gianny. Sin asistente, sin resumidor de IA, sin plantilla. Un análisis real y personalizado.',
+    'intake_thanks.s2_title': 'Reporte personalizado en 48 horas',
+    'intake_thanks.s2_body': '12-18 páginas. Quick Wins que puedes lanzar tú. Opciones de upsell si quieres ayuda hands-on. Números atados a tu operación real.',
+    'intake_thanks.s3_title': 'Llamada de 20 minutos',
+    'intake_thanks.s3_body': 'Llamada en vivo para repasar el reporte. Sales con un siguiente paso claro, ya sea construirlo tú o que lo hagamos nosotros.'
+  }
+};
+
+let currentLang = 'en';
+
+function detectLang() {
+  const stored = localStorage.getItem('lang');
+  if (stored === 'en' || stored === 'es') return stored;
+  const lang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+  return lang.startsWith('es') ? 'es' : 'en';
+}
+
+function applyLang(lang) {
+  if (!translations[lang]) lang = 'en';
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = t[key];
+    if (val !== undefined) {
+      if (el.tagName === 'TITLE') el.textContent = val;
+      else el.innerHTML = val;
+    }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = t[key];
+    if (val !== undefined) el.setAttribute('placeholder', val);
+  });
+  document.querySelectorAll('.nav-lang button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.querySelectorAll('a[href="/case-study"], a[href="/case-study-es"]').forEach(a => {
+    a.href = lang === 'es' ? '/case-study-es' : '/case-study';
+  });
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+  calc();
+}
+
+const hours = document.getElementById('hours');
+const rate = document.getElementById('rate');
+const hoursOut = document.getElementById('hours-out');
+const rateOut = document.getElementById('rate-out');
+const roiNum = document.getElementById('roi-num');
+const hasRoiCalc = hours && rate && hoursOut && rateOut && roiNum;
+
+let displayed = 23400;
+
+function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+function animateTo(target) {
+  if (!hasRoiCalc) return;
+  const start = displayed;
+  const diff = target - start;
+  const dur = 450;
+  const t0 = performance.now();
+  function tick(t) {
+    const p = Math.min(1, (t - t0) / dur);
+    const eased = 1 - Math.pow(1 - p, 3);
+    displayed = start + diff * eased;
+    roiNum.textContent = fmt(displayed);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function calc() {
+  if (!hasRoiCalc) return;
+  const h = +hours.value;
+  const r = +rate.value;
+  const annual = h * r * 52 * 0.6;
+  const t = translations[currentLang];
+  hoursOut.textContent = h + ' ' + t['roi.hours_unit'];
+  rateOut.textContent = '$' + r + t['roi.rate_unit'];
+  animateTo(annual);
+}
+
+if (hasRoiCalc) {
+  hours.addEventListener('input', calc);
+  rate.addEventListener('input', calc);
+}
+
+document.addEventListener('submit', (e) => {
+  const form = e.target;
+  if (!(form instanceof HTMLFormElement)) return;
+  const langField = form.querySelector('input[name="language"]');
+  if (!langField) return;
+  const active = (document.documentElement.lang || currentLang || 'en').toLowerCase();
+  langField.value = active.startsWith('es') ? 'es' : 'en';
+}, true);
+
+document.querySelectorAll('.nav-lang button').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+function syncHeardOtherInput() {
+  const checked = document.querySelector('input[name="heard_from"]:checked');
+  const value = checked ? checked.value : null;
+  document.querySelectorAll('.heard-other-input').forEach(input => {
+    const isOther = value === 'Other';
+    input.classList.toggle('is-visible', isOther);
+    input.required = isOther;
+    if (!isOther) input.value = '';
+  });
+}
+document.querySelectorAll('input[name="heard_from"]').forEach(radio => {
+  radio.addEventListener('change', syncHeardOtherInput);
+});
+syncHeardOtherInput();
+
+applyLang(detectLang());
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.card, .stat, .steps li, .proof-card, .about-grid > div, .final-inner').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
+// v14 stagger reveal: cascade siblings inside any .grid, .stats, .steps, .about-grid (90ms apart, cap 540ms)
+document.querySelectorAll('.grid, .stats, .steps, .about-grid').forEach(grid => {
+  [...grid.children].forEach((child, i) => {
+    if (child.classList.contains('reveal')) {
+      child.style.transitionDelay = `${Math.min(i * 90, 540)}ms`;
+    }
+  });
+});
+
+// v14 scroll progress hairline (purple-to-cyan gradient, 1.5px)
+const sp = document.createElement('div');
+sp.className = 'scroll-progress';
+document.body.prepend(sp);
+let spTick = false;
+window.addEventListener('scroll', () => {
+  if (spTick) return;
+  spTick = true;
+  requestAnimationFrame(() => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const ratio = max > 0 ? Math.min(1, scrollY / max) : 0;
+    sp.style.setProperty('--p', ratio.toFixed(3));
+    spTick = false;
+  });
+}, { passive: true });
+
+// v14 hero cursor-following glow (desktop-only, hover-capable pointers)
+const heroEl = document.querySelector('.hero');
+const heroGlow = document.querySelector('.hero-glow');
+if (heroEl && heroGlow && matchMedia('(hover: hover)').matches) {
+  heroEl.addEventListener('pointermove', e => {
+    const rect = heroEl.getBoundingClientRect();
+    heroGlow.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    heroGlow.style.setProperty('--my', `${e.clientY - rect.top}px`);
+  });
+}
+
+// v14 number count-up on view (driven by data-target / data-prefix / data-suffix / data-comma)
+function animateNum(el) {
+  const target = +el.dataset.target;
+  const pre = el.dataset.prefix || '';
+  const suf = el.dataset.suffix || '';
+  const useComma = el.hasAttribute('data-comma');
+  const dur = 1500;
+  const start = performance.now();
+  function tick(now) {
+    const t = Math.min(1, (now - start) / dur);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const v = Math.round(target * eased);
+    el.textContent = pre + (useComma ? v.toLocaleString() : v) + suf;
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const numIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.animated) {
+      e.target.dataset.animated = '1';
+      animateNum(e.target);
+    }
+  });
+}, { threshold: 0.55 });
+document.querySelectorAll('[data-target]').forEach(el => numIO.observe(el));
+
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
