@@ -708,6 +708,33 @@ document.querySelectorAll('.card, .stat, .steps li, .proof-card, .about-grid > d
   observer.observe(el);
 });
 
+// Number count-up on view (stats below the calculator + case-study proof-metrics)
+function animateNum(el) {
+  const target = +el.dataset.target;
+  const pre = el.dataset.prefix || '';
+  const suf = el.dataset.suffix || '';
+  const useComma = el.hasAttribute('data-comma');
+  const dur = 1500;
+  const start = performance.now();
+  function tick(now) {
+    const t = Math.min(1, (now - start) / dur);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const v = Math.round(target * eased);
+    el.textContent = pre + (useComma ? v.toLocaleString() : v) + suf;
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const numIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.animated) {
+      e.target.dataset.animated = '1';
+      animateNum(e.target);
+    }
+  });
+}, { threshold: 0.55 });
+document.querySelectorAll('[data-target]').forEach(el => numIO.observe(el));
+
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
