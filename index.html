@@ -397,40 +397,174 @@
     </div>
   </section>
 
-  <section id="surface" class="assessment">
+  <section id="surface" class="surface">
     <div class="kicker" data-i18n="surface.kicker">Where AI lands hardest</div>
-    <h2 data-i18n="surface.h2">Pick the leak. <span class="grad">We've got a play for it.</span></h2>
-    <p class="section-lede" data-i18n="surface.lede">AI doesn't transform anything on its own. Plugged into the right hole in your ops, it pays for itself fast.</p>
-    <div class="grid">
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_sales">Sales</span></div>
-        <h3 data-i18n="surface.c1_title">Lead Recovery</h3>
-        <p data-i18n="surface.c1_body">Recover the leads that already paid you to acquire. We've recovered over a thousand on a single audit.</p>
+    <h2 data-i18n="surface.h2">AI for <span class="grad">every department.</span></h2>
+    <p class="section-lede" data-i18n="surface.lede">From sales to operations to finance, every team across your business unlocks more once AI plugs into the right workflow.</p>
+
+    <div class="surface-tabs" role="tablist" aria-label="Departments">
+      <button class="surface-tab is-active" role="tab" aria-selected="true" aria-controls="surface-panel-sales" id="surface-tab-sales" type="button" tabindex="0" data-i18n="surface.dept_sales">Sales</button>
+      <button class="surface-tab" role="tab" aria-selected="false" aria-controls="surface-panel-marketing" id="surface-tab-marketing" type="button" tabindex="-1" data-i18n="surface.dept_marketing">Marketing</button>
+      <button class="surface-tab" role="tab" aria-selected="false" aria-controls="surface-panel-support" id="surface-tab-support" type="button" tabindex="-1" data-i18n="surface.dept_support">Support</button>
+      <button class="surface-tab" role="tab" aria-selected="false" aria-controls="surface-panel-ops" id="surface-tab-ops" type="button" tabindex="-1" data-i18n="surface.dept_ops">Operations</button>
+      <button class="surface-tab" role="tab" aria-selected="false" aria-controls="surface-panel-finance" id="surface-tab-finance" type="button" tabindex="-1" data-i18n="surface.dept_finance">Finance</button>
+      <div class="surface-arrows">
+        <button class="surface-arrow" data-dir="prev" aria-label="Previous department" type="button">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 13L3 7l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="surface-arrow" data-dir="next" aria-label="Next department" type="button">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_sales">Sales</span></div>
-        <h3 data-i18n="surface.c2_title">Speed-to-Lead</h3>
-        <p data-i18n="surface.c2_body">AI voice and SMS agent that responds to inbound leads in under 60 seconds. Books appointments while you sleep.</p>
+    </div>
+
+    <!-- Sales panel -->
+    <div class="surface-panel is-active" role="tabpanel" id="surface-panel-sales" aria-labelledby="surface-tab-sales">
+      <div class="sp-left">
+        <div class="sp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="surface.sales_title">Sales acceleration</h3>
+        <p data-i18n="surface.sales_body">Close deals faster with AI-powered lead recovery, automated outreach, and real-time response to every inbound lead. The leads that already paid you to acquire stop slipping through.</p>
+        <ul class="sp-bullets">
+          <li data-i18n="surface.sales_b1">Speed-to-Lead AI agent (voice and SMS)</li>
+          <li data-i18n="surface.sales_b2">Lead recovery cadence across cold leads</li>
+          <li data-i18n="surface.sales_b3">Automated outreach sequences</li>
+          <li data-i18n="surface.sales_b4">Conversation intelligence and follow-up</li>
+        </ul>
+        <a href="#upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
       </div>
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_ops">Ops</span></div>
-        <h3 data-i18n="surface.c3_title">Quote and Proposal Automation</h3>
-        <p data-i18n="surface.c3_body">Pull data from a form, draft a quote, send the contract, and follow up. The whole back-office stops eating you.</p>
+      <div class="sp-right">
+        <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
+        <div class="sp-stat">
+          <div class="num">100%</div>
+          <div class="lbl" data-i18n="surface.sales_s1_lbl">Inbound texts answered, day or night</div>
+        </div>
+        <div class="sp-stat">
+          <div class="num">&lt;60s</div>
+          <div class="lbl" data-i18n="surface.sales_s2_lbl">Average response time on a new lead</div>
+        </div>
+        <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.</div>
       </div>
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_support">Support</span></div>
-        <h3 data-i18n="surface.c4_title">Customer Support</h3>
-        <p data-i18n="surface.c4_body">A custom GPT trained on your FAQs, pricing, and SOPs. 24/7 answers that don't sound like a chatbot.</p>
+    </div>
+
+    <!-- Marketing panel -->
+    <div class="surface-panel" role="tabpanel" id="surface-panel-marketing" aria-labelledby="surface-tab-marketing" hidden>
+      <div class="sp-left">
+        <div class="sp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5zM15 9a3 3 0 010 6m4-9a7 7 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="surface.mkt_title">Marketing intelligence</h3>
+        <p data-i18n="surface.mkt_body">Replace the agency that has been billing you for three months without leads. We pull every reported conversion against real revenue and surface the spend that actually pays back.</p>
+        <ul class="sp-bullets">
+          <li data-i18n="surface.mkt_b1">Forensic Google and Meta ads audit</li>
+          <li data-i18n="surface.mkt_b2">Local SEO and Google Business Profile</li>
+          <li data-i18n="surface.mkt_b3">Content engine and repurposing</li>
+          <li data-i18n="surface.mkt_b4">Audience segmentation and retargeting</li>
+        </ul>
+        <a href="#upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
       </div>
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_finance">Finance</span></div>
-        <h3 data-i18n="surface.c5_title">Bookkeeping and Receipts</h3>
-        <p data-i18n="surface.c5_body">Auto-categorize, sync to QuickBooks, never sit in a spreadsheet on a Sunday again.</p>
+      <div class="sp-right">
+        <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
+        <div class="sp-stat">
+          <div class="num">$4,500+</div>
+          <div class="lbl" data-i18n="surface.mkt_s1_lbl">Ad waste identified and reallocated on a single audit</div>
+        </div>
+        <div class="sp-stat">
+          <div class="num">6-12 mo</div>
+          <div class="lbl" data-i18n="surface.mkt_s2_lbl">Of paid spend audited line by line</div>
+        </div>
+        <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.</div>
       </div>
-      <div class="card">
-        <div class="card-num" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grad-4); font-weight: 600; -webkit-text-fill-color: var(--grad-4); background: none;"><span data-i18n="surface.dept_marketing">Marketing</span></div>
-        <h3 data-i18n="surface.c6_title">Marketing Engine</h3>
-        <p data-i18n="surface.c6_body">Replace the agency that's been billing you for three months with no leads. Local SEO, ads audit, content engine.</p>
+    </div>
+
+    <!-- Support panel -->
+    <div class="surface-panel" role="tabpanel" id="surface-panel-support" aria-labelledby="surface-tab-support" hidden>
+      <div class="sp-left">
+        <div class="sp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="surface.sup_title">Customer support</h3>
+        <p data-i18n="surface.sup_body">A custom GPT trained on your FAQs, pricing, SOPs, and product docs. Lives in your stack, answers in your voice, never sounds like a chatbot. Covers the hours your team cannot.</p>
+        <ul class="sp-bullets">
+          <li data-i18n="surface.sup_b1">Custom GPT trained on your business</li>
+          <li data-i18n="surface.sup_b2">After-hours auto-reply with language detection</li>
+          <li data-i18n="surface.sup_b3">FAQ and pricing on autopilot</li>
+          <li data-i18n="surface.sup_b4">Sentiment-aware ticket triage</li>
+        </ul>
+        <a href="#upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
+      </div>
+      <div class="sp-right">
+        <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
+        <div class="sp-stat">
+          <div class="num">24/7</div>
+          <div class="lbl" data-i18n="surface.sup_s1_lbl">Coverage on inbound questions, including weekends</div>
+        </div>
+        <div class="sp-stat">
+          <div class="num">EN + ES</div>
+          <div class="lbl" data-i18n="surface.sup_s2_lbl">Auto language detection on every reply</div>
+        </div>
+        <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.</div>
+      </div>
+    </div>
+
+    <!-- Operations panel -->
+    <div class="surface-panel" role="tabpanel" id="surface-panel-ops" aria-labelledby="surface-tab-ops" hidden>
+      <div class="sp-left">
+        <div class="sp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11H5l4-7m6 16h-4l4-7M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="surface.ops_title">Operations optimization</h3>
+        <p data-i18n="surface.ops_body">Streamline every workflow. Pull data from a form, draft a quote, send the contract, sync to your accounting. The whole back-office stops eating you, every day.</p>
+        <ul class="sp-bullets">
+          <li data-i18n="surface.ops_b1">Quote and proposal automation</li>
+          <li data-i18n="surface.ops_b2">Make scenarios that orchestrate your stack</li>
+          <li data-i18n="surface.ops_b3">Workflow redesign end-to-end</li>
+          <li data-i18n="surface.ops_b4">Live operations dashboards</li>
+        </ul>
+        <a href="#upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
+      </div>
+      <div class="sp-right">
+        <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
+        <div class="sp-stat">
+          <div class="num">4 &rarr; 1</div>
+          <div class="lbl" data-i18n="surface.ops_s1_lbl">Disconnected systems consolidated into one Make scenario</div>
+        </div>
+        <div class="sp-stat">
+          <div class="num">3+ hrs</div>
+          <div class="lbl" data-i18n="surface.ops_s2_lbl">Per week reclaimed from manual data hand-offs</div>
+        </div>
+        <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.</div>
+      </div>
+    </div>
+
+    <!-- Finance panel -->
+    <div class="surface-panel" role="tabpanel" id="surface-panel-finance" aria-labelledby="surface-tab-finance" hidden>
+      <div class="sp-left">
+        <div class="sp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="surface.fin_title">Finance intelligence</h3>
+        <p data-i18n="surface.fin_body">Books that close themselves. Receipts auto-log to QuickBooks. Bank reconciliation runs on a schedule. Sunday spreadsheet sessions are over.</p>
+        <ul class="sp-bullets">
+          <li data-i18n="surface.fin_b1">QuickBooks auto-sync (Sales Receipts, not invoices)</li>
+          <li data-i18n="surface.fin_b2">Receipt capture from camera roll</li>
+          <li data-i18n="surface.fin_b3">Bank rules and monthly close</li>
+          <li data-i18n="surface.fin_b4">Cash velocity tracking</li>
+        </ul>
+        <a href="#upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
+      </div>
+      <div class="sp-right">
+        <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
+        <div class="sp-stat">
+          <div class="num">24</div>
+          <div class="lbl" data-i18n="surface.fin_s1_lbl">Orphan QuickBooks invoices reconciled in a single cleanup</div>
+        </div>
+        <div class="sp-stat">
+          <div class="num">Same-day</div>
+          <div class="lbl" data-i18n="surface.fin_s2_lbl">Receipt-to-QuickBooks posting on every transaction</div>
+        </div>
+        <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.</div>
       </div>
     </div>
   </section>
@@ -512,31 +646,19 @@
     <div class="kicker" data-i18n="proof.kicker">Proof Case</div>
     <h2 data-i18n="proof.h2">We use this on our own businesses <span class="grad">first.</span></h2>
     <div class="proof-card">
-      <div class="proof-tag" data-i18n="proof.tag">CASE STUDY · LAS VEGAS RESIDENTIAL SERVICE · 2026</div>
-      <h3 data-i18n="proof.h3">1,000+ unconverted leads, recovered with one automation.</h3>
-      <p data-i18n="proof.body">A real Las Vegas service business sitting on a year of lead-gen ad spend with no follow-up system. We ran our own Assessment on it, identified lead recovery as the #1 ROI play, and built the upsell ourselves to validate the playbook. The Assessment was the same one we sell. The build proved the upsell menu.</p>
+      <div class="proof-tag" data-i18n="proof.tag">CUSTOMER STORY · POOP SCOOP DUDE · LAS VEGAS</div>
+      <h3 data-i18n="proof.h3">The rebuild: 4 disconnected systems consolidated into one AI operating system.</h3>
+      <p data-i18n="proof.body">A real Las Vegas residential service we ran our Assessment on, then rebuilt all the way through. Lead-recovery automation live on a year of unconverted ad spend. Subpar Zapier automation retired. Sweep&amp;Go to QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.</p>
       <div class="proof-metrics">
-        <div><span data-target="1000" data-suffix="+" data-comma>1,000+</span><span data-i18n="proof.m1">leads in queue</span></div>
-        <div><span data-target="9" data-prefix="$" data-suffix="k">$9k</span><span data-i18n="proof.m2">monthly baseline</span></div>
-        <div><span data-target="30" data-prefix="+" data-suffix="%">+30%</span><span data-i18n="proof.m3">projected lift</span></div>
+        <div><span data-target="4" data-suffix=" → 1">4 → 1</span><span data-i18n="proof.m1">systems consolidated</span></div>
+        <div><span data-target="4500" data-prefix="$" data-suffix="+" data-comma>$4,500+</span><span data-i18n="proof.m2">ad waste reallocated</span></div>
+        <div><span data-target="100" data-suffix="%">100%</span><span data-i18n="proof.m3">inbound texts answered</span></div>
       </div>
-      <a href="/case-study" class="btn btn-ghost" data-i18n="proof.cta">Read the full case study</a>
-    </div>
-
-    <div class="proof-card" style="margin-top: 24px;">
-      <div class="proof-tag">CUSTOMER STORY · POOP SCOOP DUDE · LAS VEGAS</div>
-      <h3>The rebuild: 4 disconnected systems consolidated into one AI operating system.</h3>
-      <p>The same Las Vegas residential service from the assessment, rebuilt all the way through. Subpar Zapier automation retired. Sweep&amp;Go to QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.</p>
-      <div class="proof-metrics">
-        <div><span data-target="4" data-suffix=" → 1">4 → 1</span><span>systems consolidated</span></div>
-        <div><span data-target="4500" data-prefix="$" data-suffix="+" data-comma>$4,500+</span><span>ad waste reallocated</span></div>
-        <div><span data-target="100" data-suffix="%">100%</span><span>inbound texts answered</span></div>
-      </div>
-      <a href="/customers/poop-scoop-dude" class="btn btn-ghost">See the full rebuild</a>
+      <a href="/customers/poop-scoop-dude" class="btn btn-ghost" data-i18n="proof.cta">See the full rebuild</a>
     </div>
 
     <div style="text-align: center; margin-top: 28px;">
-      <a href="/customers/" class="btn btn-ghost" style="font-size: 14px;">Browse all customer stories</a>
+      <a href="/customers/" class="btn btn-ghost" style="font-size: 14px;" data-i18n="proof.browse_all">Browse all customer stories</a>
     </div>
   </section>
 
@@ -681,6 +803,7 @@
             <label><input type="radio" name="heard_from" value="Other" /><span data-i18n="form.heard_other">Other</span></label>
           </div>
           <input type="text" name="heard_from_other" class="heard-other-input" maxlength="200" data-i18n-placeholder="form.heard_other_ph" placeholder="Tell us where you heard about us" />
+          <input type="text" name="referral_name" class="referral-input" maxlength="120" data-i18n-placeholder="form.referral_ph" placeholder="Their name, so we can thank them" />
         </label>
 
         <label class="qual-field">

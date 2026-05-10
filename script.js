@@ -73,25 +73,56 @@ const translations = {
     'assessment.cta_alt': 'Or skip the call, fill the intake',
 
     'surface.kicker': 'Where AI lands hardest',
-    'surface.h2': "Pick the leak. <span class=\"grad\">We've got a play for it.</span>",
-    'surface.lede': "AI doesn't transform anything on its own. Plugged into the right hole in your ops, it pays for itself fast.",
+    'surface.h2': "AI for <span class=\"grad\">every department.</span>",
+    'surface.lede': 'From sales to operations to finance, every team across your business unlocks more once AI plugs into the right workflow.',
     'surface.dept_sales': 'Sales',
-    'surface.dept_ops': 'Ops',
-    'surface.dept_support': 'Support',
-    'surface.dept_finance': 'Finance',
     'surface.dept_marketing': 'Marketing',
-    'surface.c1_title': 'Lead Recovery',
-    'surface.c1_body': "Recover the leads that already paid you to acquire. We've recovered over a thousand on a single audit.",
-    'surface.c2_title': 'Speed-to-Lead',
-    'surface.c2_body': 'AI voice and SMS agent that responds to inbound leads in under 60 seconds. Books appointments while you sleep.',
-    'surface.c3_title': 'Quote and Proposal Automation',
-    'surface.c3_body': 'Pull data from a form, draft a quote, send the contract, and follow up. The whole back-office stops eating you.',
-    'surface.c4_title': 'Customer Support',
-    'surface.c4_body': "A custom GPT trained on your FAQs, pricing, and SOPs. 24/7 answers that don't sound like a chatbot.",
-    'surface.c5_title': 'Bookkeeping and Receipts',
-    'surface.c5_body': 'Auto-categorize, sync to QuickBooks, never sit in a spreadsheet on a Sunday again.',
-    'surface.c6_title': 'Marketing Engine',
-    'surface.c6_body': "Replace the agency that's been billing you for three months with no leads. Local SEO, ads audit, content engine.",
+    'surface.dept_support': 'Support',
+    'surface.dept_ops': 'Operations',
+    'surface.dept_finance': 'Finance',
+    'surface.cta_learn': 'Learn more',
+    'surface.outcomes_label': 'Typical outcomes',
+    'surface.disclaimer': 'Numbers from real AIROIOPS engagements (Poop Scoop Dude, Las Vegas). Outcomes vary by scope and stack.',
+    'surface.sales_title': 'Sales acceleration',
+    'surface.sales_body': 'Close deals faster with AI-powered lead recovery, automated outreach, and real-time response to every inbound lead. The leads that already paid you to acquire stop slipping through.',
+    'surface.sales_b1': 'Speed-to-Lead AI agent (voice and SMS)',
+    'surface.sales_b2': 'Lead recovery cadence across cold leads',
+    'surface.sales_b3': 'Automated outreach sequences',
+    'surface.sales_b4': 'Conversation intelligence and follow-up',
+    'surface.sales_s1_lbl': 'Inbound texts answered, day or night',
+    'surface.sales_s2_lbl': 'Average response time on a new lead',
+    'surface.mkt_title': 'Marketing intelligence',
+    'surface.mkt_body': 'Replace the agency that has been billing you for three months without leads. We pull every reported conversion against real revenue and surface the spend that actually pays back.',
+    'surface.mkt_b1': 'Forensic Google and Meta ads audit',
+    'surface.mkt_b2': 'Local SEO and Google Business Profile',
+    'surface.mkt_b3': 'Content engine and repurposing',
+    'surface.mkt_b4': 'Audience segmentation and retargeting',
+    'surface.mkt_s1_lbl': 'Ad waste identified and reallocated on a single audit',
+    'surface.mkt_s2_lbl': 'Of paid spend audited line by line',
+    'surface.sup_title': 'Customer support',
+    'surface.sup_body': 'A custom GPT trained on your FAQs, pricing, SOPs, and product docs. Lives in your stack, answers in your voice, never sounds like a chatbot. Covers the hours your team cannot.',
+    'surface.sup_b1': 'Custom GPT trained on your business',
+    'surface.sup_b2': 'After-hours auto-reply with language detection',
+    'surface.sup_b3': 'FAQ and pricing on autopilot',
+    'surface.sup_b4': 'Sentiment-aware ticket triage',
+    'surface.sup_s1_lbl': 'Coverage on inbound questions, including weekends',
+    'surface.sup_s2_lbl': 'Auto language detection on every reply',
+    'surface.ops_title': 'Operations optimization',
+    'surface.ops_body': 'Streamline every workflow. Pull data from a form, draft a quote, send the contract, sync to your accounting. The whole back-office stops eating you, every day.',
+    'surface.ops_b1': 'Quote and proposal automation',
+    'surface.ops_b2': 'Make scenarios that orchestrate your stack',
+    'surface.ops_b3': 'Workflow redesign end-to-end',
+    'surface.ops_b4': 'Live operations dashboards',
+    'surface.ops_s1_lbl': 'Disconnected systems consolidated into one Make scenario',
+    'surface.ops_s2_lbl': 'Per week reclaimed from manual data hand-offs',
+    'surface.fin_title': 'Finance intelligence',
+    'surface.fin_body': 'Books that close themselves. Receipts auto-log to QuickBooks. Bank reconciliation runs on a schedule. Sunday spreadsheet sessions are over.',
+    'surface.fin_b1': 'QuickBooks auto-sync (Sales Receipts, not invoices)',
+    'surface.fin_b2': 'Receipt capture from camera roll',
+    'surface.fin_b3': 'Bank rules and monthly close',
+    'surface.fin_b4': 'Cash velocity tracking',
+    'surface.fin_s1_lbl': 'Orphan QuickBooks invoices reconciled in a single cleanup',
+    'surface.fin_s2_lbl': 'Receipt-to-QuickBooks posting on every transaction',
 
     'upsells.kicker': 'Optional Builds',
     'upsells.h2': "If you want us to <span class=\"grad\">build it</span>, here's the menu.",
@@ -126,13 +157,14 @@ const translations = {
 
     'proof.kicker': 'Proof Case',
     'proof.h2': 'We use this on our own businesses <span class="grad">first.</span>',
-    'proof.tag': 'CASE STUDY · LAS VEGAS RESIDENTIAL SERVICE · 2026',
-    'proof.h3': '1,000+ unconverted leads, recovered with one automation.',
-    'proof.body': 'A real Las Vegas service business sitting on a year of lead-gen ad spend with no follow-up system. We ran our own Assessment on it, identified lead recovery as the #1 ROI play, and built the upsell ourselves to validate the playbook. The Assessment was the same one we sell. The build proved the upsell menu.',
-    'proof.m1': 'leads in queue',
-    'proof.m2': 'monthly baseline',
-    'proof.m3': 'projected lift',
-    'proof.cta': 'Read the full case study',
+    'proof.tag': 'CUSTOMER STORY · POOP SCOOP DUDE · LAS VEGAS',
+    'proof.h3': 'The rebuild: 4 disconnected systems consolidated into one AI operating system.',
+    'proof.body': 'A real Las Vegas residential service we ran our Assessment on, then rebuilt all the way through. Lead-recovery automation live on a year of unconverted ad spend. Subpar Zapier automation retired. Sweep&amp;Go to QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.',
+    'proof.m1': 'systems consolidated',
+    'proof.m2': 'ad waste reallocated',
+    'proof.m3': 'inbound texts answered',
+    'proof.cta': 'See the full rebuild',
+    'proof.browse_all': 'Browse all customer stories',
 
     'about.kicker': "Who's behind this",
     'about.h2': 'Built by an operator. <span class="grad">For operators.</span>',
@@ -201,6 +233,7 @@ const translations = {
     'form.heard_referral': 'Friend or referral',
     'form.heard_other': 'Other',
     'form.heard_other_ph': 'Tell us where you heard about us',
+    'form.referral_ph': 'Their name, so we can thank them',
     'form.submit': 'Submit and get your Calendly link',
 
     'thanks.title': 'Got it | AIROIOPS',
@@ -246,6 +279,7 @@ const translations = {
     'intake.heard_referral': 'Friend or referral',
     'intake.heard_other': 'Other',
     'intake.heard_other_ph': 'Tell us where you heard about us',
+    'intake.referral_ph': 'Their name, so we can thank them',
     'intake.contact_name': 'Your name',
     'intake.business_name': 'Business name',
     'intake.email': 'Best email',
@@ -398,25 +432,56 @@ const translations = {
     'assessment.cta_alt': 'O salta la llamada, llena el cuestionario',
 
     'surface.kicker': 'Dónde la IA aterriza más fuerte',
-    'surface.h2': 'Elige la fuga. <span class="grad">Tenemos una jugada para ella.</span>',
-    'surface.lede': 'La IA no transforma nada por sí sola. Conectada al hoyo correcto en tus operaciones, se paga sola rápido.',
+    'surface.h2': 'IA para <span class="grad">cada departamento.</span>',
+    'surface.lede': 'De ventas a operaciones a finanzas, cada equipo de tu negocio destraba más cuando la IA se conecta al flujo correcto.',
     'surface.dept_sales': 'Ventas',
-    'surface.dept_ops': 'Operaciones',
-    'surface.dept_support': 'Soporte',
-    'surface.dept_finance': 'Finanzas',
     'surface.dept_marketing': 'Marketing',
-    'surface.c1_title': 'Recuperación de Leads',
-    'surface.c1_body': 'Recupera los leads que ya pagaste para adquirir. Hemos recuperado más de mil en una sola auditoría.',
-    'surface.c2_title': 'Speed-to-Lead',
-    'surface.c2_body': 'Agente de IA de voz y SMS que responde a los leads entrantes en menos de 60 segundos. Agenda citas mientras duermes.',
-    'surface.c3_title': 'Automatización de Cotizaciones y Propuestas',
-    'surface.c3_body': 'Extrae datos de un formulario, redacta una cotización, envía el contrato y haz seguimiento. Toda la oficina trasera deja de comerte.',
-    'surface.c4_title': 'Soporte al Cliente',
-    'surface.c4_body': 'Un GPT personalizado entrenado en tus FAQs, precios y SOPs. Respuestas 24/7 que no suenan como un chatbot.',
-    'surface.c5_title': 'Contabilidad y Recibos',
-    'surface.c5_body': 'Categoriza automáticamente, sincroniza con QuickBooks, nunca más sentado frente a una hoja de cálculo un domingo.',
-    'surface.c6_title': 'Motor de Marketing',
-    'surface.c6_body': 'Reemplaza a la agencia que te ha estado facturando por tres meses sin leads. SEO local, auditoría de anuncios, motor de contenido.',
+    'surface.dept_support': 'Soporte',
+    'surface.dept_ops': 'Operaciones',
+    'surface.dept_finance': 'Finanzas',
+    'surface.cta_learn': 'Más información',
+    'surface.outcomes_label': 'Resultados típicos',
+    'surface.disclaimer': 'Números de engagements reales de AIROIOPS (Poop Scoop Dude, Las Vegas). Los resultados varían según el alcance y el stack.',
+    'surface.sales_title': 'Aceleración de Ventas',
+    'surface.sales_body': 'Cierra negocios más rápido con recuperación de leads por IA, outreach automatizado y respuesta en tiempo real a cada lead entrante. Los leads que ya pagaste para adquirir dejan de escaparse.',
+    'surface.sales_b1': 'Agente IA Speed-to-Lead (voz y SMS)',
+    'surface.sales_b2': 'Cadencia de recuperación sobre leads fríos',
+    'surface.sales_b3': 'Secuencias de outreach automatizadas',
+    'surface.sales_b4': 'Inteligencia conversacional y seguimiento',
+    'surface.sales_s1_lbl': 'Mensajes entrantes respondidos, de día o de noche',
+    'surface.sales_s2_lbl': 'Tiempo promedio de respuesta a un nuevo lead',
+    'surface.mkt_title': 'Inteligencia de Marketing',
+    'surface.mkt_body': 'Reemplaza a la agencia que te ha estado facturando tres meses sin leads. Cruzamos cada conversión reportada contra ingresos reales y revelamos el gasto que sí paga de vuelta.',
+    'surface.mkt_b1': 'Auditoría forense de anuncios Google y Meta',
+    'surface.mkt_b2': 'SEO local y Perfil de Google Business',
+    'surface.mkt_b3': 'Motor de contenido y repurposing',
+    'surface.mkt_b4': 'Segmentación de audiencia y retargeting',
+    'surface.mkt_s1_lbl': 'Desperdicio publicitario identificado y reasignado en una sola auditoría',
+    'surface.mkt_s2_lbl': 'De gasto pagado auditado línea por línea',
+    'surface.sup_title': 'Soporte al Cliente',
+    'surface.sup_body': 'Un GPT personalizado entrenado en tus FAQs, precios, SOPs y documentación. Vive en tu stack, responde con tu voz, nunca suena como un chatbot. Cubre las horas que tu equipo no puede.',
+    'surface.sup_b1': 'GPT personalizado entrenado en tu negocio',
+    'surface.sup_b2': 'Auto-respuesta fuera de horario con detección de idioma',
+    'surface.sup_b3': 'FAQ y precios en piloto automático',
+    'surface.sup_b4': 'Triaje de tickets consciente del sentimiento',
+    'surface.sup_s1_lbl': 'Cobertura en preguntas entrantes, incluyendo fines de semana',
+    'surface.sup_s2_lbl': 'Detección automática de idioma en cada respuesta',
+    'surface.ops_title': 'Optimización de Operaciones',
+    'surface.ops_body': 'Agiliza cada flujo. Extrae datos de un formulario, redacta una cotización, envía el contrato, sincroniza tu contabilidad. Toda la oficina trasera deja de comerte, cada día.',
+    'surface.ops_b1': 'Automatización de cotizaciones y propuestas',
+    'surface.ops_b2': 'Escenarios de Make que orquestan tu stack',
+    'surface.ops_b3': 'Rediseño de flujos end-to-end',
+    'surface.ops_b4': 'Dashboards de operaciones en vivo',
+    'surface.ops_s1_lbl': 'Sistemas desconectados consolidados en un solo escenario de Make',
+    'surface.ops_s2_lbl': 'Por semana recuperadas del paso manual de datos',
+    'surface.fin_title': 'Inteligencia Financiera',
+    'surface.fin_body': 'Libros que se cierran solos. Los recibos se registran automáticamente en QuickBooks. La conciliación bancaria corre en horario. Las sesiones de hoja de cálculo de domingo se acabaron.',
+    'surface.fin_b1': 'Auto-sync con QuickBooks (Sales Receipts, no facturas)',
+    'surface.fin_b2': 'Captura de recibos desde el camera roll',
+    'surface.fin_b3': 'Reglas de banco y cierre mensual',
+    'surface.fin_b4': 'Tracking de velocidad de caja',
+    'surface.fin_s1_lbl': 'Facturas huérfanas de QuickBooks reconciliadas en una sola limpieza',
+    'surface.fin_s2_lbl': 'Posteo recibo-a-QuickBooks en cada transacción',
 
     'upsells.kicker': 'Construcciones opcionales',
     'upsells.h2': 'Si quieres que <span class="grad">la construyamos</span>, aquí está el menú.',
@@ -451,13 +516,14 @@ const translations = {
 
     'proof.kicker': 'Caso de prueba',
     'proof.h2': 'Lo usamos primero en nuestros propios <span class="grad">negocios.</span>',
-    'proof.tag': 'CASO DE ESTUDIO · SERVICIO RESIDENCIAL EN LAS VEGAS · 2026',
-    'proof.h3': '1,000+ leads sin convertir, recuperados con una automatización.',
-    'proof.body': 'Un negocio real de servicios en Las Vegas con un año de inversión en publicidad sin sistema de seguimiento. Hicimos nuestra propia evaluación, identificamos la recuperación de leads como la jugada #1 de ROI, y construimos el upsell nosotros mismos para validar el playbook. La evaluación fue la misma que vendemos. La construcción probó el menú de upsells.',
-    'proof.m1': 'leads en cola',
-    'proof.m2': 'base mensual',
-    'proof.m3': 'aumento proyectado',
-    'proof.cta': 'Leer el caso completo',
+    'proof.tag': 'HISTORIA DE CLIENTE · POOP SCOOP DUDE · LAS VEGAS',
+    'proof.h3': 'La reconstrucción: 4 sistemas desconectados consolidados en un solo sistema operativo de IA.',
+    'proof.body': 'Un servicio residencial real en Las Vegas al que le hicimos nuestra Evaluación y luego reconstruimos de extremo a extremo. Automatización de recuperación de leads activa sobre un año de inversión publicitaria sin convertir. Automatización subpar de Zapier retirada. Integración Sweep&amp;Go a QuickBooks reemplazada. Auto-respuestas en vivo. Remitente SMS verificado. Un panel de operaciones en vivo que se refresca sin que nadie lo toque. Entregado en olas escalonadas, cada una sostenible por sí sola.',
+    'proof.m1': 'sistemas consolidados',
+    'proof.m2': 'gasto publicitario reasignado',
+    'proof.m3': 'mensajes entrantes contestados',
+    'proof.cta': 'Ver la reconstrucción completa',
+    'proof.browse_all': 'Ver todas las historias de clientes',
 
     'about.kicker': 'Quién está detrás',
     'about.h2': 'Construido por un operador. <span class="grad">Para operadores.</span>',
@@ -526,6 +592,7 @@ const translations = {
     'form.heard_referral': 'Amigo o referido',
     'form.heard_other': 'Otro',
     'form.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'form.referral_ph': 'Su nombre, para poder agradecerle',
     'form.submit': 'Enviar y recibir tu enlace de Calendly',
 
     'thanks.title': 'Recibido | AIROIOPS',
@@ -571,6 +638,7 @@ const translations = {
     'intake.heard_referral': 'Amigo o referido',
     'intake.heard_other': 'Otro',
     'intake.heard_other_ph': 'Cuéntanos dónde te enteraste de nosotros',
+    'intake.referral_ph': 'Su nombre, para poder agradecerle',
     'intake.contact_name': 'Tu nombre',
     'intake.business_name': 'Nombre del negocio',
     'intake.email': 'Correo electrónico',
@@ -752,6 +820,12 @@ function syncHeardOtherInput() {
     input.required = isOther;
     if (!isOther) input.value = '';
   });
+  document.querySelectorAll('.referral-input').forEach(input => {
+    const isReferral = value === 'Friend or referral';
+    input.classList.toggle('is-visible', isReferral);
+    input.required = isReferral;
+    if (!isReferral) input.value = '';
+  });
 }
 document.querySelectorAll('input[name="heard_from"]').forEach(radio => {
   radio.addEventListener('change', syncHeardOtherInput);
@@ -811,6 +885,55 @@ navLinks.forEach(link => {
     }
   });
 });
+
+/* --- Surface tabs (department picker) --- */
+(function setupSurfaceTabs() {
+  const surface = document.getElementById('surface');
+  if (!surface) return;
+  const tabs = Array.from(surface.querySelectorAll('.surface-tab'));
+  const panels = Array.from(surface.querySelectorAll('.surface-panel'));
+  const arrows = surface.querySelectorAll('.surface-arrow');
+  if (!tabs.length || !panels.length) return;
+
+  function activate(idx) {
+    if (idx < 0) idx = tabs.length - 1;
+    if (idx >= tabs.length) idx = 0;
+    tabs.forEach((t, i) => {
+      const on = i === idx;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    panels.forEach((p, i) => {
+      const on = i === idx;
+      p.classList.toggle('is-active', on);
+      if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', '');
+    });
+  }
+
+  function currentIdx() {
+    return Math.max(0, tabs.findIndex(t => t.classList.contains('is-active')));
+  }
+
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => activate(idx));
+  });
+  arrows.forEach(a => {
+    a.addEventListener('click', () => {
+      const dir = a.getAttribute('data-dir');
+      const i = currentIdx();
+      activate(dir === 'next' ? i + 1 : i - 1);
+    });
+  });
+  surface.querySelector('.surface-tabs')?.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const i = currentIdx();
+    const nextIdx = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+    activate(nextIdx);
+    tabs[nextIdx].focus();
+    e.preventDefault();
+  });
+})();
 
 /* --- Mobile nav drawer toggle --- */
 (function setupMobileNav() {
