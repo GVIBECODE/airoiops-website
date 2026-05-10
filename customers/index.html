@@ -139,6 +139,10 @@
 
   <nav class="nav">
     <a href="/" class="logo">AIROI<span>OPS</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-backdrop" aria-hidden="true"></div>
     <div class="nav-links">
       <a href="/#assessment">Assessment</a>
       <a href="/#upsells">Builds</a>
@@ -239,5 +243,38 @@
     </div>
   </footer>
 
+  <script>
+  (function setupMobileNav() {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+    const toggle = nav.querySelector('.nav-toggle');
+    const links = nav.querySelector('.nav-links');
+    const backdrop = nav.querySelector('.nav-backdrop');
+    if (!toggle || !links) return;
+    function close() {
+      nav.classList.remove('is-open');
+      links.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-locked');
+    }
+    function open() {
+      nav.classList.add('is-open');
+      links.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-locked');
+    }
+    toggle.addEventListener('click', () => {
+      if (nav.classList.contains('is-open')) close(); else open();
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    if (backdrop) backdrop.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) close();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
+    });
+  })();
+  </script>
 </body>
 </html>
