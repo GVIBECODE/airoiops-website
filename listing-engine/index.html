@@ -54,7 +54,19 @@
     position: relative;
     z-index: 2;
   }
-  .nav-logo { font-weight: 700; letter-spacing: 0.5px; }
+  .nav-logo {
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .nav-logo span {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .nav-cta {
     background: var(--accent);
     color: white;
@@ -232,7 +244,7 @@
 <div class="orb orb-3"></div>
 
 <header class="nav">
-  <div class="nav-logo">AIROIOPS</div>
+  <a href="/" class="nav-logo">AIROI<span>OPS</span></a>
   <a href="#book" class="nav-cta">Book a 15 min call</a>
 </header>
 
