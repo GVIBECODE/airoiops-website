@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://airoiops.com/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/" />
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://airoiops.com/assessment</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/assessment" />
@@ -20,8 +20,62 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/assessment" />
   </url>
   <url>
+    <loc>https://airoiops.com/upsells</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/upsells" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/upsells-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/upsells" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/upsells-es</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/upsells" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/upsells-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/upsells" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/faq</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/faq-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/faq" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/faq-es</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/faq-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/faq" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/customers/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/customers/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/customers-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/customers-es</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/customers/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/customers-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/" />
+  </url>
+  <url>
     <loc>https://airoiops.com/case-study</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/case-study" />
@@ -30,11 +84,29 @@
   </url>
   <url>
     <loc>https://airoiops.com/case-study-es</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/case-study" />
     <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/case-study-es" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/case-study" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/customers/sister-business-rebuild</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/customers/sister-business-rebuild" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/customers/sister-business-rebuild-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/sister-business-rebuild" />
+  </url>
+  <url>
+    <loc>https://airoiops.com/customers/sister-business-rebuild-es</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airoiops.com/customers/sister-business-rebuild" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://airoiops.com/customers/sister-business-rebuild-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/sister-business-rebuild" />
   </url>
 </urlset>

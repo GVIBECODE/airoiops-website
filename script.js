@@ -170,6 +170,11 @@ const translations = {
     'proof.cta': 'Read the case study',
     'proof.browse_all': 'Browse all customer stories',
 
+    'testimonial.kicker': 'In their own words',
+    'testimonial.quote': "Before this I was running my whole business off vibes and a brittle Zapier glue I didn't fully understand. Now I open one tab in the morning and I can see the whole company. That's the difference.",
+    'testimonial.who': 'The operator',
+    'testimonial.role': 'Founder, AIROIOPS &amp; the sister business',
+
     'about.kicker': "Who's behind this",
     'about.h2': 'Built by an operator. <span class="grad">For operators.</span>',
     'about.body1': "I'm Gianny. I run a residential service business in Las Vegas, and I'm building AIROIOPS to bring real AI leverage to small business owners, the people who actually need it most and get sold to last.",
@@ -532,6 +537,11 @@ const translations = {
     'proof.m3': 'mensajes entrantes contestados',
     'proof.cta': 'Leer el caso de estudio',
     'proof.browse_all': 'Ver todas las historias de clientes',
+
+    'testimonial.kicker': 'En sus propias palabras',
+    'testimonial.quote': 'Antes de esto manejaba mi negocio entero por intuici&oacute;n y un pegamento fr&aacute;gil de Zapier que no entend&iacute;a del todo. Ahora abro una sola pesta&ntilde;a en la ma&ntilde;ana y puedo ver la empresa entera. Esa es la diferencia.',
+    'testimonial.who': 'El operador',
+    'testimonial.role': 'Fundador, AIROIOPS y el negocio hermano',
 
     'about.kicker': 'Quién está detrás',
     'about.h2': 'Construido por un operador. <span class="grad">Para operadores.</span>',
