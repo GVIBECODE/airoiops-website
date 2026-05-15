@@ -14,14 +14,6 @@
   <link rel="stylesheet" href="../styles.css">
 
   <style>
-    .preview-banner {
-      position: sticky; top: 0; z-index: 100;
-      padding: 10px 20px; text-align: center;
-      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-      color: white; font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
-      font-weight: 600;
-    }
     .cs-wrap { max-width: 1100px; margin: 0 auto; padding: 80px 40px 0; position: relative; z-index: 1; }
     .cs-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--grad-4); text-transform: uppercase; margin-bottom: 18px; }
     .cs-hero h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 24px; max-width: 18ch; }
@@ -186,8 +178,6 @@
 </head>
 <body>
 
-  <div class="preview-banner">PREVIEW · NOT LIVE · SAVED IN proposals/ FOR REVIEW</div>
-
   <div class="bg-orbs" aria-hidden="true">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -203,9 +193,15 @@
     <div class="nav-backdrop" aria-hidden="true"></div>
     <div class="nav-links">
       <a href="/#assessment">Assessment</a>
-      <a href="/#upsells">Builds</a>
+      <a href="/upsells">Builds</a>
       <a href="/#how">How it works</a>
-      <a href="/#faq">FAQ</a>
+      <a href="/customers/" class="active">Customers</a>
+      <a href="/faq">FAQ</a>
+      <div class="nav-lang" role="group" aria-label="Language">
+        <a href="/customers/sister-business-rebuild" class="active" aria-label="English">EN</a>
+        <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
+        <a href="/?lang=es" aria-label="Espa&ntilde;ol">ES</a>
+      </div>
       <a href="/#book" class="nav-cta">Book Call</a>
     </div>
   </nav>
