@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Got it — reaching out within 24 hours | Listing Engine</title>
-<meta name="description" content="Intake received. We'll review your info and reach out personally within 24 hours to line up your Listing Engine onboarding.">
+<title>Payment received — your engine is building | Listing Engine</title>
+<meta name="description" content="Payment received. Your Listing Engine cycle 1 build kicks off now. Live in your Publer within 7 to 10 days.">
 <meta name="robots" content="noindex,follow">
 <style>
   :root {
@@ -42,7 +42,7 @@
   }
   .orb-1 { width: 480px; height: 480px; background: var(--accent); top: -120px; left: -160px; }
   .orb-2 { width: 380px; height: 380px; background: var(--accent-2); top: 280px; right: -120px; }
-  .orb-3 { width: 360px; height: 360px; background: var(--accent-3); bottom: -100px; left: 30%; opacity: 0.3; }
+  .orb-3 { width: 360px; height: 360px; background: #4dffa6; bottom: -100px; left: 30%; opacity: 0.3; }
   header.nav {
     display: flex;
     justify-content: space-between;
@@ -75,7 +75,7 @@
   }
   .thanks-hero {
     padding: 56px 44px;
-    background: linear-gradient(135deg, rgba(124,92,255,0.14), rgba(92,196,255,0.06));
+    background: linear-gradient(135deg, rgba(77,255,166,0.10), rgba(124,92,255,0.10));
     border: 1px solid var(--border-strong);
     border-radius: 28px;
     margin-bottom: 28px;
@@ -90,23 +90,38 @@
     right: -80px;
     width: 260px;
     height: 260px;
-    background: radial-gradient(circle, var(--accent-3), transparent 70%);
+    background: radial-gradient(circle, #4dffa6, transparent 70%);
     filter: blur(50px);
     opacity: 0.35;
     pointer-events: none;
   }
   .thanks-hero > * { position: relative; z-index: 1; }
+  .check-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4dffa6, var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 12px 30px -8px rgba(77,255,166,0.5);
+  }
+  .check-circle svg {
+    stroke: #0b0a1f;
+    stroke-width: 3;
+  }
   .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 6px 14px;
-    background: rgba(92,196,255,0.18);
-    border: 1px solid rgba(92,196,255,0.35);
+    background: rgba(77,255,166,0.18);
+    border: 1px solid rgba(77,255,166,0.35);
     border-radius: 999px;
     font-size: 12px;
     font-weight: 600;
-    color: var(--accent-2);
+    color: #4dffa6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 22px;
@@ -116,8 +131,8 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--accent-2);
-    box-shadow: 0 0 12px var(--accent-2);
+    background: #4dffa6;
+    box-shadow: 0 0 12px #4dffa6;
   }
   h1 {
     font-size: clamp(38px, 5.5vw, 56px);
@@ -246,9 +261,12 @@
 <main class="container">
 
   <section class="thanks-hero">
-    <span class="eyebrow">Intake received</span>
-    <h1>Got it. <span class="accent">Check your email for the payment link.</span></h1>
-    <p class="lede">If you weren't routed to Stripe checkout, check your inbox — we sent a backup link to lock in your $1,500 setup so we can start the build.</p>
+    <div class="check-circle">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <span class="eyebrow">Payment received</span>
+    <h1>You're in. <span class="accent">Build starts now.</span></h1>
+    <p class="lede">Your $1,500 setup is locked in, your monthly subscription is active, and your cycle 1 build kicks off automatically.</p>
   </section>
 
   <section class="next-steps">
@@ -257,8 +275,8 @@
     <div class="step-row">
       <div class="step-num">1</div>
       <div class="step-text">
-        <h3>Complete your $1,500 setup payment</h3>
-        <p>Email is in your inbox with the Stripe checkout link. Pay and your cycle 1 build kicks off immediately.</p>
+        <h3>Confirmation email landed in your inbox</h3>
+        <p>Stripe receipt + your build timeline + my direct email if anything urgent comes up. Check your inbox now.</p>
       </div>
     </div>
 
@@ -266,22 +284,30 @@
       <div class="step-num">2</div>
       <div class="step-text">
         <h3>We build your engine (7 to 10 days)</h3>
-        <p>20 topics. 1,120 captions across 4 platforms. 40 carousels + 20 vertical Shorts rendered with your headshot, logo, and brand color. Pushed to a fresh Publer workspace.</p>
+        <p>20 topics generated from your inputs. 1,120 platform-specific captions in your languages. 40 carousels + 20 vertical Shorts rendered with your headshot, logo, and brand color. Compliance-scanned for your state. All pushed to a fresh Publer workspace under your account.</p>
       </div>
     </div>
 
     <div class="step-row">
       <div class="step-num">3</div>
       <div class="step-text">
-        <h3>Your broker approves drafts</h3>
-        <p>You'll get an email when the build is ready. We invite your broker to your Publer as a reviewer. Once approved, first post goes live.</p>
+        <h3>You + your broker approve drafts</h3>
+        <p>You'll get an email when the build is ready. We invite your broker to your Publer as a reviewer. They approve the drafts they like (you keep editorial control).</p>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h3>First post goes live</h3>
+        <p>Once approved, drafts schedule on your cadence. 5 posts per day per platform. Recycle runs every 28 days. Seasonal refresh ships quarterly.</p>
       </div>
     </div>
 
   </section>
 
   <div class="cta-row">
-    <a href="https://ricardo-listing-engine-sample-99324.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">See a live sample</a>
+    <a href="https://ricardo-listing-engine-sample-99324.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">See a live sample while you wait</a>
     <a href="/listing-engine/" class="btn btn-ghost">Back to The Listing Engine</a>
   </div>
 
