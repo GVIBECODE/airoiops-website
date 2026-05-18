@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Listing Engine Intake | AIROIOPS</title>
-<meta name="description" content="Tell us about your real estate practice and we'll line up your Listing Engine onboarding. 5 minutes to fill, personal reply within 24 hours.">
+<meta name="description" content="Self-serve intake for The Listing Engine. Fill it once, pay your $1,500 setup, and your social engine ships in 7-10 days. No call required.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://airoiops.com/listing-engine/intake">
 
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="AIROIOPS">
 <meta property="og:url" content="https://airoiops.com/listing-engine/intake">
 <meta property="og:title" content="The Listing Engine — Intake | AIROIOPS">
-<meta property="og:description" content="5 minutes to fill. Personal reply within 24 hours. A year of branded, compliant social content for real estate agents.">
+<meta property="og:description" content="Self-serve intake. Fill the form, lock in your setup, your engine ships in 7-10 days.">
 
 <style>
   :root {
@@ -218,6 +218,7 @@
   .field input[type=email],
   .field input[type=tel],
   .field input[type=url],
+  .field input[type=color],
   .field textarea,
   .field select {
     width: 100%;
@@ -231,6 +232,19 @@
     line-height: 1.4;
     transition: border-color 0.2s, background 0.2s;
   }
+  .field input[type=file] {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0,0,0,0.25);
+    border: 1px dashed var(--border-strong);
+    border-radius: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .field input[type=file]:hover { border-color: var(--accent); }
+  .field input[type=color] { height: 56px; padding: 8px; cursor: pointer; }
   .field textarea { min-height: 110px; resize: vertical; }
   .field input:focus,
   .field textarea:focus,
@@ -283,24 +297,53 @@
   .hp { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
 
   .submit-card {
-    padding: 36px 32px;
+    padding: 40px 32px;
     background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(92,196,255,0.08));
     border: 1px solid var(--border-strong);
     border-radius: 22px;
     text-align: center;
   }
+  .price-block {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 14px 22px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 22px;
+  }
+  .price-block .big-num {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--fg);
+    letter-spacing: -0.02em;
+  }
+  .price-block .plus {
+    color: var(--muted);
+    font-size: 18px;
+    margin: 0 4px;
+  }
+  .price-block .mo {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 500;
+  }
   .submit-card p {
     margin: 0 0 22px;
     color: var(--muted);
     font-size: 15px;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
   }
   button.submit-btn {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: white;
     border: none;
-    padding: 16px 32px;
+    padding: 18px 36px;
     border-radius: 999px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     cursor: pointer;
     display: inline-flex;
@@ -311,9 +354,18 @@
   }
   button.submit-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 30px -10px rgba(124,92,255,0.55);
+    box-shadow: 0 14px 36px -10px rgba(124,92,255,0.65);
   }
   button.submit-btn:active { transform: translateY(0); }
+  .secure-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+  }
 
   footer.footer {
     margin-top: 60px;
@@ -328,7 +380,8 @@
     .container { padding: 24px 16px 64px; }
     .hero { padding: 32px 24px; }
     fieldset { padding: 24px 20px 22px; }
-    .submit-card { padding: 28px 22px; }
+    .submit-card { padding: 32px 22px; }
+    .price-block .big-num { font-size: 24px; }
   }
 </style>
 </head>
@@ -350,21 +403,22 @@
 
   <section class="hero">
     <span class="eyebrow">The Listing Engine · Intake</span>
-    <h1>Tell us about <span class="accent">your practice.</span></h1>
-    <p class="lede">5 minutes to fill. We'll review what you send, line up the right onboarding path, and reach back out personally within 24 hours.</p>
+    <h1>Fill it once. <span class="accent">Ship in 7-10 days.</span></h1>
+    <p class="lede">No call required. Give us everything we need below, lock in your $1,500 setup, and your social engine is live in your Publer within 7 to 10 days.</p>
     <div class="meta">
-      <span><b>Time to fill:</b> 5 minutes</span>
-      <span><b>Reply:</b> within 24 hours</span>
-      <span><b>You get:</b> A real human reaching out, not a generic auto-reply</span>
+      <span><b>Time to fill:</b> 10-15 minutes</span>
+      <span><b>Build time:</b> 7-10 days after payment</span>
+      <span><b>What you get:</b> 1,120 branded posts across 4 platforms</span>
     </div>
   </section>
 
   <form
     name="listing-engine-intake"
     method="POST"
+    enctype="multipart/form-data"
     data-netlify="true"
     netlify-honeypot="bot-field"
-    action="/listing-engine/thanks.html">
+    action="https://buy.stripe.com/test_5kQdR92KAgSvfyL27pgYU01">
 
     <input type="hidden" name="form-name" value="listing-engine-intake" />
     <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
@@ -373,7 +427,7 @@
     <fieldset>
       <legend>§ 1</legend>
       <h2 class="section-title">How to reach you</h2>
-      <p class="section-sub">Just enough to follow up and pull together your specific situation.</p>
+      <p class="section-sub">Just enough to follow up and route your payment.</p>
 
       <div class="row">
         <label class="field">
@@ -392,15 +446,36 @@
           <input type="email" name="email" required autocomplete="email" />
         </label>
         <label class="field">
-          <span>Best phone (text-friendly?)</span>
-          <input type="tel" name="phone" autocomplete="tel" />
+          <span>Best phone (text-friendly?) <span class="req">*</span></span>
+          <input type="tel" name="phone" required autocomplete="tel" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>Your real estate license # <span class="req">*</span></span>
+          <p class="help">Required for compliance footers on every post.</p>
+          <input type="text" name="license_number" required />
+        </label>
+        <label class="field">
+          <span>Broker's full name <span class="req">*</span></span>
+          <p class="help">The principal broker who'll approve your drafts.</p>
+          <input type="text" name="broker_name" required />
         </label>
       </div>
 
       <label class="field">
-        <span>Your real estate license number</span>
-        <p class="help">Required at onboarding for compliance. Optional here.</p>
-        <input type="text" name="license_number" />
+        <span>State you're licensed in <span class="req">*</span></span>
+        <p class="help">Compliance scan rules differ per state. We support NV, CA, AZ, TX, FL, CO at launch.</p>
+        <div class="radio-grid">
+          <label class="radio-card"><input type="radio" name="state" value="NV" required /><span>Nevada</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="CA" /><span>California</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="AZ" /><span>Arizona</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="TX" /><span>Texas</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="FL" /><span>Florida</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="CO" /><span>Colorado</span></label>
+          <label class="radio-card"><input type="radio" name="state" value="Other" /><span>Other (we'll confirm)</span></label>
+        </div>
       </label>
     </fieldset>
 
@@ -408,7 +483,7 @@
     <fieldset>
       <legend>§ 2</legend>
       <h2 class="section-title">Your real estate practice</h2>
-      <p class="section-sub">Helps us figure out which pricing tier fits and how much content fuel you have.</p>
+      <p class="section-sub">Lets us size your content fuel and pick the right pricing tier.</p>
 
       <label class="field">
         <span>Solo, on a team, or you run the brokerage? <span class="req">*</span></span>
@@ -430,9 +505,9 @@
       </label>
 
       <label class="field">
-        <span>Roughly how many closings per year?</span>
+        <span>Roughly how many closings per year? <span class="req">*</span></span>
         <div class="radio-grid">
-          <label class="radio-card"><input type="radio" name="closings_per_year" value="Under 5" /><span>Under 5</span></label>
+          <label class="radio-card"><input type="radio" name="closings_per_year" value="Under 5" required /><span>Under 5</span></label>
           <label class="radio-card"><input type="radio" name="closings_per_year" value="5-10" /><span>5 to 10</span></label>
           <label class="radio-card"><input type="radio" name="closings_per_year" value="11-20" /><span>11 to 20</span></label>
           <label class="radio-card"><input type="radio" name="closings_per_year" value="21-50" /><span>21 to 50</span></label>
@@ -442,21 +517,79 @@
 
       <div class="row">
         <label class="field">
-          <span>Languages you serve clients in</span>
-          <input type="text" name="languages_served" placeholder="e.g. English, Spanish, both" />
+          <span>Languages you serve clients in <span class="req">*</span></span>
+          <input type="text" name="languages_served" required placeholder="e.g. English, Spanish, both" />
         </label>
         <label class="field">
-          <span>Markets or ZIPs you focus on</span>
-          <input type="text" name="markets" placeholder="e.g. 89108, Charleston Heights, Henderson" />
+          <span>Markets or ZIPs you focus on <span class="req">*</span></span>
+          <input type="text" name="markets" required placeholder="e.g. 89108, Charleston Heights, Henderson" />
         </label>
       </div>
     </fieldset>
 
-    <!-- §3 Social -->
+    <!-- §3 Brand assets -->
     <fieldset>
       <legend>§ 3</legend>
+      <h2 class="section-title">Your brand</h2>
+      <p class="section-sub">Used on every post. Headshot goes on your personal-brand slides; logo lives in the compliance footer. Both required.</p>
+
+      <div class="row">
+        <label class="field">
+          <span>Upload your headshot <span class="req">*</span></span>
+          <p class="help">JPG or PNG, ideally 1080x1080 or larger. Will appear on personal-brand posts.</p>
+          <input type="file" name="headshot" accept="image/*" required />
+        </label>
+        <label class="field">
+          <span>Upload your brokerage logo <span class="req">*</span></span>
+          <p class="help">PNG with transparent background works best. Goes in compliance footer.</p>
+          <input type="file" name="logo" accept="image/*" required />
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>Your brand color</span>
+          <p class="help">Pick the accent color used on your posts. We'll use it across creatives.</p>
+          <input type="color" name="brand_color" value="#7c5cff" />
+        </label>
+        <label class="field">
+          <span>Your IDX or website URL <span class="req">*</span></span>
+          <p class="help">Where every post drives traffic. Ylopo, kvCORE, BoomTown, Real Geeks all supported.</p>
+          <input type="url" name="idx_url" required placeholder="https://yoursite.com" />
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- §4 Content fuel -->
+    <fieldset>
+      <legend>§ 4</legend>
+      <h2 class="section-title">Content fuel</h2>
+      <p class="section-sub">What we use to build your 20 cycle-1 topics. Bullets are fine. The more raw detail, the better the posts.</p>
+
+      <label class="field">
+        <span>Your niche or specialty <span class="req">*</span></span>
+        <p class="help">VA loans, first-time buyers, luxury, downsizing, military, multi-family, etc. Be specific.</p>
+        <textarea name="niche" rows="2" required></textarea>
+      </label>
+
+      <label class="field">
+        <span>Active listings to feature (addresses + MLS links if available)</span>
+        <p class="help">3 to 5 you'd love us to promote. List one per line: address + MLS or Zillow link.</p>
+        <textarea name="active_listings_detail" rows="4"></textarea>
+      </label>
+
+      <label class="field">
+        <span>Recent closing stories</span>
+        <p class="help">2 to 4 short stories. "VA-loan first-timer, 30 days, $480K." "Upsizing family, $640K closing." The human stories that prove you sell. We'll turn each into a hybrid carousel.</p>
+        <textarea name="recent_closings" rows="5"></textarea>
+      </label>
+    </fieldset>
+
+    <!-- §5 Social -->
+    <fieldset>
+      <legend>§ 5</legend>
       <h2 class="section-title">Your social handles</h2>
-      <p class="section-sub">Drop whatever's active. We'll audit them before the call so we walk in already knowing your starting point. Skip anything you don't run yet.</p>
+      <p class="section-sub">Drop whatever's active. Skip anything you don't have. We'll audit + connect them during build.</p>
 
       <div class="row">
         <label class="field">
@@ -481,37 +614,41 @@
       </div>
     </fieldset>
 
-    <!-- §4 The pain -->
+    <!-- §6 The pain -->
     <fieldset>
-      <legend>§ 4</legend>
-      <h2 class="section-title">The big one</h2>
-      <p class="section-sub">Most important question on the form. The rawer the better.</p>
+      <legend>§ 6</legend>
+      <h2 class="section-title">Anything else</h2>
 
       <label class="field">
-        <span>What's the biggest thing slowing down your social right now? <span class="req">*</span></span>
-        <p class="help">Time? Compliance? Not knowing what to post? Inconsistency? Be specific.</p>
-        <textarea name="biggest_pain" rows="4" required></textarea>
+        <span>What's slowing your social right now? <span class="req">*</span></span>
+        <p class="help">Time? Compliance? Not knowing what to post? Inconsistency? Be specific so we frame your first posts right.</p>
+        <textarea name="biggest_pain" rows="3" required></textarea>
       </label>
-    </fieldset>
-
-    <!-- §5 Anything else -->
-    <fieldset>
-      <legend>§ 5</legend>
-      <h2 class="section-title">Wrap up</h2>
 
       <label class="field">
-        <span>Anything else we should know before reaching out?</span>
-        <p class="help">Goals, timeline, things you've already tried, your broker's name, whatever.</p>
+        <span>Anything else we should know?</span>
+        <p class="help">Goals, timeline, things you've tried, broker preferences, etc.</p>
         <textarea name="anything_else" rows="3"></textarea>
       </label>
     </fieldset>
 
     <div class="submit-card">
-      <p>We'll review your answers and reach out personally within 24 hours. No automated follow-up.</p>
+      <div class="price-block">
+        <span class="big-num">$1,500</span>
+        <span class="mo">setup</span>
+        <span class="plus">+</span>
+        <span class="big-num">$397</span>
+        <span class="mo">/mo after</span>
+      </div>
+      <p>Hit submit and you'll be sent to Stripe checkout to lock in your build. After payment lands, we start your cycle 1. Live in your Publer within 7 to 10 days.</p>
       <button type="submit" class="submit-btn">
-        <span>Send my info</span>
+        <span>Submit and pay</span>
         <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
+      <div class="secure-note">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Secured by Stripe · 100% money safe
+      </div>
     </div>
 
   </form>
