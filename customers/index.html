@@ -5,300 +5,161 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Customer Stories | AIROIOPS</title>
   <meta name="description" content="Real customer rebuilds, real numbers. How AIROIOPS clients consolidate their stack, reclaim wasted spend, and put AI where humans were the bottleneck.">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://airoiops.com/customers/">
-  <meta name="theme-color" content="#050714">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Inter,system-ui' font-size='44' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="alternate" hreflang="en" href="https://airoiops.com/customers/">
+  <link rel="alternate" hreflang="es" href="https://airoiops.com/customers/?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/customers/">
+  <meta property="og:title" content="Customer Stories | AIROIOPS">
+  <meta property="og:description" content="Real customer rebuilds, real numbers. We publish the work, the numbers, and the stack used.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Customer Stories | AIROIOPS">
+  <meta name="twitter:description" content="Real customer rebuilds, real numbers. No vague claims.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-
-  <style>
-    .cust-hero {
-      max-width: 1100px; margin: 0 auto;
-      padding: 100px 40px 60px; position: relative; z-index: 1;
-    }
-    .cust-hero .kicker {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      letter-spacing: 0.25em; color: var(--grad-4);
-      text-transform: uppercase; margin-bottom: 18px;
-    }
-    .cust-hero h1 {
-      font-size: clamp(40px, 6vw, 72px); line-height: 1.04;
-      letter-spacing: -0.035em; margin: 0 0 24px; max-width: 16ch;
-    }
-    .cust-hero h1 .grad {
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .cust-hero .lede {
-      font-size: 20px; color: var(--text-2); max-width: 60ch; margin: 0 0 40px;
-    }
-    .cust-stats {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-      max-width: 760px; margin-top: 36px;
-    }
-    .cust-stat {
-      padding: 22px 24px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 16px;
-    }
-    .cust-stat .num {
-      font-size: clamp(26px, 3vw, 36px); font-weight: 800;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-      line-height: 1.05; margin-bottom: 6px;
-    }
-    .cust-stat .lbl { font-size: 12.5px; color: var(--text-3); font-weight: 500; }
-
-    .cust-grid-section {
-      max-width: 1100px; margin: 0 auto;
-      padding: 60px 40px 100px; position: relative; z-index: 1;
-    }
-    .cust-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px;
-    }
-    .cust-card {
-      display: block; text-decoration: none;
-      padding: 36px 32px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 22px;
-      color: inherit; transition: transform 0.18s ease, border-color 0.18s ease;
-      position: relative; overflow: hidden;
-    }
-    .cust-card:hover {
-      transform: translateY(-3px); border-color: var(--border-strong);
-    }
-    .cust-card-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--grad-4); font-weight: 600; margin-bottom: 16px;
-    }
-    .cust-card h3 {
-      font-size: 22px; font-weight: 700; margin: 0 0 12px;
-      letter-spacing: -0.02em; line-height: 1.2;
-    }
-    .cust-card p {
-      color: var(--text-2); font-size: 14.5px; margin: 0 0 22px; line-height: 1.55;
-    }
-    .cust-card .cust-card-metrics {
-      display: flex; flex-wrap: wrap; gap: 20px;
-      padding-top: 20px; border-top: 1px solid var(--border);
-      margin-bottom: 20px;
-    }
-    .cust-card .cust-card-metrics > div { font-size: 12.5px; color: var(--text-3); }
-    .cust-card .cust-card-metrics .num {
-      display: block; font-family: 'JetBrains Mono', monospace;
-      font-size: 17px; font-weight: 700; color: var(--text);
-      margin-bottom: 2px;
-    }
-    .cust-card .arrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--grad-4); font-weight: 600; font-size: 14px;
-    }
-
-    .cust-card.coming {
-      opacity: 0.55; cursor: default; pointer-events: none;
-      border-style: dashed;
-    }
-    .cust-card.coming h3 { color: var(--text-3); }
-
-    .cust-cta {
-      max-width: 760px; margin: 80px auto 40px;
-      padding: 60px 48px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.08));
-      border: 1px solid var(--border-strong); border-radius: 32px;
-      text-align: center; isolation: isolate;
-    }
-    .cust-cta h2 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 14px; }
-    .cust-cta h2 .grad {
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .cust-cta p {
-      color: var(--text-2); font-size: 17px; margin: 0 0 30px;
-      max-width: 50ch; margin-left: auto; margin-right: auto;
-    }
-
-    @media (max-width: 880px) {
-      .cust-hero { padding: 80px 24px 40px; }
-      .cust-grid-section { padding: 40px 24px 80px; }
-      .cust-grid { grid-template-columns: 1fr; }
-      .cust-stats { grid-template-columns: 1fr 1fr; }
-      .cust-cta { padding: 48px 28px; margin: 60px 24px 24px; }
-    }
-  </style>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
-  </div>
-
+  <!-- ============ NAV ============ -->
   <nav class="nav">
-    <a href="/" class="logo">AIROI<span>OPS</span></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-backdrop" aria-hidden="true"></div>
-    <div class="nav-links">
-      <a href="/#assessment">Assessment</a>
-      <a href="/upsells">Builds</a>
-      <a href="/#how">How it works</a>
-      <a href="/customers/" class="active">Customers</a>
-      <a href="/faq">FAQ</a>
-      <div class="nav-lang" role="group" aria-label="Language">
-        <a href="/customers/" class="active" aria-label="English">EN</a>
-        <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
-        <a href="/customers-es" aria-label="Espa&ntilde;ol">ES</a>
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment" data-i18n="nav.assessment">Assessment</a>
+        <a class="nav-item" href="/upsells" data-i18n="nav.builds">Builds</a>
+        <a class="nav-item" href="/#how" data-i18n="nav.how">How it works</a>
+        <a class="nav-item" href="/#proof" data-i18n="nav.proof">Proof</a>
+        <a class="nav-item current" href="/customers/" data-i18n="nav.customers">Customers</a>
+        <a class="nav-item" href="/faq" data-i18n="nav.faq">FAQ</a>
+        <div class="nav-lang" role="group" aria-label="Language">
+          <button data-lang="en" type="button" aria-label="English">EN</button>
+          <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
+          <button data-lang="es" type="button" aria-label="Espanol">ES</button>
+        </div>
+        <a class="nav-cta" href="/#book" data-i18n="nav.book">Book Call</a>
       </div>
-      <a href="/#book" class="nav-cta">Book Call</a>
     </div>
   </nav>
 
-  <section class="cust-hero">
-    <div class="kicker">Customer Stories</div>
-    <h1>Real rebuilds. <span class="grad">Real numbers.</span></h1>
-    <p class="lede">Each story is an SMB that ran the AIROIOPS Assessment, then shipped one or more of the upsells. We publish the work, the numbers, and the stack used. No vague claims.</p>
-    <div class="cust-stats">
-      <div class="cust-stat">
-        <div class="num">$1,000</div>
-        <div class="lbl">Fixed Assessment price across every story</div>
-      </div>
-      <div class="cust-stat">
-        <div class="num">48 hr</div>
-        <div class="lbl">Standard Roadmap turnaround</div>
-      </div>
-      <div class="cust-stat">
-        <div class="num">100%</div>
-        <div class="lbl">Stories audited against real ledger numbers</div>
-      </div>
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker" data-i18n="customers.kicker">Customer Stories</div>
+      <h1 data-i18n="customers.h1">Real rebuilds. <span class="grad">Real numbers.</span></h1>
+      <p class="ph-lede" data-i18n="customers.ph_lede">Each story is an SMB that ran the AIROIOPS Assessment, then shipped one or more of the upsells. We publish the work, the numbers, and the stack used. No vague claims.</p>
     </div>
   </section>
 
-  <section class="cust-grid-section">
-    <div class="kicker" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--grad-4); text-transform: uppercase; margin-bottom: 14px;">All Stories</div>
-    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.025em; margin: 0;">The full <span style="background: linear-gradient(135deg, var(--grad-2), var(--grad-4)); -webkit-background-clip: text; background-clip: text; color: transparent;">grid.</span></h2>
-
-    <div style="margin-top: 28px; padding: 18px 22px; border: 1px dashed var(--border-strong); border-radius: 14px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.05)); font-size: 13px; color: var(--text-2); line-height: 1.55;">
-      <strong style="color: var(--text);">Featured customer &middot; Sister business &middot; Las Vegas residential service &middot; Two-chapter case study.</strong> Chapter 1 is the $1,000 Assessment deliverable we sell. Chapter 2 is what got built after.
-    </div>
-
-    <div class="cust-grid">
-
-      <a href="/case-study" class="cust-card">
-        <div class="cust-card-tag">Chapter 1 of 2 &middot; The Assessment</div>
-        <h3>The $1,000 Assessment, run on a real service business</h3>
-        <p>The deliverable AIROIOPS sells, run on the sister business as the proof case. 48-hour audit: 1,000+ idle leads identified, $4,500 of forensically-traced ad waste, 13 hours per week reclaimable.</p>
-        <div class="cust-card-metrics">
-          <div><span class="num">48 hr</span>turnaround</div>
-          <div><span class="num">$8,983</span>ad spend audited</div>
-          <div><span class="num">1,000+</span>idle leads found</div>
-        </div>
-        <span class="arrow">Read the assessment
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-
-      <a href="/customers/sister-business-rebuild" class="cust-card">
-        <div class="cust-card-tag">Chapter 2 of 2 &middot; The Rebuild</div>
-        <h3>What got built after the assessment</h3>
-        <p>4 disconnected systems consolidated into one AI-orchestrated workflow. A brittle Zapier glue retired. Auto-replies live. Live operations dashboard. Delivered in phased waves, each one standing alone.</p>
-        <div class="cust-card-metrics">
-          <div><span class="num">4 → 1</span>systems</div>
-          <div><span class="num">$4,500+</span>ad waste reallocated</div>
-          <div><span class="num">100%</span>inbound texts answered</div>
-        </div>
-        <span class="arrow">Read the rebuild
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-
-      <div class="cust-card coming">
-        <div class="cust-card-tag">Coming soon</div>
-        <h3>Free-5 customer story</h3>
-        <p>One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
-        <div class="cust-card-metrics">
-          <div><span class="num">TBD</span>case study slot</div>
-        </div>
-      </div>
-
-      <div class="cust-card coming">
-        <div class="cust-card-tag">Coming soon</div>
-        <h3>Free-5 customer story</h3>
-        <p>One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
-        <div class="cust-card-metrics">
-          <div><span class="num">TBD</span>case study slot</div>
-        </div>
-      </div>
-
-      <div class="cust-card coming">
-        <div class="cust-card-tag">Coming soon</div>
-        <h3>Free-5 customer story</h3>
-        <p>One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
-        <div class="cust-card-metrics">
-          <div><span class="num">TBD</span>case study slot</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
+  <!-- ============ STAT ROW ============ -->
   <section>
-    <div class="cust-cta">
-      <h2>Want this run on <span class="grad">your business?</span></h2>
-      <p>$1,000 fixed for the AI Business Assessment. 48-hour custom Roadmap. Quick Wins are yours to ship; upsells are optional.</p>
-      <a href="/#book" class="btn btn-primary glow big">
-        <span>Book a Free Discovery Call</span>
-        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p style="margin-top: 18px; font-size: 14px; color: var(--text-3);">Or <a href="/assessment" style="color: var(--grad-4); text-decoration: none; border-bottom: 1px solid var(--grad-4);">fill the deep-dive intake on your own time</a>.</p>
+    <div class="wrap">
+      <div class="stat-row" style="margin-bottom:48px;">
+        <div class="stat"><div class="num">$1,000</div><div class="lbl" data-i18n="customers.stat1">Fixed Assessment price across every story</div></div>
+        <div class="stat"><div class="num">48 hr</div><div class="lbl" data-i18n="customers.stat2">Standard Roadmap turnaround</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl" data-i18n="customers.stat3">Stories audited against real ledger numbers</div></div>
+      </div>
+
+      <div class="kicker" data-i18n="customers.featured_kicker">Featured customer</div>
+      <h2 class="h2" data-i18n="customers.featured_h2">Sister business <span class="grad">&middot; Las Vegas residential service.</span></h2>
+      <p class="lede" data-i18n="customers.featured_lede">A two-chapter case study. Chapter 1 is the $1,000 Assessment deliverable we sell. Chapter 2 is what got built after.</p>
+
+      <div class="story">
+        <div class="story-chapter" data-i18n="customers.ch1_tag">Chapter 1 of 2 &middot; The Assessment</div>
+        <h3 data-i18n="customers.ch1_title">The $1,000 Assessment, run on a real service business</h3>
+        <p data-i18n="customers.ch1_body">The deliverable AIROIOPS sells, run on the sister business as the proof case. 48-hour audit: 1,000+ idle leads identified, $4,500 of forensically-traced ad waste, 13 hours per week reclaimable.</p>
+        <div class="story-metrics">
+          <div><span class="sm-num">48 hr</span><span class="sm-lbl" data-i18n="customers.ch1_m1">turnaround</span></div>
+          <div><span class="sm-num">$8,983</span><span class="sm-lbl" data-i18n="customers.ch1_m2">ad spend audited</span></div>
+          <div><span class="sm-num">1,000+</span><span class="sm-lbl" data-i18n="customers.ch1_m3">idle leads found</span></div>
+        </div>
+        <a href="/case-study" class="btn btn-ghost" data-i18n="customers.ch1_cta">Read the assessment</a>
+      </div>
+
+      <div class="story">
+        <div class="story-chapter" data-i18n="customers.ch2_tag">Chapter 2 of 2 &middot; The Rebuild</div>
+        <h3 data-i18n="customers.ch2_title">What got built after the assessment</h3>
+        <p data-i18n="customers.ch2_body">4 disconnected systems consolidated into one AI-orchestrated workflow. A brittle Zapier glue retired. Auto-replies live. Live operations dashboard. Delivered in phased waves, each one standing alone.</p>
+        <div class="story-metrics">
+          <div><span class="sm-num">4 &rarr; 1</span><span class="sm-lbl" data-i18n="customers.ch2_m1">systems</span></div>
+          <div><span class="sm-num">$4,500+</span><span class="sm-lbl" data-i18n="customers.ch2_m2">ad waste reallocated</span></div>
+          <div><span class="sm-num">100%</span><span class="sm-lbl" data-i18n="customers.ch2_m3">inbound texts answered</span></div>
+        </div>
+        <a href="/customers/sister-business-rebuild" class="btn btn-ghost" data-i18n="customers.ch2_cta">Read the rebuild</a>
+      </div>
     </div>
   </section>
 
+  <!-- ============ MORE STORIES ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker" data-i18n="customers.more_kicker">More stories</div>
+      <h2 class="h2" data-i18n="customers.more_h2">Free-5 customer stories, <span class="grad">coming soon.</span></h2>
+      <p class="lede" data-i18n="customers.more_lede">The first 5 free AI Business Assessments. Each story is published once the rebuild ships and the numbers are in.</p>
+      <div class="grid three">
+        <div class="story soon">
+          <div class="story-chapter" data-i18n="customers.soon_tag">Coming soon</div>
+          <h3 data-i18n="customers.soon_title">Free-5 customer story</h3>
+          <p data-i18n="customers.soon_body">One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
+        </div>
+        <div class="story soon">
+          <div class="story-chapter" data-i18n="customers.soon_tag">Coming soon</div>
+          <h3 data-i18n="customers.soon_title">Free-5 customer story</h3>
+          <p data-i18n="customers.soon_body">One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
+        </div>
+        <div class="story soon">
+          <div class="story-chapter" data-i18n="customers.soon_tag">Coming soon</div>
+          <h3 data-i18n="customers.soon_title">Free-5 customer story</h3>
+          <p data-i18n="customers.soon_body">One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2" data-i18n="customers.cta_h2">Want this run on <span class="grad">your business?</span></h2>
+        <p data-i18n="customers.cta_body">$1,000 fixed for the AI Business Assessment. 48-hour custom Roadmap. Quick Wins are yours to ship; upsells are optional.</p>
+        <div class="section-cta">
+          <a href="/#book" class="btn btn-primary">
+            <span data-i18n="hero.cta_primary">Book a Free Discovery Call</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/assessment" class="btn btn-glass" data-i18n="assessment.cta_alt">Or skip the call, fill the intake</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer>
-    <div class="foot-area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
+    <div class="foot-area" data-i18n="footer.area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
     <div class="foot-bottom">
-      <div>© 2026 AIROIOPS</div>
-      <div class="foot-mid">AI · ROI · OPS</div>
-      <div>Built in Las Vegas, NV</div>
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
+      <div data-i18n="footer.location">Built in Las Vegas, NV</div>
     </div>
   </footer>
 
-  <script>
-  (function setupMobileNav() {
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-    const toggle = nav.querySelector('.nav-toggle');
-    const links = nav.querySelector('.nav-links');
-    const backdrop = nav.querySelector('.nav-backdrop');
-    if (!toggle || !links) return;
-    function close() {
-      nav.classList.remove('is-open');
-      links.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-locked');
-    }
-    function open() {
-      nav.classList.add('is-open');
-      links.classList.add('is-open');
-      toggle.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('nav-locked');
-    }
-    toggle.addEventListener('click', () => {
-      if (nav.classList.contains('is-open')) close(); else open();
-    });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-    if (backdrop) backdrop.addEventListener('click', close);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) close();
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
-    });
-  })();
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>
