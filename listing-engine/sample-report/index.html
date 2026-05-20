@@ -1,634 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<title>Sample Monthly Performance Report - The Listing Engine</title>
-<style>
-  :root {
-    --bg: #0b0a1f;
-    --bg-2: #14123a;
-    --fg: #f4f3ff;
-    --muted: #b6b3d8;
-    --accent: #7c5cff;
-    --accent-2: #5cc4ff;
-    --green: #22c55e;
-    --amber: #fbbf24;
-    --red: #ef4444;
-    --card: rgba(255,255,255,0.04);
-    --border: rgba(255,255,255,0.10);
-    --fb: #1877f2;
-    --ig: #e1306c;
-    --li: #0a66c2;
-    --pin: #e60023;
-    --tt: #69c9d0;
-    --yt: #ff0000;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  .orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(110px);
-    opacity: 0.25;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .orb-1 { width: 500px; height: 500px; background: var(--accent); top: -150px; left: -100px; }
-  .orb-2 { width: 420px; height: 420px; background: var(--accent-2); top: 400px; right: -120px; }
-  header {
-    padding: 28px 24px;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    position: relative;
-    z-index: 1;
-  }
-  header .label {
-    font-size: 11px;
-    color: var(--accent-2);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  header h1 {
-    font-size: 28px;
-    margin: 12px 0 6px;
-    letter-spacing: -0.01em;
-  }
-  header h1 .accent {
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  header .agent {
-    color: var(--muted);
-    font-size: 15px;
-  }
-  header .period {
-    margin-top: 12px;
-    display: inline-block;
-    background: rgba(124,92,255,0.18);
-    border: 1px solid rgba(124,92,255,0.35);
-    color: var(--fg);
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    padding: 6px 14px;
-    border-radius: 999px;
-  }
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 36px 24px 80px;
-    position: relative;
-    z-index: 1;
-  }
-  .sample-banner {
-    background: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(251,191,36,0.04));
-    border: 1px solid rgba(251,191,36,0.30);
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin-bottom: 28px;
-    color: #ffe19a;
-    font-size: 14px;
-  }
-  .sample-banner strong { color: #ffd05a; }
-  .summary {
-    background: linear-gradient(135deg, rgba(124,92,255,0.10), rgba(92,196,255,0.06));
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 32px;
-    margin-bottom: 32px;
-  }
-  .summary h2 {
-    margin: 0 0 6px;
-    font-size: 22px;
-  }
-  .summary .subtitle {
-    color: var(--muted);
-    margin-bottom: 24px;
-  }
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  .kpi {
-    background: rgba(11,10,31,0.55);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-  }
-  .kpi .kpi-label {
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-  }
-  .kpi .kpi-value {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--fg);
-  }
-  .kpi .kpi-trend {
-    font-size: 12px;
-    margin-top: 6px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 2px 8px;
-    border-radius: 999px;
-  }
-  .kpi .kpi-trend.up { color: var(--green); background: rgba(34,197,94,0.10); }
-  .kpi .kpi-trend.flat { color: var(--muted); background: rgba(255,255,255,0.04); }
-  section { margin-bottom: 36px; }
-  section h2 {
-    font-size: 22px;
-    margin: 0 0 18px;
-    letter-spacing: -0.01em;
-  }
-  .topics-list {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .topic-row {
-    display: grid;
-    grid-template-columns: 40px 1fr auto;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 22px;
-    border-bottom: 1px solid var(--border);
-  }
-  .topic-row:last-child { border-bottom: none; }
-  .topic-row .rank {
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-  }
-  .topic-row .topic-info .name {
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--fg);
-    margin-bottom: 2px;
-  }
-  .topic-row .topic-info .meta {
-    color: var(--muted);
-    font-size: 13px;
-  }
-  .topic-row .stats {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-  }
-  .topic-row .stats .stat {
-    text-align: right;
-  }
-  .topic-row .stats .stat .num {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--accent-2);
-    line-height: 1;
-  }
-  .topic-row .stats .stat .lbl {
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 4px;
-  }
-  .platforms-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  .platform-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-  }
-  .platform-card .platform-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-  .platform-card .badge {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .badge-fb { background: var(--fb); }
-  .badge-ig { background: linear-gradient(45deg, #fdcb52, #e1306c, #833ab4); }
-  .badge-li { background: var(--li); }
-  .badge-pin { background: var(--pin); }
-  .badge-tt { background: #000; border: 1px solid #fff; }
-  .badge-yt { background: var(--yt); }
-  .platform-card .platform-name {
-    font-weight: 600;
-    font-size: 14px;
-  }
-  .platform-card .platform-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-  .platform-card .platform-stats .stat {
-    text-align: center;
-    padding: 8px 4px;
-    background: rgba(11,10,31,0.45);
-    border-radius: 8px;
-  }
-  .platform-card .platform-stats .stat .num {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--fg);
-    line-height: 1.1;
-  }
-  .platform-card .platform-stats .stat .lbl {
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 4px;
-  }
-  .platform-card.highlight {
-    border-color: rgba(34,197,94,0.30);
-    background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(11,10,31,0.55));
-  }
-  .platform-card.highlight .platform-name::after {
-    content: "Top performer";
-    margin-left: 8px;
-    font-size: 10px;
-    background: var(--green);
-    color: white;
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .insights {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .insight-card {
-    border-radius: 14px;
-    padding: 22px;
-    border: 1px solid var(--border);
-  }
-  .insight-card.working {
-    background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(11,10,31,0.45));
-    border-color: rgba(34,197,94,0.25);
-  }
-  .insight-card.adjust {
-    background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(11,10,31,0.45));
-    border-color: rgba(251,191,36,0.25);
-  }
-  .insight-card h3 {
-    margin: 0 0 14px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .insight-card.working h3 { color: var(--green); }
-  .insight-card.adjust h3 { color: var(--amber); }
-  .insight-card ul {
-    margin: 0;
-    padding-left: 18px;
-    color: #e8e5f8;
-  }
-  .insight-card ul li { margin-bottom: 8px; font-size: 14px; }
-  .next-up {
-    background: linear-gradient(135deg, rgba(124,92,255,0.10), rgba(92,196,255,0.05));
-    border: 1px solid rgba(124,92,255,0.25);
-    border-radius: 16px;
-    padding: 24px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-  .next-up .next-content h3 {
-    margin: 0 0 4px;
-    font-size: 18px;
-  }
-  .next-up .next-content p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
-  }
-  .next-up .next-date {
-    background: rgba(124,92,255,0.20);
-    border: 1px solid rgba(124,92,255,0.40);
-    color: var(--fg);
-    padding: 12px 20px;
-    border-radius: 12px;
-    text-align: center;
-  }
-  .next-up .next-date .date-day {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1;
-  }
-  .next-up .next-date .date-month {
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 4px;
-  }
-  footer {
-    text-align: center;
-    padding: 28px 24px;
-    color: var(--muted);
-    font-size: 13px;
-    border-top: 1px solid var(--border);
-    margin-top: 40px;
-  }
-  footer a { color: var(--accent-2); text-decoration: none; }
-  @media (max-width: 720px) {
-    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    .platforms-grid { grid-template-columns: 1fr; }
-    .insights { grid-template-columns: 1fr; }
-    header h1 { font-size: 22px; }
-    .topic-row { grid-template-columns: 32px 1fr; }
-    .topic-row .stats { grid-column: 1 / -1; padding-left: 48px; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sample Monthly Performance Report - The Listing Engine</title>
+  <meta name="description" content="An illustrative example of the monthly performance report Listing Engine clients receive on the 5th of each month. Top topics, platform breakdown, and what we recommend changing.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://airoiops.com/listing-engine/sample-report/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/listing-engine/sample-report/">
+  <meta property="og:title" content="Sample Monthly Performance Report - The Listing Engine">
+  <meta property="og:description" content="An illustrative example of the monthly performance report Listing Engine clients receive on the 5th of each month.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sample Monthly Performance Report - The Listing Engine">
+  <meta name="twitter:description" content="An illustrative example of the monthly performance report Listing Engine clients receive.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-
-<header>
-  <div class="label">The Listing Engine &middot; Monthly Performance Report</div>
-  <h1><span class="accent">Maya Reyes</span> &middot; Performance Summary</h1>
-  <div class="agent">Independent Nevada Brokerage &middot; License #S.XXXXXXX</div>
-  <div class="period">Reporting period: May 1 to May 31, 2026</div>
-</header>
-
-<div class="container">
-
-  <div class="sample-banner">
-    <strong>SAMPLE REPORT.</strong> This is an illustrative example of the monthly summary you receive while you're a client. Real reports use live data from your Publer analytics, your IDX site traffic, and your CRM lead counts.
-  </div>
-
-  <section class="summary">
-    <h2>This month, at a glance</h2>
-    <div class="subtitle">840 posts published across 6 platforms. Here's how they performed.</div>
-    <div class="kpi-grid">
-      <div class="kpi">
-        <div class="kpi-label">Posts published</div>
-        <div class="kpi-value">840</div>
-        <div class="kpi-trend flat">on schedule</div>
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Assessment</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">How it works</a>
+        <a class="nav-item" href="/#proof">Proof</a>
+        <a class="nav-item" href="/customers/">Customers</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <a class="nav-cta" href="/listing-engine/">The Listing Engine</a>
       </div>
-      <div class="kpi">
-        <div class="kpi-label">Total clicks</div>
-        <div class="kpi-value">624</div>
-        <div class="kpi-trend up">+18% vs. April</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Leads created</div>
-        <div class="kpi-value">73</div>
-        <div class="kpi-trend up">+24% vs. April</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Direct inquiries</div>
-        <div class="kpi-value">9</div>
-        <div class="kpi-trend up">+3 vs. April</div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">The Listing Engine &middot; Monthly Performance Report</div>
+      <h1>Maya Reyes <span class="grad">&middot; Performance Summary.</span></h1>
+      <p class="ph-lede">Independent Nevada Brokerage &middot; License #S.XXXXXXX</p>
+      <div class="intake-meta">
+        <span><b>Reporting period:</b> May 1 to May 31, 2026</span>
       </div>
     </div>
   </section>
 
+  <!-- ============ REPORT BODY ============ -->
   <section>
-    <h2>Top performing topics this month</h2>
-    <div class="topics-list">
+    <div class="wrap-narrow">
 
-      <div class="topic-row">
-        <div class="rank">1</div>
-        <div class="topic-info">
-          <div class="name">Summerlin Pool Homes Under $700K</div>
-          <div class="meta">42 posts published &middot; runs in weeks 1 and 3</div>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="num">214</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">28</div><div class="lbl">Leads</div></div>
-          <div class="stat"><div class="num">4</div><div class="lbl">Inquiries</div></div>
-        </div>
+      <div class="lr-banner">
+        <strong>SAMPLE REPORT.</strong> This is an illustrative example of the monthly summary you receive while you're a client. Real reports use live data from your Publer analytics, your IDX site traffic, and your CRM lead counts.
       </div>
 
-      <div class="topic-row">
-        <div class="rank">2</div>
-        <div class="topic-info">
-          <div class="name">Henderson 55+ Communities</div>
-          <div class="meta">42 posts published &middot; runs in weeks 2 and 4</div>
+      <div class="kicker">This month, at a glance</div>
+      <h2 class="h2">840 posts published across <span class="grad">6 platforms.</span></h2>
+      <p class="lede">Here's how they performed.</p>
+      <div class="lr-kpis">
+        <div class="lr-kpi">
+          <div class="lr-kpi-lbl">Posts published</div>
+          <div class="lr-kpi-val">840</div>
+          <span class="lr-trend flat">on schedule</span>
         </div>
-        <div class="stats">
-          <div class="stat"><div class="num">156</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">19</div><div class="lbl">Leads</div></div>
-          <div class="stat"><div class="num">2</div><div class="lbl">Inquiries</div></div>
+        <div class="lr-kpi">
+          <div class="lr-kpi-lbl">Total clicks</div>
+          <div class="lr-kpi-val">624</div>
+          <span class="lr-trend up">+18% vs. April</span>
         </div>
-      </div>
-
-      <div class="topic-row">
-        <div class="rank">3</div>
-        <div class="topic-info">
-          <div class="name">Vegas First-Time Buyer Under $400K</div>
-          <div class="meta">42 posts published &middot; runs in weeks 1 and 4</div>
+        <div class="lr-kpi">
+          <div class="lr-kpi-lbl">Leads created</div>
+          <div class="lr-kpi-val">73</div>
+          <span class="lr-trend up">+24% vs. April</span>
         </div>
-        <div class="stats">
-          <div class="stat"><div class="num">98</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">14</div><div class="lbl">Leads</div></div>
-          <div class="stat"><div class="num">2</div><div class="lbl">Inquiries</div></div>
-        </div>
-      </div>
-
-      <div class="topic-row">
-        <div class="rank">4</div>
-        <div class="topic-info">
-          <div class="name">Spring Valley Townhomes Under $350K</div>
-          <div class="meta">42 posts published &middot; runs in weeks 2 and 3</div>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="num">72</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">8</div><div class="lbl">Leads</div></div>
-          <div class="stat"><div class="num">1</div><div class="lbl">Inquiries</div></div>
+        <div class="lr-kpi">
+          <div class="lr-kpi-lbl">Direct inquiries</div>
+          <div class="lr-kpi-val">9</div>
+          <span class="lr-trend up">+3 vs. April</span>
         </div>
       </div>
-
-      <div class="topic-row">
-        <div class="rank">5</div>
-        <div class="topic-info">
-          <div class="name">Las Vegas Homes With RV Parking</div>
-          <div class="meta">42 posts published &middot; runs in week 3</div>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="num">38</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">3</div><div class="lbl">Leads</div></div>
-          <div class="stat"><div class="num">0</div><div class="lbl">Inquiries</div></div>
-        </div>
-      </div>
-
     </div>
-    <p style="color: var(--muted); font-size: 13px; margin-top: 12px;">15 more topics ran this month. Full breakdown available in your Publer dashboard.</p>
   </section>
 
+  <!-- ============ TOP TOPICS ============ -->
+  <section class="band-tint">
+    <div class="wrap-narrow">
+      <div class="kicker">Top topics</div>
+      <h2 class="h2">Top performing topics <span class="grad">this month.</span></h2>
+      <div class="lr-topics">
+        <div class="lr-topic">
+          <div class="lr-rank">1</div>
+          <div>
+            <div class="lr-topic-name">Summerlin Pool Homes Under $700K</div>
+            <div class="lr-topic-meta">42 posts published &middot; runs in weeks 1 and 3</div>
+          </div>
+          <div class="lr-topic-stats">
+            <div class="lr-st"><div class="n">214</div><div class="l">Clicks</div></div>
+            <div class="lr-st"><div class="n">28</div><div class="l">Leads</div></div>
+            <div class="lr-st"><div class="n">4</div><div class="l">Inquiries</div></div>
+          </div>
+        </div>
+        <div class="lr-topic">
+          <div class="lr-rank">2</div>
+          <div>
+            <div class="lr-topic-name">Henderson 55+ Communities</div>
+            <div class="lr-topic-meta">42 posts published &middot; runs in weeks 2 and 4</div>
+          </div>
+          <div class="lr-topic-stats">
+            <div class="lr-st"><div class="n">156</div><div class="l">Clicks</div></div>
+            <div class="lr-st"><div class="n">19</div><div class="l">Leads</div></div>
+            <div class="lr-st"><div class="n">2</div><div class="l">Inquiries</div></div>
+          </div>
+        </div>
+        <div class="lr-topic">
+          <div class="lr-rank">3</div>
+          <div>
+            <div class="lr-topic-name">Vegas First-Time Buyer Under $400K</div>
+            <div class="lr-topic-meta">42 posts published &middot; runs in weeks 1 and 4</div>
+          </div>
+          <div class="lr-topic-stats">
+            <div class="lr-st"><div class="n">98</div><div class="l">Clicks</div></div>
+            <div class="lr-st"><div class="n">14</div><div class="l">Leads</div></div>
+            <div class="lr-st"><div class="n">2</div><div class="l">Inquiries</div></div>
+          </div>
+        </div>
+        <div class="lr-topic">
+          <div class="lr-rank">4</div>
+          <div>
+            <div class="lr-topic-name">Spring Valley Townhomes Under $350K</div>
+            <div class="lr-topic-meta">42 posts published &middot; runs in weeks 2 and 3</div>
+          </div>
+          <div class="lr-topic-stats">
+            <div class="lr-st"><div class="n">72</div><div class="l">Clicks</div></div>
+            <div class="lr-st"><div class="n">8</div><div class="l">Leads</div></div>
+            <div class="lr-st"><div class="n">1</div><div class="l">Inquiries</div></div>
+          </div>
+        </div>
+        <div class="lr-topic">
+          <div class="lr-rank">5</div>
+          <div>
+            <div class="lr-topic-name">Las Vegas Homes With RV Parking</div>
+            <div class="lr-topic-meta">42 posts published &middot; runs in week 3</div>
+          </div>
+          <div class="lr-topic-stats">
+            <div class="lr-st"><div class="n">38</div><div class="l">Clicks</div></div>
+            <div class="lr-st"><div class="n">3</div><div class="l">Leads</div></div>
+            <div class="lr-st"><div class="n">0</div><div class="l">Inquiries</div></div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-3);margin-top:14px;">15 more topics ran this month. Full breakdown available in your Publer dashboard.</p>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM BREAKDOWN ============ -->
   <section>
-    <h2>Platform breakdown</h2>
-    <div class="platforms-grid">
-
-      <div class="platform-card highlight">
-        <div class="platform-head">
-          <span class="badge badge-li">in</span>
-          <span class="platform-name">LinkedIn</span>
+    <div class="wrap-narrow">
+      <div class="kicker">Platform breakdown</div>
+      <h2 class="h2">How each platform <span class="grad">performed.</span></h2>
+      <div class="lr-plat-grid">
+        <div class="lr-plat top">
+          <div class="lr-plat-head">
+            <span class="lr-badge li">in</span>
+            <span class="lr-plat-name">LinkedIn</span>
+            <span class="lr-tag">Top performer</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">142</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">23</div><div class="l">Leads</div></div>
+          </div>
         </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">142</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">23</div><div class="lbl">Leads</div></div>
+        <div class="lr-plat">
+          <div class="lr-plat-head">
+            <span class="lr-badge fb">f</span>
+            <span class="lr-plat-name">Facebook</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">189</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">19</div><div class="l">Leads</div></div>
+          </div>
         </div>
-      </div>
-
-      <div class="platform-card">
-        <div class="platform-head">
-          <span class="badge badge-fb">f</span>
-          <span class="platform-name">Facebook</span>
+        <div class="lr-plat">
+          <div class="lr-plat-head">
+            <span class="lr-badge ig">IG</span>
+            <span class="lr-plat-name">Instagram</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">128</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">14</div><div class="l">Leads</div></div>
+          </div>
         </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">189</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">19</div><div class="lbl">Leads</div></div>
+        <div class="lr-plat">
+          <div class="lr-plat-head">
+            <span class="lr-badge tt">TT</span>
+            <span class="lr-plat-name">TikTok</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">94</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">9</div><div class="l">Leads</div></div>
+          </div>
         </div>
-      </div>
-
-      <div class="platform-card">
-        <div class="platform-head">
-          <span class="badge badge-ig">IG</span>
-          <span class="platform-name">Instagram</span>
+        <div class="lr-plat">
+          <div class="lr-plat-head">
+            <span class="lr-badge yt">YT</span>
+            <span class="lr-plat-name">YouTube</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">42</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">6</div><div class="l">Leads</div></div>
+          </div>
         </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">128</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">14</div><div class="lbl">Leads</div></div>
-        </div>
-      </div>
-
-      <div class="platform-card">
-        <div class="platform-head">
-          <span class="badge badge-tt">TT</span>
-          <span class="platform-name">TikTok</span>
-        </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">94</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">9</div><div class="lbl">Leads</div></div>
-        </div>
-      </div>
-
-      <div class="platform-card">
-        <div class="platform-head">
-          <span class="badge badge-yt">YT</span>
-          <span class="platform-name">YouTube</span>
-        </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">42</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">6</div><div class="lbl">Leads</div></div>
-        </div>
-      </div>
-
-      <div class="platform-card">
-        <div class="platform-head">
-          <span class="badge badge-pin">P</span>
-          <span class="platform-name">Pinterest</span>
-        </div>
-        <div class="platform-stats">
-          <div class="stat"><div class="num">140</div><div class="lbl">Posts</div></div>
-          <div class="stat"><div class="num">29</div><div class="lbl">Clicks</div></div>
-          <div class="stat"><div class="num">2</div><div class="lbl">Leads</div></div>
+        <div class="lr-plat">
+          <div class="lr-plat-head">
+            <span class="lr-badge pin">P</span>
+            <span class="lr-plat-name">Pinterest</span>
+          </div>
+          <div class="lr-plat-stats">
+            <div class="lr-ps"><div class="n">140</div><div class="l">Posts</div></div>
+            <div class="lr-ps"><div class="n">29</div><div class="l">Clicks</div></div>
+            <div class="lr-ps"><div class="n">2</div><div class="l">Leads</div></div>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- ============ WHAT WE LEARNED ============ -->
+  <section class="band-tint">
+    <div class="wrap-narrow">
+      <div class="kicker">What we learned</div>
+      <h2 class="h2">What we learned <span class="grad">this month.</span></h2>
+      <div class="lr-insights">
+        <div class="lr-insight good">
+          <h3>What's working</h3>
+          <ul>
+            <li><strong>Single-story angles outperform luxury by 3x</strong> in lead quality. Buyers responding tend to be 50+ planning aging-in-place.</li>
+            <li><strong>LinkedIn punches above its weight.</strong> Lower click volume (142) but highest lead-to-click ratio at 16%. Real estate professionals and seller-side referrals.</li>
+            <li><strong>Pool home content peaked May 12-19.</strong> Seasonal demand confirmed. Recycle is timing this well naturally.</li>
+          </ul>
+        </div>
+        <div class="lr-insight adjust">
+          <h3>What to consider</h3>
+          <ul>
+            <li><strong>Pinterest underperforming.</strong> 29 clicks across 140 posts. Recommend swapping pin format for infographic style in next refresh.</li>
+            <li><strong>RV Parking topic is light.</strong> Only 3 leads from 42 posts. Either niche is wrong for May or visual hook needs work. We'll re-test in June.</li>
+            <li><strong>Add 2 more 55+ topic variations.</strong> Demand signal is clear. Henderson 55+ ranking #2 with limited inventory of related posts.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEXT REFRESH ============ -->
   <section>
-    <h2>What we learned this month</h2>
-    <div class="insights">
-
-      <div class="insight-card working">
-        <h3>What's working</h3>
-        <ul>
-          <li><strong>Single-story angles outperform luxury by 3x</strong> in lead quality. Buyers responding tend to be 50+ planning aging-in-place.</li>
-          <li><strong>LinkedIn punches above its weight.</strong> Lower click volume (142) but highest lead-to-click ratio at 16%. Real estate professionals and seller-side referrals.</li>
-          <li><strong>Pool home content peaked May 12-19.</strong> Seasonal demand confirmed. Recycle is timing this well naturally.</li>
-        </ul>
-      </div>
-
-      <div class="insight-card adjust">
-        <h3>What to consider</h3>
-        <ul>
-          <li><strong>Pinterest underperforming.</strong> 29 clicks across 140 posts. Recommend swapping pin format for infographic style in next refresh.</li>
-          <li><strong>RV Parking topic is light.</strong> Only 3 leads from 42 posts. Either niche is wrong for May or visual hook needs work. We'll re-test in June.</li>
-          <li><strong>Add 2 more 55+ topic variations.</strong> Demand signal is clear. Henderson 55+ ranking #2 with limited inventory of related posts.</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <div class="next-up">
-      <div class="next-content">
-        <h3>Your next seasonal refresh</h3>
-        <p>5 to 10 fresh posts added to your queue. Summer pool homes, fall move-up timing, mid-year market data.</p>
-      </div>
-      <div class="next-date">
-        <div class="date-day">Aug 8</div>
-        <div class="date-month">2026</div>
+    <div class="wrap-narrow">
+      <div class="lr-next">
+        <div>
+          <h3>Your next seasonal refresh</h3>
+          <p>5 to 10 fresh posts added to your queue. Summer pool homes, fall move-up timing, mid-year market data.</p>
+        </div>
+        <div class="lr-next-date">
+          <div class="d">Aug 8</div>
+          <div class="y">2026</div>
+        </div>
       </div>
     </div>
   </section>
 
-</div>
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2">Want this run on <span class="grad">your listings?</span></h2>
+        <p>The Listing Engine ships 840 branded, compliant posts a year and reports like this on the 5th of every month. Sample report for demonstration only.</p>
+        <div class="section-cta">
+          <a href="/listing-engine/" class="btn btn-primary">
+            <span>Back to The Listing Engine</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="mailto:gianny@airoiops.com" class="btn btn-glass">Email gianny@airoiops.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  The Listing Engine, an AIROIOPS product &middot; Las Vegas, NV
-  <br>
-  Sample report for demonstration. Real reports are sent on the 5th of each month while you're a client.
-  <br>
-  <a href="/listing-engine/" style="color: var(--accent-2); font-weight: 600;">&larr; Back to The Listing Engine</a>
-  &nbsp;&middot;&nbsp;
-  Questions? Email <a href="mailto:gianny@airoiops.com">gianny@airoiops.com</a>
-</footer>
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="foot-area">The Listing Engine, an AIROIOPS product. Sample report for demonstration. Real reports are sent on the 5th of each month while you're a client. Built in Las Vegas, NV.</div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
+      <div>Built in Las Vegas, NV</div>
+    </div>
+  </footer>
 
+  <script src="../../script.js"></script>
 </body>
 </html>

@@ -1,636 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<title>The Listing Engine | AIROIOPS</title>
-<meta name="description" content="A year of branded, compliant social content for real estate agents. 60 minutes of setup. 840 posts per platform. Recycled forever.">
-<style>
-  :root {
-    --bg: #0b0a1f;
-    --bg-2: #14123a;
-    --fg: #f4f3ff;
-    --muted: #b6b3d8;
-    --accent: #7c5cff;
-    --accent-2: #5cc4ff;
-    --card: rgba(255,255,255,0.04);
-    --border: rgba(255,255,255,0.10);
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Listing Engine | AIROIOPS</title>
+  <meta name="description" content="A year of branded, compliant social content for real estate agents. 60 minutes of setup. 840 posts per platform. Recycled forever.">
+  <meta name="keywords" content="real estate social media, listing engine, real estate content automation, agent social media Las Vegas, IDX social content">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://airoiops.com/listing-engine/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/listing-engine/">
+  <meta property="og:title" content="The Listing Engine | AIROIOPS">
+  <meta property="og:description" content="A year of branded, compliant social content for real estate agents. 60 minutes of setup. 840 posts per platform. Recycled forever.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Listing Engine | AIROIOPS">
+  <meta name="twitter:description" content="A year of branded, compliant social content for real estate agents. 60 minutes of setup.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "The Listing Engine",
+    "description": "A year of branded, compliant, recycling social content for real estate agents. 840 posts per platform across six platforms, set up in 60 minutes and refreshed seasonally.",
+    "brand": { "@type": "Brand", "name": "AIROIOPS" },
+    "url": "https://airoiops.com/listing-engine/",
+    "offers": [
+      { "@type": "Offer", "name": "DIY Kit", "price": "297", "priceCurrency": "USD", "url": "https://airoiops.com/listing-engine/intake" },
+      { "@type": "Offer", "name": "Done For You", "price": "1500", "priceCurrency": "USD", "url": "https://airoiops.com/listing-engine/intake" },
+      { "@type": "Offer", "name": "Brokerage", "price": "5000", "priceCurrency": "USD", "url": "https://airoiops.com/listing-engine/intake" }
+    ]
   }
-  * { box-sizing: border-box; }
-  html { overflow-x: hidden; }
-  html, body { margin: 0; padding: 0; max-width: 100vw; }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
-  }
-  .orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.45;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .orb-1 { width: 480px; height: 480px; background: var(--accent); top: -120px; left: -160px; }
-  .orb-2 { width: 380px; height: 380px; background: var(--accent-2); top: 280px; right: -120px; }
-  .orb-3 { width: 520px; height: 520px; background: #ff5cb0; top: 1400px; left: 30%; opacity: 0.25; }
-  .container {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 64px 32px;
-    position: relative;
-    z-index: 1;
-  }
-  header.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 32px;
-    max-width: 1080px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-  .nav-logo {
-    font-weight: 800;
-    font-size: 19px;
-    letter-spacing: -0.02em;
-    color: var(--fg);
-    text-decoration: none;
-  }
-  .nav-logo span {
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .nav-cta {
-    background: var(--accent);
-    color: white;
-    padding: 10px 18px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  h1 {
-    font-size: 56px;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    margin: 0 0 24px;
-  }
-  h1 .accent {
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .subhead {
-    font-size: 22px;
-    color: var(--muted);
-    max-width: 720px;
-    margin: 0 0 36px;
-    line-height: 1.4;
-  }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-    padding: 16px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    display: inline-block;
-  }
-  .btn-secondary {
-    color: var(--fg);
-    border: 1px solid var(--border);
-    padding: 16px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    display: inline-block;
-  }
-  .ticker {
-    color: var(--muted);
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  section { margin-top: 96px; position: relative; z-index: 1; }
-  h2 {
-    font-size: 36px;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin: 0 0 24px;
-  }
-  h3 {
-    font-size: 22px;
-    margin: 0 0 12px;
-  }
-  .problem {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 36px;
-  }
-  .problem ul { padding-left: 20px; color: var(--muted); }
-  .problem li { margin-bottom: 8px; }
-  .three-step {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .step {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-  }
-  .step .num {
-    font-size: 14px;
-    color: var(--accent-2);
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-  .step h3 { margin-top: 8px; font-size: 20px; }
-  .step p { color: var(--muted); font-size: 15px; margin: 0; }
-  .deliverable {
-    background: linear-gradient(135deg, rgba(124,92,255,0.10), rgba(92,196,255,0.05));
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 40px;
-  }
-  .deliverable ul { list-style: none; padding: 0; margin: 0; }
-  .deliverable li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .deliverable li:last-child { border-bottom: none; }
-  .check {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: white;
-    flex-shrink: 0;
-  }
-  .pricing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .tier {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-  }
-  .tier.featured {
-    border: 2px solid var(--accent);
-    transform: translateY(-12px);
-    background: linear-gradient(180deg, rgba(124,92,255,0.10), rgba(124,92,255,0.02));
-  }
-  .tier-name { font-size: 14px; color: var(--accent-2); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
-  .tier-price { font-size: 36px; font-weight: 700; margin: 16px 0 4px; }
-  .tier-price .recurring { font-size: 18px; color: var(--muted); font-weight: 400; }
-  .tier-tag { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
-  .tier-list { list-style: none; padding: 0; margin: 0 0 28px; flex: 1; }
-  .tier-list li { padding: 8px 0; color: var(--muted); font-size: 15px; padding-left: 22px; position: relative; }
-  .tier-list li:before { content: "+"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
-  .tier .btn-primary { text-align: center; }
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-  }
-  .faq-q { font-weight: 600; margin-bottom: 8px; }
-  .faq-a { color: var(--muted); font-size: 16px; }
-  .footer {
-    margin-top: 96px;
-    padding: 32px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
-    border-top: 1px solid var(--border);
-  }
-  .time-math {
-    background: linear-gradient(135deg, rgba(124,92,255,0.10), rgba(92,196,255,0.06));
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 36px;
-  }
-  .compare-row {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 24px;
-    align-items: stretch;
-  }
-  .compare-col {
-    background: rgba(11,10,31,0.55);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-  }
-  .compare-col .compare-label {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  .compare-col .compare-stat {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--fg);
-    line-height: 1.05;
-    margin-bottom: 18px;
-  }
-  .compare-col.engine .compare-stat {
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .compare-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .compare-col ul li {
-    padding: 6px 0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  .vs-divider {
-    align-self: center;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .savings-callout {
-    text-align: center;
-    margin: 36px auto 12px;
-    max-width: 700px;
-  }
-  .savings-callout .savings-num {
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 1;
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -0.02em;
-  }
-  .savings-callout .savings-lbl {
-    font-size: 18px;
-    color: var(--fg);
-    font-weight: 600;
-    margin-top: 6px;
-    margin-bottom: 18px;
-  }
-  .savings-callout .savings-translation {
-    color: #e2dffb;
-    font-size: 16px;
-    line-height: 1.55;
-  }
-  .cost-flip {
-    margin-top: 28px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-  }
-  .cost-flip p {
-    margin: 0 0 10px;
-    color: #e2dffb;
-    line-height: 1.55;
-  }
-  .cost-flip p:last-child { margin-bottom: 0; }
-  .brokerage-note {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px dashed var(--border);
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.55;
-  }
-  .brokerage-note strong { color: var(--fg); }
-  @media (max-width: 720px) {
-    h1 { font-size: 40px; }
-    .subhead { font-size: 18px; }
-    .three-step, .pricing { grid-template-columns: 1fr; }
-    .tier.featured { transform: none; }
-    .container { padding: 40px 20px; }
-    .compare-row { grid-template-columns: 1fr; }
-    .vs-divider { padding: 12px 0; }
-    .savings-callout .savings-num { font-size: 48px; }
-    .time-math { padding: 28px 22px; }
-  }
-</style>
+  </script>
 </head>
 <body>
 
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-
-<header class="nav">
-  <a href="/" class="nav-logo">AIROI<span>OPS</span></a>
-  <a href="/listing-engine/intake" class="nav-cta">Get started</a>
-</header>
-
-<main class="container">
-
-  <h1>A year of social content.<br><span class="accent">60 minutes of your time.</span></h1>
-  <p class="subhead">The Listing Engine builds 840 branded, compliant, recycling posts for your real estate business. We run the prompt, design the creative, schedule across six platforms, and refresh seasonally. You review the drafts and approve. That's the job.</p>
-  <div class="cta-row">
-    <a href="/listing-engine/intake" class="btn-primary">Get started in 5 minutes</a>
-    <a href="#how" class="btn-secondary">See how it works</a>
-  </div>
-  <p class="ticker">Built for agents using Ylopo, kvCORE, BoomTown, Sierra Interactive, or any IDX site that returns search URLs.</p>
-
-  <section>
-    <h2>The problem with the playbook every brokerage hands you</h2>
-    <div class="problem">
-      <p>Every brokerage tells agents the same thing. "Post on social. Drive leads to your IDX site. We pay for the retargeting, the CRM, the AI voice. You feed the funnel."</p>
-      <p>Then they hand you a 12-page PDF.</p>
-      <ul>
-        <li>Pick 20 search topics. Build 20 search URLs. Shorten each one through a branded domain.</li>
-        <li>Open Claude. Paste a 600-word prompt. Get back text. Move it into 24 separate spreadsheets, one per platform per week.</li>
-        <li>Open Canva. Build a master template. Resize for six aspect ratios. Drop your image into all 140 frames.</li>
-        <li>Convert images to MP4 for the video platforms. Upload everything to Publer's media library, sorted into folders.</li>
-        <li>Bulk-import 24 CSVs. Confirm every Facebook link converted to an uploaded image. Schedule the week.</li>
-        <li>Repeat for week 2, 3, 4. Then click recycle.</li>
-      </ul>
-      <p>That's an afternoon if you know what you're doing. It's a week if you don't. And then you have to refresh it every quarter or the algorithm punishes you.</p>
-      <p style="margin-top: 24px; color: var(--fg);">Most agents quit at step 4.</p>
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Assessment</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">How it works</a>
+        <a class="nav-item" href="/#proof">Proof</a>
+        <a class="nav-item" href="/customers/">Customers</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <a class="nav-cta" href="/listing-engine/intake">Get started</a>
+      </div>
     </div>
-  </section>
+  </nav>
 
-  <section id="how">
-    <h2>What the Listing Engine actually does</h2>
-    <div class="three-step">
-      <div class="step">
-        <div class="num">Step 1</div>
-        <h3>You fill a 7-field form</h3>
-        <p>Your IDX URL, top 5 neighborhoods you sell in, top 5 niches, your headshot, logo, brand color, and license number. 15 minutes.</p>
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">The Listing Engine</div>
+      <h1>A year of social content. <span class="grad">60 minutes of your time.</span></h1>
+      <p class="ph-lede">The Listing Engine builds 840 branded, compliant, recycling posts for your real estate business. We run the prompt, design the creative, schedule across six platforms, and refresh seasonally. You review the drafts and approve. That's the job.</p>
+      <div class="section-cta">
+        <a href="/listing-engine/intake" class="btn btn-primary">
+          <span>Get started in 5 minutes</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how" class="btn btn-glass">See how it works</a>
       </div>
-      <div class="step">
-        <div class="num">Step 2</div>
-        <h3>We run the engine</h3>
-        <p>20 search topics. 840 captions. 140 creatives per platform. 24 CSVs. Compliance-scanned for your state. Imported to your Publer as drafts.</p>
-      </div>
-      <div class="step">
-        <div class="num">Step 3</div>
-        <h3>You approve, we recycle</h3>
-        <p>30 minutes of draft review. Hit publish. Recycle runs every 28 days forever. We push 5 to 10 fresh posts every quarter.</p>
+      <div class="intake-meta">
+        <span>Built for agents using Ylopo, kvCORE, BoomTown, Sierra Interactive, or any IDX site that returns search URLs.</span>
       </div>
     </div>
   </section>
 
+  <!-- ============ THE PROBLEM ============ -->
   <section>
-    <h2>What you get</h2>
-    <div class="deliverable">
-      <ul>
-        <li><span class="check">+</span> 20 hyper-local search URLs generated from your IDX site</li>
-        <li><span class="check">+</span> 840 platform-specific captions (Facebook, Instagram, LinkedIn, Pinterest, TikTok, YouTube)</li>
-        <li><span class="check">+</span> 140 branded creatives per platform, six aspect ratios, your headshot and logo on every one</li>
-        <li><span class="check">+</span> 24 Publer-ready CSVs imported as drafts in your account</li>
-        <li><span class="check">+</span> Branded short link domain ($25 yr, white-labeled to you, included)</li>
-        <li><span class="check">+</span> Compliance scan for your state (NV, CA, AZ, TX, FL, CO supported at launch)</li>
-        <li><span class="check">+</span> 28-day infinite recycle configured automatically</li>
-        <li><span class="check">+</span> Quarterly seasonal refresh of 5 to 10 fresh posts (no extra charge)</li>
-        <li><span class="check">+</span> One brand-tone revision pass at setup, included</li>
-      </ul>
+    <div class="wrap-narrow">
+      <div class="kicker">The problem</div>
+      <h2 class="h2">The problem with the playbook <span class="grad">every brokerage hands you.</span></h2>
+      <p class="cs-prose">Every brokerage tells agents the same thing. "Post on social. Drive leads to your IDX site. We pay for the retargeting, the CRM, the AI voice. You feed the funnel."</p>
+      <p class="cs-prose">Then they hand you a 12-page PDF.</p>
+      <div class="cs-note">
+        <ul style="margin:0;padding-left:20px;">
+          <li>Pick 20 search topics. Build 20 search URLs. Shorten each one through a branded domain.</li>
+          <li>Open Claude. Paste a 600-word prompt. Get back text. Move it into 24 separate spreadsheets, one per platform per week.</li>
+          <li>Open Canva. Build a master template. Resize for six aspect ratios. Drop your image into all 140 frames.</li>
+          <li>Convert images to MP4 for the video platforms. Upload everything to Publer's media library, sorted into folders.</li>
+          <li>Bulk-import 24 CSVs. Confirm every Facebook link converted to an uploaded image. Schedule the week.</li>
+          <li>Repeat for week 2, 3, 4. Then click recycle.</li>
+        </ul>
+      </div>
+      <p class="cs-prose">That's an afternoon if you know what you're doing. It's a week if you don't. And then you have to refresh it every quarter or the algorithm punishes you.</p>
+      <p class="cs-prose" style="font-weight:600;color:var(--text);">Most agents quit at step 4.</p>
     </div>
   </section>
 
-  <section>
-    <h2>Why agents and brokerages choose this</h2>
-    <div class="three-step">
-      <div class="step">
-        <div class="num">Benefit 1</div>
-        <h3>You get your weekends back</h3>
-        <p>The brokerage playbook is a full afternoon every week and another half-day every quarter for the refresh. We turn that into 60 minutes of intake plus 30 minutes of approval review. That's it. The rest is automated.</p>
-      </div>
-      <div class="step">
-        <div class="num">Benefit 2</div>
-        <h3>It actually goes out</h3>
-        <p>Most agents start the playbook, get to step 4, and quit. We don't. 840 branded posts a year actually publish to your feeds, recycling forever, refreshed seasonally. Consistency beats sporadic effort every time.</p>
-      </div>
-      <div class="step">
-        <div class="num">Benefit 3</div>
-        <h3>Compliance is handled</h3>
-        <p>Every post is scanned against your state's MLS rules, fair housing requirements, and broker disclosure rules before delivery. Your broker name and license are on every creative. You own final approval, but the scaffolding is bulletproof.</p>
-      </div>
-      <div class="step">
-        <div class="num">Benefit 4</div>
-        <h3>The funnel finally gets fed</h3>
-        <p>Your brokerage already pays for the IDX site, the retargeting, the CRM, the AI calling. None of that matters if nothing brings traffic in. Every post we ship drives clicks to your IDX site so the stack you're already paying for has something to do.</p>
-      </div>
-      <div class="step">
-        <div class="num">Benefit 5</div>
-        <h3>Built for every platform</h3>
-        <p>We don't dump the same caption on six platforms. Facebook gets long-form. Instagram gets punchy hooks. LinkedIn gets professional. Pinterest gets SEO-rich. TikTok gets video scripts. YouTube gets chapters. Each one tuned to how that platform's algorithm actually rewards content.</p>
-      </div>
-      <div class="step">
-        <div class="num">Benefit 6</div>
-        <h3>You never copy-paste anything</h3>
-        <p>Drafts land in your scheduling tool ready to go. You don't move files, you don't manually post, you don't fight CSV imports. Open the dashboard, hit approve, and walk away. That's the whole workflow on your end.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>The real math: time = money</h2>
-
-    <div class="time-math">
-
-      <div class="compare-row">
-        <div class="compare-col">
-          <div class="compare-label">If you do it yourself</div>
-          <div class="compare-stat">~40 hours / year</div>
-          <ul>
-            <li>6 hours initial setup (one afternoon)</li>
-            <li>30 minutes a week on draft approval and tweaks</li>
-            <li>3 hours every 90 days for the seasonal refresh</li>
-            <li>Plus the brain space of remembering to do it</li>
-          </ul>
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how" class="band-tint">
+    <div class="wrap">
+      <div class="kicker">How it works</div>
+      <h2 class="h2">What the Listing Engine <span class="grad">actually does.</span></h2>
+      <div class="timeline">
+        <div class="tl-step">
+          <div class="tl-node">1</div>
+          <div class="tl-card">
+            <div class="tl-day">Step 1</div>
+            <h3>You fill a 7-field form</h3>
+            <p>Your IDX URL, top 5 neighborhoods you sell in, top 5 niches, your headshot, logo, brand color, and license number. 15 minutes.</p>
+          </div>
         </div>
-
-        <div class="vs-divider">vs</div>
-
-        <div class="compare-col engine">
-          <div class="compare-label">With the Listing Engine</div>
-          <div class="compare-stat">~2 hours / year</div>
-          <ul>
-            <li>15 minutes filling out one intake form (once)</li>
-            <li>30 minutes reviewing your drafts at delivery</li>
-            <li>15 minutes per quarter approving the refresh</li>
-            <li>Zero brain space, we handle the rest</li>
-          </ul>
+        <div class="tl-step">
+          <div class="tl-node">2</div>
+          <div class="tl-card">
+            <div class="tl-day">Step 2</div>
+            <h3>We run the engine</h3>
+            <p>20 search topics. 840 captions. 140 creatives per platform. 24 CSVs. Compliance-scanned for your state. Imported to your Publer as drafts.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node">3</div>
+          <div class="tl-card">
+            <div class="tl-day">Step 3</div>
+            <h3>You approve, we recycle</h3>
+            <p>30 minutes of draft review. Hit publish. Recycle runs every 28 days forever. We push 5 to 10 fresh posts every quarter.</p>
+          </div>
         </div>
       </div>
-
-      <div class="savings-callout">
-        <div class="savings-num">~38 hours</div>
-        <div class="savings-lbl">saved per agent per year</div>
-        <div class="savings-translation">At <strong>$250 an hour</strong> of productive selling time (showings, calls, prospecting), that's roughly <strong>$9,500 of opportunity cost</strong> back in your week.</div>
-      </div>
-
-      <div class="cost-flip">
-        <p>Our annual cost: <strong>$6,264 in year one</strong> ($1,500 setup + $397/mo), then <strong>$4,764 every year after</strong>.</p>
-        <p>You're already up $3,000 to $5,000 in time alone, before counting a single extra closing. And one commission on a $400K home at 2.5% pays you $10,000. The engine pays for itself with one closing.</p>
-      </div>
-
-      <div class="brokerage-note">
-        <strong>For brokerages:</strong> a 25-agent roster is $17,500 upfront and $2,995 a month. Compare that to a part-time content manager at $4,000+ a month, or paying retail per agent. Year-one savings versus retail: roughly <strong>$103,000</strong>, and your agents save 38 hours each.
-      </div>
-
     </div>
   </section>
 
+  <!-- ============ WHAT YOU GET ============ -->
   <section>
-    <h2>What your monthly tracking looks like</h2>
-    <div style="background: linear-gradient(135deg, rgba(124,92,255,0.10), rgba(92,196,255,0.06)); border: 1px solid var(--border); border-radius: 24px; padding: 36px; text-align: center;">
-      <p style="font-size: 17px; color: #e2dffb; max-width: 640px; margin: 0 auto 18px;">Every client gets a personalized monthly performance dashboard on the 5th of each month. Top topics by clicks, platform breakdown, leads created, and what we recommend changing for next month.</p>
-      <p style="font-size: 15px; color: var(--muted); max-width: 640px; margin: 0 auto 28px;">It's yours to keep as long as you're a client. Once you cancel, the recycle stops and the monthly tracking pauses.</p>
-      <a href="/listing-engine/sample-report/" target="_blank" style="background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; padding: 16px 28px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; box-shadow: 0 8px 24px rgba(124,92,255,0.40);">See an example monthly report &rarr;</a>
+    <div class="wrap-narrow">
+      <div class="kicker">What you get</div>
+      <h2 class="h2">Everything in the box, <span class="grad">delivered for you.</span></h2>
+      <ul class="cs-outcomes">
+        <li>20 hyper-local search URLs generated from your IDX site</li>
+        <li>840 platform-specific captions (Facebook, Instagram, LinkedIn, Pinterest, TikTok, YouTube)</li>
+        <li>140 branded creatives per platform, six aspect ratios, your headshot and logo on every one</li>
+        <li>24 Publer-ready CSVs imported as drafts in your account</li>
+        <li>Branded short link domain ($25 yr, white-labeled to you, included)</li>
+        <li>Compliance scan for your state (NV, CA, AZ, TX, FL, CO supported at launch)</li>
+        <li>28-day infinite recycle configured automatically</li>
+        <li>Quarterly seasonal refresh of 5 to 10 fresh posts (no extra charge)</li>
+        <li>One brand-tone revision pass at setup, included</li>
+      </ul>
     </div>
   </section>
 
+  <!-- ============ WHY AGENTS CHOOSE THIS ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker">Why it works</div>
+      <h2 class="h2">Why agents and brokerages <span class="grad">choose this.</span></h2>
+      <div class="grid three">
+        <div class="card">
+          <div class="card-num">Benefit 1</div>
+          <h3>You get your weekends back</h3>
+          <p>The brokerage playbook is a full afternoon every week and another half-day every quarter for the refresh. We turn that into 60 minutes of intake plus 30 minutes of approval review. That's it. The rest is automated.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">Benefit 2</div>
+          <h3>It actually goes out</h3>
+          <p>Most agents start the playbook, get to step 4, and quit. We don't. 840 branded posts a year actually publish to your feeds, recycling forever, refreshed seasonally. Consistency beats sporadic effort every time.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">Benefit 3</div>
+          <h3>Compliance is handled</h3>
+          <p>Every post is scanned against your state's MLS rules, fair housing requirements, and broker disclosure rules before delivery. Your broker name and license are on every creative. You own final approval, but the scaffolding is bulletproof.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">Benefit 4</div>
+          <h3>The funnel finally gets fed</h3>
+          <p>Your brokerage already pays for the IDX site, the retargeting, the CRM, the AI calling. None of that matters if nothing brings traffic in. Every post we ship drives clicks to your IDX site so the stack you're already paying for has something to do.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">Benefit 5</div>
+          <h3>Built for every platform</h3>
+          <p>We don't dump the same caption on six platforms. Facebook gets long-form. Instagram gets punchy hooks. LinkedIn gets professional. Pinterest gets SEO-rich. TikTok gets video scripts. YouTube gets chapters. Each one tuned to how that platform's algorithm actually rewards content.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">Benefit 6</div>
+          <h3>You never copy-paste anything</h3>
+          <p>Drafts land in your scheduling tool ready to go. You don't move files, you don't manually post, you don't fight CSV imports. Open the dashboard, hit approve, and walk away. That's the whole workflow on your end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE MATH ============ -->
   <section>
-    <h2>Pricing</h2>
-    <div class="pricing">
-
-      <div class="tier">
-        <div class="tier-name">DIY Kit</div>
-        <div class="tier-price">$297<span class="recurring"> one time</span></div>
-        <div class="tier-tag">For agents who want to run it themselves.</div>
-        <ul class="tier-list">
-          <li>The master prompt (paste into Claude)</li>
-          <li>The Canva master template</li>
-          <li>The Publer CSV column spec</li>
-          <li>30 minute Loom walkthrough</li>
-          <li>No setup support</li>
-          <li>No recycle automation</li>
-        </ul>
-        <a href="/listing-engine/intake" class="btn-secondary" style="text-align: center;">Get the kit</a>
+    <div class="wrap-narrow">
+      <div class="kicker">The real math</div>
+      <h2 class="h2">The real math: <span class="grad">time = money.</span></h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-num chip">If you do it yourself</div>
+          <h3>~40 hours / year</h3>
+          <p>6 hours initial setup (one afternoon). 30 minutes a week on draft approval and tweaks. 3 hours every 90 days for the seasonal refresh. Plus the brain space of remembering to do it.</p>
+        </div>
+        <div class="card">
+          <div class="card-num chip">With the Listing Engine</div>
+          <h3>~2 hours / year</h3>
+          <p>15 minutes filling out one intake form (once). 30 minutes reviewing your drafts at delivery. 15 minutes per quarter approving the refresh. Zero brain space, we handle the rest.</p>
+        </div>
       </div>
-
-      <div class="tier featured">
-        <div class="tier-name">Done For You</div>
-        <div class="tier-price">$1,500<span class="recurring"> + $397 mo</span></div>
-        <div class="tier-tag">Most agents pick this.</div>
-        <ul class="tier-list">
-          <li>Full pipeline run on your behalf</li>
-          <li>24 CSVs imported to your Publer as drafts</li>
-          <li>Recycle configured</li>
-          <li>Quarterly seasonal refresh</li>
-          <li>One brand-tone revision pass</li>
-          <li>Email support, 1 business day reply</li>
-        </ul>
-        <a href="/listing-engine/intake" class="btn-primary">Get started</a>
+      <div class="cs-callout">
+        <div class="cs-callout-label">~38 hours saved per agent per year</div>
+        <p>At $250 an hour of productive selling time (showings, calls, prospecting), that's roughly $9,500 of opportunity cost back in your week.</p>
       </div>
-
-      <div class="tier">
-        <div class="tier-name">Brokerage</div>
-        <div class="tier-price">$5,000<span class="recurring"> + $500/agent setup</span></div>
-        <div class="tier-tag" style="margin-top: 6px; color: var(--accent-2); font-weight: 600;">Then $2,995/mo for up to 25 agents</div>
-        <ul class="tier-list">
-          <li>Branded with your brokerage logo</li>
-          <li>Master compliance footer with your broker info</li>
-          <li>One intake per agent in your dashboard</li>
-          <li>We onboard your full roster</li>
-          <li>Quarterly performance report</li>
-          <li>Priority support</li>
-        </ul>
-        <a href="/listing-engine/intake" class="btn-secondary" style="text-align: center;">Talk to founder</a>
+      <div class="cs-note">
+        <p style="margin:0 0 10px;">Our annual cost: <strong>$6,264 in year one</strong> ($1,500 setup + $397/mo), then <strong>$4,764 every year after</strong>.</p>
+        <p style="margin:0;">You're already up $3,000 to $5,000 in time alone, before counting a single extra closing. And one commission on a $400K home at 2.5% pays you $10,000. The engine pays for itself with one closing.</p>
       </div>
-
+      <div class="cs-note">
+        <p style="margin:0;"><strong>For brokerages:</strong> a 25-agent roster is $17,500 upfront and $2,995 a month. Compare that to a part-time content manager at $4,000+ a month, or paying retail per agent. Year-one savings versus retail: roughly <strong>$103,000</strong>, and your agents save 38 hours each.</p>
+      </div>
     </div>
   </section>
 
+  <!-- ============ MONTHLY TRACKING ============ -->
+  <section class="band-tint">
+    <div class="wrap-narrow center">
+      <div class="kicker">Monthly tracking</div>
+      <h2 class="h2">What your monthly tracking <span class="grad">looks like.</span></h2>
+      <p class="lede">Every client gets a personalized monthly performance dashboard on the 5th of each month. Top topics by clicks, platform breakdown, leads created, and what we recommend changing for next month. It's yours to keep as long as you're a client. Once you cancel, the recycle stops and the monthly tracking pauses.</p>
+      <div class="section-cta">
+        <a href="/listing-engine/sample-report/" target="_blank" class="btn btn-primary">
+          <span>See an example monthly report</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
   <section>
-    <h2>Frequently asked</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">What does the monthly fee actually pay for?</div>
-      <div class="faq-a">The $397 a month keeps your engine running: 28-day recycle automation across all 6 platforms, quarterly seasonal refresh of 5 to 10 fresh posts (included), revision support (we tweak captions, swap neighborhoods, update niches within 1 business day), compliance re-scans when state or NAR rules change, and a monthly performance summary. Without the monthly, the recycle eventually goes stale and your reach drops.</div>
+    <div class="wrap">
+      <div class="kicker">Pricing</div>
+      <h2 class="h2">Three ways to <span class="grad">run the engine.</span></h2>
+      <p class="lede">Pick what fits your practice. Most agents pick Done For You.</p>
+      <div class="builds-list">
+        <div class="build-row">
+          <div class="build-price">$297<small>ONE TIME</small></div>
+          <div>
+            <h3>DIY Kit</h3>
+            <p>For agents who want to run it themselves. The master prompt (paste into Claude), the Canva master template, the Publer CSV column spec, and a 30-minute Loom walkthrough. No setup support, no recycle automation.</p>
+            <div class="section-cta" style="margin-top:18px;">
+              <a href="/listing-engine/intake" class="btn btn-ghost">Get the kit</a>
+            </div>
+          </div>
+        </div>
+        <div class="build-row retainer">
+          <div class="build-price">$1,500+<small>$397 / MONTH AFTER</small></div>
+          <div>
+            <h3>Done For You</h3>
+            <p>Most agents pick this. Full pipeline run on your behalf. 24 CSVs imported to your Publer as drafts, recycle configured, quarterly seasonal refresh, one brand-tone revision pass, and email support with a 1 business day reply.</p>
+            <div class="section-cta" style="margin-top:18px;">
+              <a href="/listing-engine/intake" class="btn btn-primary">
+                <span>Get started</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="build-row">
+          <div class="build-price">$5,000+<small>$500 / AGENT SETUP, THEN $2,995 / MO FOR UP TO 25 AGENTS</small></div>
+          <div>
+            <h3>Brokerage</h3>
+            <p>Branded with your brokerage logo. Master compliance footer with your broker info, one intake per agent in your dashboard, we onboard your full roster, quarterly performance report, and priority support.</p>
+            <div class="section-cta" style="margin-top:18px;">
+              <a href="/listing-engine/intake" class="btn btn-ghost">Talk to founder</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">What accounts do I need to connect, and how?</div>
-      <div class="faq-a">You provide three things: your IDX site URL (no login, just the address), a Publer Business account ($25 to $50 a month, you sign up yourself, takes 5 minutes), and your social media accounts connected to that Publer (you connect each through Publer's own login flow, we never see your passwords). You then invite us as a limited team member inside your Publer. We can upload drafts and schedule. We can't publish without your approval, change your passwords, or touch your social accounts directly.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do I need to build a new website or buy a new domain?</div>
-      <div class="faq-a">No. Your IDX site (Ylopo, kvCORE, BoomTown, etc.) is the destination. Every post drives traffic to your existing site, where your retargeting and AI calling already take over. Branded short links are included as part of the service: your posts use short URLs like aiv.gs/rp-sw-pool700 instead of long IDX URLs. We manage the short link service on our end, no setup or maintenance on your part. If you want your own fully custom branded domain (yourname.live), that is a $25 a year add-on you own outright.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can two agents use the same engine to save money?</div>
-      <div class="faq-a">No. Every post we produce is uniquely branded to one agent: your license number on every compliance footer, your headshot baked into every image, your broker name in every caption, and your IDX search URL as the destination. If another agent tried to publish your posts as their own, that is license fraud and gets them suspended. The drafts also live inside your private Publer account, not on a shareable link. Each agent needs their own subscription.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Will this work with my IDX vendor?</div>
-      <div class="faq-a">Yes if your IDX returns saved-search URLs. We support Ylopo, kvCORE, BoomTown, Sierra Interactive, Real Geeks, Chime, and most custom builds. If your URL pattern is unusual, we test it on the intake call before charging you.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Are the posts actually compliant for my state?</div>
-      <div class="faq-a">Every post is scanned against your state's MLS rules, fair housing requirements, and broker disclosure rules before delivery. We currently support NV, CA, AZ, TX, FL, and CO at launch. New states added quarterly. You still own final approval before anything publishes.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if I don't have a Publer account?</div>
-      <div class="faq-a">We set one up with you on the kickoff call. The Publer Business plan ($25 to $40 a month) is required and is not included in our pricing. It's the engine that makes the recycle work.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you guarantee leads or closings?</div>
-      <div class="faq-a">No. We guarantee 840 published posts per platform per year, branded and compliant, recycling forever, with quarterly refreshes. Lead generation depends on your market, your stack, and your follow-up. We deliver the content engine. You close the leads.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if I cancel after month 3?</div>
-      <div class="faq-a">You keep everything we built. The 24 CSVs, the Canva template, the Publer schedule. We turn off the recycle automation and stop the quarterly refresh. The setup fee is non-refundable because the deliverable is yours.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How is this different from the playbook my brokerage already gave me?</div>
-      <div class="faq-a">Your brokerage gave you the recipe. We are the kitchen. You can absolutely run their playbook yourself if you have an afternoon and the patience to do 24 CSV imports. Most agents don't.</div>
-    </div>
-
   </section>
 
-  <section id="book">
-    <h2>Tell us about your practice</h2>
-    <p style="color: var(--muted); margin-bottom: 24px;">5 minutes of info. We review your answers, pull together a real sample week for your market, and reach back out personally within 24 hours. No sales pitch, no auto-reply chain.</p>
-    <a href="/listing-engine/intake" class="btn-primary">Start the 5-minute intake</a>
-    <p class="ticker" style="margin-top: 16px;">Or email gianny@airoiops.com if forms are evil.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker" style="display:block;text-align:center;">Frequently asked</div>
+      <h2 class="h2 center">Questions agents <span class="grad">ask first.</span></h2>
+      <div class="faq-acc" style="margin-top:36px;">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>What does the monthly fee actually pay for?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>The $397 a month keeps your engine running: 28-day recycle automation across all 6 platforms, quarterly seasonal refresh of 5 to 10 fresh posts (included), revision support (we tweak captions, swap neighborhoods, update niches within 1 business day), compliance re-scans when state or NAR rules change, and a monthly performance summary. Without the monthly, the recycle eventually goes stale and your reach drops.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>What accounts do I need to connect, and how?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>You provide three things: your IDX site URL (no login, just the address), a Publer Business account ($25 to $50 a month, you sign up yourself, takes 5 minutes), and your social media accounts connected to that Publer (you connect each through Publer's own login flow, we never see your passwords). You then invite us as a limited team member inside your Publer. We can upload drafts and schedule. We can't publish without your approval, change your passwords, or touch your social accounts directly.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>Do I need to build a new website or buy a new domain?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>No. Your IDX site (Ylopo, kvCORE, BoomTown, etc.) is the destination. Every post drives traffic to your existing site, where your retargeting and AI calling already take over. Branded short links are included as part of the service: your posts use short URLs like aiv.gs/rp-sw-pool700 instead of long IDX URLs. We manage the short link service on our end, no setup or maintenance on your part. If you want your own fully custom branded domain (yourname.live), that is a $25 a year add-on you own outright.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>Can two agents use the same engine to save money?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>No. Every post we produce is uniquely branded to one agent: your license number on every compliance footer, your headshot baked into every image, your broker name in every caption, and your IDX search URL as the destination. If another agent tried to publish your posts as their own, that is license fraud and gets them suspended. The drafts also live inside your private Publer account, not on a shareable link. Each agent needs their own subscription.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>Will this work with my IDX vendor?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Yes if your IDX returns saved-search URLs. We support Ylopo, kvCORE, BoomTown, Sierra Interactive, Real Geeks, Chime, and most custom builds. If your URL pattern is unusual, we test it on the intake call before charging you.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>Are the posts actually compliant for my state?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Every post is scanned against your state's MLS rules, fair housing requirements, and broker disclosure rules before delivery. We currently support NV, CA, AZ, TX, FL, and CO at launch. New states added quarterly. You still own final approval before anything publishes.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>What if I don't have a Publer account?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>We set one up with you on the kickoff call. The Publer Business plan ($25 to $40 a month) is required and is not included in our pricing. It's the engine that makes the recycle work.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>Do you guarantee leads or closings?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>No. We guarantee 840 published posts per platform per year, branded and compliant, recycling forever, with quarterly refreshes. Lead generation depends on your market, your stack, and your follow-up. We deliver the content engine. You close the leads.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>What if I cancel after month 3?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>You keep everything we built. The 24 CSVs, the Canva template, the Publer schedule. We turn off the recycle automation and stop the quarterly refresh. The setup fee is non-refundable because the deliverable is yours.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            <span>How is this different from the playbook my brokerage already gave me?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Your brokerage gave you the recipe. We are the kitchen. You can absolutely run their playbook yourself if you have an afternoon and the patience to do 24 CSV imports. Most agents don't.</p></div></div>
+        </div>
+      </div>
+    </div>
   </section>
 
-</main>
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band" id="book">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2">Tell us about <span class="grad">your practice.</span></h2>
+        <p>5 minutes of info. We review your answers, pull together a real sample week for your market, and reach back out personally within 24 hours. No sales pitch, no auto-reply chain.</p>
+        <div class="section-cta">
+          <a href="/listing-engine/intake" class="btn btn-primary">
+            <span>Start the 5-minute intake</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="final-alt">Or email gianny@airoiops.com if forms are evil.</p>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  AIROIOPS &middot; Las Vegas, NV &middot; airoiops.com
-  <br>
-  The Listing Engine is a product of AIROIOPS. We are not affiliated with any brokerage, IDX vendor, or scheduling tool listed on this page.
-</footer>
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="foot-area">The Listing Engine is a product of AIROIOPS. We are not affiliated with any brokerage, IDX vendor, or scheduling tool listed on this page. Serving real estate agents in Las Vegas and remote nationwide.</div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
+      <div>Built in Las Vegas, NV</div>
+    </div>
+  </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>

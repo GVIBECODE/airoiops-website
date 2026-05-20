@@ -934,3 +934,132 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
   .cs-callout { padding: 24px 22px; }
   .cs-table th, .cs-table td { padding: 11px 13px; font-size: 12.5px; }
 }
+
+/* ============ LISTING ENGINE REPORT (light body, sub-page) ==== */
+.lr-banner {
+  background: linear-gradient(135deg, #fff7e6, #fffdf5);
+  border: 1px solid #f4dca0; border-radius: var(--r-sm);
+  padding: 16px 20px; margin-bottom: 30px;
+  font-size: 14px; color: #8a6914; line-height: 1.55;
+}
+.lr-banner strong { color: #6b4f00; font-weight: 800; }
+.lr-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.lr-kpi {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r-sm); box-shadow: var(--sh-1); padding: 22px 20px;
+}
+.lr-kpi .lr-kpi-lbl {
+  font-size: 11.5px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;
+}
+.lr-kpi .lr-kpi-val {
+  font-size: 34px; font-weight: 900; letter-spacing: -.02em;
+  background: linear-gradient(120deg, var(--purple-deep), var(--cyan));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  line-height: 1;
+}
+.lr-kpi .lr-trend {
+  display: inline-block; margin-top: 9px;
+  font-size: 11.5px; font-weight: 700;
+  padding: 3px 10px; border-radius: 999px;
+}
+.lr-kpi .lr-trend.up { color: #15803d; background: rgba(34,197,94,.12); }
+.lr-kpi .lr-trend.flat { color: var(--text-3); background: var(--tint); }
+.lr-topics {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r); box-shadow: var(--sh-1); overflow: hidden;
+}
+.lr-topic {
+  display: grid; grid-template-columns: 44px 1fr auto;
+  align-items: center; gap: 18px;
+  padding: 18px 24px; border-bottom: 1px solid var(--border);
+}
+.lr-topic:last-child { border-bottom: none; }
+.lr-rank {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--purple), var(--indigo));
+  color: #fff; font-weight: 800; font-size: 14px;
+}
+.lr-topic-name { font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 2px; }
+.lr-topic-meta { font-size: 12.5px; color: var(--text-3); }
+.lr-topic-stats { display: flex; gap: 22px; }
+.lr-topic-stats .lr-st { text-align: right; }
+.lr-topic-stats .lr-st .n { font-size: 18px; font-weight: 900; color: var(--purple-deep); line-height: 1; }
+.lr-topic-stats .lr-st .l {
+  font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--text-3); margin-top: 4px;
+}
+.lr-plat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.lr-plat {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r-sm); box-shadow: var(--sh-1); padding: 20px;
+}
+.lr-plat.top { border-color: #aee9c1; box-shadow: 0 12px 30px rgba(34,197,94,.14); }
+.lr-plat-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.lr-badge {
+  width: 30px; height: 30px; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 12px; font-weight: 800;
+}
+.lr-badge.fb { background: #1877f2; }
+.lr-badge.ig { background: linear-gradient(45deg, #fdcb52, #e1306c, #833ab4); }
+.lr-badge.li { background: #0a66c2; }
+.lr-badge.pin { background: #e60023; }
+.lr-badge.tt { background: #111; }
+.lr-badge.yt { background: #ff0000; }
+.lr-plat-name { font-weight: 800; font-size: 15px; }
+.lr-tag {
+  font-size: 10px; font-weight: 800; letter-spacing: .06em;
+  text-transform: uppercase; color: #15803d;
+  background: rgba(34,197,94,.14); padding: 3px 8px; border-radius: 6px;
+}
+.lr-plat-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.lr-plat-stats .lr-ps {
+  text-align: center; padding: 10px 4px;
+  background: var(--tint); border: 1px solid var(--border); border-radius: 9px;
+}
+.lr-plat-stats .lr-ps .n { font-size: 17px; font-weight: 900; color: var(--text); line-height: 1; }
+.lr-plat-stats .lr-ps .l {
+  font-size: 10px; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--text-3); margin-top: 5px;
+}
+.lr-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.lr-insight {
+  border-radius: var(--r); padding: 26px; border: 1px solid var(--border);
+}
+.lr-insight.good { background: linear-gradient(135deg, #f0fdf4, #ffffff); border-color: #aee9c1; }
+.lr-insight.adjust { background: linear-gradient(135deg, #fffbeb, #ffffff); border-color: #f4dca0; }
+.lr-insight h3 { font-size: 17px; font-weight: 800; margin: 0 0 14px; }
+.lr-insight.good h3 { color: #15803d; }
+.lr-insight.adjust h3 { color: #b45309; }
+.lr-insight ul { margin: 0; padding-left: 20px; }
+.lr-insight ul li { font-size: 14px; color: var(--text-2); margin-bottom: 10px; }
+.lr-insight ul li strong { color: var(--text); font-weight: 700; }
+.lr-next {
+  background: linear-gradient(135deg, #f4f1ff, #e9fbfd);
+  border: 1px solid #e3def9; border-radius: var(--r);
+  padding: 26px 30px; display: flex; align-items: center;
+  justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+.lr-next h3 { font-size: 18px; font-weight: 800; margin: 0 0 5px; }
+.lr-next p { font-size: 14px; color: var(--text-2); margin: 0; }
+.lr-next-date {
+  background: linear-gradient(135deg, var(--purple), var(--indigo));
+  color: #fff; padding: 14px 22px; border-radius: var(--r-sm); text-align: center;
+}
+.lr-next-date .d { font-size: 22px; font-weight: 900; line-height: 1; }
+.lr-next-date .y {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  color: rgba(255,255,255,.78); margin-top: 5px;
+}
+@media (max-width: 940px) {
+  .lr-kpis { grid-template-columns: repeat(2, 1fr); }
+  .lr-plat-grid { grid-template-columns: 1fr; }
+  .lr-insights { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .lr-kpis { grid-template-columns: 1fr; }
+  .lr-topic { grid-template-columns: 36px 1fr; }
+  .lr-topic-stats { grid-column: 1 / -1; justify-content: flex-start; padding-left: 54px; }
+}
