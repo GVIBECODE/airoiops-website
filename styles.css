@@ -783,6 +783,37 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
 .intake-help { font-size: 13px; color: var(--text-3); margin: -2px 0 8px; font-style: italic; }
 .intake-form textarea { min-height: 86px; }
 .intake-form textarea.tall { min-height: 124px; }
+.qual-field input[type=tel],
+.qual-field input[type=url] {
+  width: 100%; font-family: inherit; font-size: 14.5px;
+  padding: 12px 14px; border: 1.5px solid var(--border-2);
+  border-radius: 11px; background: #fff; color: var(--text);
+  outline: none; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.qual-field input[type=tel]:focus,
+.qual-field input[type=url]:focus {
+  border-color: var(--purple); box-shadow: 0 0 0 3px rgba(124,92,255,.15);
+}
+.qual-field input[type=file] {
+  width: 100%; font-family: inherit; font-size: 13.5px;
+  padding: 11px 14px; border: 1.5px dashed var(--border-2);
+  border-radius: 11px; background: #fff; color: var(--text-2);
+  cursor: pointer; transition: border-color .15s ease;
+}
+.qual-field input[type=file]:hover { border-color: var(--purple); }
+.qual-field input[type=color] {
+  width: 100%; height: 48px; padding: 5px;
+  border: 1.5px solid var(--border-2); border-radius: 11px;
+  background: #fff; cursor: pointer;
+}
+.intake-price {
+  display: inline-flex; align-items: baseline; gap: 7px;
+  padding: 12px 20px; background: #fff; border: 1px solid #e3def9;
+  border-radius: 12px; margin-bottom: 18px;
+}
+.intake-price .num { font-size: 26px; font-weight: 800; color: var(--text); letter-spacing: -.02em; }
+.intake-price .lbl { font-size: 14px; color: var(--text-2); font-weight: 500; }
+.intake-price .plus { font-size: 17px; color: var(--text-3); margin: 0 3px; }
 .intake-submit {
   background: linear-gradient(160deg, #f4f1ff, #e9fbfd);
   border: 1px solid #e3def9; border-radius: var(--r);
