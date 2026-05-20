@@ -988,3 +988,43 @@ navLinks.forEach(link => {
     if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
   });
 })();
+
+/* --- Redesign (genaipi rebuild): department tabs + FAQ accordion --- */
+(function setupRedesignInteractions() {
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  if (tabs.length) {
+    const show = (name) => {
+      tabs.forEach(t => {
+        const on = t.dataset.panel === name;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === name));
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t.dataset.panel));
+      t.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const n = e.key === 'ArrowRight'
+          ? (i + 1) % tabs.length
+          : (i - 1 + tabs.length) % tabs.length;
+        tabs[n].focus();
+        show(tabs[n].dataset.panel);
+      });
+    });
+  }
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    const ico = item.querySelector('.faq-ico');
+    if (!q || !a) return;
+    q.addEventListener('click', () => {
+      const open = item.classList.toggle('open');
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+      if (ico) ico.textContent = open ? '–' : '+';
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+})();
