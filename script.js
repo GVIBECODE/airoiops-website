@@ -145,6 +145,55 @@ const translations = {
     'upsells.ret_body': 'Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.',
     'upsells.cta': 'Book a call to scope a build',
     'upsells.cta_alt': 'See a real build in action',
+    'upsells.menu_kicker': 'The build menu',
+    'upsells.menu_h2': 'Six builds, one retainer. <span class="grad">Fixed floors.</span>',
+    'upsells.menu_lede': "Pick what you want, skip what you don't. Each build is scoped before you commit.",
+    'upsells.price_audit': 'FIXED, 48-HOUR REPORT',
+    'upsells.price_floor': 'FLOOR PRICE',
+    'upsells.price_month': 'PER MONTH',
+    'upsells.cta_h2': 'Ready to <span class="grad">scope a build?</span>',
+    'upsells.cta_body': 'Start with the $1,000 Assessment. We quantify your ROI in writing first, so the math is on paper before any build contract.',
+
+    'faq.ph_lede': 'Price, timeline, scope, who it is for, what software it works with, and how the bigger builds are priced. All seven answers, in one place.',
+    'faq.cta_h2': 'Still got <span class="grad">questions?</span>',
+    'faq.cta_body': 'Book a free Discovery Call and ask anything. No spam, no agency rates, no 90-day discovery phases.',
+
+    'customers.kicker': 'Customer Stories',
+    'customers.h1': 'Real rebuilds. <span class="grad">Real numbers.</span>',
+    'customers.ph_lede': 'Each story is an SMB that ran the AIROIOPS Assessment, then shipped one or more of the upsells. We publish the work, the numbers, and the stack used. No vague claims.',
+    'customers.stat1': 'Fixed Assessment price across every story',
+    'customers.stat2': 'Standard Roadmap turnaround',
+    'customers.stat3': 'Stories audited against real ledger numbers',
+    'customers.featured_kicker': 'Featured customer',
+    'customers.featured_h2': 'Sister business <span class="grad">&middot; Las Vegas residential service.</span>',
+    'customers.featured_lede': 'A two-chapter case study. Chapter 1 is the $1,000 Assessment deliverable we sell. Chapter 2 is what got built after.',
+    'customers.ch1_tag': 'Chapter 1 of 2 &middot; The Assessment',
+    'customers.ch1_title': 'The $1,000 Assessment, run on a real service business',
+    'customers.ch1_body': 'The deliverable AIROIOPS sells, run on the sister business as the proof case. 48-hour audit: 1,000+ idle leads identified, $4,500 of forensically-traced ad waste, 13 hours per week reclaimable.',
+    'customers.ch1_m1': 'turnaround',
+    'customers.ch1_m2': 'ad spend audited',
+    'customers.ch1_m3': 'idle leads found',
+    'customers.ch1_cta': 'Read the assessment',
+    'customers.ch2_tag': 'Chapter 2 of 2 &middot; The Rebuild',
+    'customers.ch2_title': 'What got built after the assessment',
+    'customers.ch2_body': '4 disconnected systems consolidated into one AI-orchestrated workflow. A brittle Zapier glue retired. Auto-replies live. Live operations dashboard. Delivered in phased waves, each one standing alone.',
+    'customers.ch2_m1': 'systems',
+    'customers.ch2_m2': 'ad waste reallocated',
+    'customers.ch2_m3': 'inbound texts answered',
+    'customers.ch2_cta': 'Read the rebuild',
+    'customers.more_kicker': 'More stories',
+    'customers.more_h2': 'Free-5 customer stories, <span class="grad">coming soon.</span>',
+    'customers.more_lede': 'The first 5 free AI Business Assessments. Each story is published once the rebuild ships and the numbers are in.',
+    'customers.soon_tag': 'Coming soon',
+    'customers.soon_title': 'Free-5 customer story',
+    'customers.soon_body': 'One of the first 5 free AI Business Assessments. Story published once the rebuild ships and the numbers are in.',
+    'customers.cta_h2': 'Want this run on <span class="grad">your business?</span>',
+    'customers.cta_body': '$1,000 fixed for the AI Business Assessment. 48-hour custom Roadmap. Quick Wins are yours to ship; upsells are optional.',
+
+    'thanks.steps_kicker': 'What happens next',
+    'thanks.steps_h2': 'Three steps to your <span class="grad">Discovery Call.</span>',
+    'intake_thanks.steps_kicker': 'What happens next',
+    'intake_thanks.steps_h2': 'From your answers to <span class="grad">your roadmap.</span>',
 
     'how.kicker': 'How it works',
     'how.h2': '48 hours. Three steps. <span class="grad">Real ROI.</span>',
@@ -513,6 +562,55 @@ const translations = {
     'upsells.ret_body': 'Optimización continua, nuevas construcciones y mantenimiento del stack de IA. Cancela cuando quieras. La mayoría de clientes empieza esto después de su primer upsell.',
     'upsells.cta': 'Agenda una llamada para definir una construcción',
     'upsells.cta_alt': 'Ver una construcción real en acción',
+    'upsells.menu_kicker': 'El menú de construcciones',
+    'upsells.menu_h2': 'Seis construcciones, un retainer. <span class="grad">Pisos fijos.</span>',
+    'upsells.menu_lede': 'Elige lo que quieres, salta lo que no. Cada construcción se define en alcance antes de comprometerte.',
+    'upsells.price_audit': 'FIJO, REPORTE EN 48 HORAS',
+    'upsells.price_floor': 'PRECIO PISO',
+    'upsells.price_month': 'POR MES',
+    'upsells.cta_h2': '¿Listo para <span class="grad">definir una construcción?</span>',
+    'upsells.cta_body': 'Empieza con la Evaluación de $1,000. Cuantificamos tu ROI por escrito primero, así los números están en papel antes de cualquier contrato de construcción.',
+
+    'faq.ph_lede': 'Precio, tiempos, alcance, para quién es, con qué software funciona, y cómo se cotizan las construcciones más grandes. Las siete respuestas, en un solo lugar.',
+    'faq.cta_h2': '¿Aún tienes <span class="grad">preguntas?</span>',
+    'faq.cta_body': 'Agenda una llamada gratis y pregunta lo que quieras. Sin spam, sin tarifas de agencia, sin fases de descubrimiento de 90 días.',
+
+    'customers.kicker': 'Historias de clientes',
+    'customers.h1': 'Reconstrucciones reales. <span class="grad">Números reales.</span>',
+    'customers.ph_lede': 'Cada historia es una pequeña empresa que hizo la Evaluación de AIROIOPS y luego lanzó uno o más de los upsells. Publicamos el trabajo, los números y el stack usado. Sin afirmaciones vagas.',
+    'customers.stat1': 'Precio fijo de la Evaluación en cada historia',
+    'customers.stat2': 'Entrega estándar de la hoja de ruta',
+    'customers.stat3': 'Historias auditadas contra números reales del libro contable',
+    'customers.featured_kicker': 'Cliente destacado',
+    'customers.featured_h2': 'Negocio hermano <span class="grad">&middot; servicio residencial en Las Vegas.</span>',
+    'customers.featured_lede': 'Un caso de estudio de dos capítulos. El Capítulo 1 es el entregable de la Evaluación de $1,000 que vendemos. El Capítulo 2 es lo que se construyó después.',
+    'customers.ch1_tag': 'Capítulo 1 de 2 &middot; La Evaluación',
+    'customers.ch1_title': 'La Evaluación de $1,000, hecha en un negocio de servicios real',
+    'customers.ch1_body': 'El entregable que AIROIOPS vende, hecho en el negocio hermano como caso de prueba. Auditoría de 48 horas: 1,000+ leads inactivos identificados, $4,500 de desperdicio publicitario rastreado forensicamente, 13 horas por semana recuperables.',
+    'customers.ch1_m1': 'entrega',
+    'customers.ch1_m2': 'gasto publicitario auditado',
+    'customers.ch1_m3': 'leads inactivos encontrados',
+    'customers.ch1_cta': 'Leer la evaluación',
+    'customers.ch2_tag': 'Capítulo 2 de 2 &middot; La Reconstrucción',
+    'customers.ch2_title': 'Lo que se construyó después de la evaluación',
+    'customers.ch2_body': '4 sistemas desconectados consolidados en un solo flujo orquestado por IA. Un pegamento frágil de Zapier retirado. Auto-respuestas en vivo. Panel de operaciones en vivo. Entregado en olas escalonadas, cada una sostenible por sí sola.',
+    'customers.ch2_m1': 'sistemas',
+    'customers.ch2_m2': 'gasto publicitario reasignado',
+    'customers.ch2_m3': 'mensajes entrantes contestados',
+    'customers.ch2_cta': 'Leer la reconstrucción',
+    'customers.more_kicker': 'Más historias',
+    'customers.more_h2': 'Historias de los Free-5, <span class="grad">muy pronto.</span>',
+    'customers.more_lede': 'Las primeras 5 Evaluaciones de Negocio con IA gratuitas. Cada historia se publica una vez que la reconstrucción se entrega y los números están listos.',
+    'customers.soon_tag': 'Muy pronto',
+    'customers.soon_title': 'Historia de cliente Free-5',
+    'customers.soon_body': 'Una de las primeras 5 Evaluaciones de Negocio con IA gratuitas. Historia publicada una vez que la reconstrucción se entrega y los números están listos.',
+    'customers.cta_h2': '¿Quieres esto en <span class="grad">tu negocio?</span>',
+    'customers.cta_body': '$1,000 fijo por la Evaluación de Negocio con IA. Hoja de ruta personalizada en 48 horas. Los Quick Wins son tuyos para lanzar; los upsells son opcionales.',
+
+    'thanks.steps_kicker': 'Qué sigue',
+    'thanks.steps_h2': 'Tres pasos para tu <span class="grad">llamada de descubrimiento.</span>',
+    'intake_thanks.steps_kicker': 'Qué sigue',
+    'intake_thanks.steps_h2': 'De tus respuestas a <span class="grad">tu hoja de ruta.</span>',
 
     'how.kicker': 'Cómo funciona',
     'how.h2': '48 horas. Tres pasos. <span class="grad">ROI real.</span>',
@@ -986,5 +1084,45 @@ navLinks.forEach(link => {
   });
   window.addEventListener('resize', () => {
     if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
+  });
+})();
+
+/* --- Redesign (genaipi rebuild): department tabs + FAQ accordion --- */
+(function setupRedesignInteractions() {
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  if (tabs.length) {
+    const show = (name) => {
+      tabs.forEach(t => {
+        const on = t.dataset.panel === name;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === name));
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t.dataset.panel));
+      t.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const n = e.key === 'ArrowRight'
+          ? (i + 1) % tabs.length
+          : (i - 1 + tabs.length) % tabs.length;
+        tabs[n].focus();
+        show(tabs[n].dataset.panel);
+      });
+    });
+  }
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    const ico = item.querySelector('.faq-ico');
+    if (!q || !a) return;
+    q.addEventListener('click', () => {
+      const open = item.classList.toggle('open');
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+      if (ico) ico.textContent = open ? '–' : '+';
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   });
 })();

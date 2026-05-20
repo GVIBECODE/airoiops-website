@@ -5,208 +5,150 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Optional Builds &amp; Pricing | AIROIOPS</title>
   <meta name="description" content="Fixed-floor pricing for AIROIOPS optional builds. Forensic Ad Audit ($750), Zapier Automation ($1,500+), Custom GPT ($2,500+), Speed-to-Lead AI Agent ($3,500+), Process Optimization ($4,500+), and Monthly Retainer ($1,500/mo). Charged at the floor or 20% of projected first-year ROI, whichever is greater.">
+  <meta name="keywords" content="AI builds Las Vegas, Zapier automation pricing, Custom GPT pricing, Speed to Lead AI agent, Forensic ad audit, process optimization">
   <meta name="author" content="AIROIOPS">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://airoiops.com/upsells">
-  <meta name="theme-color" content="#050714">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Inter,system-ui' font-size='44' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="alternate" hreflang="en" href="https://airoiops.com/upsells">
+  <link rel="alternate" hreflang="es" href="https://airoiops.com/upsells?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://airoiops.com/upsells">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/upsells">
+  <meta property="og:title" content="Optional Builds &amp; Pricing | AIROIOPS">
+  <meta property="og:description" content="Six fixed-floor AI builds plus a monthly retainer. Charged at the floor or 20% of projected first-year ROI, whichever is greater.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Optional Builds &amp; Pricing | AIROIOPS">
+  <meta name="twitter:description" content="Six fixed-floor AI builds plus a monthly retainer. Built in your stack, you own every credential.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    .page-hero {
-      max-width: 1100px; margin: 0 auto;
-      padding: 100px 40px 40px; position: relative; z-index: 1;
-    }
-    .page-hero .kicker {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      letter-spacing: 0.25em; color: var(--grad-4);
-      text-transform: uppercase; margin-bottom: 18px;
-    }
-    .page-hero h1 {
-      font-size: clamp(36px, 5.5vw, 60px); line-height: 1.06;
-      letter-spacing: -0.03em; margin: 0 0 18px;
-    }
-    .page-hero h1 .grad {
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .page-hero .lede {
-      font-size: 18px; color: var(--text-2);
-      max-width: 70ch; margin: 0 0 36px; line-height: 1.55;
-    }
-    .upsells-section { max-width: 1100px; margin: 0 auto; padding: 20px 40px 80px; position: relative; z-index: 1; }
-    .upsells-section .grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 24px;
-    }
-    .upsells-section .card {
-      padding: 32px 28px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 22px;
-    }
-    .upsells-section .card-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 28px; font-weight: 800; color: var(--text);
-      margin-bottom: 14px; letter-spacing: -0.01em;
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .upsells-section .card-num-suf { font-size: 18px; opacity: 0.7; }
-    .upsells-section .card h3 {
-      font-size: 20px; font-weight: 700; margin: 0 0 12px;
-      letter-spacing: -0.015em;
-    }
-    .upsells-section .card p {
-      color: var(--text-2); font-size: 14.5px;
-      line-height: 1.55; margin: 0;
-    }
-    .upsells-cta {
-      max-width: 760px; margin: 60px auto 40px;
-      padding: 56px 48px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.08));
-      border: 1px solid var(--border-strong); border-radius: 32px;
-      text-align: center;
-    }
-    .upsells-cta h2 { font-size: clamp(26px, 3.5vw, 36px); margin: 0 0 12px; }
-    .upsells-cta h2 .grad {
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .upsells-cta p {
-      color: var(--text-2); font-size: 16px; margin: 0 0 24px;
-      max-width: 52ch; margin-left: auto; margin-right: auto;
-    }
-    @media (max-width: 880px) {
-      .page-hero { padding: 80px 24px 28px; }
-      .upsells-section { padding: 10px 24px 60px; }
-      .upsells-section .grid { grid-template-columns: 1fr; }
-      .upsells-cta { padding: 44px 28px; margin: 40px 24px 24px; }
-    }
-  </style>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
-  </div>
-
+  <!-- ============ NAV ============ -->
   <nav class="nav">
-    <a href="/" class="logo">AIROI<span>OPS</span></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-backdrop" aria-hidden="true"></div>
-    <div class="nav-links">
-      <a href="/#assessment">Assessment</a>
-      <a href="/upsells" class="active">Builds</a>
-      <a href="/#how">How it works</a>
-      <a href="/customers/">Customers</a>
-      <a href="/faq">FAQ</a>
-      <div class="nav-lang" role="group" aria-label="Language">
-        <a href="/upsells" class="active" aria-label="English">EN</a>
-        <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
-        <a href="/upsells-es" aria-label="Espa&ntilde;ol">ES</a>
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment" data-i18n="nav.assessment">Assessment</a>
+        <a class="nav-item current" href="/upsells" data-i18n="nav.builds">Builds</a>
+        <a class="nav-item" href="/#how" data-i18n="nav.how">How it works</a>
+        <a class="nav-item" href="/#proof" data-i18n="nav.proof">Proof</a>
+        <a class="nav-item" href="/customers/" data-i18n="nav.customers">Customers</a>
+        <a class="nav-item" href="/faq" data-i18n="nav.faq">FAQ</a>
+        <div class="nav-lang" role="group" aria-label="Language">
+          <button data-lang="en" type="button" aria-label="English">EN</button>
+          <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
+          <button data-lang="es" type="button" aria-label="Espanol">ES</button>
+        </div>
+        <a class="nav-cta" href="/#book" data-i18n="nav.book">Book Call</a>
       </div>
-      <a href="/#book" class="nav-cta">Book Call</a>
     </div>
   </nav>
 
+  <!-- ============ PAGE HERO ============ -->
   <section class="page-hero">
-    <div class="kicker">Optional Builds</div>
-    <h1>If you want us to <span class="grad">build it</span>, here's the menu.</h1>
-    <p class="lede">The $1,000 Assessment is the deliverable. Quick Wins are yours to ship. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.</p>
-  </section>
-
-  <section class="upsells-section">
-    <div class="grid">
-      <div class="card">
-        <div class="card-num">$750</div>
-        <h3>Forensic Ad Audit</h3>
-        <p>Full forensic pull of your last 6-12 months of paid ad spend (Google, Meta, or both). We map every reported conversion to your actual paying-customer ledger and surface the waste your last agency missed. 6-8 page audit report in 48 hours.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">$1,500<span class="card-num-suf">+</span></div>
-        <h3>Zapier Automation</h3>
-        <p>Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">$2,500<span class="card-num-suf">+</span></div>
-        <h3>Custom GPT</h3>
-        <p>A ChatGPT trained on your SOPs, FAQs, pricing, and product docs. Lives in your OpenAI workspace. Use it on your site, in support, or for staff training.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">$3,500<span class="card-num-suf">+</span></div>
-        <h3>Speed-to-Lead AI Agent</h3>
-        <p>AI voice + SMS agent that responds to inbound leads in under 60 seconds. Books appointments, qualifies fit, hands off hot leads to you. Lives in your CRM.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">$4,500<span class="card-num-suf">+</span></div>
-        <h3>Process Optimization</h3>
-        <p>End-to-end audit of one bottleneck workflow plus the automation rebuild. Best for ops with 5+ tools and a lot of manual data hand-offs.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">$1,500<span class="card-num-suf"> /mo</span></div>
-        <h3>Monthly Retainer</h3>
-        <p>Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.</p>
-      </div>
-    </div>
-
-    <div class="upsells-cta">
-      <h2>Ready to <span class="grad">scope a build?</span></h2>
-      <p>Start with the $1,000 Assessment. We quantify your ROI in writing first, so the math is on paper before any build contract.</p>
-      <a href="/#book" class="btn btn-primary glow big">
-        <span>Book a Free Discovery Call</span>
-        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p style="margin-top: 18px; font-size: 14px; color: var(--text-3);">Or <a href="/assessment" style="color: var(--grad-4); text-decoration: none; border-bottom: 1px solid var(--grad-4);">fill the deep-dive intake on your own time</a>.</p>
+    <div class="wrap">
+      <div class="kicker" data-i18n="upsells.kicker">Optional Builds</div>
+      <h1 data-i18n="upsells.h2">If you want us to <span class="grad">build it</span>, here's the menu.</h1>
+      <p class="ph-lede" data-i18n="upsells.lede">The Assessment is the deliverable. Quick Wins are deliberately DIY. If you'd rather hand off the bigger plays, every build has a floor price below. We charge the floor or 20% of projected first-year ROI, whichever is greater. The Assessment puts your ROI number on paper before there's a contract. Built in your stack. You own every credential.</p>
     </div>
   </section>
 
+  <!-- ============ BUILD MENU ============ -->
+  <section>
+    <div class="wrap">
+      <div class="kicker" data-i18n="upsells.menu_kicker">The build menu</div>
+      <h2 class="h2" data-i18n="upsells.menu_h2">Six builds, one retainer. <span class="grad">Fixed floors.</span></h2>
+      <p class="lede" data-i18n="upsells.menu_lede">Pick what you want, skip what you don't. Each build is scoped before you commit.</p>
+      <div class="builds-list">
+        <div class="build-row">
+          <div class="build-price">$750<small data-i18n="upsells.price_audit">FIXED, 48-HOUR REPORT</small></div>
+          <div>
+            <h3 data-i18n="upsells.audit_title">Forensic Ad Audit</h3>
+            <p data-i18n="upsells.audit_body">Full forensic pull of your last 6-12 months of paid ad spend (Google, Meta, or both). We map every reported conversion to your actual paying-customer ledger and surface the waste your last agency missed. 6-8 page audit report in 48 hours.</p>
+          </div>
+        </div>
+        <div class="build-row">
+          <div class="build-price">$1,500+<small data-i18n="upsells.price_floor">FLOOR PRICE</small></div>
+          <div>
+            <h3 data-i18n="upsells.zap_title">Zapier Automation</h3>
+            <p data-i18n="upsells.zap_body">Multi-step automation across the tools you already pay for. Connects 2-5 apps, handles the data hand-offs, runs on your Zapier account.</p>
+          </div>
+        </div>
+        <div class="build-row">
+          <div class="build-price">$2,500+<small data-i18n="upsells.price_floor">FLOOR PRICE</small></div>
+          <div>
+            <h3 data-i18n="upsells.gpt_title">Custom GPT</h3>
+            <p data-i18n="upsells.gpt_body">A ChatGPT trained on your SOPs, FAQs, pricing, and product docs. Lives in your OpenAI workspace. Use it on your site, in support, or for staff training.</p>
+          </div>
+        </div>
+        <div class="build-row">
+          <div class="build-price">$3,500+<small data-i18n="upsells.price_floor">FLOOR PRICE</small></div>
+          <div>
+            <h3 data-i18n="upsells.s2l_title">Speed-to-Lead AI Agent</h3>
+            <p data-i18n="upsells.s2l_body">AI voice + SMS agent that responds to inbound leads in under 60 seconds. Books appointments, qualifies fit, hands off hot leads to you. Lives in your CRM.</p>
+          </div>
+        </div>
+        <div class="build-row">
+          <div class="build-price">$4,500+<small data-i18n="upsells.price_floor">FLOOR PRICE</small></div>
+          <div>
+            <h3 data-i18n="upsells.po_title">Process Optimization</h3>
+            <p data-i18n="upsells.po_body">End-to-end audit of one bottleneck workflow plus the automation rebuild. Best for ops with 5+ tools and a lot of manual data hand-offs.</p>
+          </div>
+        </div>
+        <div class="build-row retainer">
+          <div class="build-price">$1,500<small data-i18n="upsells.price_month">PER MONTH</small></div>
+          <div>
+            <h3 data-i18n="upsells.ret_title">Monthly Retainer</h3>
+            <p data-i18n="upsells.ret_body">Ongoing optimization, new builds, and AI-stack maintenance. Cancel anytime. Most clients start this after the first upsell ships.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2" data-i18n="upsells.cta_h2">Ready to <span class="grad">scope a build?</span></h2>
+        <p data-i18n="upsells.cta_body">Start with the $1,000 Assessment. We quantify your ROI in writing first, so the math is on paper before any build contract.</p>
+        <div class="section-cta">
+          <a href="/#book" class="btn btn-primary">
+            <span data-i18n="hero.cta_primary">Book a Free Discovery Call</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/assessment" class="btn btn-glass" data-i18n="assessment.cta_alt">Or skip the call, fill the intake</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer>
-    <div class="foot-area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
+    <div class="foot-area" data-i18n="footer.area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
     <div class="foot-bottom">
       <div>&copy; 2026 AIROIOPS</div>
       <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
-      <div>Built in Las Vegas, NV</div>
+      <div data-i18n="footer.location">Built in Las Vegas, NV</div>
     </div>
   </footer>
 
-  <script>
-  (function setupMobileNav() {
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-    const toggle = nav.querySelector('.nav-toggle');
-    const links = nav.querySelector('.nav-links');
-    const backdrop = nav.querySelector('.nav-backdrop');
-    if (!toggle || !links) return;
-    function close() {
-      nav.classList.remove('is-open');
-      links.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-locked');
-    }
-    function open() {
-      nav.classList.add('is-open');
-      links.classList.add('is-open');
-      toggle.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('nav-locked');
-    }
-    toggle.addEventListener('click', () => {
-      if (nav.classList.contains('is-open')) close(); else open();
-    });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-    if (backdrop) backdrop.addEventListener('click', close);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) close();
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
-    });
-  })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

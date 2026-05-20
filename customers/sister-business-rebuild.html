@@ -4,492 +4,327 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Private Case Study: Las Vegas Residential Service AI Rebuild | AIROIOPS</title>
-  <meta name="robots" content="noindex,nofollow">
   <meta name="description" content="How a Las Vegas residential service rebuilt its entire operation around one AI system. 4 disconnected systems consolidated, $4,500+ ad waste reallocated, 100% of inbound texts now answered automatically. Delivered in phased waves, each one standing alone.">
-  <meta name="theme-color" content="#050714">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Inter,system-ui' font-size='44' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://airoiops.com/customers/sister-business-rebuild">
+  <link rel="alternate" hreflang="en" href="https://airoiops.com/customers/sister-business-rebuild">
+  <link rel="alternate" hreflang="es" href="https://airoiops.com/customers/sister-business-rebuild-es">
+  <link rel="alternate" hreflang="x-default" href="https://airoiops.com/customers/sister-business-rebuild">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/customers/sister-business-rebuild">
+  <meta property="og:title" content="Private Case Study: Las Vegas Residential Service AI Rebuild | AIROIOPS">
+  <meta property="og:description" content="4 disconnected systems consolidated, $4,500+ ad waste reallocated, 100% of inbound texts answered automatically.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Private Case Study: Las Vegas Residential Service AI Rebuild | AIROIOPS">
+  <meta name="twitter:description" content="One AI operating system, delivered in phased waves. Each wave standing alone.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-
-  <style>
-    .cs-wrap { max-width: 1100px; margin: 0 auto; padding: 80px 40px 0; position: relative; z-index: 1; }
-    .cs-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--grad-4); text-transform: uppercase; margin-bottom: 18px; }
-    .cs-hero h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 24px; max-width: 18ch; }
-    .cs-hero .lede { font-size: 20px; color: var(--text-2); max-width: 60ch; margin: 0 0 36px; }
-    .cs-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .cs-tag { padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 999px; font-size: 12px; color: var(--text-2); font-weight: 500; background: var(--surface); }
-
-    .cs-byline { display: flex; align-items: center; gap: 14px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border); }
-    .cs-byline-avatar {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; color: white; font-size: 22px;
-      letter-spacing: -0.02em;
-    }
-    .cs-byline-name { font-weight: 700; font-size: 15px; color: var(--text); }
-    .cs-byline-title { font-size: 13px; color: var(--text-3); margin-top: 2px; }
-
-    .cs-section { max-width: 1100px; margin: 0 auto; padding: 80px 40px; position: relative; z-index: 1; }
-    .cs-section h2 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 16px; letter-spacing: -0.025em; }
-    .cs-section h2 .grad { background: linear-gradient(135deg, var(--grad-2), var(--grad-4)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .cs-section .section-lede { font-size: 17px; color: var(--text-2); max-width: 65ch; margin: 0 0 36px; }
-    .cs-section .kicker { margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grad-4); }
-
-    .cs-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 36px 0 0; }
-    .cs-metric { padding: 24px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
-    .cs-metric .num {
-      font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em;
-      background: linear-gradient(135deg, var(--grad-2), var(--grad-4));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-      line-height: 1.05; margin-bottom: 8px;
-    }
-    .cs-metric .lbl { font-size: 12.5px; color: var(--text-3); font-weight: 500; line-height: 1.45; }
-    .cs-metric .compound {
-      margin-top: 14px; padding-top: 12px;
-      border-top: 1px solid var(--border);
-      font-size: 11.5px; color: var(--text-2); line-height: 1.5;
-      font-weight: 500;
-    }
-
-    .cs-outcomes { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .cs-outcomes li {
-      padding: 18px 22px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 14px;
-      font-size: 15px; color: var(--text); line-height: 1.5;
-      position: relative; padding-left: 48px;
-    }
-    .cs-outcomes li::before {
-      content: ""; position: absolute; left: 18px; top: 22px;
-      width: 18px; height: 18px; border-radius: 50%;
-      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-      box-shadow: 0 0 16px rgba(6, 182, 212, 0.45);
-    }
-    .cs-outcomes li::after {
-      content: ""; position: absolute; left: 23px; top: 27px;
-      width: 8px; height: 4px;
-      border-left: 2px solid white; border-bottom: 2px solid white;
-      transform: rotate(-45deg);
-    }
-
-    .cs-find-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
-    .cs-find { padding: 26px 26px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
-    .cs-find h3 { font-size: 18px; margin: 0 0 10px; color: var(--text); font-weight: 700; }
-    .cs-find p { color: var(--text-2); font-size: 14.5px; margin: 0; line-height: 1.6; }
-    .cs-find .cs-find-num {
-      display: inline-block; font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; color: var(--grad-4); font-weight: 600;
-      padding: 3px 9px; border-radius: 100px;
-      background: rgba(6, 182, 212, 0.08);
-      border: 1px solid rgba(6, 182, 212, 0.22);
-      margin-bottom: 14px;
-    }
-
-    .cs-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .cs-stack-chip {
-      padding: 10px 16px; border: 1px solid var(--border-strong); border-radius: 12px;
-      background: var(--surface); font-size: 13px; color: var(--text-2); font-weight: 500;
-      font-family: 'Inter', system-ui;
-    }
-    .cs-stack-chip strong { color: var(--text); font-weight: 700; }
-
-    .cs-callout {
-      padding: 28px 32px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.10), rgba(6, 182, 212, 0.06));
-      border: 1px solid var(--border-strong); border-radius: 20px;
-      margin-top: 28px; isolation: isolate;
-    }
-    .cs-callout .cs-callout-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--grad-4); margin-bottom: 10px;
-    }
-    .cs-callout p { margin: 0; font-size: 17px; color: var(--text); line-height: 1.55; font-weight: 500; }
-
-    .cs-quote {
-      max-width: 880px; margin: 60px auto;
-      padding: 48px 56px;
-      background: var(--surface);
-      border: 1px solid var(--border-strong); border-radius: 28px;
-      position: relative;
-    }
-    .cs-quote-mark {
-      font-family: 'Inter', system-ui; font-size: 88px; font-weight: 800;
-      color: var(--grad-4); opacity: 0.18;
-      line-height: 0.6; position: absolute; top: 36px; left: 32px;
-    }
-    .cs-quote p {
-      font-size: 22px; line-height: 1.5; color: var(--text);
-      margin: 0 0 24px; font-weight: 500;
-      font-family: 'Inter', system-ui; padding-left: 32px;
-    }
-    .cs-quote-attr {
-      display: flex; align-items: center; gap: 14px; padding-left: 32px;
-    }
-    .cs-quote-attr .av {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; color: white; font-size: 18px;
-    }
-    .cs-quote-attr .who { font-weight: 700; color: var(--text); font-size: 14px; }
-    .cs-quote-attr .role { font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
-
-    .cs-phase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 28px; }
-    .cs-phase {
-      padding: 28px 26px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 18px;
-    }
-    .cs-phase-num {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: var(--grad-4); font-weight: 700; letter-spacing: 0.2em;
-      margin-bottom: 12px; text-transform: uppercase;
-    }
-    .cs-phase h3 { font-size: 18px; margin: 0 0 10px; font-weight: 700; }
-    .cs-phase p { color: var(--text-2); font-size: 14.5px; margin: 0; line-height: 1.6; }
-
-    .cs-cta {
-      max-width: 760px; margin: 80px auto 40px;
-      padding: 60px 48px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.08));
-      border: 1px solid var(--border-strong); border-radius: 32px;
-      text-align: center; isolation: isolate;
-    }
-    .cs-cta h2 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 14px; }
-    .cs-cta p { color: var(--text-2); font-size: 17px; margin: 0 0 30px; max-width: 50ch; margin-left: auto; margin-right: auto; }
-
-    @media (max-width: 880px) {
-      .cs-wrap { padding: 60px 24px 0; }
-      .cs-section { padding: 60px 24px; }
-      .cs-metrics { grid-template-columns: repeat(2, 1fr); }
-      .cs-outcomes { grid-template-columns: 1fr; }
-      .cs-find-grid { grid-template-columns: 1fr; }
-      .cs-phase-grid { grid-template-columns: 1fr; }
-      .cs-cta { padding: 48px 28px; margin: 60px 24px 24px; }
-      .cs-callout { padding: 24px 22px; }
-      .cs-quote { padding: 36px 28px; }
-      .cs-quote p { padding-left: 0; font-size: 19px; }
-      .cs-quote-attr { padding-left: 0; }
-      .cs-quote-mark { display: none; }
-    }
-  </style>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
-  </div>
-
+  <!-- ============ NAV ============ -->
   <nav class="nav">
-    <a href="/" class="logo">AIROI<span>OPS</span></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-backdrop" aria-hidden="true"></div>
-    <div class="nav-links">
-      <a href="/#assessment">Assessment</a>
-      <a href="/upsells">Builds</a>
-      <a href="/#how">How it works</a>
-      <a href="/customers/" class="active">Customers</a>
-      <a href="/faq">FAQ</a>
-      <div class="nav-lang" role="group" aria-label="Language">
-        <a href="/customers/sister-business-rebuild" class="active" aria-label="English">EN</a>
-        <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
-        <a href="/customers/sister-business-rebuild-es" aria-label="Espa&ntilde;ol">ES</a>
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Assessment</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">How it works</a>
+        <a class="nav-item current" href="/customers/">Customers</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <div class="nav-lang" role="group" aria-label="Language">
+          <a href="/customers/sister-business-rebuild" class="active" aria-label="English">EN</a>
+          <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
+          <a href="/customers/sister-business-rebuild-es" aria-label="Espanol">ES</a>
+        </div>
+        <a class="nav-cta" href="/#book">Book Call</a>
       </div>
-      <a href="/#book" class="nav-cta">Book Call</a>
     </div>
   </nav>
 
-  <section class="cs-wrap">
-    <div class="cs-hero">
-      <div class="cs-eyebrow">Sister Business Case Study · Las Vegas · 2026</div>
-      <h1>How a <span class="grad">Las Vegas residential service</span> rebuilt its entire operation around one AI system.</h1>
-      <p class="lede">100+ clients. One owner-operator. Four disconnected platforms held together with duct tape. After the AIROIOPS engagement, it runs as a single AI-orchestrated workflow with no new headcount. Delivered in phased waves, each one standing alone.</p>
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">Sister Business Case Study &middot; Las Vegas &middot; 2026</div>
+      <h1>How a <span class="grad">Las Vegas residential service</span> rebuilt its operation around one AI system.</h1>
+      <p class="ph-lede">100+ clients. One owner-operator. Four disconnected platforms held together with duct tape. After the AIROIOPS engagement, it runs as a single AI-orchestrated workflow with no new headcount. Delivered in phased waves, each one standing alone.</p>
       <div class="cs-tags">
         <span class="cs-tag">Sector: Residential service</span>
         <span class="cs-tag">Location: Las Vegas, NV</span>
         <span class="cs-tag">Scale: 100+ recurring clients</span>
         <span class="cs-tag">Delivery: phased rollout</span>
       </div>
-      <div class="cs-byline">
-        <div class="cs-byline-avatar">A</div>
-        <div>
-          <div class="cs-byline-name">Featuring insights from the operator</div>
-          <div class="cs-byline-title">Founder, AIROIOPS &amp; the sister business</div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section class="cs-section" style="padding-top: 40px; padding-bottom: 28px;">
-    <div class="kicker">Proof at a glance</div>
-    <h2 style="margin-bottom: 10px;">The <span class="grad">numbers,</span> up front.</h2>
-    <p class="section-lede" style="margin-bottom: 22px;">Skip the story. Here is what shipped first.</p>
-    <div class="cs-metrics">
-      <div class="cs-metric">
-        <div class="num">4 &rarr; 1</div>
-        <div class="lbl">Disconnected systems consolidated into one Make scenario</div>
-        <div class="compound">Costs once. Pays every month forever. Year two onward: pure margin on the same fix.</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">$4,500+</div>
-        <div class="lbl">Ad waste identified and reallocated after the audit</div>
-        <div class="compound">Reallocated to ZIPs that actually convert. Compounds quarter over quarter as targeting tightens.</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">24</div>
-        <div class="lbl">Orphan QuickBooks invoices reconciled in one cleanup</div>
-        <div class="compound">Underlying automation prevents new orphans. Monthly close goes from hours to minutes, every month.</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">100%</div>
-        <div class="lbl">Inbound texts answered automatically, including in Spanish</div>
-        <div class="compound">Every captured lead is one a competitor doesn't get. Compounds with reputation and word of mouth.</div>
-      </div>
-    </div>
-    <div class="cs-callout" style="margin-top: 32px;">
-      <div class="cs-callout-label">Why this matters over time</div>
-      <p>An employee costs you again every month. The plays AIROIOPS installs cost once and keep paying every month at zero extra cost. That is the difference between hiring help and building leverage. Year one is the savings. Year two and beyond is pure margin.</p>
-    </div>
-  </section>
-
-  <section class="cs-section" style="padding-top: 40px;">
-    <div class="kicker">Outcomes</div>
-    <h2>What <span class="grad">changed</span> after the rebuild.</h2>
-    <p class="section-lede">Skim the numbers. Read the story below if you want to see how. Every claim ties back to a Make scenario, a QuickBooks ledger entry, or a verified provider record.</p>
-    <ul class="cs-outcomes">
-      <li>4 disconnected systems consolidated into 1 orchestrated workflow</li>
-      <li>$4,500+ in identified ad waste reallocated after the audit</li>
-      <li>24 orphaned QuickBooks invoices reconciled in a single cleanup</li>
-      <li>100% of inbound text leads answered automatically, day or night</li>
-      <li>A2P 10DLC verified sender so SMS lands in the inbox, not spam</li>
-      <li>Bilingual auto-replies with automatic English / Spanish detection</li>
-      <li>Live operations dashboard refreshing without anyone touching it</li>
-      <li>Zero new employees hired to absorb the operational load</li>
-    </ul>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">Executive Summary</div>
-    <h2>The short version, <span class="grad">in plain English.</span></h2>
-    <p class="section-lede" style="font-size: 18px; max-width: 70ch;">The sister business is a Las Vegas residential service company with 100+ recurring clients. Like most owner-operated SMBs, it ran on goodwill, tribal knowledge, and a duct-tape stack: a field-ops platform, QuickBooks for accounting, a CRM for messaging, a brittle Zapier automation as the glue, and Google Ads burning cash without clear attribution.</p>
-    <p class="section-lede" style="font-size: 18px; max-width: 70ch;">The entire operation was rebuilt around a single AI-orchestrated workflow, delivered in phased waves so each win shipped on its own. The subpar Zapier automation was retired. The CRM-to-QuickBooks integration was replaced with a Make scenario. Auto-replies and language detection now answer every inbound lead in real time. The Google Ads account was audited and paused until the wasted ZIPs could be cut. A live operating dashboard now shows the state of the business in one glance.</p>
-    <p class="section-lede" style="font-size: 18px; max-width: 70ch;">The result: a small residential service runs with the operational discipline of a company ten times its size, without adding a single employee.</p>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">The Problem</div>
-    <h2>What was <span class="grad">broken</span> before.</h2>
-    <p class="section-lede">A 100+ client residential service, growing year over year. The problems were not effort or skill. They were everywhere the operator could not be at once.</p>
-    <div class="cs-find-grid">
-      <div class="cs-find">
-        <span class="cs-find-num">01</span>
-        <h3>Disconnected systems with no source of truth</h3>
-        <p>The field-ops platform held jobs. QuickBooks held money. The CRM held leads. Nothing talked to anything cleanly. "How is the business doing right now?" required opening five tabs.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">02</span>
-        <h3>A failing native integration</h3>
-        <p>The CRM-to-QuickBooks link generated orphaned invoices that never tied back to payments. 24 of them sat unreconciled at the time of cleanup. Books drifted further from reality every month.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">03</span>
-        <h3>Duct-tape glue running mission-critical sync</h3>
-        <p>A subpar Zapier automation ran the sync logic between platforms. Billed monthly, broke silently, and nobody but the owner could debug it. A single point of failure with no fallback.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">04</span>
-        <h3>Ad spend with no answer</h3>
-        <p>Google Ads spent $8,983 across the prior 8 months. Nobody could say which ZIPs paid back and which didn't. Reported conversions did not match real paying customers.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">05</span>
-        <h3>Lead-response gaps after hours</h3>
-        <p>Inbound texts arriving at night sat unanswered until morning. By then the lead had called three competitors. Roughly half the inbound flow was leaking out the bottom of the funnel.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">06</span>
-        <h3>SMS landing in spam folders</h3>
-        <p>Outbound texts from the business number were getting filtered before clients saw them. No A2P 10DLC registration, no verified sender. Quotes and reminders silently disappearing.</p>
-      </div>
-    </div>
-    <div class="cs-callout">
-      <div class="cs-callout-label">The cost of doing nothing</div>
-      <p>When the operator runs on context-switching, growth caps at the operator's bandwidth. The next 100 clients were going to break what the first 100 already strained.</p>
-    </div>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">The Solution</div>
-    <h2>One <span class="grad">orchestration layer.</span> Smallest possible reliable stack.</h2>
-    <p class="section-lede">AIROIOPS designed and deployed a production-grade operating layer for the sister business. Not a prototype. Not a pile of clever experiments. The smallest possible stack that runs the business every day.</p>
-    <div class="cs-stack">
-      <span class="cs-stack-chip"><strong>Make.com</strong> · orchestration backbone</span>
-      <span class="cs-stack-chip"><strong>QuickBooks Online</strong> · revenue source of truth</span>
-      <span class="cs-stack-chip"><strong>The CRM</strong> · field ops, via Make</span>
-      <span class="cs-stack-chip"><strong>QUO</strong> · SMS with A2P 10DLC verified sender</span>
-      <span class="cs-stack-chip"><strong>Notion</strong> · lead database and follow-up</span>
-      <span class="cs-stack-chip"><strong>Gmail</strong> · auto-replies with language detection</span>
-      <span class="cs-stack-chip"><strong>Live HTML dashboard</strong> · auto-refreshes</span>
-      <span class="cs-stack-chip"><strong>Decision log</strong> · nothing depends on memory</span>
-    </div>
-    <div class="cs-callout">
-      <div class="cs-callout-label">Production grade, not a prototype</div>
-      <p>Every component is wired into the daily run of the business. If a Make scenario fails, the operator knows in minutes. If a payment lands, the books reflect it that day. If a lead texts at midnight, they get a reply before they call a competitor.</p>
-    </div>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">The Approach</div>
-    <h2>Stop the bleeding. <span class="grad">Then automate.</span></h2>
-    <p class="section-lede">Every step was reversible. Every decision was logged. Every automation was live-tested against a real owned phone or email before being armed.</p>
-    <div class="cs-phase-grid">
-      <div class="cs-phase">
-        <div class="cs-phase-num">Phase 01</div>
-        <h3>Audit and stabilize</h3>
-        <p>A 30-question operator interview produced a written self-assessment of every workflow, tool, and dependency. The Google Ads account was audited line by line. $4,500+ of waste was identified. The account was paused until structural fixes were made.</p>
-      </div>
-      <div class="cs-phase">
-        <div class="cs-phase-num">Phase 02</div>
-        <h3>Consolidate the stack</h3>
-        <p>The CRM-to-QuickBooks native integration was disconnected. 24 orphan invoices were voided cleanly. The subpar Zapier automation was retired. A single Make scenario took over orchestration. One reliable scenario beats five clever ones.</p>
-      </div>
-      <div class="cs-phase">
-        <div class="cs-phase-num">Phase 03</div>
-        <h3>Activate AI where it matters</h3>
-        <p>Auto-replies with English / Spanish language detection went live. SMS sender verification cleared the spam-filter problem. The dashboard went live. AI was placed where humans were the bottleneck, not where AI was fashionable.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">Measurable Results</div>
-    <h2>What it adds up to. <span class="grad">Net of work.</span></h2>
-    <div class="cs-metrics">
-      <div class="cs-metric">
-        <div class="num">4 → 1</div>
-        <div class="lbl">Disconnected systems consolidated into one Make scenario</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">$4,500+</div>
-        <div class="lbl">Ad waste identified and reallocated after the audit</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">24</div>
-        <div class="lbl">Orphan QuickBooks invoices reconciled in one cleanup</div>
-      </div>
-      <div class="cs-metric">
-        <div class="num">100%</div>
-        <div class="lbl">Inbound texts answered automatically, including in Spanish</div>
-      </div>
-    </div>
-    <div class="cs-callout">
-      <div class="cs-callout-label">What the assessment surfaced first</div>
-      <p>Before any of this got built, the same business went through the standard $1,000 AIROIOPS Assessment. <a href="/case-study" style="color: var(--grad-4); text-decoration: none; border-bottom: 1px solid var(--grad-4);">See the original 48-hour findings here</a>: 1,000+ idle leads, $4,500 detected ad waste, 13 hours per week reclaimable. The rebuild story above is what got built after.</p>
-    </div>
-  </section>
-
-  <section class="cs-section">
-    <div class="cs-quote">
-      <div class="cs-quote-mark">"</div>
-      <p>Before this I was running my whole business off vibes and a subpar Zapier automation I didn't fully understand. Now I open one tab in the morning and I can see the whole company. That's the difference.</p>
-      <div class="cs-quote-attr">
-        <div class="av">A</div>
-        <div>
-          <div class="who">The operator</div>
-          <div class="role">Founder, AIROIOPS &amp; the sister business</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cs-section">
-    <div class="kicker">What this means for you</div>
-    <h2>If you run an SMB, <span class="grad">the playbook is the same.</span></h2>
-    <p class="section-lede">Residential service. Mobile detail. Lawn. Hauling. Mobile pet grooming. Any owner-operator field-services business at $300k to $3M revenue. This rebuild is the template.</p>
-    <div class="cs-find-grid">
-      <div class="cs-find">
-        <span class="cs-find-num">01</span>
-        <h3>Stop the bleeding first</h3>
-        <p>Most SMBs are paying for waste they cannot see: ad spend that misses, integrations that drift, follow-up that never happens. The audit pays for the engagement.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">02</span>
-        <h3>Consolidate before you automate</h3>
-        <p>One reliable orchestration scenario beats five clever ones. Fewer systems means fewer breakage points and a stack the operator can actually understand.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">03</span>
-        <h3>Put AI where humans are the bottleneck</h3>
-        <p>Lead reply at midnight. Language detection. Dashboard summarization. Not chatbots-for-the-sake-of-chatbots. The real ROI is closing the gaps the operator cannot personally cover.</p>
-      </div>
-      <div class="cs-find">
-        <span class="cs-find-num">04</span>
-        <h3>Live-test before arming</h3>
-        <p>Every scheduler that writes externally gets one real call to a real owned phone or email with the exact payload before it goes live. Dry-runs miss API contract bugs every time.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- ============ PROOF AT A GLANCE ============ -->
   <section>
-    <div class="cs-cta">
-      <h2>Want this run on <span class="grad">your business?</span></h2>
-      <p>Same Question Bank, same 48-hour turnaround, same custom 12-18 page report. $1,000 fixed for the Assessment. Quick Wins are yours to ship; upsells are optional.</p>
-      <a href="/#book" class="btn btn-primary glow big">
-        <span>Book a Free Discovery Call</span>
-        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p style="margin-top: 18px; font-size: 14px; color: var(--text-3);">Or skip the call. <a href="/assessment" style="color: var(--grad-4); text-decoration: none; border-bottom: 1px solid var(--grad-4);">Fill the deep-dive intake on your own time</a>.</p>
+    <div class="wrap">
+      <div class="kicker">Proof at a glance</div>
+      <h2 class="h2">The <span class="grad">numbers,</span> up front.</h2>
+      <p class="lede">Skip the story. Here is what shipped first.</p>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="num">4 &rarr; 1</div>
+          <div class="lbl">Disconnected systems consolidated into one Make scenario</div>
+          <div class="compound">Costs once. Pays every month forever. Year two onward: pure margin on the same fix.</div>
+        </div>
+        <div class="cs-metric">
+          <div class="num">$4,500+</div>
+          <div class="lbl">Ad waste identified and reallocated after the audit</div>
+          <div class="compound">Reallocated to ZIPs that actually convert. Compounds quarter over quarter as targeting tightens.</div>
+        </div>
+        <div class="cs-metric">
+          <div class="num">24</div>
+          <div class="lbl">Orphan QuickBooks invoices reconciled in one cleanup</div>
+          <div class="compound">Underlying automation prevents new orphans. Monthly close goes from hours to minutes, every month.</div>
+        </div>
+        <div class="cs-metric">
+          <div class="num">100%</div>
+          <div class="lbl">Inbound texts answered automatically, including in Spanish</div>
+          <div class="compound">Every captured lead is one a competitor doesn't get. Compounds with reputation and word of mouth.</div>
+        </div>
+      </div>
+      <div class="cs-callout">
+        <div class="cs-callout-label">Why this matters over time</div>
+        <p>An employee costs you again every month. The plays AIROIOPS installs cost once and keep paying every month at zero extra cost. That is the difference between hiring help and building leverage. Year one is the savings. Year two and beyond is pure margin.</p>
+      </div>
     </div>
   </section>
 
+  <!-- ============ OUTCOMES ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker">Outcomes</div>
+      <h2 class="h2">What <span class="grad">changed</span> after the rebuild.</h2>
+      <p class="lede">Skim the numbers. Read the story below if you want to see how. Every claim ties back to a Make scenario, a QuickBooks ledger entry, or a verified provider record.</p>
+      <ul class="cs-outcomes">
+        <li>4 disconnected systems consolidated into 1 orchestrated workflow</li>
+        <li>$4,500+ in identified ad waste reallocated after the audit</li>
+        <li>24 orphaned QuickBooks invoices reconciled in a single cleanup</li>
+        <li>100% of inbound text leads answered automatically, day or night</li>
+        <li>A2P 10DLC verified sender so SMS lands in the inbox, not spam</li>
+        <li>Bilingual auto-replies with automatic English / Spanish detection</li>
+        <li>Live operations dashboard refreshing without anyone touching it</li>
+        <li>Zero new employees hired to absorb the operational load</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ EXECUTIVE SUMMARY ============ -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">Executive Summary</div>
+      <h2 class="h2">The short version, <span class="grad">in plain English.</span></h2>
+      <p class="cs-prose">The sister business is a Las Vegas residential service company with 100+ recurring clients. Like most owner-operated SMBs, it ran on goodwill, tribal knowledge, and a duct-tape stack: a field-ops platform, QuickBooks for accounting, a CRM for messaging, a brittle Zapier automation as the glue, and Google Ads burning cash without clear attribution.</p>
+      <p class="cs-prose">The entire operation was rebuilt around a single AI-orchestrated workflow, delivered in phased waves so each win shipped on its own. The subpar Zapier automation was retired. The CRM-to-QuickBooks integration was replaced with a Make scenario. Auto-replies and language detection now answer every inbound lead in real time. The Google Ads account was audited and paused until the wasted ZIPs could be cut. A live operating dashboard now shows the state of the business in one glance.</p>
+      <p class="cs-prose">The result: a small residential service runs with the operational discipline of a company ten times its size, without adding a single employee.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker">The Problem</div>
+      <h2 class="h2">What was <span class="grad">broken</span> before.</h2>
+      <p class="lede">A 100+ client residential service, growing year over year. The problems were not effort or skill. They were everywhere the operator could not be at once.</p>
+      <div class="cs-find-grid">
+        <div class="cs-find">
+          <span class="cs-find-num">01</span>
+          <h3>Disconnected systems with no source of truth</h3>
+          <p>The field-ops platform held jobs. QuickBooks held money. The CRM held leads. Nothing talked to anything cleanly. "How is the business doing right now?" required opening five tabs.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">02</span>
+          <h3>A failing native integration</h3>
+          <p>The CRM-to-QuickBooks link generated orphaned invoices that never tied back to payments. 24 of them sat unreconciled at the time of cleanup. Books drifted further from reality every month.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">03</span>
+          <h3>Duct-tape glue running mission-critical sync</h3>
+          <p>A subpar Zapier automation ran the sync logic between platforms. Billed monthly, broke silently, and nobody but the owner could debug it. A single point of failure with no fallback.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">04</span>
+          <h3>Ad spend with no answer</h3>
+          <p>Google Ads spent $8,983 across the prior 8 months. Nobody could say which ZIPs paid back and which didn't. Reported conversions did not match real paying customers.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">05</span>
+          <h3>Lead-response gaps after hours</h3>
+          <p>Inbound texts arriving at night sat unanswered until morning. By then the lead had called three competitors. Roughly half the inbound flow was leaking out the bottom of the funnel.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">06</span>
+          <h3>SMS landing in spam folders</h3>
+          <p>Outbound texts from the business number were getting filtered before clients saw them. No A2P 10DLC registration, no verified sender. Quotes and reminders silently disappearing.</p>
+        </div>
+      </div>
+      <div class="cs-callout">
+        <div class="cs-callout-label">The cost of doing nothing</div>
+        <p>When the operator runs on context-switching, growth caps at the operator's bandwidth. The next 100 clients were going to break what the first 100 already strained.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SOLUTION ============ -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">The Solution</div>
+      <h2 class="h2">One <span class="grad">orchestration layer.</span> Smallest possible reliable stack.</h2>
+      <p class="lede">AIROIOPS designed and deployed a production-grade operating layer for the sister business. Not a prototype. Not a pile of clever experiments. The smallest possible stack that runs the business every day.</p>
+      <div class="cs-stack">
+        <span class="cs-stack-chip"><strong>Make.com</strong> &middot; orchestration backbone</span>
+        <span class="cs-stack-chip"><strong>QuickBooks Online</strong> &middot; revenue source of truth</span>
+        <span class="cs-stack-chip"><strong>The CRM</strong> &middot; field ops, via Make</span>
+        <span class="cs-stack-chip"><strong>QUO</strong> &middot; SMS with A2P 10DLC verified sender</span>
+        <span class="cs-stack-chip"><strong>Notion</strong> &middot; lead database and follow-up</span>
+        <span class="cs-stack-chip"><strong>Gmail</strong> &middot; auto-replies with language detection</span>
+        <span class="cs-stack-chip"><strong>Live HTML dashboard</strong> &middot; auto-refreshes</span>
+        <span class="cs-stack-chip"><strong>Decision log</strong> &middot; nothing depends on memory</span>
+      </div>
+      <div class="cs-callout">
+        <div class="cs-callout-label">Production grade, not a prototype</div>
+        <p>Every component is wired into the daily run of the business. If a Make scenario fails, the operator knows in minutes. If a payment lands, the books reflect it that day. If a lead texts at midnight, they get a reply before they call a competitor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE APPROACH ============ -->
+  <section class="band-tint">
+    <div class="wrap">
+      <div class="kicker">The Approach</div>
+      <h2 class="h2">Stop the bleeding. <span class="grad">Then automate.</span></h2>
+      <p class="lede">Every step was reversible. Every decision was logged. Every automation was live-tested against a real owned phone or email before being armed.</p>
+      <div class="cs-phase-grid">
+        <div class="cs-phase">
+          <div class="cs-phase-num">Phase 01</div>
+          <h3>Audit and stabilize</h3>
+          <p>A 30-question operator interview produced a written self-assessment of every workflow, tool, and dependency. The Google Ads account was audited line by line. $4,500+ of waste was identified. The account was paused until structural fixes were made.</p>
+        </div>
+        <div class="cs-phase">
+          <div class="cs-phase-num">Phase 02</div>
+          <h3>Consolidate the stack</h3>
+          <p>The CRM-to-QuickBooks native integration was disconnected. 24 orphan invoices were voided cleanly. The subpar Zapier automation was retired. A single Make scenario took over orchestration. One reliable scenario beats five clever ones.</p>
+        </div>
+        <div class="cs-phase">
+          <div class="cs-phase-num">Phase 03</div>
+          <h3>Activate AI where it matters</h3>
+          <p>Auto-replies with English / Spanish language detection went live. SMS sender verification cleared the spam-filter problem. The dashboard went live. AI was placed where humans were the bottleneck, not where AI was fashionable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEASURABLE RESULTS ============ -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">Measurable Results</div>
+      <h2 class="h2">What it adds up to. <span class="grad">Net of work.</span></h2>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="num">4 &rarr; 1</div><div class="lbl">Disconnected systems consolidated into one Make scenario</div></div>
+        <div class="cs-metric"><div class="num">$4,500+</div><div class="lbl">Ad waste identified and reallocated after the audit</div></div>
+        <div class="cs-metric"><div class="num">24</div><div class="lbl">Orphan QuickBooks invoices reconciled in one cleanup</div></div>
+        <div class="cs-metric"><div class="num">100%</div><div class="lbl">Inbound texts answered automatically, including in Spanish</div></div>
+      </div>
+      <div class="cs-callout">
+        <div class="cs-callout-label">What the assessment surfaced first</div>
+        <p>Before any of this got built, the same business went through the standard $1,000 AIROIOPS Assessment. <a href="/case-study">See the original 48-hour findings here</a>: 1,000+ idle leads, $4,500 detected ad waste, 13 hours per week reclaimable. The rebuild story above is what got built after.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="band-tint">
+    <div class="wrap center" style="margin-bottom:32px;"><div class="kicker">In their own words</div></div>
+    <div class="wrap">
+      <div class="tcard">
+        <div class="tmark">&ldquo;</div>
+        <p class="tquote">Before this I was running my whole business off vibes and a subpar Zapier automation I didn't fully understand. Now I open one tab in the morning and I can see the whole company. That's the difference.</p>
+        <div class="tattr">
+          <div class="tav">A</div>
+          <div>
+            <div class="twho">The operator</div>
+            <div class="trole">Founder, AIROIOPS &amp; the sister business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT THIS MEANS FOR YOU ============ -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">What this means for you</div>
+      <h2 class="h2">If you run an SMB, <span class="grad">the playbook is the same.</span></h2>
+      <p class="lede">Residential service. Mobile detail. Lawn. Hauling. Mobile pet grooming. Any owner-operator field-services business at $300k to $3M revenue. This rebuild is the template.</p>
+      <div class="cs-find-grid">
+        <div class="cs-find">
+          <span class="cs-find-num">01</span>
+          <h3>Stop the bleeding first</h3>
+          <p>Most SMBs are paying for waste they cannot see: ad spend that misses, integrations that drift, follow-up that never happens. The audit pays for the engagement.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">02</span>
+          <h3>Consolidate before you automate</h3>
+          <p>One reliable orchestration scenario beats five clever ones. Fewer systems means fewer breakage points and a stack the operator can actually understand.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">03</span>
+          <h3>Put AI where humans are the bottleneck</h3>
+          <p>Lead reply at midnight. Language detection. Dashboard summarization. Not chatbots-for-the-sake-of-chatbots. The real ROI is closing the gaps the operator cannot personally cover.</p>
+        </div>
+        <div class="cs-find">
+          <span class="cs-find-num">04</span>
+          <h3>Live-test before arming</h3>
+          <p>Every scheduler that writes externally gets one real call to a real owned phone or email with the exact payload before it goes live. Dry-runs miss API contract bugs every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2">Want this run on <span class="grad">your business?</span></h2>
+        <p>Same Question Bank, same 48-hour turnaround, same custom 12-18 page report. $1,000 fixed for the Assessment. Quick Wins are yours to ship; upsells are optional.</p>
+        <div class="section-cta">
+          <a href="/#book" class="btn btn-primary">
+            <span>Book a Free Discovery Call</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/assessment" class="btn btn-glass">Or skip the call, fill the intake</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="foot-area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
     <div class="foot-bottom">
-      <div>© 2026 AIROIOPS</div>
-      <div class="foot-mid">AI · ROI · OPS</div>
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
       <div>Built in Las Vegas, NV</div>
     </div>
   </footer>
 
-  <script>
-  (function setupMobileNav() {
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-    const toggle = nav.querySelector('.nav-toggle');
-    const links = nav.querySelector('.nav-links');
-    const backdrop = nav.querySelector('.nav-backdrop');
-    if (!toggle || !links) return;
-    function close() {
-      nav.classList.remove('is-open');
-      links.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-locked');
-    }
-    function open() {
-      nav.classList.add('is-open');
-      links.classList.add('is-open');
-      toggle.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('nav-locked');
-    }
-    toggle.addEventListener('click', () => {
-      if (nav.classList.contains('is-open')) close(); else open();
-    });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-    if (backdrop) backdrop.addEventListener('click', close);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) close();
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 980 && nav.classList.contains('is-open')) close();
-    });
-  })();
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>

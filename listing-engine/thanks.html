@@ -1,295 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Got it — reaching out within 24 hours | Listing Engine</title>
-<meta name="description" content="Intake received. We'll review your info and reach out personally within 24 hours to line up your Listing Engine onboarding.">
-<meta name="robots" content="noindex,follow">
-<style>
-  :root {
-    --bg: #0b0a1f;
-    --bg-2: #14123a;
-    --fg: #f4f3ff;
-    --muted: #b6b3d8;
-    --accent: #7c5cff;
-    --accent-2: #5cc4ff;
-    --accent-3: #ff5cb0;
-    --card: rgba(255,255,255,0.04);
-    --border: rgba(255,255,255,0.10);
-    --border-strong: rgba(255,255,255,0.18);
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; max-width: 100vw; }
-  html { overflow-x: hidden; }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
-    min-height: 100vh;
-  }
-  .orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.45;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .orb-1 { width: 480px; height: 480px; background: var(--accent); top: -120px; left: -160px; }
-  .orb-2 { width: 380px; height: 380px; background: var(--accent-2); top: 280px; right: -120px; }
-  .orb-3 { width: 360px; height: 360px; background: var(--accent-3); bottom: -100px; left: 30%; opacity: 0.3; }
-  header.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 32px;
-    max-width: 1080px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-  .nav-logo {
-    font-weight: 800;
-    font-size: 19px;
-    letter-spacing: -0.02em;
-    color: var(--fg);
-    text-decoration: none;
-  }
-  .nav-logo span {
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 24px 80px;
-    position: relative;
-    z-index: 1;
-  }
-  .thanks-hero {
-    padding: 56px 44px;
-    background: linear-gradient(135deg, rgba(124,92,255,0.14), rgba(92,196,255,0.06));
-    border: 1px solid var(--border-strong);
-    border-radius: 28px;
-    margin-bottom: 28px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .thanks-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -80px;
-    right: -80px;
-    width: 260px;
-    height: 260px;
-    background: radial-gradient(circle, var(--accent-3), transparent 70%);
-    filter: blur(50px);
-    opacity: 0.35;
-    pointer-events: none;
-  }
-  .thanks-hero > * { position: relative; z-index: 1; }
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    background: rgba(92,196,255,0.18);
-    border: 1px solid rgba(92,196,255,0.35);
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--accent-2);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-  }
-  .eyebrow::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent-2);
-    box-shadow: 0 0 12px var(--accent-2);
-  }
-  h1 {
-    font-size: clamp(38px, 5.5vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin: 0 0 22px;
-    font-weight: 700;
-  }
-  h1 .accent {
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .lede {
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 50ch;
-    margin: 0 auto 0;
-    line-height: 1.55;
-  }
-  .next-steps {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 32px 32px 28px;
-    margin-bottom: 24px;
-  }
-  .next-steps h2 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--accent-2);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin: 0 0 20px;
-  }
-  .step-row {
-    display: flex;
-    gap: 18px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .step-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .step-row:first-child { padding-top: 0; }
-  .step-num {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .step-text h3 {
-    font-size: 17px;
-    margin: 4px 0 4px;
-    font-weight: 600;
-  }
-  .step-text p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  .cta-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 32px;
-  }
-  .btn {
-    padding: 14px 24px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    display: inline-block;
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-  }
-  .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 30px -10px rgba(124,92,255,0.55);
-  }
-  .btn-ghost {
-    color: var(--fg);
-    border: 1px solid var(--border);
-  }
-  .btn-ghost:hover { border-color: var(--accent); }
-
-  footer.footer {
-    margin-top: 60px;
-    padding: 32px 24px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    border-top: 1px solid var(--border);
-  }
-
-  @media (max-width: 600px) {
-    .container { padding: 32px 16px 64px; }
-    .thanks-hero { padding: 40px 26px; }
-    .next-steps { padding: 26px 22px 22px; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Got it, reaching out within 24 hours | Listing Engine</title>
+  <meta name="description" content="Intake received. We'll review your info and reach out personally within 24 hours to line up your Listing Engine onboarding.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/">Home</a>
+        <a class="nav-item" href="/listing-engine/">The Listing Engine</a>
+        <a class="nav-cta" href="/#book">Book Call</a>
+      </div>
+    </div>
+  </nav>
 
-<header class="nav">
-  <a href="/" class="nav-logo">AIROI<span>OPS</span></a>
-  <a href="/listing-engine/" style="color: var(--muted); text-decoration: none; font-size: 14px;">Back to The Listing Engine</a>
-</header>
-
-<main class="container">
-
-  <section class="thanks-hero">
-    <span class="eyebrow">Intake received</span>
-    <h1>Got it. <span class="accent">Check your email for the payment link.</span></h1>
-    <p class="lede">If you weren't routed to Stripe checkout, check your inbox — we sent a backup link to lock in your $1,500 setup so we can start the build.</p>
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Intake received</span>
+      </div>
+      <h1>Got it. <span class="grad">Check your email for the payment link.</span></h1>
+      <p class="ph-lede">If you weren't routed to Stripe checkout, check your inbox. We sent a backup link to lock in your $1,500 setup so we can start the build.</p>
+    </div>
   </section>
 
-  <section class="next-steps">
-    <h2>What happens next</h2>
-
-    <div class="step-row">
-      <div class="step-num">1</div>
-      <div class="step-text">
-        <h3>Complete your $1,500 setup payment</h3>
-        <p>Email is in your inbox with the Stripe checkout link. Pay and your cycle 1 build kicks off immediately.</p>
-      </div>
+  <!-- ============ STEPS ============ -->
+  <section>
+    <div class="wrap-narrow">
+      <div class="kicker">What happens next</div>
+      <h2 class="h2">Three steps to your <span class="grad">live engine.</span></h2>
+      <ol class="assess-steps">
+        <li data-n="01">
+          <h3>Complete your $1,500 setup payment</h3>
+          <p>Email is in your inbox with the Stripe checkout link. Pay and your cycle 1 build kicks off immediately.</p>
+        </li>
+        <li data-n="02">
+          <h3>We build your engine (7 to 10 days)</h3>
+          <p>20 topics. 1,120 captions across 4 platforms. 40 carousels + 20 vertical Shorts rendered with your headshot, logo, and brand color. Pushed to a fresh Publer workspace.</p>
+        </li>
+        <li data-n="03">
+          <h3>Your broker approves drafts</h3>
+          <p>You'll get an email when the build is ready. We invite your broker to your Publer as a reviewer. Once approved, first post goes live.</p>
+        </li>
+      </ol>
     </div>
-
-    <div class="step-row">
-      <div class="step-num">2</div>
-      <div class="step-text">
-        <h3>We build your engine (7 to 10 days)</h3>
-        <p>20 topics. 1,120 captions across 4 platforms. 40 carousels + 20 vertical Shorts rendered with your headshot, logo, and brand color. Pushed to a fresh Publer workspace.</p>
-      </div>
-    </div>
-
-    <div class="step-row">
-      <div class="step-num">3</div>
-      <div class="step-text">
-        <h3>Your broker approves drafts</h3>
-        <p>You'll get an email when the build is ready. We invite your broker to your Publer as a reviewer. Once approved, first post goes live.</p>
-      </div>
-    </div>
-
   </section>
 
-  <div class="cta-row">
-    <a href="https://ricardo-listing-engine-sample-99324.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">See a live sample</a>
-    <a href="/listing-engine/" class="btn btn-ghost">Back to The Listing Engine</a>
-  </div>
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="inner">
+        <h2 class="h2">Want to see what you're <span class="grad">getting?</span></h2>
+        <p>Take a look at a live sample build while you wait for the payment link to land.</p>
+        <div class="section-cta">
+          <a href="https://ricardo-listing-engine-sample-99324.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>See a live sample</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/listing-engine/" class="btn btn-glass">Back to The Listing Engine</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</main>
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="foot-area">The Listing Engine is a product of AIROIOPS. Serving real estate agents in Las Vegas and remote nationwide.</div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
+      <div>Built in Las Vegas, NV</div>
+    </div>
+  </footer>
 
-<footer class="footer">
-  AIROIOPS &middot; The Listing Engine &middot; Las Vegas, NV
-</footer>
-
+  <script src="../script.js"></script>
 </body>
 </html>
