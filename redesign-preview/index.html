@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIROIOPS redesign preview v5 | homepage</title>
+  <meta name="description" content="Redesign preview of the AIROIOPS site. Hybrid structure: a full homepage plus real standalone pages. Not the live site.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0a0b1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="preview-bar">
+    Redesign preview <b>v5</b> &nbsp;&middot;&nbsp; hybrid structure: full homepage + real pages (try the nav) &nbsp;&middot;&nbsp; mockup, not the live airoiops.com
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="assessment.html">Assessment</a>
+        <a class="nav-item" href="builds.html">Builds</a>
+        <a class="nav-item" href="#how">How it works</a>
+        <a class="nav-item" href="customers.html">Customers</a>
+        <a class="nav-item" href="faq.html">FAQ</a>
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-cta" href="#book">Book Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO (dark) ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Now booking 3 case-study spots at no charge
+          </div>
+          <h1>Real AI ROI. <span class="grad">In 48 hours.</span><br>Yours to keep.</h1>
+          <p class="hl">We audit your operations, find your highest-leverage AI plays, and deliver a custom 12-18 page AI Roadmap inside 48 hours. Quick Wins you can ship yourself, transparent pricing for the bigger builds you'd rather hand off.</p>
+          <div class="cta-row">
+            <a href="#book" class="btn btn-primary">
+              Book a Free Discovery Call
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="assessment.html" class="btn btn-glass">See the Assessment</a>
+          </div>
+          <p class="cta-alt">
+            Too busy for a call?
+            <a href="#book">Skip it and fill the intake on your own time &rarr;</a>
+          </p>
+          <div class="trust">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="trust-text">$1,000 fixed price &middot; 48-hour delivery &middot; DIY or hand off, your call</div>
+          </div>
+        </div>
+
+        <div class="roi-card">
+          <div class="roi-head">
+            <span class="dot"></span>
+            Live ROI Calculator
+          </div>
+          <div class="roi-body">
+            <label>
+              <span>Hours / week on repetitive work</span>
+              <input type="range" id="hours" min="1" max="40" value="15">
+              <output id="hours-out">15 hrs</output>
+            </label>
+            <label>
+              <span>Effective hourly cost</span>
+              <input type="range" id="rate" min="20" max="2000" step="10" value="50">
+              <output id="rate-out">$50/hr</output>
+            </label>
+            <div class="roi-out">
+              <div class="roi-num" id="roi-num">$23,400</div>
+              <div class="roi-sub">Potential annual savings if we automate 60% of this</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat"><div class="num" data-target="48">48</div><div class="lbl">hour turnaround</div></div>
+        <div class="stat"><div class="num" data-target="5" data-suffix="+">5+</div><div class="lbl">Quick Wins per report</div></div>
+        <div class="stat"><div class="num" data-target="1000" data-prefix="$" data-comma>$1,000</div><div class="lbl">fixed price</div></div>
+        <div class="stat"><div class="num" data-target="100" data-suffix="%">100%</div><div class="lbl">yours forever</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEMS ============ -->
+  <section id="problems">
+    <div class="wrap">
+      <div class="kicker">What you're actually fighting</div>
+      <h2 class="h2">Most AI consulting <span class="grad">won't say this out loud.</span></h2>
+      <p class="lede">Four leaks are eating most small businesses right now. The tech stack is incidental. The leak is the problem.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="card-num">10-15 hrs<span class="card-num-suf"> /wk</span></div>
+          <h3>Hours burned on manual work</h3>
+          <p>Quotes, follow-ups, invoices, inbox triage, scheduling. Most of it doesn't need you. Most of it doesn't get done well anyway. The day ends and you wonder where it went.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">$20-50k<span class="card-num-suf"> /yr</span></div>
+          <h3>Money leaking out the back door</h3>
+          <p>Dead ad spend. Leads who texted at 9pm and never heard back. $50-an-hour labor on $0 work. Every leak is small. Stack them up and they're a whole employee's salary.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">~78%<span class="card-num-suf"> cold</span></div>
+          <h3>No system that closes the loop</h3>
+          <p>Lead drops in. Sits. Goes cold. Or you scramble at midnight to send a quote you'll forget you sent. Selling, but not converting, is the most expensive way to grow.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">$20k+<span class="card-num-suf"> floor</span></div>
+          <h3>Tools built for enterprise, not you</h3>
+          <p>Most "AI for business" is sold by people who've never run one. Wrong stack, wrong price, wrong language. By the time you finish onboarding, the quarter's over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ASSESSMENT ============ -->
+  <section id="assessment" class="band-tint">
+    <div class="wrap">
+      <div class="assess-grid">
+        <div class="assess-intro">
+          <div class="kicker">The Assessment</div>
+          <h2 class="h2">What you actually get for <span class="grad">$1,000</span>.</h2>
+          <p class="lede" style="margin-bottom:28px;">No 90-day discovery phase. No slide deck disguised as a deliverable. A 12-18 page custom roadmap with Quick Wins you can ship yourself, plus transparent pricing for the upsells if you'd rather hand off.</p>
+          <div class="section-cta" style="margin-top:0;">
+            <a href="#book" class="btn btn-primary">
+              Book your free Discovery Call
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="assessment.html" class="btn btn-ghost">See the full breakdown</a>
+          </div>
+          <div class="report-visual" aria-hidden="true">
+            <div class="rv-doc">
+              <div class="rv-line g"></div>
+              <div class="rv-line"></div>
+              <div class="rv-line"></div>
+              <div class="rv-line"></div>
+              <div class="rv-line s"></div>
+            </div>
+            <div class="rv-cap">Your custom 12-18 page AI Roadmap</div>
+          </div>
+        </div>
+        <ol class="assess-steps">
+          <li data-n="01">
+            <h3>Operations Audit</h3>
+            <p>Deep-dive on your tools, workflows, and data. We map every recurring task in your business and tag it for AI leverage.</p>
+          </li>
+          <li data-n="02">
+            <h3>Quick Wins You Can Ship</h3>
+            <p>5-7 DIY recommendations ranked by ROI and effort. Tools you can subscribe to, integrations you can configure in an afternoon, prompts you can paste into ChatGPT today.</p>
+          </li>
+          <li data-n="03">
+            <h3>Upsell Menu</h3>
+            <p>Optional priced builds for the bigger plays: Speed-to-Lead, Custom GPTs, Zapier automations. Pick what you want, skip what you don't. Every build is scoped before you commit, with a transparent floor price plus a percentage of your projected ROI.</p>
+          </li>
+          <li data-n="04">
+            <h3>AI Roadmap</h3>
+            <p>The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Phased milestones, prioritized backlog, no fluff.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="kicker">How it works</div>
+      <h2 class="h2">48 hours. Three steps. <span class="grad">Real ROI.</span></h2>
+      <p class="lede">One short intake, a deep audit, a custom roadmap in your inbox. No retainers, no discovery theater.</p>
+      <div class="timeline">
+        <div class="tl-step">
+          <div class="tl-node">1</div>
+          <div class="tl-card">
+            <div class="tl-day">Day 1</div>
+            <h3>Tell Us About Your Business</h3>
+            <p>Free 45-min discovery call OR fill the deep-dive intake on your own time. Either way, we learn your business, tools, and biggest time sinks.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node">2</div>
+          <div class="tl-card">
+            <div class="tl-day">Day 1-2</div>
+            <h3>Audit &amp; Map</h3>
+            <p>We dig in. Map your workflows. Score Quick Wins by ROI. Build your upsell menu so you know what's DIY and what's worth handing off.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node">3</div>
+          <div class="tl-card">
+            <div class="tl-day">Day 2-3</div>
+            <h3>Roadmap Delivered</h3>
+            <p>12-18 page custom report plus a 20-min walk-through call. Clear next step. DIY the Quick Wins, or hand off an upsell to us.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#book" class="btn btn-primary">
+          Start your 48-hour roadmap
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUTCOMES ============ -->
+  <section id="outcomes" class="band-tint">
+    <div class="wrap">
+      <div class="kicker">What you actually get back</div>
+      <h2 class="h2">Forget the tools. <span class="grad">This is what you're buying.</span></h2>
+      <p class="lede">The roadmap, the report, the automations. None of that is why you'd hire us. You're buying these four things. Everything else is just how we deliver them.</p>
+      <div class="outcome-list">
+        <div class="outcome-row">
+          <div><div class="outcome-no">01</div><div class="outcome-key">Time</div></div>
+          <div>
+            <h3>Your nights and weekends back</h3>
+            <p>Most operators we work with were burning 10 to 15 hours a week on quotes, follow-ups, invoices, and inbox triage. Most of that work doesn't need you. Get those hours back for family, for sleep, or for the moves only you can make.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div><div class="outcome-no">02</div><div class="outcome-key">Money</div></div>
+          <div>
+            <h3>The leaks you didn't know you had</h3>
+            <p>Dead ad spend. Leads who texted at 9pm and never heard back. Manual work paid at $50 an hour that should cost zero. The audit usually finds $20k to $50k a year in leak on the first pass. Plug it once, keep the savings every year after.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div><div class="outcome-no">03</div><div class="outcome-key">Freedom</div></div>
+          <div>
+            <h3>A business that doesn't need you for everything</h3>
+            <p>Lead follow-up runs without you. Quotes go out without you. The small stuff stops eating the day so you can work on the business instead of in it. The point isn't to do AI. It's to be free of the $20-an-hour tasks that have been holding you hostage.</p>
+          </div>
+        </div>
+        <div class="outcome-row">
+          <div><div class="outcome-no">04</div><div class="outcome-key">Leverage</div></div>
+          <div>
+            <h3>Compounding, not one-time</h3>
+            <p>An employee costs you again every month. The plays we install keep paying every month at zero extra cost. Year two is pure margin. That's the difference between hiring help and building leverage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#book" class="btn btn-primary">
+          Book a free Discovery Call
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#assessment" class="btn btn-ghost">See how we deliver it</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SURFACE / DEPARTMENTS ============ -->
+  <section id="surface">
+    <div class="wrap">
+      <div class="kicker">Where AI lands hardest</div>
+      <h2 class="h2">AI for <span class="grad">every department.</span></h2>
+      <p class="lede">From sales to operations to finance, every team across your business unlocks more once AI plugs into the right workflow.</p>
+
+      <div class="tabs" role="tablist" aria-label="Departments">
+        <button class="tab is-active" role="tab" aria-selected="true" data-panel="sales" type="button">Sales</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="marketing" type="button">Marketing</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="support" type="button">Support</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="ops" type="button">Operations</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="finance" type="button">Finance</button>
+      </div>
+
+      <div class="panel is-active" data-panel="sales" role="tabpanel">
+        <div class="sp-card">
+          <div class="sp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Sales acceleration</h3>
+          <p>Close deals faster with AI-powered lead recovery, automated outreach, and real-time response to every inbound lead. The leads that already paid you to acquire stop slipping through.</p>
+          <ul class="sp-bullets">
+            <li>Speed-to-Lead AI agent (voice and SMS)</li>
+            <li>Lead recovery cadence across cold leads</li>
+            <li>Automated outreach sequences</li>
+            <li>Conversation intelligence and follow-up</li>
+          </ul>
+          <a href="builds.html" class="btn btn-ghost">Learn more</a>
+        </div>
+        <div class="sp-side">
+          <div class="sp-eyebrow">Typical outcomes</div>
+          <div class="sp-stat"><div class="num">100%</div><div class="lbl">Inbound texts answered, day or night</div></div>
+          <div class="sp-stat"><div class="num">&lt;60s</div><div class="lbl">Average response time on a new lead</div></div>
+          <div class="sp-disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="marketing" role="tabpanel">
+        <div class="sp-card">
+          <div class="sp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5zM15 9a3 3 0 010 6m4-9a7 7 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Marketing intelligence</h3>
+          <p>Replace the agency that has been billing you for three months without leads. We pull every reported conversion against real revenue and surface the spend that actually pays back.</p>
+          <ul class="sp-bullets">
+            <li>Forensic Google and Meta ads audit</li>
+            <li>Local SEO and Google Business Profile</li>
+            <li>Content engine and repurposing</li>
+            <li>Audience segmentation and retargeting</li>
+          </ul>
+          <a href="builds.html" class="btn btn-ghost">Learn more</a>
+        </div>
+        <div class="sp-side">
+          <div class="sp-eyebrow">Typical outcomes</div>
+          <div class="sp-stat"><div class="num">$4,500+</div><div class="lbl">Ad waste identified and reallocated on a single audit</div></div>
+          <div class="sp-stat"><div class="num">6-12 mo</div><div class="lbl">Of paid spend audited line by line</div></div>
+          <div class="sp-disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="support" role="tabpanel">
+        <div class="sp-card">
+          <div class="sp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Customer support</h3>
+          <p>A custom GPT trained on your FAQs, pricing, SOPs, and product docs. Lives in your stack, answers in your voice, never sounds like a chatbot. Covers the hours your team cannot.</p>
+          <ul class="sp-bullets">
+            <li>Custom GPT trained on your business</li>
+            <li>After-hours auto-reply with language detection</li>
+            <li>FAQ and pricing on autopilot</li>
+            <li>Sentiment-aware ticket triage</li>
+          </ul>
+          <a href="builds.html" class="btn btn-ghost">Learn more</a>
+        </div>
+        <div class="sp-side">
+          <div class="sp-eyebrow">Typical outcomes</div>
+          <div class="sp-stat"><div class="num">24/7</div><div class="lbl">Coverage on inbound questions, including weekends</div></div>
+          <div class="sp-stat"><div class="num">EN + ES</div><div class="lbl">Auto language detection on every reply</div></div>
+          <div class="sp-disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="ops" role="tabpanel">
+        <div class="sp-card">
+          <div class="sp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11H5l4-7m6 16h-4l4-7M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Operations optimization</h3>
+          <p>Streamline every workflow. Pull data from a form, draft a quote, send the contract, sync to your accounting. The whole back-office stops eating you, every day.</p>
+          <ul class="sp-bullets">
+            <li>Quote and proposal automation</li>
+            <li>Make scenarios that orchestrate your stack</li>
+            <li>Workflow redesign end-to-end</li>
+            <li>Live operations dashboards</li>
+          </ul>
+          <a href="builds.html" class="btn btn-ghost">Learn more</a>
+        </div>
+        <div class="sp-side">
+          <div class="sp-eyebrow">Typical outcomes</div>
+          <div class="sp-stat"><div class="num">4 &rarr; 1</div><div class="lbl">Disconnected systems consolidated into one Make scenario</div></div>
+          <div class="sp-stat"><div class="num">3+ hrs</div><div class="lbl">Per week reclaimed from manual data hand-offs</div></div>
+          <div class="sp-disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="finance" role="tabpanel">
+        <div class="sp-card">
+          <div class="sp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Finance intelligence</h3>
+          <p>Books that close themselves. Receipts auto-log to QuickBooks. Bank reconciliation runs on a schedule. Sunday spreadsheet sessions are over.</p>
+          <ul class="sp-bullets">
+            <li>QuickBooks auto-sync (Sales Receipts, not invoices)</li>
+            <li>Receipt capture from camera roll</li>
+            <li>Bank rules and monthly close</li>
+            <li>Cash velocity tracking</li>
+          </ul>
+          <a href="builds.html" class="btn btn-ghost">Learn more</a>
+        </div>
+        <div class="sp-side">
+          <div class="sp-eyebrow">Typical outcomes</div>
+          <div class="sp-stat"><div class="num">24</div><div class="lbl">Orphan QuickBooks invoices reconciled in a single cleanup</div></div>
+          <div class="sp-stat"><div class="num">Same-day</div><div class="lbl">Receipt-to-QuickBooks posting on every transaction</div></div>
+          <div class="sp-disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPSELLS ============ -->
+  <section id="upsells" class="band-tint">
+    <div class="wrap center">
+      <div class="kicker">Optional Builds</div>
+      <h2 class="h2">If you want us to <span class="grad">build it</span>, here's the menu.</h2>
+      <p class="lede">The Assessment is the deliverable. Quick Wins are yours to ship. If you'd rather hand off the bigger plays, we have six fixed-floor builds ranging from $750 to $4,500, plus a $1,500/mo retainer. Every build is priced at the floor or 20% of projected first-year ROI, whichever is greater. Built in your stack. You own every credential.</p>
+      <div class="section-cta">
+        <a href="builds.html" class="btn btn-primary">
+          See the full build menu
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#book" class="btn btn-ghost">Book a call to scope a build</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF ============ -->
+  <section id="proof">
+    <div class="wrap">
+      <div class="kicker">Proof Case</div>
+      <h2 class="h2">We use this on our own businesses <span class="grad">first.</span></h2>
+      <p class="lede">Before we sell a play, we run it on a business we own. The Assessment is the same playbook, end to end.</p>
+      <div class="proof-card">
+        <div class="proof-main">
+          <div class="proof-tag">SISTER BUSINESS &middot; LAS VEGAS RESIDENTIAL SERVICE</div>
+          <h3>The rebuild: 4 disconnected systems consolidated into one AI operating system.</h3>
+          <p>A Las Vegas residential service we ran our Assessment on, then rebuilt all the way through. Lead-recovery automation live on a year of unconverted ad spend. A brittle Zapier glue retired. The CRM-to-QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.</p>
+          <div class="proof-metrics">
+            <div><span class="pm-num" data-target="4" data-suffix=" &rarr; 1">4 &rarr; 1</span><span class="pm-lbl">systems consolidated</span></div>
+            <div><span class="pm-num" data-target="4500" data-prefix="$" data-suffix="+" data-comma>$4,500+</span><span class="pm-lbl">ad waste reallocated</span></div>
+            <div><span class="pm-num" data-target="100" data-suffix="%">100%</span><span class="pm-lbl">inbound texts answered</span></div>
+          </div>
+          <a href="customers.html" class="btn btn-ghost">Read the case study</a>
+        </div>
+        <div class="proof-visual" aria-hidden="true">
+          <div class="pv-row">
+            <div class="pv-tile"><div class="t">SYSTEMS</div><div class="v g">1</div></div>
+            <div class="pv-tile"><div class="t">TEXTS ANSWERED</div><div class="v">100%</div></div>
+          </div>
+          <div class="pv-tile">
+            <div class="t">AD SPEND RECLAIMED</div>
+            <div class="pv-bars">
+              <span style="height:36%"></span><span style="height:52%"></span>
+              <span style="height:44%"></span><span style="height:68%"></span>
+              <span style="height:80%"></span><span style="height:96%"></span>
+            </div>
+          </div>
+          <div class="pv-cap">Illustrative. Live operations dashboard.</div>
+        </div>
+      </div>
+      <div class="proof-browse">
+        <a href="customers.html" class="btn btn-ghost">Browse all customer stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="band-tint">
+    <div class="wrap center" style="margin-bottom:32px;"><div class="kicker">In their own words</div></div>
+    <div class="wrap">
+      <div class="tcard">
+        <div class="tmark">&ldquo;</div>
+        <p class="tquote">Before this I was running my whole business off vibes and a brittle Zapier glue I didn't fully understand. Now I open one tab in the morning and I can see the whole company. That's the difference.</p>
+        <div class="tattr">
+          <div class="tav">A</div>
+          <div>
+            <div class="twho">The operator</div>
+            <div class="trole">Founder, AIROIOPS &amp; the sister business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section>
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <div class="kicker">Who's behind this</div>
+          <h2 class="h2">Built by an operator. <span class="grad">For operators.</span></h2>
+          <p>I'm Gianny. I run a residential service business in Las Vegas, and I'm building AIROIOPS to bring real AI leverage to small business owners, the people who actually need it most and get sold to last.</p>
+          <p>The Assessment isn't a deck. It's the same playbook I run on my own ops, delivering a custom AI Roadmap in 48 hours. The Quick Wins are yours to ship today; the upsells are there if you'd rather hand off.</p>
+          <div class="section-cta" style="margin-top:26px;">
+            <a href="#book" class="btn btn-primary">
+              Book Your Discovery Call
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="about.html" class="btn btn-ghost">More about AIROIOPS</a>
+          </div>
+        </div>
+        <div class="about-visual" aria-hidden="true">
+          <div class="av-ring av-ring-1"></div>
+          <div class="av-ring av-ring-2"></div>
+          <div class="av-ring av-ring-3"></div>
+          <div class="av-core">AI &middot; ROI &middot; OPS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="band-tint">
+    <div class="wrap center">
+      <div class="kicker">FAQ</div>
+      <h2 class="h2">Common questions about <span class="grad">AI for small business.</span></h2>
+      <p class="lede">Price, timeline, scope, who it is for, what software it works with, how the bigger builds are priced. Full answers on one page.</p>
+      <div class="section-cta">
+        <a href="faq.html" class="btn btn-primary">
+          Read all 7 FAQs
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#book" class="btn btn-ghost">Still got questions? Book a free call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL / BOOK (dark close) ============ -->
+  <section id="book" class="final">
+    <div class="wrap">
+      <div class="final-inner">
+        <h2 class="h2">Ready to see what AI can <span class="grad">actually</span> do for your business?</h2>
+        <p>Tell us about your business. We will review and send you a Calendly link within 1 business day.</p>
+
+        <form class="qual-form" id="qual-form">
+          <div class="qual-row">
+            <label class="qual-field"><span>First name</span><input type="text" name="first_name" required autocomplete="given-name" /></label>
+            <label class="qual-field"><span>Last name</span><input type="text" name="last_name" required autocomplete="family-name" /></label>
+          </div>
+          <div class="qual-row">
+            <label class="qual-field"><span>Email</span><input type="email" name="email" required autocomplete="email" /></label>
+            <label class="qual-field"><span>Business name</span><input type="text" name="business" required autocomplete="organization" /></label>
+          </div>
+          <label class="qual-field">
+            <span>In one sentence, what does your business do?</span>
+            <input type="text" name="what" maxlength="200" placeholder="We do [X] for [Y] in [Z]." required />
+          </label>
+          <label class="qual-field">
+            <span>How big is the team?</span>
+            <select name="team_size" required>
+              <option value="">Select...</option>
+              <option>Solo / just me</option>
+              <option>2-5 people</option>
+              <option>6-20 people</option>
+              <option>21-50 people</option>
+              <option>50+ people</option>
+            </select>
+          </label>
+          <label class="qual-field">
+            <span>What's the #1 task that eats your time every week?</span>
+            <textarea name="time_sink" rows="3" maxlength="500" placeholder="Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'." required></textarea>
+          </label>
+          <label class="qual-field">
+            <span>What AI tools are you using today? (Check any that apply)</span>
+            <div class="qual-checks">
+              <label><input type="checkbox" name="ai_tools" value="None" /><span>None / haven't started</span></label>
+              <label><input type="checkbox" name="ai_tools" value="ChatGPT occasional" /><span>ChatGPT / Claude (occasional)</span></label>
+              <label><input type="checkbox" name="ai_tools" value="ChatGPT daily" /><span>ChatGPT / Claude (daily)</span></label>
+              <label><input type="checkbox" name="ai_tools" value="Custom GPTs" /><span>Custom GPTs trained on my data</span></label>
+              <label><input type="checkbox" name="ai_tools" value="Zapier or Make" /><span>Zapier or Make automations</span></label>
+              <label><input type="checkbox" name="ai_tools" value="AI voice agent" /><span>AI voice agent (Retell, Vapi)</span></label>
+            </div>
+          </label>
+          <label class="qual-field">
+            <span>If this delivers, what does "worth it" look like to you?</span>
+            <textarea name="outcome" rows="3" maxlength="500" placeholder="10 hours back per week? $5k/mo new revenue? Stop missing leads at night?" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary big">
+            Submit and get your Calendly link
+            <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <div class="form-done" id="form-done">This is a preview, so the form isn't wired up here. On the live site this sends your intake and returns a Calendly link.</div>
+
+        <p class="final-alt">
+          Prefer to skip the call?
+          <a href="#book">Fill the deep-dive intake instead &rarr;</a>
+        </p>
+        <div class="final-sub">No spam. No agency rates. No 90-day discovery phases.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="foot-area">Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.</div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 AIROIOPS</div>
+      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
+      <div>Built in Las Vegas, NV</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
