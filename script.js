@@ -1211,7 +1211,7 @@ navLinks.forEach(link => {
     try {
       const { RetellWebClient } = await import('https://esm.sh/retell-client-js-sdk@2');
 
-      const res = await fetch('/.netlify/functions/create-web-call');
+      const res = await fetch('/.netlify/functions/create-web-call', { method: 'POST' });
       if (!res.ok) throw new Error('token request failed');
       const data = await res.json();
       if (!data || !data.access_token) throw new Error('no access token');
