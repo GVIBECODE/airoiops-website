@@ -1094,3 +1094,16 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
   .lr-topic { grid-template-columns: 36px 1fr; }
   .lr-topic-stats { grid-column: 1 / -1; justify-content: flex-start; padding-left: 54px; }
 }
+
+/* ============ STAGE-1 CHOOSER ============ */
+.chooser-grid { margin-top: 36px; }
+.chooser-card { display: flex; flex-direction: column; text-align: left; }
+.chooser-card h3 { font-size: 20px; font-weight: 800; margin: 0 0 10px; letter-spacing: -.01em; }
+.chooser-card p { font-size: 14.5px; color: var(--text-2); margin: 0 0 22px; }
+.chooser-card .btn { align-self: flex-start; margin-top: auto; }
+.chooser-status { font-size: 13.5px; color: var(--purple-deep); font-weight: 600; margin: 14px 0 0 !important; min-height: 1.1em; }
+.chooser-status:empty { display: none; }
+@media (max-width: 720px) {
+  .chooser-grid { grid-template-columns: 1fr; }
+  .chooser-card .btn { align-self: stretch; justify-content: center; }
+}

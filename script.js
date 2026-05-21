@@ -9,6 +9,20 @@ const translations = {
     'nav.faq': 'FAQ',
     'nav.book': 'Book Call',
 
+    'chooser.kicker': 'Pick your path',
+    'chooser.h2': 'Two ways to <span class="grad">get started.</span>',
+    'chooser.lede': 'Talk to our AI specialist right now, or grab a weekend slot with Gianny. Either way it is free.',
+    'chooser.ai_title': 'Talk to our AI now',
+    'chooser.ai_sub': 'A quick chat with Annie, our AI specialist. No scheduling. It is also a live demo of what we build.',
+    'chooser.ai_btn': 'Start the call',
+    'chooser.zoom_title': 'Book a call with Gianny',
+    'chooser.zoom_sub': 'Prefer a person. Grab a weekend slot.',
+    'chooser.zoom_btn': 'Book a Zoom',
+    'chooser.st_connecting': 'Connecting to Annie...',
+    'chooser.st_connected': 'You are connected. Say hello to Annie.',
+    'chooser.st_ended': 'Call ended. Gianny will follow up.',
+    'chooser.st_error': 'Something went wrong starting the call. Please try again or book a Zoom.',
+
     'hero.badge': 'Now booking 3 case-study spots at no charge',
     'hero.h1': 'Real AI ROI. <span class="grad">In 48 hours.</span><br>Yours to keep.',
     'hero.lede': "We audit your operations, find your highest-leverage AI plays, and deliver a custom 12-18 page AI Roadmap inside 48 hours. Quick Wins you can ship yourself, transparent pricing for the bigger builds you'd rather hand off.",
@@ -427,6 +441,20 @@ const translations = {
     'nav.customers': 'Clientes',
     'nav.faq': 'Preguntas',
     'nav.book': 'Agendar',
+
+    'chooser.kicker': 'Elige tu camino',
+    'chooser.h2': 'Dos formas de <span class="grad">empezar.</span>',
+    'chooser.lede': 'Habla con nuestra especialista en IA ahora mismo, o reserva un espacio el fin de semana con Gianny. De cualquier forma es gratis.',
+    'chooser.ai_title': 'Habla con nuestra IA ahora',
+    'chooser.ai_sub': 'Una charla rapida con Annie, nuestra especialista en IA. Sin agendar. Tambien es una demostracion de lo que construimos.',
+    'chooser.ai_btn': 'Iniciar la llamada',
+    'chooser.zoom_title': 'Agenda una llamada con Gianny',
+    'chooser.zoom_sub': 'Prefieres a una persona. Reserva un espacio el fin de semana.',
+    'chooser.zoom_btn': 'Agendar Zoom',
+    'chooser.st_connecting': 'Conectando con Annie...',
+    'chooser.st_connected': 'Estas conectado. Saluda a Annie.',
+    'chooser.st_ended': 'Llamada terminada. Gianny te dara seguimiento.',
+    'chooser.st_error': 'Algo salio mal al iniciar la llamada. Intenta de nuevo o agenda un Zoom.',
 
     'hero.badge': 'Aceptando 3 casos de estudio sin costo',
     'hero.h1': 'ROI real con IA. <span class="grad">En 48 horas.</span><br>Tuyo para siempre.',
@@ -1124,5 +1152,60 @@ navLinks.forEach(link => {
       if (ico) ico.textContent = open ? '–' : '+';
       q.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  });
+})();
+
+/* ============ DISCOVERY ANNIE WEB-CALL WIDGET ============ */
+/* No extra script tag is needed in index.html. The Retell web SDK is
+   loaded on demand via a dynamic import the first time the button is clicked. */
+(function () {
+  const btn = document.getElementById('discovery-annie-start');
+  const status = document.getElementById('discovery-annie-status');
+  if (!btn || !status) return;
+
+  function say(key) {
+    const t = translations[currentLang] || translations.en;
+    status.textContent = t[key] || translations.en[key] || '';
+  }
+
+  let inCall = false;
+
+  btn.addEventListener('click', async function () {
+    if (inCall) return;
+    inCall = true;
+    btn.disabled = true;
+    say('chooser.st_connecting');
+
+    try {
+      const { RetellWebClient } = await import('https://esm.sh/retell-client-js-sdk@2');
+
+      const res = await fetch('/.netlify/functions/create-web-call');
+      if (!res.ok) throw new Error('token request failed');
+      const data = await res.json();
+      if (!data || !data.access_token) throw new Error('no access token');
+
+      const c = new RetellWebClient();
+
+      c.on('call_started', function () {
+        say('chooser.st_connected');
+      });
+      c.on('call_ended', function () {
+        say('chooser.st_ended');
+        inCall = false;
+        btn.disabled = false;
+      });
+      c.on('error', function () {
+        say('chooser.st_error');
+        try { c.stopCall(); } catch (e) {}
+        inCall = false;
+        btn.disabled = false;
+      });
+
+      await c.startCall({ accessToken: data.access_token });
+    } catch (err) {
+      say('chooser.st_error');
+      inCall = false;
+      btn.disabled = false;
+    }
   });
 })();
