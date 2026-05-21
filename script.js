@@ -9,13 +9,44 @@ const translations = {
     'nav.faq': 'FAQ',
     'nav.book': 'Book Call',
 
+    'chooser.kicker': 'Pick your path',
+    'chooser.h2': 'Two ways to <span class="grad">get started.</span>',
+    'chooser.lede': 'Talk to our AI specialist right now, or grab a weekend slot with Gianny. Either way it is free.',
+    'chooser.ai_title': 'Talk to our AI now',
+    'chooser.ai_sub': 'A quick chat with Annie, our AI specialist. No scheduling. It is also a live demo of what we build.',
+    'chooser.ai_btn': 'Start the call',
+    'chooser.ai_end': 'End call',
+    'chooser.zoom_title': 'Book a call with Gianny',
+    'chooser.zoom_sub': 'Prefer a person. Grab a weekend slot.',
+    'chooser.zoom_btn': 'Book a Zoom',
+    'chooser.st_connecting': 'Connecting to Annie...',
+    'chooser.st_connected': 'You are connected. Say hello to Annie.',
+    'chooser.st_ended': 'Call ended. Gianny will follow up.',
+    'chooser.st_error': 'Something went wrong starting the call. Please try again or book a Zoom.',
+
+    'intakeopt.title': 'Your AI assessment, your way | AIROIOPS',
+    'intakeopt.badge': 'You are confirmed',
+    'intakeopt.h1': 'Your AI assessment, <span class="grad">your way.</span>',
+    'intakeopt.lede': 'You are all set. Now pick how you want to do the deep interview. Both paths feed the same custom AI Roadmap Report.',
+    'intakeopt.kicker': 'Two ways to do it',
+    'intakeopt.h2': 'Talk it through, or <span class="grad">write it out.</span>',
+    'intakeopt.voice_title': 'Talk it through with Annie',
+    'intakeopt.voice_sub': 'A roughly 30 minute voice interview with Annie, our AI specialist. She walks you through the deep questions and you just talk. Nothing to type.',
+    'intakeopt.voice_number': 'Call +1 (702) 706-6567',
+    'intakeopt.form_title': 'Write it out yourself',
+    'intakeopt.form_sub': 'Prefer to type at your own pace. Fill the written deep-dive intake whenever it suits you and we take it from there.',
+    'intakeopt.form_btn': 'Open the written intake',
+    'intakeopt.close_h2': 'Either way, you get the same report.',
+    'intakeopt.close_body': 'Your answers turn into a custom AI Roadmap Report, plus a short walk-through call. Pick whichever path feels easier and we will handle the rest.',
+    'intakeopt.close_cta': 'Back to home',
+
     'hero.badge': 'Now booking 3 case-study spots at no charge',
     'hero.h1': 'Real AI ROI. <span class="grad">In 48 hours.</span><br>Yours to keep.',
     'hero.lede': "We audit your operations, find your highest-leverage AI plays, and deliver a custom 12-18 page AI Roadmap inside 48 hours. Quick Wins you can ship yourself, transparent pricing for the bigger builds you'd rather hand off.",
     'hero.cta_primary': 'Book a Free Discovery Call',
     'hero.cta_ghost': 'See the Assessment',
     'hero.cta_alt_pre': 'Too busy for a call?',
-    'hero.cta_alt_link': 'Skip it and fill the intake on your own time →',
+    'hero.cta_alt_link': 'Talk to our AI specialist instead →',
     'hero.trust': '$1,000 fixed price · 48-hour delivery · DIY or hand off, your call',
 
     'roi.title': 'Live ROI Calculator',
@@ -72,7 +103,7 @@ const translations = {
     'assessment.c4_title': 'AI Roadmap',
     'assessment.c4_body': 'The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Phased milestones, prioritized backlog, no fluff.',
     'assessment.cta': 'Book your free Discovery Call',
-    'assessment.cta_alt': 'Or skip the call, fill the intake',
+    'assessment.cta_alt': 'Or talk to our AI specialist',
 
     'surface.kicker': 'Where AI lands hardest',
     'surface.h2': "AI for <span class=\"grad\">every department.</span>",
@@ -256,8 +287,8 @@ const translations = {
     'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
     'final.body': 'Tell us about your business. We will review and send you a Calendly link within 1 business day.',
     'final.cta': 'Book a Free Discovery Call',
-    'final.alt_pre': 'Prefer to skip the call?',
-    'final.alt_link': 'Fill the deep-dive intake instead →',
+    'final.alt_pre': 'Prefer to skip the form?',
+    'final.alt_link': 'Talk to our AI specialist instead →',
     'final.sub': 'No spam. No agency rates. No 90-day discovery phases.',
 
     'form.first_label': 'First name',
@@ -428,13 +459,44 @@ const translations = {
     'nav.faq': 'Preguntas',
     'nav.book': 'Agendar',
 
+    'chooser.kicker': 'Elige tu camino',
+    'chooser.h2': 'Dos formas de <span class="grad">empezar.</span>',
+    'chooser.lede': 'Habla con nuestra especialista en IA ahora mismo, o reserva un espacio el fin de semana con Gianny. De cualquier forma es gratis.',
+    'chooser.ai_title': 'Habla con nuestra IA ahora',
+    'chooser.ai_sub': 'Una charla rapida con Annie, nuestra especialista en IA. Sin agendar. Tambien es una demostracion de lo que construimos.',
+    'chooser.ai_btn': 'Iniciar la llamada',
+    'chooser.ai_end': 'Terminar llamada',
+    'chooser.zoom_title': 'Agenda una llamada con Gianny',
+    'chooser.zoom_sub': 'Prefieres a una persona. Reserva un espacio el fin de semana.',
+    'chooser.zoom_btn': 'Agendar Zoom',
+    'chooser.st_connecting': 'Conectando con Annie...',
+    'chooser.st_connected': 'Estas conectado. Saluda a Annie.',
+    'chooser.st_ended': 'Llamada terminada. Gianny te dara seguimiento.',
+    'chooser.st_error': 'Algo salio mal al iniciar la llamada. Intenta de nuevo o agenda un Zoom.',
+
+    'intakeopt.title': 'Tu evaluacion de IA, a tu manera | AIROIOPS',
+    'intakeopt.badge': 'Estas confirmado',
+    'intakeopt.h1': 'Tu evaluacion de IA, <span class="grad">a tu manera.</span>',
+    'intakeopt.lede': 'Ya estas listo. Ahora elige como quieres hacer la entrevista a fondo. Ambos caminos alimentan el mismo reporte personalizado de IA.',
+    'intakeopt.kicker': 'Dos formas de hacerlo',
+    'intakeopt.h2': 'Hablalo, o <span class="grad">escribelo tu mismo.</span>',
+    'intakeopt.voice_title': 'Hablalo con Annie',
+    'intakeopt.voice_sub': 'Una entrevista de voz de unos 30 minutos con Annie, nuestra especialista en IA. Ella te guia por las preguntas a fondo y tu solo hablas. Sin escribir nada.',
+    'intakeopt.voice_number': 'Llama al +1 (702) 706-6567',
+    'intakeopt.form_title': 'Escribelo tu mismo',
+    'intakeopt.form_sub': 'Prefieres escribir a tu ritmo. Llena el cuestionario a fondo cuando te convenga y nosotros nos encargamos del resto.',
+    'intakeopt.form_btn': 'Abrir el cuestionario',
+    'intakeopt.close_h2': 'De cualquier forma, recibes el mismo reporte.',
+    'intakeopt.close_body': 'Tus respuestas se convierten en un reporte personalizado de IA, mas una llamada corta de repaso. Elige el camino que te resulte mas facil y nosotros nos encargamos del resto.',
+    'intakeopt.close_cta': 'Volver al inicio',
+
     'hero.badge': 'Aceptando 3 casos de estudio sin costo',
     'hero.h1': 'ROI real con IA. <span class="grad">En 48 horas.</span><br>Tuyo para siempre.',
     'hero.lede': 'Auditamos tus operaciones, encontramos las jugadas de IA con mayor impacto, y entregamos una hoja de ruta personalizada de 12-18 páginas en 48 horas. Quick Wins que puedes lanzar tú mismo, precios transparentes para las construcciones más grandes que prefieras delegar.',
     'hero.cta_primary': 'Agenda una llamada gratis',
     'hero.cta_ghost': 'Ver la evaluación',
     'hero.cta_alt_pre': '¿Sin tiempo para una llamada?',
-    'hero.cta_alt_link': 'Sáltala y llena el cuestionario a tu ritmo →',
+    'hero.cta_alt_link': 'Habla con nuestra especialista en IA →',
     'hero.trust': '$1,000 precio fijo · entrega en 48 horas · DIY o lo delegas, tú decides',
 
     'roi.title': 'Calculadora de ROI en vivo',
@@ -491,7 +553,7 @@ const translations = {
     'assessment.c4_title': 'Hoja de ruta IA',
     'assessment.c4_body': 'El camino secuenciado desde tu primer Quick Win hasta un stack de operaciones totalmente potenciado por IA. Hitos por fases, backlog priorizado, sin relleno.',
     'assessment.cta': 'Agenda tu llamada gratis',
-    'assessment.cta_alt': 'O salta la llamada, llena el cuestionario',
+    'assessment.cta_alt': 'O habla con nuestra especialista en IA',
 
     'surface.kicker': 'Dónde la IA aterriza más fuerte',
     'surface.h2': 'IA para <span class="grad">cada departamento.</span>',
@@ -671,8 +733,8 @@ const translations = {
     'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
     'final.body': 'Cuéntanos sobre tu negocio. Lo revisaremos y te enviaremos un enlace de Calendly dentro de 1 día hábil.',
     'final.cta': 'Agenda una llamada gratis',
-    'final.alt_pre': '¿Prefieres saltar la llamada?',
-    'final.alt_link': 'Llena el cuestionario completo →',
+    'final.alt_pre': '¿Prefieres saltar el formulario?',
+    'final.alt_link': 'Habla con nuestra especialista en IA →',
     'final.sub': 'Sin spam. Sin tarifas de agencia. Sin fases de descubrimiento de 90 días.',
 
     'form.first_label': 'Nombre',
@@ -1124,5 +1186,82 @@ navLinks.forEach(link => {
       if (ico) ico.textContent = open ? '–' : '+';
       q.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  });
+})();
+
+/* ============ DISCOVERY ANNIE WEB-CALL WIDGET ============ */
+/* No extra script tag is needed in index.html. The Retell web SDK is
+   loaded on demand via a dynamic import the first time the button is clicked. */
+(function () {
+  const btn = document.getElementById('discovery-annie-start');
+  const status = document.getElementById('discovery-annie-status');
+  if (!btn || !status) return;
+
+  function txt(key) {
+    const t = translations[currentLang] || translations.en;
+    return t[key] || translations.en[key] || '';
+  }
+  function say(key) { status.textContent = txt(key); }
+  function setLabel(key) {
+    btn.setAttribute('data-i18n', key);
+    btn.textContent = txt(key);
+  }
+
+  let client = null;
+  let inCall = false;
+  let busy = false;
+
+  function reset(statusKey) {
+    say(statusKey);
+    inCall = false;
+    busy = false;
+    client = null;
+    btn.disabled = false;
+    setLabel('chooser.ai_btn');
+  }
+
+  btn.addEventListener('click', async function () {
+    if (busy) return;
+
+    /* A click while a call is live hangs it up. */
+    if (inCall && client) {
+      try { client.stopCall(); } catch (e) {}
+      return;
+    }
+
+    busy = true;
+    btn.disabled = true;
+    say('chooser.st_connecting');
+
+    try {
+      const { RetellWebClient } = await import('https://esm.sh/retell-client-js-sdk@2');
+
+      const res = await fetch('/.netlify/functions/create-web-call', { method: 'POST' });
+      if (!res.ok) throw new Error('token request failed');
+      const data = await res.json();
+      if (!data || !data.access_token) throw new Error('no access token');
+
+      const c = new RetellWebClient();
+      client = c;
+
+      c.on('call_started', function () {
+        say('chooser.st_connected');
+        inCall = true;
+        busy = false;
+        btn.disabled = false;
+        setLabel('chooser.ai_end');
+      });
+      c.on('call_ended', function () {
+        reset('chooser.st_ended');
+      });
+      c.on('error', function () {
+        try { c.stopCall(); } catch (e) {}
+        reset('chooser.st_error');
+      });
+
+      await c.startCall({ accessToken: data.access_token });
+    } catch (err) {
+      reset('chooser.st_error');
+    }
   });
 })();
