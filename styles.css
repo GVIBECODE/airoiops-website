@@ -1108,6 +1108,11 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
   font-size: 18px !important; font-weight: 800;
   color: var(--purple-deep) !important; letter-spacing: -.01em;
 }
+.intakeopt-call a {
+  color: inherit; text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-thickness: 2px;
+}
+.intakeopt-call a:hover { opacity: .8; }
 @media (max-width: 720px) {
   .chooser-grid { grid-template-columns: 1fr; }
   .chooser-card .btn { align-self: stretch; justify-content: center; }
