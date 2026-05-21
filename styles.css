@@ -1103,6 +1103,11 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
 .chooser-card .btn { align-self: flex-start; margin-top: auto; }
 .chooser-status { font-size: 13.5px; color: var(--purple-deep); font-weight: 600; margin: 14px 0 0 !important; min-height: 1.1em; }
 .chooser-status:empty { display: none; }
+.intakeopt-call {
+  margin-top: auto !important;
+  font-size: 18px !important; font-weight: 800;
+  color: var(--purple-deep) !important; letter-spacing: -.01em;
+}
 @media (max-width: 720px) {
   .chooser-grid { grid-template-columns: 1fr; }
   .chooser-card .btn { align-self: stretch; justify-content: center; }
