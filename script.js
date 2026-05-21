@@ -15,6 +15,7 @@ const translations = {
     'chooser.ai_title': 'Talk to our AI now',
     'chooser.ai_sub': 'A quick chat with Annie, our AI specialist. No scheduling. It is also a live demo of what we build.',
     'chooser.ai_btn': 'Start the call',
+    'chooser.ai_end': 'End call',
     'chooser.zoom_title': 'Book a call with Gianny',
     'chooser.zoom_sub': 'Prefer a person. Grab a weekend slot.',
     'chooser.zoom_btn': 'Book a Zoom',
@@ -464,6 +465,7 @@ const translations = {
     'chooser.ai_title': 'Habla con nuestra IA ahora',
     'chooser.ai_sub': 'Una charla rapida con Annie, nuestra especialista en IA. Sin agendar. Tambien es una demostracion de lo que construimos.',
     'chooser.ai_btn': 'Iniciar la llamada',
+    'chooser.ai_end': 'Terminar llamada',
     'chooser.zoom_title': 'Agenda una llamada con Gianny',
     'chooser.zoom_sub': 'Prefieres a una persona. Reserva un espacio el fin de semana.',
     'chooser.zoom_btn': 'Agendar Zoom',
@@ -1195,16 +1197,39 @@ navLinks.forEach(link => {
   const status = document.getElementById('discovery-annie-status');
   if (!btn || !status) return;
 
-  function say(key) {
+  function txt(key) {
     const t = translations[currentLang] || translations.en;
-    status.textContent = t[key] || translations.en[key] || '';
+    return t[key] || translations.en[key] || '';
+  }
+  function say(key) { status.textContent = txt(key); }
+  function setLabel(key) {
+    btn.setAttribute('data-i18n', key);
+    btn.textContent = txt(key);
   }
 
+  let client = null;
   let inCall = false;
+  let busy = false;
+
+  function reset(statusKey) {
+    say(statusKey);
+    inCall = false;
+    busy = false;
+    client = null;
+    btn.disabled = false;
+    setLabel('chooser.ai_btn');
+  }
 
   btn.addEventListener('click', async function () {
-    if (inCall) return;
-    inCall = true;
+    if (busy) return;
+
+    /* A click while a call is live hangs it up. */
+    if (inCall && client) {
+      try { client.stopCall(); } catch (e) {}
+      return;
+    }
+
+    busy = true;
     btn.disabled = true;
     say('chooser.st_connecting');
 
@@ -1217,27 +1242,26 @@ navLinks.forEach(link => {
       if (!data || !data.access_token) throw new Error('no access token');
 
       const c = new RetellWebClient();
+      client = c;
 
       c.on('call_started', function () {
         say('chooser.st_connected');
+        inCall = true;
+        busy = false;
+        btn.disabled = false;
+        setLabel('chooser.ai_end');
       });
       c.on('call_ended', function () {
-        say('chooser.st_ended');
-        inCall = false;
-        btn.disabled = false;
+        reset('chooser.st_ended');
       });
       c.on('error', function () {
-        say('chooser.st_error');
         try { c.stopCall(); } catch (e) {}
-        inCall = false;
-        btn.disabled = false;
+        reset('chooser.st_error');
       });
 
       await c.startCall({ accessToken: data.access_token });
     } catch (err) {
-      say('chooser.st_error');
-      inCall = false;
-      btn.disabled = false;
+      reset('chooser.st_error');
     }
   });
 })();
