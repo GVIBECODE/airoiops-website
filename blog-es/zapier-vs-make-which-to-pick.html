@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zapier vs Make: cuál escoger para un negocio de servicios de 5-50 personas | AIROIOPS</title>
+  <meta name="description" content="Mismo caso de uso, distinta matemática. Zapier es más rápido para empezar y más barato a bajo volumen. Make es más barato a escala y te deja construir cosas que Zapier no puede. Aquí está el árbol de decisión honesto y el umbral exacto de volumen donde uno le gana al otro.">
+  <meta name="keywords" content="Zapier vs Make, Make vs Zapier, precios Zapier, precios Make.com, herramientas automatización, automatización sin código, alternativa Zapier, comparación plataforma integración">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://airoiops.com/blog-es/zapier-vs-make-which-to-pick">
+  <link rel="alternate" hreflang="en" href="https://airoiops.com/blog/zapier-vs-make-which-to-pick">
+  <link rel="alternate" hreflang="es" href="https://airoiops.com/blog-es/zapier-vs-make-which-to-pick">
+  <link rel="alternate" hreflang="x-default" href="https://airoiops.com/blog/zapier-vs-make-which-to-pick">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/blog-es/zapier-vs-make-which-to-pick">
+  <meta property="og:title" content="Zapier vs Make: cuál escoger para un negocio de servicios de 5-50 personas">
+  <meta property="og:description" content="El árbol de decisión honesto y el umbral exacto de volumen donde uno le gana al otro.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zapier vs Make: cuál escoger">
+  <meta name="twitter:description" content="El árbol de decisión honesto para un negocio de servicios de 5-50 personas.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .article { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .article-meta { color: var(--text-3, #8a8ca0); font-size: 14px; margin-bottom: 28px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .article h2 { margin-top: 48px; margin-bottom: 14px; font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; }
+    .article h3 { margin-top: 30px; margin-bottom: 10px; font-size: 19px; }
+    .article p { font-size: 17px; line-height: 1.75; color: var(--text-2, #56586e); margin: 0 0 18px; }
+    .article ul, .article ol { padding-left: 22px; line-height: 1.8; color: var(--text-2, #56586e); margin: 0 0 20px; font-size: 17px; }
+    .article li { margin-bottom: 6px; }
+    .article a { color: var(--purple, #7c5cff); font-weight: 600; text-decoration: none; }
+    .article a:hover { color: var(--cyan, #06b6d4); text-decoration: underline; }
+    .article strong { color: var(--text, #11121f); font-weight: 700; }
+    .pull-quote {
+      margin: 32px 0;
+      padding: 20px 26px;
+      border-left: 4px solid var(--purple, #7c5cff);
+      background: linear-gradient(135deg, rgba(124,92,255,0.06), rgba(6,182,212,0.04));
+      border-radius: 0 12px 12px 0;
+      font-size: 18.5px;
+      line-height: 1.55;
+      color: var(--text, #11121f);
+      font-weight: 600;
+    }
+    .article table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      font-size: 15.5px;
+    }
+    .article th, .article td {
+      padding: 12px 14px; text-align: left;
+      border-bottom: 1px solid var(--border, #e7e7f1);
+    }
+    .article th {
+      background: var(--surface, #f7f7fb);
+      font-weight: 700; color: var(--text, #11121f);
+      font-size: 13.5px; letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+    .article td { color: var(--text-2, #56586e); }
+    .article td strong { color: var(--text, #11121f); }
+    .related {
+      margin-top: 60px; padding-top: 30px;
+      border-top: 1px solid var(--border, #e7e7f1);
+    }
+    .related h3 { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3, #8a8ca0); margin: 0 0 16px; font-weight: 700; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 680px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-card {
+      padding: 18px 20px; border-radius: 14px;
+      background: var(--surface, #f7f7fb);
+      border: 1px solid var(--border, #e7e7f1);
+      text-decoration: none;
+      transition: transform .15s ease;
+      display: block;
+    }
+    .related-card:hover { transform: translateY(-2px); }
+    .related-card .rc-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--purple, #7c5cff); text-transform: uppercase;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .related-card .rc-title {
+      margin-top: 8px;
+      font-size: 16px; font-weight: 700; color: var(--text, #11121f);
+      line-height: 1.35;
+    }
+    .breadcrumbs {
+      font-size: 13px; color: var(--text-3, #8a8ca0);
+      margin-bottom: 18px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .breadcrumbs a { color: var(--text-3, #8a8ca0); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple, #7c5cff); }
+    .breadcrumbs .sep { margin: 0 8px; opacity: 0.5; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Zapier vs Make: cuál escoger para un negocio de servicios de 5-50 personas",
+    "description": "Mismo caso de uso, distinta matemática. Zapier es más rápido para empezar y más barato a bajo volumen. Make es más barato a escala y te deja construir cosas que Zapier no puede. Aquí está el árbol de decisión honesto y el umbral exacto de volumen donde uno le gana al otro.",
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-05-22",
+    "author": { "@type": "Organization", "name": "AIROIOPS", "url": "https://airoiops.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIROIOPS",
+      "logo": { "@type": "ImageObject", "url": "https://airoiops.com/og-image.jpg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://airoiops.com/blog-es/zapier-vs-make-which-to-pick" },
+    "image": "https://airoiops.com/og-image.jpg",
+    "inLanguage": "es-US"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Evaluación</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">Cómo funciona</a>
+        <a class="nav-item" href="/customers/">Clientes</a>
+        <a class="nav-item current" href="/blog-es/">Blog</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <a class="nav-cta" href="/#book">Agendar llamada</a>
+        <a class="nav-item" href="/blog/zapier-vs-make-which-to-pick" style="opacity:0.7;font-size:13px;">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumbs">
+        <a href="/">Inicio</a><span class="sep">/</span><a href="/blog-es/">Blog</a><span class="sep">/</span><span>Zapier vs Make</span>
+      </div>
+      <div class="kicker">Herramientas &middot; 7 min de lectura</div>
+      <h1>Zapier vs Make: cuál escoger para un <span class="grad">negocio de servicios de 5-50 personas.</span></h1>
+      <p class="ph-lede">Las dos herramientas funcionan. Las dos son buenas. Están armadas y precificadas distinto, y la correcta para una agencia de 5 personas rara vez es la correcta para una operación de 30 personas. Aquí está el árbol de decisión que usamos en proyectos reales.</p>
+    </div>
+  </section>
+
+  <!-- ============ ARTICLE ============ -->
+  <section>
+    <div class="wrap">
+      <div class="article">
+
+        <p class="article-meta">Publicado el 22 de mayo de 2026 &middot; Por AIROIOPS</p>
+
+        <p>Cada semana alguien me pregunta cuál debería usar. La respuesta honesta es que la pregunta está mal. La pregunta correcta es "qué estás automatizando, qué tan seguido va a correr, y qué tan compleja es la lógica". Una vez que respondes esas tres, la herramienta se escoge sola.</p>
+
+        <p>He construido más de 80 automatizaciones de producción en ambas plataformas en los últimos 24 meses, entre mis propios negocios y los clientes de AIROIOPS. Aquí está el árbol de decisión, la matemática de precios, y el umbral donde uno empieza a ganar sobre el otro.</p>
+
+        <h2>El resumen honesto en un párrafo</h2>
+
+        <p>Zapier gana en velocidad de primera automatización, pulido de UI, y amplitud de integraciones. Make gana en precio a escala, flexibilidad estructural (filtros, routers, iteradores, manejo de errores), y peticiones HTTP personalizadas contra APIs que Zapier no soporta nativamente. Si eres un negocio de 1-5 personas con menos de 500 corridas mensuales y no necesitas ramificación compleja, usa Zapier. Si eres de 6+ personas, esperas más de 500 corridas mensuales, o necesitas lógica condicional, usa Make.</p>
+
+        <div class="pull-quote">No hay herramienta perfecta. Solo hay la herramienta correcta para lo que estás haciendo en este momento. Escoger mal no es un desastre. Migrar después es molesto pero barato. Escoger nada es la opción cara.</div>
+
+        <h2>Dónde gana Zapier (y el techo de volumen)</h2>
+
+        <p>El pitch de Zapier es "si puedes describir el flujo en inglés, puedes construirlo en 10 minutos". Ese pitch es en gran medida cierto. La UI es la más pulida de la categoría. La biblioteca de integraciones es la más profunda (7,000+ apps en 2026). Las features de AI Actions y Tables cierran la mayoría de los huecos que antes mandaban a la gente a la competencia.</p>
+
+        <p>Dónde brilla:</p>
+
+        <ul>
+          <li><strong>Flujos lineales simples.</strong> El trigger dispara, pasan tres pasos en secuencia, listo. Envío de formulario a CRM a notificación de Slack. Reserva de calendario a correo de bienvenida a tracker interno.</li>
+          <li><strong>Apps donde Zapier tiene la mejor integración.</strong> Los módulos nativos de Zapier para cosas como Calendly, Slack, Notion y HubSpot son a menudo más profundos que lo que ofrece Make, con más campos disponibles expuestos.</li>
+          <li><strong>Equipos donde una persona maneja automatización como proyecto secundario.</strong> Una curva de aprendizaje más baja significa que un office manager no técnico puede enviar workflows sin ayuda de ingeniería.</li>
+        </ul>
+
+        <p>El techo aparece cuando necesitas lógica condicional que se ramifica más de dos caminos profundo, cuando necesitas hacer loop a través de arrays, o cuando estás haciendo cualquier cosa que toca más de 2,000-3,000 tareas por mes. El precio te aplana rápido por encima de ese umbral.</p>
+
+        <p>Precios en 2026: gratis hasta 100 tareas por mes con automatizaciones de solo dos pasos. El plan Professional empieza en $20 al mes por 750 tareas y desbloquea multi-paso. El plan Team brinca a $69 al mes por 2,000 tareas. El nivel de 50,000 tareas está por encima de $300 al mes. Cada tarea cuenta (cada paso en un workflow es una tarea), entonces un workflow de 5 pasos que corre 400 veces consume 2,000 tareas en un solo workflow.</p>
+
+        <h2>Dónde gana Make (y la curva de aprendizaje)</h2>
+
+        <p>Make (anteriormente Integromat) está armado como un diagrama de flujo visual en lugar de una lista vertical de pasos. Eso suena cosmético. No lo es. La forma de diagrama de flujo hace que la ramificación, el ruteo y el paralelismo se sientan naturales de una manera que la interfaz de Zapier combate.</p>
+
+        <p>Dónde brilla:</p>
+
+        <ul>
+          <li><strong>Lógica condicional.</strong> Routers, filtros, iteradores, agregadores y manejadores de errores son ciudadanos de primera clase, no añadiduras. Un workflow de 12 ramas es tan fácil de leer como uno de 2 ramas.</li>
+          <li><strong>Módulos HTTP personalizados.</strong> Si una app tiene API pero no tiene módulo de Make, puedes hablarle directamente con un módulo genérico de petición HTTP. Esto desbloquea aproximadamente el 80 por ciento de las apps que aparecen en nuestro trabajo pero no están en el catálogo nativo de ninguna plataforma.</li>
+          <li><strong>Costo a volumen.</strong> Make cobra por "operación" en lugar de por tarea. Las operaciones son más pequeñas. Un workflow de 5 pasos que corre 400 veces consume aproximadamente las mismas operaciones que Zapier consume tareas, pero el costo por operación de Make es dramáticamente más bajo a escala.</li>
+        </ul>
+
+        <p>La curva de aprendizaje es real. Los primeros tres workflows que construyas en Make te van a tomar más tiempo que los mismos workflows en Zapier, porque tienes que aprender el paradigma de diagrama de flujo, el modelo de operación, y la estructura de datos (Make pasa bundles estructurados tipo JSON entre módulos; Zapier oculta esa abstracción).</p>
+
+        <p>Precios en 2026: gratis hasta 1,000 operaciones por mes. El plan Core empieza en $9 al mes por 10,000 operaciones. El plan Pro en $16 por 10,000 operaciones con features más avanzadas. El plan Teams en $29 por 10,000 operaciones con espacios de trabajo compartidos. Niveles más altos escalan a 50,000, 100,000 y más, a aproximadamente 30-50 por ciento del precio equivalente de Zapier.</p>
+
+        <h2>Matemática de precios: el flip de umbral</h2>
+
+        <p>Aquí está la comparación que la mayoría nunca corre.</p>
+
+        <table>
+          <thead>
+            <tr><th>Volumen mensual</th><th>Costo Zapier</th><th>Costo Make</th><th>Ganador</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Menos de 100 tareas/ops</td><td>$0 (Free)</td><td>$0 (Free)</td><td>Empate, usa Zapier por la UI</td></tr>
+            <tr><td>500 tareas/ops</td><td>$20 (Pro)</td><td>$9 (Core)</td><td>Make, pero el margen es pequeño</td></tr>
+            <tr><td>2,000 tareas/ops</td><td>$69 (Team)</td><td>$9 (Core, con espacio para crecer)</td><td>Make</td></tr>
+            <tr><td>10,000 tareas/ops</td><td>$133+ (nivel custom)</td><td>$16 (Pro)</td><td>Make, por 8x</td></tr>
+            <tr><td>50,000 tareas/ops</td><td>$300+</td><td>$70-90</td><td>Make, por 3-4x</td></tr>
+            <tr><td>100,000+ tareas/ops</td><td>Cotización enterprise</td><td>$150-250</td><td>Make</td></tr>
+          </tbody>
+        </table>
+
+        <p>El flip de umbral cae aproximadamente en las 500 corridas mensuales. Por debajo de eso, la ventaja de UI de Zapier vale el modesto premio de precio. Por encima de eso, Make empieza a despegarse, y para cuando estás haciendo 10,000+ corridas, Make es 60-70 por ciento más barato a funcionalidad equivalente.</p>
+
+        <p>Para un negocio de servicios ocupado que corre un agente de Speed-to-Lead, un auto-cotizador, y un refresh semanal de dashboard, vas a rebasar las 500 corridas mensuales en los primeros 30 días. Ver la matemática en <a href="/blog-es/busywork-hours-cost-service-business">el post de horas de trabajo administrativo</a> para tener una idea del volumen que cada automatización genera.</p>
+
+        <h2>Árbol de decisión: escoge el correcto para tu caso específico</h2>
+
+        <p>Si puedes responder sí a cualquiera de estas, default a Zapier:</p>
+
+        <ul>
+          <li>Nunca has construido una automatización antes y quieres el on-ramp más fácil posible.</li>
+          <li>Tu volumen total va a quedarse abajo de 500 corridas mensuales en el futuro previsible.</li>
+          <li>Tu stack es enteramente apps nativas de Zapier (Calendly, Slack, Notion, Google Workspace, Stripe).</li>
+          <li>Necesitas esto en vivo en 60 minutos, hoy, y no tienes tiempo de aprender un nuevo paradigma.</li>
+        </ul>
+
+        <p>Si puedes responder sí a cualquiera de estas, default a Make:</p>
+
+        <ul>
+          <li>Esperas correr más de 500 automatizaciones por mes dentro de 6 meses.</li>
+          <li>Necesitas ramificación condicional que se parte en tres o más caminos.</li>
+          <li>Necesitas hacer loop a través de arrays (ej., por cada partida en una factura, hacer X).</li>
+          <li>Necesitas llamar a una API personalizada que ninguna plataforma soporta nativamente.</li>
+          <li>Quieres consolidar varias herramientas (ya pagas Zapier Y algo más; Make a menudo absorbe ambos).</li>
+          <li>Estás corriendo un workflow manejado por GPT personalizado (ver <a href="/blog-es/custom-gpt-replaces-coordinator">nuestro post sobre GPTs personalizados que reemplazan coordinadores</a>) que necesita ruteo sofisticado.</li>
+        </ul>
+
+        <h2>Lo que usamos internamente (y por qué)</h2>
+
+        <p>Por transparencia total: AIROIOPS corre casi todo en Make. Mi negocio de servicios residenciales también corre en Make. Migramos desde Zapier a inicios de 2026 porque el volumen pegó un muro de precio y los routers de Make nos dejaron colapsar lo que solían ser cuatro Zaps separados en un solo escenario más limpio.</p>
+
+        <p>Dicho eso, todavía recomendamos Zapier aproximadamente al 20 por ciento de los clientes con los que trabajamos. Usualmente son operaciones de 1-3 personas con un set de workflow estable, sin expectativa de crecimiento mayor de volumen, y un dueño no técnico que va a ser quien mantenga la construcción. Para ese perfil, la UI de Zapier vale el premio de precio y la migración no vale el esfuerzo.</p>
+
+        <p>El otro 80 por ciento obtiene Make. Techo de precio más bajo, más espacio, más flexibilidad. Los 30 a 60 minutos extra de curva de aprendizaje se pagan solos en el primer mes de costos de suscripción ahorrados.</p>
+
+        <p>Si quieres una recomendación afinada a tu stack y volumen específicos, eso es parte de cada <a href="/#assessment">Evaluación de Negocio con IA de AIROIOPS por $1,000</a>. Mapeamos lo que estás corriendo, dónde están las fugas, qué plataforma encaja con cada automatización, y cómo se ve el costo a 12 meses. $1,000 fijo. Entrega en 48 horas.</p>
+
+        <!-- Related posts -->
+        <div class="related">
+          <h3>Sigue leyendo</h3>
+          <div class="related-grid">
+            <a href="/blog-es/first-3-automations-service-business" class="related-card">
+              <div class="rc-tag">Automatización</div>
+              <div class="rc-title">Las primeras 3 automatizaciones que todo negocio de servicios debería construir</div>
+            </a>
+            <a href="/blog-es/busywork-hours-cost-service-business" class="related-card">
+              <div class="rc-tag">Problema</div>
+              <div class="rc-title">Las 8 horas a la semana que tu negocio pierde en trabajo administrativo</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="band-tint">
+    <div class="wrap center">
+      <div class="kicker">Encuentra tus fugas</div>
+      <h2 class="h2">Recibe un <span class="grad">Roadmap de IA de 12-18 páginas</span> sobre tu negocio en 48 horas.</h2>
+      <p class="lede">La Evaluación de AIROIOPS encuentra las cuatro fugas más grandes en tu operación específica, cuantifica el ROI de cerrar cada una, y te entrega un roadmap secuenciado para construirlo tú mismo o que lo tomemos nosotros. $1,000 fijo. Entrega en 48 horas.</p>
+      <div class="section-cta">
+        <a href="/#assessment" class="btn btn-primary">
+          <span>Ver la Evaluación</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px;">AIROI<span>OPS</span></div>
+          <p class="footer-tag">Evaluaciones de Negocio con IA y construcciones a precio fijo para dueños de negocio de cualquier tamaño. Construido por un operador en Las Vegas, sirviendo a todo Estados Unidos.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="/#assessment">Evaluación de Negocio con IA</a></li>
+            <li><a href="/upsells">Builds</a></li>
+            <li><a href="/customers/">Casos de clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="/blog-es/">Blog</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/#book">Agendar llamada de descubrimiento</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AIROIOPS. Construido en Las Vegas, NV.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
