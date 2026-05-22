@@ -18,7 +18,7 @@ const translations = {
     'chooser.ai_end': 'End call',
     'chooser.zoom_title': 'Book a call with Gianny',
     'chooser.zoom_sub': 'Prefer a person. Grab a weekend slot.',
-    'chooser.zoom_btn': 'Book a video call',
+    'chooser.zoom_btn': 'Get started',
     'chooser.st_connecting': 'Connecting to Annie...',
     'chooser.st_connected': 'You are connected. Say hello to Annie.',
     'chooser.st_ended': 'Call ended. Gianny will follow up.',
@@ -285,7 +285,7 @@ const translations = {
 
 
     'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
-    'final.body': 'Tell us about your business. We will review and send you a Calendly link within 1 business day.',
+    'final.body': 'Tell us about your business, then book your call on the next page. We will have your answers ready so the call goes straight to solutions.',
     'final.cta': 'Book a Free Discovery Call',
     'final.alt_pre': 'Prefer to skip the form?',
     'final.alt_link': 'Talk to our AI specialist instead →',
@@ -468,7 +468,7 @@ const translations = {
     'chooser.ai_end': 'Terminar llamada',
     'chooser.zoom_title': 'Agenda una llamada con Gianny',
     'chooser.zoom_sub': 'Prefieres a una persona. Reserva un espacio el fin de semana.',
-    'chooser.zoom_btn': 'Agendar videollamada',
+    'chooser.zoom_btn': 'Comenzar',
     'chooser.st_connecting': 'Conectando con Annie...',
     'chooser.st_connected': 'Estas conectado. Saluda a Annie.',
     'chooser.st_ended': 'Llamada terminada. Gianny te dara seguimiento.',
@@ -731,7 +731,7 @@ const translations = {
 
 
     'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
-    'final.body': 'Cuéntanos sobre tu negocio. Lo revisaremos y te enviaremos un enlace de Calendly dentro de 1 día hábil.',
+    'final.body': 'Cuéntanos sobre tu negocio y luego agenda tu llamada en la siguiente página. Tendremos tus respuestas listas para dedicar la llamada a soluciones.',
     'final.cta': 'Agenda una llamada gratis',
     'final.alt_pre': '¿Prefieres saltar el formulario?',
     'final.alt_link': 'Habla con nuestra especialista en IA →',
