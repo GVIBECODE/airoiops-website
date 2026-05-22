@@ -6,6 +6,7 @@ const translations = {
     'nav.how': 'How it works',
     'nav.proof': 'Proof',
     'nav.customers': 'Customers',
+    'nav.blog': 'Blog',
     'nav.faq': 'FAQ',
     'nav.book': 'Book Call',
 
@@ -456,6 +457,7 @@ const translations = {
     'nav.how': 'Cómo funciona',
     'nav.proof': 'Prueba',
     'nav.customers': 'Clientes',
+    'nav.blog': 'Blog',
     'nav.faq': 'Preguntas',
     'nav.book': 'Agendar',
 
