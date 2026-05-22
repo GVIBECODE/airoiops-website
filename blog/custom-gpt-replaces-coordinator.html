@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How a Custom GPT Replaces a $50,000 Coordinator | AIROIOPS</title>
+  <meta name="description" content="A coordinator costs $50,000 plus benefits and quits in 18 months. A Custom GPT costs $2,500 to build, runs 24/7, and gets smarter every week. Here is exactly what to give it, how to test it, and what to keep on the human side.">
+  <meta name="keywords" content="custom GPT, replace coordinator with AI, AI coordinator, custom GPT for business, ChatGPT custom GPT, AI assistant replace employee, AI hire alternative">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://airoiops.com/blog/custom-gpt-replaces-coordinator">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/blog/custom-gpt-replaces-coordinator">
+  <meta property="og:title" content="How a Custom GPT Replaces a $50,000 Coordinator">
+  <meta property="og:description" content="A coordinator costs $50,000 plus benefits and quits in 18 months. A Custom GPT costs $2,500 to build and runs 24/7. The honest math.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How a Custom GPT Replaces a $50,000 Coordinator">
+  <meta name="twitter:description" content="$2,500 to build, runs 24/7, gets smarter every week. The honest math.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .article { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .article-meta { color: var(--text-3, #8a8ca0); font-size: 14px; margin-bottom: 28px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .article h2 { margin-top: 48px; margin-bottom: 14px; font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; }
+    .article h3 { margin-top: 30px; margin-bottom: 10px; font-size: 19px; }
+    .article p { font-size: 17px; line-height: 1.75; color: var(--text-2, #56586e); margin: 0 0 18px; }
+    .article ul, .article ol { padding-left: 22px; line-height: 1.8; color: var(--text-2, #56586e); margin: 0 0 20px; font-size: 17px; }
+    .article li { margin-bottom: 6px; }
+    .article a { color: var(--purple, #7c5cff); font-weight: 600; text-decoration: none; }
+    .article a:hover { color: var(--cyan, #06b6d4); text-decoration: underline; }
+    .article strong { color: var(--text, #11121f); font-weight: 700; }
+    .pull-quote {
+      margin: 32px 0;
+      padding: 20px 26px;
+      border-left: 4px solid var(--purple, #7c5cff);
+      background: linear-gradient(135deg, rgba(124,92,255,0.06), rgba(6,182,212,0.04));
+      border-radius: 0 12px 12px 0;
+      font-size: 18.5px;
+      line-height: 1.55;
+      color: var(--text, #11121f);
+      font-weight: 600;
+    }
+    .article table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      font-size: 15.5px;
+    }
+    .article th, .article td {
+      padding: 12px 14px; text-align: left;
+      border-bottom: 1px solid var(--border, #e7e7f1);
+    }
+    .article th {
+      background: var(--surface, #f7f7fb);
+      font-weight: 700; color: var(--text, #11121f);
+      font-size: 13.5px; letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+    .article td { color: var(--text-2, #56586e); }
+    .article td strong { color: var(--text, #11121f); }
+    .related {
+      margin-top: 60px; padding-top: 30px;
+      border-top: 1px solid var(--border, #e7e7f1);
+    }
+    .related h3 { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3, #8a8ca0); margin: 0 0 16px; font-weight: 700; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 680px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-card {
+      padding: 18px 20px; border-radius: 14px;
+      background: var(--surface, #f7f7fb);
+      border: 1px solid var(--border, #e7e7f1);
+      text-decoration: none;
+      transition: transform .15s ease;
+      display: block;
+    }
+    .related-card:hover { transform: translateY(-2px); }
+    .related-card .rc-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--purple, #7c5cff); text-transform: uppercase;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .related-card .rc-title {
+      margin-top: 8px;
+      font-size: 16px; font-weight: 700; color: var(--text, #11121f);
+      line-height: 1.35;
+    }
+    .breadcrumbs {
+      font-size: 13px; color: var(--text-3, #8a8ca0);
+      margin-bottom: 18px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .breadcrumbs a { color: var(--text-3, #8a8ca0); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple, #7c5cff); }
+    .breadcrumbs .sep { margin: 0 8px; opacity: 0.5; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How a Custom GPT Replaces a $50,000 Coordinator",
+    "description": "A coordinator costs $50,000 plus benefits and quits in 18 months. A Custom GPT costs $2,500 to build, runs 24/7, and gets smarter every week. Here is exactly what to give it, how to test it, and what to keep on the human side.",
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-05-22",
+    "author": { "@type": "Organization", "name": "AIROIOPS", "url": "https://airoiops.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIROIOPS",
+      "logo": { "@type": "ImageObject", "url": "https://airoiops.com/og-image.jpg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://airoiops.com/blog/custom-gpt-replaces-coordinator" },
+    "image": "https://airoiops.com/og-image.jpg",
+    "inLanguage": "en-US"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Assessment</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">How it works</a>
+        <a class="nav-item" href="/customers/">Customers</a>
+        <a class="nav-item current" href="/blog/">Blog</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <a class="nav-cta" href="/#book">Book Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumbs">
+        <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><span>Custom GPT economics</span>
+      </div>
+      <div class="kicker">Custom GPT &middot; 8 min read</div>
+      <h1>How a Custom GPT replaces a <span class="grad">$50,000 coordinator.</span></h1>
+      <p class="ph-lede">The coordinator role is the most expensive seat in a 5-50 person business, and the easiest to break when someone quits. A well-built Custom GPT does roughly 70% of the work for the lifetime cost of a single month of salary. Here is the honest version of how that math actually works.</p>
+    </div>
+  </section>
+
+  <!-- ============ ARTICLE ============ -->
+  <section>
+    <div class="wrap">
+      <div class="article">
+
+        <p class="article-meta">Published May 22, 2026 &middot; By AIROIOPS</p>
+
+        <p>I have hired exactly two coordinators in my life. The first one was great for nine months and then announced she was moving to Phoenix. The second one looked great on paper, lasted six weeks, and quit by text on a Sunday night. Total cash burned between the two: roughly $34,000, plus 220 hours of my own time recruiting, training, managing, and eventually replacing them.</p>
+
+        <p>If I were doing it again today, I would not hire a coordinator. I would build a Custom GPT, wire it into the systems I already pay for, and spend the salary delta on a part-time human who handles only the things the GPT genuinely cannot. That is what I have actually done across both of my businesses now, and the result is roughly 70 percent of the coordinator workload handled by software for under $50 a month total operating cost.</p>
+
+        <p>This is the post I wish someone had written me four years ago.</p>
+
+        <div class="pull-quote">A Custom GPT is not a replacement for a great senior hire. It is a replacement for the role you keep hiring junior because you cannot justify the salary of someone good. That role almost never works out anyway.</div>
+
+        <h2>What a coordinator actually does (broken down)</h2>
+
+        <p>Pull a real coordinator job description and you will find roughly these eight buckets:</p>
+
+        <ul>
+          <li><strong>Inbox triage</strong> (60-90 emails per day, sort, flag, draft responses)</li>
+          <li><strong>Scheduling</strong> (book calls, reschedule, send reminders, manage your calendar)</li>
+          <li><strong>Client communication</strong> (status updates, project check-ins, basic Q&A)</li>
+          <li><strong>Document prep</strong> (proposals, agendas, meeting notes, weekly reports)</li>
+          <li><strong>Data entry</strong> (CRM updates, project trackers, billing prep)</li>
+          <li><strong>Vendor coordination</strong> (chase invoices, confirm orders, manage delivery windows)</li>
+          <li><strong>Internal SOP maintenance</strong> (keep playbooks current, onboard new team members)</li>
+          <li><strong>Owner-shielding</strong> (decide what reaches you and what does not)</li>
+        </ul>
+
+        <p>That role at market rate in 2026 is $48,000 to $58,000 a year base, plus 20-25 percent in benefits and overhead. Call it $62,000 fully loaded. Plus 200 hours of your annual time managing them, recruiting their replacement when they leave (they will leave), and re-onboarding the next one.</p>
+
+        <h2>What a Custom GPT can take off the list</h2>
+
+        <p>Honest assessment, bucket by bucket.</p>
+
+        <table>
+          <thead>
+            <tr><th>Bucket</th><th>Custom GPT handles</th><th>Still needs human</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Inbox triage</strong></td><td>Sorting, summarizing, drafting 80% of replies</td><td>Final approval, sensitive replies</td></tr>
+            <tr><td><strong>Scheduling</strong></td><td>End-to-end with Calendly/Cal.com integration</td><td>VIP rescheduling, exceptions</td></tr>
+            <tr><td><strong>Client communication</strong></td><td>Status updates, recurring check-ins, FAQ answers</td><td>Bad news, escalations, relationship moments</td></tr>
+            <tr><td><strong>Document prep</strong></td><td>First drafts of everything (90%)</td><td>Final review, your voice</td></tr>
+            <tr><td><strong>Data entry</strong></td><td>Parse and pre-fill via Zapier/Make</td><td>Edge cases the schema does not catch</td></tr>
+            <tr><td><strong>Vendor coordination</strong></td><td>Routine follow-ups, status pings</td><td>Negotiations, disputes</td></tr>
+            <tr><td><strong>SOP maintenance</strong></td><td>Drafting and updating SOPs from notes</td><td>Approving them, training humans on them</td></tr>
+            <tr><td><strong>Owner-shielding</strong></td><td>Filtering noise, scoring importance</td><td>Judgment on gray-area calls</td></tr>
+          </tbody>
+        </table>
+
+        <p>Roughly 70 percent of the total hour load disappears. The remaining 30 percent is still real work, and it is the highest-judgment 30 percent. That is where your part-time human comes in (10-15 hours a week, $25-35 per hour, total $13,000-$27,000 a year).</p>
+
+        <h2>What you still need a human for (be honest)</h2>
+
+        <p>Three categories where I would never let a Custom GPT run unsupervised, even today.</p>
+
+        <p>First, anything where the relationship is part of what you are selling. If your retention model depends on the client feeling personally known, a GPT cannot fake that for long. It can draft, you have to send.</p>
+
+        <p>Second, anything where a mistake is expensive and irreversible. Wiring money, deleting data, sending the wrong contract version, firing a customer. Keep humans in the loop on irreversible actions, full stop.</p>
+
+        <p>Third, judgment calls that require knowledge of context outside the system. The GPT does not know your CFO is going through a divorce, your top client is about to be acquired, or that your second-best technician was up all night with a sick kid. Humans hold that context. They should hold the related decisions.</p>
+
+        <h2>The 90-minute build, step by step</h2>
+
+        <p>If you have a ChatGPT Team or Plus plan, you can build a serviceable v1 Custom GPT in a single 90-minute session. Here is the sequence:</p>
+
+        <ol>
+          <li><strong>Minutes 0-15:</strong> Write the system prompt. Who is this GPT, what is the business, what is the operating philosophy, what are the non-negotiable rules (e.g., "never quote a price outside the grid," "always escalate refund requests to me"). Use the SOP-writer prompt from <a href="/blog/chatgpt-for-business-owners-7-prompts">our 7-prompts post</a> to clean this up.</li>
+          <li><strong>Minutes 15-35:</strong> Upload your knowledge files. Pricing grid, FAQ, top-10 SOPs, voice samples (5-10 of your best emails), brand guidelines if you have them. Keep it under 20 files. More files do not equal better answers.</li>
+          <li><strong>Minutes 35-65:</strong> Build the conversation starters. Five prompts that cover 80% of what you will use it for. Examples: "Draft a reply to this customer email," "Score this lead and tell me what to ask next," "Write a status update for [client]," "Draft a proposal for [scope]," "Summarize this week's numbers."</li>
+          <li><strong>Minutes 65-90:</strong> Test with 10 real examples from your inbox. For each one, score the answer 1-5 and update the system prompt or knowledge files based on where it failed.</li>
+        </ol>
+
+        <p>That is v1. It will be 60 percent as good as it will be after a month of weekly tuning. Use it. Catch the misses. Update the prompt. Repeat. Six weeks in, it is doing the job.</p>
+
+        <h2>How to test it before you trust it</h2>
+
+        <p>The right test sequence is exactly the same sequence you would use for a new human hire.</p>
+
+        <p>Week 1: Shadow mode. The GPT drafts everything. You approve every send. You catch every mistake. You update the prompt or the knowledge file the moment you spot a pattern.</p>
+
+        <p>Week 2-3: Co-pilot mode. The GPT drafts. You approve in bulk (batch-review 20 drafts at once). Errors should be at maybe 5-10 percent. Note them, fix them at the source.</p>
+
+        <p>Week 4+: Restricted autonomy. The GPT sends routine messages directly (status updates, scheduling confirmations, FAQ answers). Anything sensitive still routes to you. Track the error rate weekly. When it drops below 1 percent on a category, expand the GPT's autonomy on that category.</p>
+
+        <p>This is the same trust-but-verify ladder you would use with a new coordinator. The difference is the GPT does not get tired, does not get a better offer, and does not need to be re-trained from scratch when it leaves, because it does not leave.</p>
+
+        <h2>The real-cost comparison over 3 years</h2>
+
+        <p>Here is the math that ends this argument.</p>
+
+        <table>
+          <thead>
+            <tr><th>Cost category</th><th>Coordinator</th><th>Custom GPT + part-time human</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Year 1 build/hire cost</td><td>$5,000 (recruiting, ramp, training)</td><td>$2,500 - $4,500 (one-time build)</td></tr>
+            <tr><td>Year 1 ongoing cost</td><td>$62,000 (loaded)</td><td>$240 (OpenAI Team) + $18,000 (part-time human)</td></tr>
+            <tr><td>Year 1 total</td><td><strong>$67,000</strong></td><td><strong>$20,740 - $22,740</strong></td></tr>
+            <tr><td>Year 2 (one turnover)</td><td>$62,000 + $5,000 re-hire</td><td>$240 + $18,000 + $500 tuning</td></tr>
+            <tr><td>Year 3</td><td>$64,000</td><td>$240 + $18,500</td></tr>
+            <tr><td><strong>3-year total</strong></td><td><strong>$198,000</strong></td><td><strong>$60,960 - $62,960</strong></td></tr>
+            <tr><td><strong>3-year savings</strong></td><td colspan="2"><strong>~$135,000+ retained in the business</strong></td></tr>
+          </tbody>
+        </table>
+
+        <p>Even if you assume the Custom GPT only covers 50 percent of the role (lower than reality once it is tuned), the math still produces a six-figure savings over three years. That is a second technician, a marketing budget, a year of runway, or a house down payment.</p>
+
+        <p>And the part most operators miss: the Custom GPT is an asset that compounds. Every week of use makes it sharper. A human coordinator at month 18 is roughly as good as they were at month 9. A Custom GPT at month 18 is meaningfully better than at month 9, because the prompt and knowledge base have been refined 60+ times.</p>
+
+        <p>The build itself runs $2,500-$4,500 when AIROIOPS does it (depending on integration complexity), and is part of every Custom GPT engagement we ship out of the <a href="/#assessment">$1,000 AI Business Assessment</a>. If you also want it wired into Zapier or Make for full task execution (not just drafts), see our breakdown of <a href="/blog/zapier-vs-make-which-to-pick">Zapier vs Make for service businesses</a>.</p>
+
+        <!-- Related posts -->
+        <div class="related">
+          <h3>Keep reading</h3>
+          <div class="related-grid">
+            <a href="/blog/chatgpt-for-business-owners-7-prompts" class="related-card">
+              <div class="rc-tag">ChatGPT</div>
+              <div class="rc-title">7 prompts that save business owners 10 hours a week</div>
+            </a>
+            <a href="/blog/zapier-vs-make-which-to-pick" class="related-card">
+              <div class="rc-tag">Tooling</div>
+              <div class="rc-title">Zapier vs Make: which to pick for a 5-50 person service business</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="band-tint">
+    <div class="wrap center">
+      <div class="kicker">Find your leaks</div>
+      <h2 class="h2">Get a <span class="grad">12-18 page AI Roadmap</span> on your business in 48 hours.</h2>
+      <p class="lede">The AIROIOPS Assessment finds the four biggest leaks in your specific operation, quantifies the ROI of closing each one, and gives you a sequenced roadmap to ship them yourself or hand off. $1,000 flat. 48-hour turnaround.</p>
+      <div class="section-cta">
+        <a href="/#assessment" class="btn btn-primary">
+          <span>See the Assessment</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px;">AIROI<span>OPS</span></div>
+          <p class="footer-tag">AI Business Assessments and fixed-price builds for business owners of any size. Built by an operator in Las Vegas, serving the United States nationwide.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#assessment">AI Business Assessment</a></li>
+            <li><a href="/upsells">Builds</a></li>
+            <li><a href="/customers/">Customer Stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/#book">Book Discovery Call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AIROIOPS. Built in Las Vegas, NV.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

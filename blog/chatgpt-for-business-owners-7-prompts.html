@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChatGPT for Business Owners: 7 Prompts That Save 10 Hours a Week | AIROIOPS</title>
+  <meta name="description" content="Most business owners use ChatGPT like a smarter Google. Here are seven prompts that turn it into a 24/7 second brain. Each one targets a real bottleneck and ships measurable hours back to you in the first week.">
+  <meta name="keywords" content="ChatGPT for business, ChatGPT prompts, AI for small business owners, ChatGPT for service business, business owner prompts, AI second brain, ChatGPT productivity">
+  <meta name="author" content="AIROIOPS">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://airoiops.com/blog/chatgpt-for-business-owners-7-prompts">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AIROIOPS">
+  <meta property="og:url" content="https://airoiops.com/blog/chatgpt-for-business-owners-7-prompts">
+  <meta property="og:title" content="ChatGPT for Business Owners: 7 Prompts That Save 10 Hours a Week">
+  <meta property="og:description" content="Seven prompts that turn ChatGPT into a 24/7 second brain. Each one ships measurable hours back to you in the first week.">
+  <meta property="og:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT for Business Owners: 7 Prompts That Save 10 Hours a Week">
+  <meta name="twitter:description" content="Seven prompts that turn ChatGPT into a 24/7 second brain.">
+  <meta name="twitter:image" content="https://airoiops.com/og-image.jpg">
+
+  <meta name="theme-color" content="#0c0d1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-family='Inter,system-ui' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .article { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .article-meta { color: var(--text-3, #8a8ca0); font-size: 14px; margin-bottom: 28px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .article h2 { margin-top: 48px; margin-bottom: 14px; font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; }
+    .article h3 { margin-top: 30px; margin-bottom: 10px; font-size: 19px; }
+    .article p { font-size: 17px; line-height: 1.75; color: var(--text-2, #56586e); margin: 0 0 18px; }
+    .article ul, .article ol { padding-left: 22px; line-height: 1.8; color: var(--text-2, #56586e); margin: 0 0 20px; font-size: 17px; }
+    .article li { margin-bottom: 6px; }
+    .article a { color: var(--purple, #7c5cff); font-weight: 600; text-decoration: none; }
+    .article a:hover { color: var(--cyan, #06b6d4); text-decoration: underline; }
+    .article strong { color: var(--text, #11121f); font-weight: 700; }
+    .pull-quote {
+      margin: 32px 0;
+      padding: 20px 26px;
+      border-left: 4px solid var(--purple, #7c5cff);
+      background: linear-gradient(135deg, rgba(124,92,255,0.06), rgba(6,182,212,0.04));
+      border-radius: 0 12px 12px 0;
+      font-size: 18.5px;
+      line-height: 1.55;
+      color: var(--text, #11121f);
+      font-weight: 600;
+    }
+    .article table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      font-size: 15.5px;
+    }
+    .article th, .article td {
+      padding: 12px 14px; text-align: left;
+      border-bottom: 1px solid var(--border, #e7e7f1);
+    }
+    .article th {
+      background: var(--surface, #f7f7fb);
+      font-weight: 700; color: var(--text, #11121f);
+      font-size: 13.5px; letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+    .article td { color: var(--text-2, #56586e); }
+    .article td strong { color: var(--text, #11121f); }
+    .article pre {
+      background: #0c0d1f;
+      color: #e7e7f1;
+      padding: 20px 22px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 18px 0 22px;
+      white-space: pre-wrap;
+    }
+    .article code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.92em;
+      background: var(--surface, #f7f7fb);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text, #11121f);
+    }
+    .article pre code { background: transparent; padding: 0; color: inherit; }
+    .related {
+      margin-top: 60px; padding-top: 30px;
+      border-top: 1px solid var(--border, #e7e7f1);
+    }
+    .related h3 { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3, #8a8ca0); margin: 0 0 16px; font-weight: 700; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 680px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-card {
+      padding: 18px 20px; border-radius: 14px;
+      background: var(--surface, #f7f7fb);
+      border: 1px solid var(--border, #e7e7f1);
+      text-decoration: none;
+      transition: transform .15s ease;
+      display: block;
+    }
+    .related-card:hover { transform: translateY(-2px); }
+    .related-card .rc-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--purple, #7c5cff); text-transform: uppercase;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .related-card .rc-title {
+      margin-top: 8px;
+      font-size: 16px; font-weight: 700; color: var(--text, #11121f);
+      line-height: 1.35;
+    }
+    .breadcrumbs {
+      font-size: 13px; color: var(--text-3, #8a8ca0);
+      margin-bottom: 18px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    .breadcrumbs a { color: var(--text-3, #8a8ca0); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--purple, #7c5cff); }
+    .breadcrumbs .sep { margin: 0 8px; opacity: 0.5; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ChatGPT for Business Owners: 7 Prompts That Save 10 Hours a Week",
+    "description": "Most business owners use ChatGPT like a smarter Google. Here are seven prompts that turn it into a 24/7 second brain. Each one targets a real bottleneck and ships measurable hours back to you in the first week.",
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-05-22",
+    "author": { "@type": "Organization", "name": "AIROIOPS", "url": "https://airoiops.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIROIOPS",
+      "logo": { "@type": "ImageObject", "url": "https://airoiops.com/og-image.jpg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://airoiops.com/blog/chatgpt-for-business-owners-7-prompts" },
+    "image": "https://airoiops.com/og-image.jpg",
+    "inLanguage": "en-US"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">AIROI<span>OPS</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="nav-item" href="/#assessment">Assessment</a>
+        <a class="nav-item" href="/upsells">Builds</a>
+        <a class="nav-item" href="/#how">How it works</a>
+        <a class="nav-item" href="/customers/">Customers</a>
+        <a class="nav-item current" href="/blog/">Blog</a>
+        <a class="nav-item" href="/faq">FAQ</a>
+        <a class="nav-cta" href="/#book">Book Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumbs">
+        <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><span>ChatGPT prompts</span>
+      </div>
+      <div class="kicker">ChatGPT &middot; 9 min read</div>
+      <h1>ChatGPT for business owners: <span class="grad">7 prompts</span> that save 10 hours a week.</h1>
+      <p class="ph-lede">ChatGPT is the single best leverage tool ever shipped to non-technical business owners. Most still use it for one-off questions. Here are seven prompts I use weekly that turn it into a 24/7 second brain, with hours-recovered estimates for each.</p>
+    </div>
+  </section>
+
+  <!-- ============ ARTICLE ============ -->
+  <section>
+    <div class="wrap">
+      <div class="article">
+
+        <p class="article-meta">Published May 22, 2026 &middot; By AIROIOPS</p>
+
+        <p>The most common mistake I see business owners make with ChatGPT is treating it like a smarter Google. You ask a question. It gives an answer. You close the tab. You repeat this pattern 30 times a week and you wonder why everyone keeps saying AI is going to change everything.</p>
+
+        <p>That use is fine. It is also five percent of what the tool can do. The real leverage shows up when you stop using ChatGPT for facts and start using it for the work in your business that requires writing, judgment, or structured thinking, and that you currently do yourself because no human you could afford would do it as well.</p>
+
+        <p>Below are the seven prompts I personally run every week between my residential service business and AIROIOPS. Each has three parts: when to use it, the actual prompt text you copy and paste, and the time it actually saves. They get more valuable the more you use them because you can tune them to your specific business.</p>
+
+        <div class="pull-quote">A great prompt is not a magic spell. It is a clear job description for a contractor who is faster, cheaper, and never gets tired. Write it the same way you would brief a contractor.</div>
+
+        <h2>Prompt 1: The lead-qualifier</h2>
+
+        <p><strong>When to use it:</strong> A new inbound text or form submission comes in. You want to know if it is a real lead, what to ask next, and what to quote, in 30 seconds.</p>
+
+        <pre><code>You are a senior sales rep for [YOUR BUSINESS, what you do, your service area].
+Our pricing logic is: [paste your simple price grid or rules in 5 lines or less].
+
+Here is an inbound message from a new lead:
+"[paste the message]"
+
+In exactly this format:
+1. Lead quality (1-10) and why
+2. Three things missing that I need before I can quote
+3. The reply I should send back, in casual SMS voice, under 250 characters
+4. If we have enough info, a quoted price range and the reasoning</code></pre>
+
+        <p><strong>Time recovered:</strong> 4 to 8 minutes per inbound. If you handle 30 inbounds a week, that is 2 to 4 hours back. This prompt is also the manual version of the automated Speed-to-Lead build covered in <a href="/blog/custom-gpt-replaces-coordinator">our post on Custom GPTs replacing a $50k coordinator</a>.</p>
+
+        <h2>Prompt 2: The proposal first-draft</h2>
+
+        <p><strong>When to use it:</strong> A discovery call wrapped up. You owe a proposal. You hate writing proposals because they take 90 minutes and you are tired.</p>
+
+        <pre><code>You are writing a proposal for [YOUR BUSINESS] to [PROSPECT NAME, type of business, what they do].
+
+Scope they want: [paste the bullet list from your call notes]
+Budget signal: [whatever they told you, or "unknown but mid-market"]
+Their tone: [formal / casual / skeptical / urgent]
+My differentiator: [one line, what makes me the right pick for this]
+Pricing model: [flat fee $X / hourly $Y / retainer $Z]
+
+Write a 1-page proposal with these sections:
+1. Recap of what you're solving for them (3 lines, in their words)
+2. What I will deliver (3-5 bullets, specific)
+3. Timeline and process (high-level, no week-by-week)
+4. Investment (one number, then 1-line value framing)
+5. Next step (one clear ask)
+
+Tone: confident, operator-to-operator, no marketing fluff, no em-dashes.</code></pre>
+
+        <p><strong>Time recovered:</strong> 60 to 75 minutes per proposal. If you send four a month, that is 4 to 5 hours every month, plus you actually send them the same day instead of three days later.</p>
+
+        <h2>Prompt 3: The weekly numbers digest</h2>
+
+        <p><strong>When to use it:</strong> Every Friday or Sunday. You exported a CSV from your CRM, accounting tool, or ad platform and you want the story of the week in 90 seconds, not 30 minutes of squinting at columns.</p>
+
+        <pre><code>You are my operator's chief of staff. I am pasting raw weekly data below.
+
+Context: [my business, what these numbers represent, what good looks like for me]
+
+Data:
+[paste the CSV or copy-paste rows]
+
+Give me exactly:
+1. The 5 things that matter most this week, in plain English
+2. The 1 number that is meaningfully off vs. trend, and your guess at why
+3. The 1 action I should take Monday morning
+4. Nothing else. No filler.</code></pre>
+
+        <p><strong>Time recovered:</strong> 25 to 40 minutes per week. The bigger benefit is you actually do the review instead of avoiding it, which compounds.</p>
+
+        <h2>Prompt 4: The SOP writer</h2>
+
+        <p><strong>When to use it:</strong> You finally have a team member (or want one). You need a written process for something you have always done in your head.</p>
+
+        <pre><code>You are turning a tribal process into a written SOP that a brand-new team member can follow on day one.
+
+Process: [name of the process, e.g., "Closing a new quote in our CRM"]
+
+I will describe how I do it in messy bullet form. You will turn it into a clean, numbered SOP with no ambiguity.
+
+Here is how I do it:
+[dump everything you do, in any order, in your own words, including weird edge cases]
+
+Output:
+- Title (clear, action-verb)
+- Required tools/access (bullet list)
+- Steps, numbered, with a bolded action verb starting each one
+- 3-5 common mistakes and how to avoid them
+- A "you're done when" checklist at the bottom
+
+Plain language. No corporate-speak. Written for a smart 22-year-old new hire.</code></pre>
+
+        <p><strong>Time recovered:</strong> 90 minutes per SOP, and you actually finish them instead of leaving them half-drafted in a Google Doc forever. A 12-person agency I work with documented 14 SOPs in a single Saturday using this prompt.</p>
+
+        <h2>Prompt 5: The customer reply</h2>
+
+        <p><strong>When to use it:</strong> Someone is upset. You are about to write a reply that is either too defensive, too apologetic, or too cold, depending on your mood.</p>
+
+        <pre><code>You are a senior customer-service operator with 20 years of experience.
+
+Here is the message from an upset customer:
+"[paste it]"
+
+Here is the context they may not know:
+[your side of the story, what actually happened, in plain English]
+
+Give me three reply options:
+1. The diplomatic / save-the-relationship version
+2. The boundary-setting version (still kind but firm)
+3. The "we are parting ways with this customer" version
+
+Each reply should be under 150 words, in SMS or email tone (specify which), and end with a clear next step. Tell me which one you'd recommend and why.</code></pre>
+
+        <p><strong>Time recovered:</strong> Hard to put a number on. The real win is you stop firing off the wrong reply at 9 pm and torching a relationship that did not need to be torched. I save myself one customer relationship every couple of months with this prompt alone.</p>
+
+        <h2>Prompt 6: The hiring scorecard</h2>
+
+        <p><strong>When to use it:</strong> You have three candidates for a role and your gut is leaning one way for reasons you cannot articulate.</p>
+
+        <pre><code>You are a hiring partner helping me make a clear, evidence-based call.
+
+Role: [title, what they will own, what success looks like in 90 days]
+
+Candidate 1: [paste their resume, notes from the call, anything relevant]
+Candidate 2: [same]
+Candidate 3: [same]
+
+Build a scorecard with these columns: Skill fit, Culture fit, Risk flags, Upside, Salary fit.
+Score each candidate 1-5 in each column with a one-line reason.
+
+Then:
+1. Your recommendation, with two sentences of reasoning
+2. The single biggest red flag across all three I might be missing
+3. The one question I should ask in a follow-up call before deciding</code></pre>
+
+        <p><strong>Time recovered:</strong> 60+ minutes of fuzzy thinking, plus the cost of one bad hire avoided. The first bad hire avoided pays for ChatGPT for the next 50 years.</p>
+
+        <h2>Prompt 7: The decision tree</h2>
+
+        <p><strong>When to use it:</strong> A hard call. You are going in circles. You need someone to think it through with you without protecting your ego.</p>
+
+        <pre><code>You are a no-bullshit operator I trust completely. I'm stuck on a decision.
+
+The decision: [describe it in 4-6 sentences]
+What I'm leaning toward: [your current bias]
+What's holding me back: [the actual fear]
+Constraints: [time, money, people, anything that limits the option set]
+
+Give me:
+1. The 3 paths forward, including ones I haven't considered
+2. For each path: the 2nd-order effect 12 months out
+3. The honest pros and cons of each
+4. Your recommendation and why
+5. The one thing I'm probably underweighting
+
+Do not be a sycophant. If my reasoning is bad, say so.</code></pre>
+
+        <p><strong>Time recovered:</strong> A weekend of pacing the kitchen. You will not always take its recommendation. That is fine. The value is breaking out of the loop.</p>
+
+        <h2>How to make these work for your business</h2>
+
+        <p>Three rules.</p>
+
+        <p>First, save these in a notes app or document. Re-typing them is friction. Friction kills habits. I keep mine in a single doc pinned to my desktop. Copy, paste, fill in the brackets, send.</p>
+
+        <p>Second, edit them for your business. The brackets are the leverage. The more specific you make the system prompt to your actual operation, the better the output gets. A vague brief produces vague output. A surgical brief produces surgical output.</p>
+
+        <p>Third, when a prompt becomes a habit, promote it. If you are running the lead-qualifier prompt 30 times a week, that is no longer a ChatGPT prompt. That is a Custom GPT or an automated agent. The graduation path goes prompt to template to Custom GPT to fully automated. See <a href="/blog/first-3-automations-service-business">the first 3 automations every service business should build</a> for what to automate first.</p>
+
+        <p>If you want a tailored prompt library and Custom GPT plan for your specific business, that is part of every AIROIOPS <a href="/#assessment">$1,000 AI Business Assessment</a>. You walk with a 12-18 page roadmap that includes your top 5 prompts, the Custom GPTs worth building, and the order to build them in. $1,000 flat. 48-hour turnaround.</p>
+
+        <!-- Related posts -->
+        <div class="related">
+          <h3>Keep reading</h3>
+          <div class="related-grid">
+            <a href="/blog/custom-gpt-replaces-coordinator" class="related-card">
+              <div class="rc-tag">Custom GPT</div>
+              <div class="rc-title">How a Custom GPT replaces a $50,000 coordinator</div>
+            </a>
+            <a href="/blog/first-3-automations-service-business" class="related-card">
+              <div class="rc-tag">Automation</div>
+              <div class="rc-title">The first 3 automations every service business should build</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="band-tint">
+    <div class="wrap center">
+      <div class="kicker">Find your leaks</div>
+      <h2 class="h2">Get a <span class="grad">12-18 page AI Roadmap</span> on your business in 48 hours.</h2>
+      <p class="lede">The AIROIOPS Assessment finds the four biggest leaks in your specific operation, quantifies the ROI of closing each one, and gives you a sequenced roadmap to ship them yourself or hand off. $1,000 flat. 48-hour turnaround.</p>
+      <div class="section-cta">
+        <a href="/#assessment" class="btn btn-primary">
+          <span>See the Assessment</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px;">AIROI<span>OPS</span></div>
+          <p class="footer-tag">AI Business Assessments and fixed-price builds for business owners of any size. Built by an operator in Las Vegas, serving the United States nationwide.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#assessment">AI Business Assessment</a></li>
+            <li><a href="/upsells">Builds</a></li>
+            <li><a href="/customers/">Customer Stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/#book">Book Discovery Call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AIROIOPS. Built in Las Vegas, NV.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
