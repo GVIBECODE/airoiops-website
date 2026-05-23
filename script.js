@@ -20,7 +20,7 @@ const translations = {
     'chooser.zoom_title': 'Book a call with Gianny',
     'chooser.zoom_sub': 'Prefer a person. Grab a weekend slot.',
     'chooser.zoom_btn': 'Get started',
-    'chooser.st_connecting': 'Connecting to Annie...',
+    'chooser.st_connecting': 'Calling Annie...',
     'chooser.st_connected': 'You are connected. Say hello to Annie.',
     'chooser.st_ended': 'Call ended. Gianny will follow up.',
     'chooser.st_error': 'Something went wrong starting the call. Please try again or book a video call.',
@@ -471,7 +471,7 @@ const translations = {
     'chooser.zoom_title': 'Agenda una llamada con Gianny',
     'chooser.zoom_sub': 'Prefieres a una persona. Reserva un espacio el fin de semana.',
     'chooser.zoom_btn': 'Comenzar',
-    'chooser.st_connecting': 'Conectando con Annie...',
+    'chooser.st_connecting': 'Llamando a Annie...',
     'chooser.st_connected': 'Estas conectado. Saluda a Annie.',
     'chooser.st_ended': 'Llamada terminada. Gianny te dara seguimiento.',
     'chooser.st_error': 'Algo salio mal al iniciar la llamada. Intenta de nuevo o agenda una videollamada.',
@@ -1213,7 +1213,65 @@ navLinks.forEach(link => {
   let inCall = false;
   let busy = false;
 
+  /* Ring tone: warms up the browser audio pipeline while WebRTC handshakes,
+     so Annie's first word isn't clipped. Also unlocks the AudioContext on
+     iOS Safari (must run inside the user-gesture click handler). */
+  let audioCtx = null;
+  let ringMaster = null;
+  let ringTimers = [];
+
+  function startRing() {
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      if (!audioCtx) audioCtx = new AC();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+
+      ringMaster = audioCtx.createGain();
+      ringMaster.gain.value = 0.06;
+      ringMaster.connect(audioCtx.destination);
+
+      function pulse(offset) {
+        const start = audioCtx.currentTime + offset;
+        const o1 = audioCtx.createOscillator();
+        const o2 = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o1.frequency.value = 440;
+        o2.frequency.value = 480;
+        o1.type = 'sine'; o2.type = 'sine';
+        o1.connect(g); o2.connect(g);
+        g.connect(ringMaster);
+        g.gain.setValueAtTime(0, start);
+        g.gain.linearRampToValueAtTime(1, start + 0.05);
+        g.gain.setValueAtTime(1, start + 0.55);
+        g.gain.linearRampToValueAtTime(0, start + 0.65);
+        o1.start(start); o2.start(start);
+        o1.stop(start + 0.7); o2.stop(start + 0.7);
+      }
+
+      /* Schedule up to ~10s of ring cycles; stopRing() cuts it short. */
+      for (let i = 0; i < 6; i++) pulse(i * 1.4);
+    } catch (e) { /* ignore: ring is cosmetic, never block the call */ }
+  }
+
+  function stopRing() {
+    try {
+      if (audioCtx && ringMaster) {
+        const now = audioCtx.currentTime;
+        ringMaster.gain.cancelScheduledValues(now);
+        ringMaster.gain.setValueAtTime(ringMaster.gain.value, now);
+        ringMaster.gain.linearRampToValueAtTime(0, now + 0.08);
+        const toDisconnect = ringMaster;
+        setTimeout(function () { try { toDisconnect.disconnect(); } catch (e) {} }, 200);
+      }
+    } catch (e) {}
+    ringMaster = null;
+    ringTimers.forEach(function (t) { clearTimeout(t); });
+    ringTimers = [];
+  }
+
   function reset(statusKey) {
+    stopRing();
     say(statusKey);
     inCall = false;
     busy = false;
@@ -1234,6 +1292,7 @@ navLinks.forEach(link => {
     busy = true;
     btn.disabled = true;
     say('chooser.st_connecting');
+    startRing();
 
     try {
       const { RetellWebClient } = await import('https://esm.sh/retell-client-js-sdk@2');
@@ -1247,6 +1306,7 @@ navLinks.forEach(link => {
       client = c;
 
       c.on('call_started', function () {
+        stopRing();
         say('chooser.st_connected');
         inCall = true;
         busy = false;
