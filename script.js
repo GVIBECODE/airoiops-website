@@ -42,7 +42,7 @@ const translations = {
     'intakeopt.close_cta': 'Back to home',
 
     'hero.badge': 'Now booking 3 case-study spots at no charge',
-    'hero.h1': 'Real AI ROI. <span class="grad">In 48 hours.</span><br>Yours to keep.',
+    'hero.h1': 'AI consulting for operators. <span class="grad">Any size. Any vertical.</span>',
     'hero.lede': "We audit your operations, find your highest-leverage AI plays, and deliver a custom 12-18 page AI Roadmap inside 48 hours. Quick Wins you can ship yourself, transparent pricing for the bigger builds you'd rather hand off.",
     'hero.cta_primary': 'Book a Free Discovery Call',
     'hero.cta_ghost': 'See the Assessment',
@@ -271,7 +271,7 @@ const translations = {
     'faq.q2': 'How long does the AI assessment take?',
     'faq.a2': '48 hours from the time you complete the intake. You can fill the deep-dive intake on your own time or book a 45-minute discovery call. Either way, your custom roadmap lands in your inbox 48 hours later.',
     'faq.q3': 'Do you only serve businesses in Las Vegas?',
-    'faq.a3': 'No. We are based in Las Vegas and we work with business owners of any size across the entire United States. The entire assessment runs over email and one short call, so geography is not a constraint. Local Las Vegas service businesses get an optional in-person session if they want it.',
+    'faq.a3': 'No. We work with business owners of any size across the entire United States. The Assessment runs over email and one short call, so geography is not a constraint. We are headquartered in Las Vegas, NV, and local Vegas-area service businesses get an optional in-person session if they want it.',
     'faq.q4': 'What is included in the AI Business Assessment?',
     'faq.a4': 'An operations audit of your tools and workflows, 5-7 DIY Quick Wins you can ship yourself, a transparent build menu for the bigger plays (Speed-to-Lead AI agents, Custom GPTs, automation builds in Zapier, Make, or n8n), and a sequenced AI roadmap with prioritized milestones. All in a 12-18 page custom report, plus a 20-minute walk-through call.',
     'faq.q5': 'Will the AI tools work with the software I already use?',
@@ -282,7 +282,7 @@ const translations = {
     'faq.a7': 'Every optional build is custom-scoped on a follow-up call after the Assessment. We quote in writing before you commit, with a fixed floor or 20 percent of projected first-year ROI, whichever is greater. Typical builds run $3,500 to $15,000 depending on scope. The Monthly Retainer for ongoing maintenance plus net-new builds is $1,500 per month. The $1,500 Assessment quantifies your ROI in writing before any build contract, so the math is on paper before you commit.',
     'faq.cta': 'Still got questions? Book a free call',
 
-    'footer.area': 'Serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston and remote clients nationwide.',
+    'footer.area': 'Serving businesses of every size, across the United States. Headquartered in Las Vegas, NV.',
 
 
     'final.h2': 'Ready to see what AI can <span class="grad">actually</span> do for your business?',
@@ -493,7 +493,7 @@ const translations = {
     'intakeopt.close_cta': 'Volver al inicio',
 
     'hero.badge': 'Aceptando 3 casos de estudio sin costo',
-    'hero.h1': 'ROI real con IA. <span class="grad">En 48 horas.</span><br>Tuyo para siempre.',
+    'hero.h1': 'Consultoría de IA para operadores. <span class="grad">Cualquier tamaño. Cualquier industria.</span>',
     'hero.lede': 'Auditamos tus operaciones, encontramos las jugadas de IA con mayor impacto, y entregamos una hoja de ruta personalizada de 12-18 páginas en 48 horas. Quick Wins que puedes lanzar tú mismo, precios transparentes para las construcciones más grandes que prefieras delegar.',
     'hero.cta_primary': 'Agenda una llamada gratis',
     'hero.cta_ghost': 'Ver la evaluación',
@@ -718,7 +718,7 @@ const translations = {
     'faq.q2': '¿Cuánto tarda la evaluación de IA?',
     'faq.a2': '48 horas desde que completas el cuestionario. Puedes llenar el cuestionario detallado a tu ritmo o agendar una llamada de 45 minutos. De cualquier forma, tu hoja de ruta personalizada llega a tu correo 48 horas después.',
     'faq.q3': '¿Solo atienden a negocios en Las Vegas?',
-    'faq.a3': 'No. Estamos basados en Las Vegas y trabajamos con dueños de negocio de cualquier tamaño en todo Estados Unidos. La evaluación completa se hace por correo y una llamada corta, así que la geografía no es una restricción. Los negocios de servicio locales en Las Vegas tienen la opción de una sesión presencial si la quieren.',
+    'faq.a3': 'No. Trabajamos con dueños de negocio de cualquier tamaño en todo Estados Unidos. La Evaluación se hace por correo y una llamada corta, así que la geografía no es una restricción. Tenemos sede en Las Vegas, NV, y los negocios de servicio locales en el área de Vegas tienen la opción de una sesión presencial si la quieren.',
     'faq.q4': '¿Qué incluye la Evaluación de Negocio con IA?',
     'faq.a4': 'Una auditoría de operaciones de tus herramientas y flujos, 5-7 Quick Wins DIY que puedes lanzar tú mismo, un menú transparente para las construcciones más grandes (agentes Speed-to-Lead, GPTs personalizados, automatizaciones en Zapier, Make o n8n), y una hoja de ruta IA secuenciada con hitos priorizados. Todo en un reporte personalizado de 12-18 páginas, más una llamada de repaso de 20 minutos.',
     'faq.q5': '¿Las herramientas de IA funcionarán con el software que ya uso?',
@@ -729,7 +729,7 @@ const translations = {
     'faq.a7': 'Cada construcción opcional se define a medida en una llamada de seguimiento después de la Evaluación. Cotizamos por escrito antes de que te comprometas, con un precio piso fijo o el 20 por ciento del ROI proyectado del primer año, lo que sea mayor. Las construcciones típicas van de $3,500 a $15,000 según el alcance. El Retainer Mensual para mantenimiento continuo más nuevas construcciones es $1,500 por mes. La Evaluación de $1,500 cuantifica tu ROI por escrito antes de cualquier contrato de construcción.',
     'faq.cta': '¿Aún tienes preguntas? Agenda una llamada gratis',
 
-    'footer.area': 'Atendiendo Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Centennial Hills, Boulder City, Mesquite, Pahrump, Indian Springs, Mount Charleston y clientes remotos en todo el país.',
+    'footer.area': 'Atendiendo negocios de cualquier tamaño en todo Estados Unidos. Sede en Las Vegas, NV.',
 
 
     'final.h2': '¿Listo para ver lo que la IA <span class="grad">realmente</span> puede hacer por tu negocio?',
