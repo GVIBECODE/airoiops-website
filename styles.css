@@ -1117,3 +1117,16 @@ footer { background: var(--ink); color: #b7b9cc; padding: 48px 0; }
   .chooser-grid { grid-template-columns: 1fr; }
   .chooser-card .btn { align-self: stretch; justify-content: center; }
 }
+
+/* ============ LEGAL LINKS (footer) ============================ */
+.foot-links {
+  text-align: center;
+  padding: 0 24px 20px;
+  font-size: 13px;
+}
+.foot-links a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+}
+.foot-links a:hover { color: #fff; }
+.foot-links span { margin: 0 8px; color: rgba(255,255,255,.25); }
