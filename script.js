@@ -193,6 +193,7 @@ const translations = {
     'upsells.price_month': 'PER MONTH',
     'upsells.cta_h2': 'Ready to <span class="grad">scope a build?</span>',
     'upsells.cta_body': 'Start with the $1,500 Assessment. We quantify your ROI in writing first, so the math is on paper before any build contract.',
+    'upsells.payment_first_notice': 'Heads up: nothing ships until payment clears. Fixed-fee items (Assessment, Forensic Ad Audit, Retainer) require payment in full before delivery. Custom-scoped builds require a 50% deposit before work begins, with the balance due on delivery.',
 
     'faq.ph_lede': 'Price, timeline, scope, who it is for, what software it works with, and how the bigger builds are priced. All seven answers, in one place.',
     'faq.cta_h2': 'Still got <span class="grad">questions?</span>',
@@ -650,6 +651,7 @@ const translations = {
     'upsells.price_month': 'POR MES',
     'upsells.cta_h2': '¿Listo para <span class="grad">definir una construcción?</span>',
     'upsells.cta_body': 'Empieza con la Evaluación de $1,500. Cuantificamos tu ROI por escrito primero, así los números están en papel antes de cualquier contrato de construcción.',
+    'upsells.payment_first_notice': 'Aviso: nada se envía hasta que se reciba el pago. Los entregables de tarifa fija (Evaluación, Auditoría Forense de Anuncios, Retainer) requieren pago completo antes de la entrega. Las construcciones personalizadas requieren un depósito del 50% antes de empezar el trabajo, con el saldo al momento de entrega.',
 
     'faq.ph_lede': 'Precio, tiempos, alcance, para quién es, con qué software funciona, y cómo se cotizan las construcciones más grandes. Las siete respuestas, en un solo lugar.',
     'faq.cta_h2': '¿Aún tienes <span class="grad">preguntas?</span>',
