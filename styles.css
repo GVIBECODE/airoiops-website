@@ -643,7 +643,7 @@ h1 .grad {
   background: linear-gradient(120deg, #a68bff, #5fe6ff);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.final > .final-inner > p, .cta-band p {
+.final .final-inner > p:not(.final-alt), .cta-band p {
   font-size: 16.5px; color: rgba(255,255,255,.72); margin: 0 0 34px;
 }
 .cta-band .inner { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; text-align: center; }
