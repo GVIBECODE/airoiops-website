@@ -268,27 +268,33 @@
           </div>
         </div>
 
-        <div class="roi-card">
-          <div class="roi-head">
-            <span class="dot"></span>
-            <span data-i18n="roi.title">Live ROI Calculator</span>
-          </div>
-          <div class="roi-body">
-            <label>
-              <span data-i18n="roi.hours_label">Hours / week on repetitive work</span>
-              <input type="range" id="hours" min="1" max="40" value="15">
-              <output id="hours-out">15 hrs</output>
-            </label>
-            <label>
-              <span data-i18n="roi.rate_label">Effective hourly cost</span>
-              <input type="range" id="rate" min="20" max="2000" step="10" value="50">
-              <output id="rate-out">$50/hr</output>
-            </label>
-            <div class="roi-out">
-              <div class="roi-num" id="roi-num">$23,400</div>
-              <div class="roi-sub" data-i18n="roi.subtext">Potential annual savings if we automate 60% of this</div>
+        <div class="hero-demo">
+          <div class="demo-phone" role="img" aria-label="Live demo of Annie, the AIROIOPS AI agent, finding a leak and booking the Operator's Audit">
+            <div class="dp-bar">
+              <div class="dp-id">
+                <span class="dp-av">A</span>
+                <div class="dp-meta">
+                  <div class="dp-name" data-i18n="demo.header_name">Annie</div>
+                  <div class="dp-sub"><span class="dp-dot"></span><span data-i18n="demo.status">Active now</span></div>
+                </div>
+              </div>
+              <div class="dp-live" data-i18n="demo.badge">LIVE</div>
             </div>
+            <div class="dp-thread">
+              <div class="dp-msg in" data-i18n="demo.b1">Hey, I'm Annie. What's the one thing slipping through the cracks in your shop?</div>
+              <div class="dp-msg out" data-i18n="demo.b2">Leads. We miss calls and texts at night.</div>
+              <div class="dp-msg in" data-i18n="demo.b3">That's the leak. About 12 missed leads a month at your ticket size is roughly $23,400 a year gone.</div>
+              <div class="dp-msg in" data-i18n="demo.b4">Your Operator's Audit maps every leak like this in 48 hours, then we plug them. Want me to book yours?</div>
+              <div class="dp-msg out" data-i18n="demo.b5">Yes, let's do it.</div>
+              <div class="dp-typing" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="dp-msg in dp-last" data-i18n="demo.b6">Booked. Check your inbox in 48 hours.</div>
+            </div>
+            <a href="#chooser" class="dp-cta">
+              <span data-i18n="demo.cta">Talk to Annie now (2 min call)</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
+          <p class="demo-cap" data-i18n="demo.caption">Live demo. Annie is the same AI agent we install inside your business.</p>
         </div>
       </div>
     </div>
@@ -302,6 +308,19 @@
         <div class="stat"><div class="num" data-target="5" data-suffix="+">5+</div><div class="lbl" data-i18n="stats.automations">Quick Wins per report</div></div>
         <div class="stat"><div class="num" data-target="1500" data-prefix="$" data-comma>$1,500</div><div class="lbl" data-i18n="stats.price">fixed price</div></div>
         <div class="stat"><div class="num" data-target="100" data-suffix="%">100%</div><div class="lbl" data-i18n="stats.refund">yours forever</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trustbar" aria-label="Why operators trust AIROIOPS">
+    <div class="wrap">
+      <div class="trustbar-row">
+        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t1">Real Vegas operator, not an agency</span></span>
+        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t2">Built in your stack, you own every credential</span></span>
+        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t3">Milestone-gated payments</span></span>
+        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t4">48-hour delivery</span></span>
+        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t5">English and Spanish</span></span>
       </div>
     </div>
   </section>
