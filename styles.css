@@ -62,9 +62,11 @@ a { color: inherit; }
   display: flex; align-items: center; gap: 24px;
 }
 .logo {
+  display: inline-flex; align-items: center; gap: 9px;
   font-weight: 800; font-size: 20px; letter-spacing: -.02em;
   text-decoration: none; color: #fff;
 }
+.logo-mark { width: 26px; height: 26px; flex: none; }
 .logo span {
   background: linear-gradient(120deg, #a68bff, #5fe6ff);
   -webkit-background-clip: text; background-clip: text; color: transparent;
