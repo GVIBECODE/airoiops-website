@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    'meta.title': 'AI Consulting for Business Owners | AIROIOPS',
+    'meta.title': "AIROIOPS | The Operator's Audit for Las Vegas service businesses",
     'nav.assessment': 'Assessment',
     'nav.builds': 'Builds',
     'nav.how': 'How it works',
@@ -478,7 +478,7 @@ const translations = {
   },
 
   es: {
-    'meta.title': 'Consultoría de IA para Dueños de Negocio | AIROIOPS',
+    'meta.title': 'AIROIOPS | La Auditoría del Operador para negocios de servicio en Las Vegas',
     'nav.assessment': 'Evaluación',
     'nav.builds': 'Construcciones',
     'nav.how': 'Cómo funciona',
