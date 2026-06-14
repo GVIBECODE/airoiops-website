@@ -874,3 +874,20 @@
   @keyframes aioMarq{to{transform:translateX(-50%);}}
   @media(max-width:860px){.aio-ladder,.aio-vs{grid-template-columns:1fr;}.aio-pnum{grid-template-columns:1fr 1fr;}}
   @media(prefers-reduced-motion:reduce){.strip-track{animation:none!important;}}
+
+/* mobile nav menu (added 2026-06-14) */
+.nav-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px;line-height:0;margin-left:4px;}
+.nav-toggle svg{width:26px;height:26px;}
+@media (max-width: 720px){
+  .nav-toggle{display:inline-flex;align-items:center;}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(12,13,18,0.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:6px 24px 16px;margin:0;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;width:100%;padding:14px 0;font-size:17px;color:var(--text);border-bottom:1px solid var(--line-soft);}
+}

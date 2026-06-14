@@ -924,6 +924,7 @@
       <li><a href="/faq">FAQ</a></li>
     </ul>
     <a class="btn btn-primary" href="https://calendly.com/airoiops/airoiops-discovery-call">Book the free call</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </nav>
 
@@ -1344,11 +1345,11 @@
         <a href="https://poopscoopdude.com">Talk to my AI</a>
       </nav>
       <nav class="foot-links" aria-label="More">
-        <a href='/assessment'>Free assessment</a>
-        <a href='/case-study'>Case study</a>
-        <a href="/customers/">Customers</a>
-        <a href="/blog/">Blog</a>
-        <a href='/faq'>FAQ</a>
+        <a href="/services">Services</a>
+        <a href="/results">Results</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
       </nav>
     </div>
     <div class="foot-base">
@@ -1440,6 +1441,31 @@
     if(!openChat()){ var n=0, p=setInterval(function(){ if(openChat()||++n>16) clearInterval(p); }, 250); }
   });
 })();
+</script>
+<style>
+/* mobile nav */
+.nav-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px;line-height:0;margin-left:4px;}
+.nav-toggle svg{width:26px;height:26px;}
+@media (max-width: 720px){
+  .nav-toggle{display:inline-flex;align-items:center;}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(12,13,18,0.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:6px 24px 16px;margin:0;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;width:100%;padding:14px 0;font-size:17px;color:var(--text);border-bottom:1px solid var(--line-soft);}
+}
+</style>
+<script>
+//mobile nav
+
+(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');
+if(t&&l){t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
 </script>
 </body>
 </html>

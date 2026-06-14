@@ -48,3 +48,8 @@
       });
     });
   })();
+
+// mobile nav toggle (added 2026-06-14)
+(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');
+if(t&&l){t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
