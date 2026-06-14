@@ -1,895 +1,1501 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title data-i18n="meta.title">AIROIOPS | The Operator's Vision for Las Vegas service businesses</title>
-  <meta name="description" content="AIROIOPS finds the busywork quietly eating your hours and builds AI systems to handle it. Start with The Operator's Vision, a free, clear map of where AI saves a Las Vegas service business time and money. Built by an operator who runs one.">
-  <meta name="keywords" content="The Operator's Vision, AI automation for service businesses, AI for service business, AI consultant Las Vegas, missed call automation, speed to lead AI agent, custom GPT, Zapier consultant, Make automation, free AI assessment, Las Vegas AI consulting">
-  <meta name="author" content="AIROIOPS">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://airoiops.com/">
-  <link rel="alternate" hreflang="en" href="https://airoiops.com/">
-  <link rel="alternate" hreflang="es" href="https://airoiops.com/?lang=es">
-  <link rel="alternate" hreflang="x-default" href="https://airoiops.com/">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIROIOPS, AI operations for owner-led businesses</title>
+<meta name="description" content="I run two opposite businesses on one AI system, and I will build yours. AI that runs the front office for owner-led businesses in Las Vegas." />
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="es_US">
-  <meta property="og:site_name" content="AIROIOPS">
-  <meta property="og:url" content="https://airoiops.com/">
-  <meta property="og:title" content="Capture the leads you're already losing | AIROIOPS">
-  <meta property="og:description" content="The Operator's Vision shows a Las Vegas service business where it is leaking time and money, then AIROIOPS builds the fix. Free, built by an operator who runs one.">
-  <meta property="og:image" content="https://airoiops.com/og-card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="AIROIOPS. The Operator's Vision. Capture the leads you're already losing. AI automation for Las Vegas service businesses.">
+<!-- Brand mark + tab icon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/icon-512.png" />
+<meta name="theme-color" content="#0c0d12" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Capture the leads you're already losing | AIROIOPS">
-  <meta name="twitter:description" content="The Operator's Vision shows where your Las Vegas service business leaks time and money, then AIROIOPS builds the fix. Free, built by an operator who runs one.">
-  <meta name="twitter:image" content="https://airoiops.com/og-card.png">
+<!-- Social / iMessage share card -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AIROIOPS, AI operations for owner-led businesses" />
+<meta property="og:description" content="I run two opposite businesses on one AI system, and I will build yours. AI that runs the front office so owner-led businesses get their time back." />
+<meta property="og:image" content="https://airoiops.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://airoiops.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AIROIOPS, AI operations for owner-led businesses" />
+<meta name="twitter:description" content="AI that runs the front office for owner-led businesses in Las Vegas. Book a free Operator's Vision." />
+<meta name="twitter:image" content="https://airoiops.com/og.png" />
 
-  <meta name="geo.region" content="US-NV">
-  <meta name="geo.placename" content="Las Vegas">
-  <meta name="geo.position" content="36.1699;-115.1398">
-  <meta name="ICBM" content="36.1699, -115.1398">
+<!-- Google Fonts: Fraunces (variable, opsz) display + Hanken Grotesk body -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <meta name="theme-color" content="#0c0d1f">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2334e3e3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='20' height='20' rx='6' fill='url(%23g)'/%3E%3Cpath d='M6.5 15.5 L10.5 11 L13 13.5 L17.5 8.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.6 8.5 H17.5 V12.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Shorter homepage: long mid-page sections (each also has its own dedicated page) are hidden */
-    #outcomes, #surface, #upsells, #faq { display: none !important; }
-    section:has(.tcard) { display: none !important; }
-  </style>
+<style>
+  /* =========================================================
+     AIROIOPS showcase. One committed aesthetic.
+     Deep near-black ink, warm off-white, single amber accent.
+     No purple, no cyan, no teal. No em-dashes anywhere.
+     ========================================================= */
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://airoiops.com/#business",
-        "name": "AIROIOPS",
-        "alternateName": "AI ROI OPS",
-        "description": "AI consulting for business owners of any size. A free Operator's Vision delivered in 48 hours, plus optional custom-scoped builds for automation (Zapier, Make, or n8n), Custom GPTs, and Speed-to-Lead AI agents.",
-        "url": "https://airoiops.com/",
-        "logo": "https://airoiops.com/og-image.jpg",
-        "image": "https://airoiops.com/og-image.jpg",
-        "currenciesAccepted": "USD",
-        "paymentAccepted": "Credit Card, Bank Transfer",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Las Vegas",
-          "addressRegion": "NV",
-          "postalCode": "89128",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 36.1699,
-          "longitude": -115.1398
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Las Vegas", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Henderson", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "North Las Vegas", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Paradise", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Spring Valley", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Sunrise Manor", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Enterprise", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Summerlin", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Centennial Hills", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Boulder City", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Mesquite", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Pahrump", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Indian Springs", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "City", "name": "Mount Charleston", "containedInPlace": { "@type": "State", "name": "Nevada" } },
-          { "@type": "Country", "name": "United States" }
-        ],
-        "serviceArea": {
-          "@type": "GeoCircle",
-          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 36.1699, "longitude": -115.1398 },
-          "geoRadius": "5000000"
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "Gianny",
-          "jobTitle": "Founder",
-          "description": "Operator running a residential service business in Las Vegas. Built AIROIOPS to bring real AI leverage to business owners of any size, in any vertical."
-        },
-        "knowsAbout": [
-          "AI consulting",
-          "Operator's Vision",
-          "Forensic Google Ads audit",
-          "Forensic Meta ads audit",
-          "ChatGPT for business owners",
-          "Custom GPTs",
-          "Zapier automation",
-          "Speed to Lead AI agents",
-          "AI ROI analysis",
-          "Process optimization for any business size",
-          "AI for service businesses"
-        ],
-        "makesOffer": [
-          { "@type": "Offer", "name": "Operator's Vision", "price": "0", "priceCurrency": "USD", "url": "https://airoiops.com/#assessment", "description": "Free diagnostic. A clear picture of your business running itself, with live examples built on your own business, delivered in 48 hours." },
-          { "@type": "Offer", "name": "Forensic Ad Audit", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Diagnostic build, custom-scoped on the discovery call. 6-8 page audit of 6-12 months of paid ad spend, mapped against the operator's actual paying-customer ledger. 48-hour turnaround." },
-          { "@type": "Offer", "name": "Automation Build", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Multi-step automation built in Zapier, Make, or n8n. Custom-scoped on the discovery call, quoted in writing before any contract, built in your stack." },
-          { "@type": "Offer", "name": "Custom GPT", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Custom-scoped on the discovery call, quoted in writing before any contract, built in your stack." },
-          { "@type": "Offer", "name": "Speed-to-Lead AI Agent", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Custom-scoped on the discovery call, quoted in writing before any contract, built in your stack." },
-          { "@type": "Offer", "name": "Process Optimization", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Custom-scoped on the discovery call, quoted in writing before any contract, built in your stack." },
-          { "@type": "Offer", "name": "Monthly Retainer", "priceCurrency": "USD", "url": "https://airoiops.com/upsells", "description": "Ongoing optimization and maintenance. Cancel anytime." }
-        ],
-        "sameAs": []
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://airoiops.com/#website",
-        "url": "https://airoiops.com/",
-        "name": "AIROIOPS",
-        "description": "AI consulting for business owners of any size. Las Vegas based, serving the United States nationwide.",
-        "inLanguage": ["en-US", "es-US"],
-        "publisher": { "@id": "https://airoiops.com/#business" }
-      },
-      {
-        "@type": "Service",
-        "name": "Operator's Vision",
-        "provider": { "@id": "https://airoiops.com/#business" },
-        "serviceType": "AI consulting",
-        "description": "A free Operator's Vision delivered in 48 hours. A clear picture of your business running itself, with live examples built on your own business and a map of every leak and how it gets handled automatically.",
-        "areaServed": [
-          { "@type": "City", "name": "Las Vegas" },
-          { "@type": "Country", "name": "United States" }
-        ],
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        },
-        "url": "https://airoiops.com/#assessment"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is the Operator's Vision really free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, the Operator's Vision is free. You get an operations audit, live examples built on your own business, and a clear picture of your business running itself, delivered in 48 hours, plus a 20-minute walk-through call. No card, no catch."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does the Operator's Vision take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "48 hours from the time you complete the intake. You can fill the deep-dive intake on your own time or book a 45-minute discovery call. Either way, your Operator's Vision lands in your inbox 48 hours later."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you only serve businesses in Las Vegas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We are based in Las Vegas and we work with business owners of any size across the entire United States. The entire Operator's Vision runs over email and one short call, so geography is not a constraint. Local Las Vegas service businesses get an optional in-person session if they want it."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is included in the Operator's Vision?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An operations audit of your tools and workflows, live examples built on your own business (a working AI assistant, a sample video, a refreshed home page), and a clear map of every leak and how it gets handled automatically. All delivered in 48 hours, plus a 20-minute walk-through call."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will the AI tools work with the software I already use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Every Quick Win is scoped against your actual stack (CRM, email, scheduling, billing, ads). Builds run inside the tools you already pay for, not on a new platform. You own every credential."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need technical skills to ship the Quick Wins?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Quick Wins are picked so a non-technical operator can configure them in an afternoon. If you can paste a prompt into ChatGPT or click through a Zapier setup, you can ship them. The bigger builds with code or multi-step automation are the upsells, where we hand off the technical work."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What do the bigger builds cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every build is custom-scoped on a call after your Operator's Vision. We quote it in writing before you commit, built in your stack, your credentials. The Vision shows you the upside first, so the numbers make sense before you spend anything."
-            }
-          }
-        ]
-      }
-    ]
+  :root {
+    /* ink base + layered panels */
+    --ink:        #0c0d12;
+    --panel:      #14161d;
+    --panel-2:    #1b1e27;
+
+    /* warm off-white text */
+    --text:       #ece8e2;
+    --muted:      #a8a39b;
+    --faint:      #6f6b64;
+
+    /* single accent: warm amber/gold */
+    --accent:     #f5b13d;
+    --accent-hi:  #ffc15e;
+    --accent-dim: rgba(245, 177, 61, 0.14);
+
+    /* hairlines + shadow */
+    --line:       rgba(255, 255, 255, 0.08);
+    --line-soft:  rgba(255, 255, 255, 0.05);
+    --shadow:     0 40px 90px -30px rgba(0, 0, 0, 0.75);
+    --shadow-amber: 0 30px 70px -28px rgba(245, 177, 61, 0.22);
+
+    /* type */
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body:    "Hanken Grotesk", system-ui, sans-serif;
+
+    /* 8pt rhythm */
+    --s1: 8px;  --s2: 16px; --s3: 24px; --s4: 32px;
+    --s5: 48px; --s6: 64px; --s7: 96px; --s8: 128px;
+
+    --maxw: 1240px;
   }
-  </script>
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: var(--body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.002em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--accent); color: #14110a; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* grain overlay over the whole dark base */
+  .grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* layout shell */
+  .wrap {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--s4);
+    position: relative;
+    z-index: 2;
+  }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.7;
+    display: inline-block;
+  }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; }
+
+  /* =========================================================
+     NAV
+     ========================================================= */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    transition: background 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease, padding 0.4s ease;
+    border-bottom: 1px solid transparent;
+    padding: var(--s3) 0;
+  }
+  .nav.scrolled {
+    background: rgba(12, 13, 18, 0.72);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+    padding: calc(var(--s2) + 2px) 0;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s4);
+  }
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    position: relative;
+  }
+  .wordmark b { color: var(--accent); font-weight: 600; }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--s5);
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-links a {
+    font-size: 14px;
+    color: var(--muted);
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 1px; width: 0;
+    background: var(--accent);
+    transition: width 0.32s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover::after { width: 100%; }
+
+  /* buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s1);
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.005em;
+    border-radius: 999px;
+    padding: 13px 24px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.28s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #1a1407;
+    box-shadow: 0 14px 34px -14px rgba(245,177,61,0.6);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hi);
+    transform: translateY(-2px);
+    box-shadow: 0 22px 46px -16px rgba(245,177,61,0.75);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent-hi);
+    transform: translateY(-2px);
+  }
+  .btn .arrow { transition: transform 0.3s ease; }
+  .btn:hover .arrow { transform: translate(3px, -3px); }
+
+  .textlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+    position: relative;
+    padding-bottom: 3px;
+  }
+  .textlink::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0; height: 1px; width: 100%;
+    background: var(--line);
+    transition: background 0.3s ease, height 0.3s ease;
+  }
+  .textlink:hover { color: var(--accent-hi); }
+  .textlink:hover::after { background: var(--accent); height: 2px; }
+
+  a:focus-visible, .btn:focus-visible {
+    outline: 2px solid var(--accent-hi);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* =========================================================
+     HERO, asymmetric
+     ========================================================= */
+  .hero {
+    position: relative;
+    padding: 220px 0 var(--s8);
+    overflow: hidden;
+  }
+  /* amber glows behind hero */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -10%; left: -8%;
+    width: 720px; height: 720px;
+    background: radial-gradient(circle at center, rgba(245,177,61,0.16), rgba(245,177,61,0) 62%);
+    filter: blur(8px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -20%; right: -12%;
+    width: 640px; height: 640px;
+    background: radial-gradient(circle at center, rgba(245,177,61,0.10), rgba(245,177,61,0) 60%);
+    filter: blur(6px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.32fr 0.85fr;
+    gap: var(--s7);
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 7.6vw, 104px);
+    line-height: 0.99;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    max-width: 14ch;
+  }
+  .hero h1 .lead { color: var(--muted); font-weight: 400; }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    margin-top: var(--s4);
+    font-size: clamp(17px, 2vw, 21px);
+    color: var(--muted);
+    max-width: 46ch;
+    line-height: 1.55;
+  }
+  .hero-cta {
+    margin-top: var(--s5);
+    display: flex;
+    align-items: center;
+    gap: var(--s4);
+    flex-wrap: wrap;
+  }
+
+  /* hero reveal lines */
+  .reveal-line { display: block; overflow: hidden; }
+  .reveal-line > span {
+    display: block;
+    transform: translateY(118%);
+    opacity: 0;
+    animation: lineUp 1.05s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+  @keyframes lineUp { to { transform: translateY(0); opacity: 1; } }
+  @keyframes fadeUp { to { transform: translateY(0); opacity: 1; } }
+
+  /* hero visual: two businesses, one system ledger card */
+  .ledger {
+    position: relative;
+    background: linear-gradient(165deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: var(--s5) var(--s4);
+    box-shadow: var(--shadow), var(--shadow-amber);
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+    animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.55s forwards;
+  }
+  .ledger-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: var(--s3);
+  }
+  .ledger-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s2);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .ledger-row:last-of-type { border-bottom: none; }
+  .ledger-biz {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--display);
+    font-size: 18px; font-weight: 500;
+  }
+  .ledger-dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-dim);
+    flex: none;
+  }
+  .ledger-tag {
+    font-family: var(--body);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .ledger-sys {
+    margin-top: var(--s3);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px;
+    border: 1px dashed rgba(245,177,61,0.4);
+    border-radius: 12px;
+    background: var(--accent-dim);
+    font-size: 13px;
+    color: var(--accent-hi);
+    letter-spacing: 0.04em;
+  }
+  .ledger-sys .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent-hi);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,193,94,0.5); }
+    50% { opacity: 0.5; box-shadow: 0 0 0 7px rgba(255,193,94,0); }
+  }
+
+  /* =========================================================
+     PROOF STRIP
+     ========================================================= */
+  .strip {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(20, 22, 29, 0.5);
+  }
+  .strip-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .strip-cell {
+    background: var(--ink);
+    padding: var(--s4) var(--s3);
+    text-align: center;
+  }
+  .strip-cell .k {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+  }
+  .strip-cell .v {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* =========================================================
+     SECTION SCAFFOLD
+     ========================================================= */
+  section { position: relative; z-index: 2; }
+  .section-pad { padding: var(--s8) 0; }
+
+  .sec-head { max-width: 760px; margin-bottom: var(--s6); }
+  .sec-head h2 {
+    margin-top: var(--s3);
+    font-size: clamp(34px, 4.6vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  .sec-head h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .sec-head p {
+    margin-top: var(--s3);
+    color: var(--muted);
+    font-size: 19px;
+    max-width: 54ch;
+  }
+  .sec-index {
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--faint);
+    letter-spacing: 0.04em;
+  }
+
+  /* scroll reveal */
+  .sr { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+  .sr.in { opacity: 1; transform: none; }
+  .sr.d1 { transition-delay: 0.08s; }
+  .sr.d2 { transition-delay: 0.16s; }
+  .sr.d3 { transition-delay: 0.24s; }
+  .sr.d4 { transition-delay: 0.32s; }
+
+  /* =========================================================
+     THE LEAK
+     ========================================================= */
+  .leak {
+    border-top: 1px solid var(--line);
+  }
+  .leak-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .leak-item {
+    background: var(--ink);
+    padding: var(--s5);
+    display: flex;
+    gap: var(--s3);
+    align-items: flex-start;
+    transition: background 0.4s ease;
+  }
+  .leak-item:hover { background: var(--panel); }
+  .leak-num {
+    font-family: var(--display);
+    font-size: 14px;
+    color: var(--faint);
+    flex: none;
+    padding-top: 6px;
+  }
+  .leak-ico {
+    flex: none;
+    width: 46px; height: 46px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    display: grid; place-items: center;
+    color: var(--accent);
+    transition: border-color 0.4s ease, transform 0.4s ease;
+  }
+  .leak-item:hover .leak-ico { border-color: var(--accent); transform: translateY(-2px); }
+  .leak-ico svg { width: 22px; height: 22px; }
+  .leak-body h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .leak-body p {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  /* =========================================================
+     WHAT I BUILD, outcome cards
+     ========================================================= */
+  .build { border-top: 1px solid var(--line); }
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s3);
+  }
+  .card {
+    position: relative;
+    background: linear-gradient(170deg, var(--panel), var(--ink));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: var(--s5);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1), border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,177,61,0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245,177,61,0.45);
+    box-shadow: var(--shadow);
+  }
+  .card:hover::after { opacity: 1; }
+  .card-ico {
+    width: 50px; height: 50px;
+    border-radius: 13px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(245,177,61,0.25);
+    display: grid; place-items: center;
+    color: var(--accent-hi);
+    margin-bottom: var(--s3);
+  }
+  .card-ico svg { width: 24px; height: 24px; }
+  .card h3 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+  }
+  .card p {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .card .dept {
+    display: inline-block;
+    margin-top: var(--s3);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  /* =========================================================
+     WHY ME, two-business proof
+     ========================================================= */
+  .why { border-top: 1px solid var(--line); background: rgba(20,22,29,0.4); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: var(--s7);
+    align-items: center;
+  }
+  .why h2 {
+    font-size: clamp(32px, 4.4vw, 54px);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  .why h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .why p { margin-top: var(--s3); color: var(--muted); font-size: 18px; }
+  .why .lede { color: var(--text); font-size: 20px; }
+  .why-cta { margin-top: var(--s4); }
+
+  .proof-panel {
+    background: linear-gradient(160deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: var(--s5);
+    box-shadow: var(--shadow);
+  }
+  .proof-panel .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .proof-stack {
+    margin-top: var(--s3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2);
+  }
+  .proof-biz {
+    display: flex; align-items: center; gap: 14px;
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: rgba(255,255,255,0.015);
+  }
+  .proof-biz .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex: none; box-shadow: 0 0 0 4px var(--accent-dim); }
+  .proof-biz .name { font-family: var(--display); font-size: 17px; font-weight: 500; }
+  .proof-biz .role { font-size: 13px; color: var(--muted); margin-left: auto; }
+  .proof-bridge {
+    text-align: center;
+    font-size: 12px;
+    color: var(--accent-hi);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 6px 0;
+  }
+  .proof-foot {
+    margin-top: var(--s3);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .proof-foot a { color: var(--accent-hi); }
+
+  /* =========================================================
+     QUIET INSIGHT, illustrative
+     ========================================================= */
+  .insight { border-top: 1px solid var(--line); }
+  .insight-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .insight blockquote {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(26px, 4vw, 44px);
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+  .insight blockquote .hl { color: var(--accent); }
+  .insight .attrib {
+    margin-top: var(--s4);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .insight .repnote {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* =========================================================
+     FAQ
+     ========================================================= */
+  .faq { border-top: 1px solid var(--line); }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: var(--s7);
+  }
+  .faq-list { border-top: 1px solid var(--line); }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: var(--display);
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-align: left;
+    padding: var(--s4) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s3);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .faq-q:hover { color: var(--accent-hi); }
+  .faq-toggle {
+    flex: none;
+    width: 34px; height: 34px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--accent);
+    transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1), border-color 0.3s ease;
+  }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); border-color: var(--accent); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.2,0.7,0.2,1);
+  }
+  .faq-a-inner {
+    padding: 0 0 var(--s4);
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.62;
+    max-width: 60ch;
+  }
+
+  /* =========================================================
+     FINAL CTA BAND
+     ========================================================= */
+  .cta-band { border-top: 1px solid var(--line); position: relative; overflow: hidden; }
+  .cta-band::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle at center, rgba(245,177,61,0.18), rgba(245,177,61,0) 60%);
+    pointer-events: none;
+  }
+  .cta-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .cta-inner h2 {
+    font-size: clamp(38px, 5.6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+  .cta-inner h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .cta-inner p {
+    margin: var(--s3) auto 0;
+    color: var(--muted);
+    font-size: 19px;
+    max-width: 52ch;
+  }
+  .cta-inner .actions {
+    margin-top: var(--s5);
+    display: flex; gap: var(--s3);
+    align-items: center; justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-note {
+    margin-top: var(--s3);
+    font-size: 13px;
+    color: var(--faint);
+  }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: var(--s7) 0 var(--s6);
+    position: relative;
+    z-index: 2;
+  }
+  .foot-grid {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--s5);
+    flex-wrap: wrap;
+  }
+  .foot-mark {
+    font-family: var(--display);
+    font-size: clamp(40px, 8vw, 92px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    color: var(--text);
+  }
+  .foot-mark b { color: var(--accent); }
+  .foot-tag { margin-top: var(--s2); color: var(--muted); font-size: 15px; }
+  .foot-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .foot-links a { color: var(--muted); font-size: 15px; }
+  .foot-links a:hover { color: var(--accent-hi); }
+  .foot-base {
+    margin-top: var(--s6);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--line-soft);
+    display: flex; justify-content: space-between; gap: var(--s3);
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--faint);
+  }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: var(--s6); }
+    .ledger { max-width: 460px; }
+    .why-grid { grid-template-columns: 1fr; gap: var(--s5); }
+    .faq-grid { grid-template-columns: 1fr; gap: var(--s4); }
+    .strip-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    body { font-size: 17px; }
+    .wrap { padding: 0 var(--s3); }
+    .nav-links { display: none; }
+    .hero { padding: 150px 0 var(--s7); }
+    .section-pad { padding: var(--s7) 0; }
+    .leak-grid { grid-template-columns: 1fr; }
+    .build-grid { grid-template-columns: 1fr; }
+    .leak-item, .card { padding: var(--s4); }
+    .foot-grid { flex-direction: column; align-items: flex-start; }
+    .foot-links { align-items: flex-start; text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal-line > span, .fade-up, .ledger { opacity: 1 !important; transform: none !important; }
+    .sr { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ===== additions 2026-06-13: engagement ladder + comparison + proof numbers + marquee ===== */
+  .aio-ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:var(--s5,38px);}
+  .aio-step{position:relative;display:flex;flex-direction:column;background:linear-gradient(170deg,var(--panel),var(--ink));border:1px solid var(--line);border-radius:20px;padding:30px 26px;}
+  .aio-step.lit{border-color:rgba(245,177,61,.45);box-shadow:0 28px 60px -30px rgba(0,0,0,.6);}
+  .aio-tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(245,177,61,.4);border-radius:100px;padding:5px 12px;margin-bottom:18px;}
+  .aio-step .n{font-family:var(--display);font-size:14px;color:rgba(236,232,226,.4);margin-bottom:6px;}
+  .aio-step h3{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:-.01em;margin:0 0 10px;}
+  .aio-step p{color:rgba(236,232,226,.66);font-size:15px;margin:0 0 16px;}
+  .aio-step ul{list-style:none;padding:0;margin:0 0 20px;flex:1;}
+  .aio-step li{position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px;color:rgba(236,232,226,.7);}
+  .aio-step li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--accent);}
+  .aio-step .out{font-size:13.5px;border-top:1px solid var(--line);padding-top:14px;color:var(--text);}
+  .aio-step .out b{color:var(--accent);font-weight:700;}
+  .aio-vs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:var(--s5,38px);}
+  .aio-col{background:linear-gradient(170deg,var(--panel),var(--ink));border:1px solid var(--line);border-radius:20px;padding:28px 26px;}
+  .aio-col.win{border-color:rgba(245,177,61,.5);box-shadow:0 28px 60px -30px rgba(0,0,0,.6);}
+  .aio-col .lab{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(236,232,226,.4);margin-bottom:14px;}
+  .aio-col.win .lab{color:var(--accent);}
+  .aio-col h3{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.01em;margin:0 0 12px;}
+  .aio-col p{color:rgba(236,232,226,.66);font-size:15px;margin:0 0 16px;}
+  .aio-col .cost{font-family:var(--display);font-size:15px;border-top:1px solid var(--line);padding-top:14px;color:var(--text);}
+  .aio-pnum{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:var(--s5,38px);}
+  .aio-stat{background:linear-gradient(170deg,var(--panel),var(--ink));border:1px solid var(--line);border-radius:18px;padding:26px 22px;}
+  .aio-stat .big{font-family:var(--display);font-weight:500;font-size:40px;line-height:1;letter-spacing:-.02em;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .aio-stat .cap{font-size:13px;color:rgba(236,232,226,.66);margin-top:10px;line-height:1.45;}
+  .strip-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+  .strip-track{display:flex;width:max-content;animation:aioMarq 38s linear infinite;}
+  .strip-track:hover{animation-play-state:paused;}
+  .strip-track .strip-cell{padding:var(--s4,20px) clamp(30px,5vw,68px);border-right:1px solid var(--line);text-align:left;white-space:nowrap;}
+  @keyframes aioMarq{to{transform:translateX(-50%);}}
+  @media(max-width:860px){.aio-ladder,.aio-vs{grid-template-columns:1fr;}.aio-pnum{grid-template-columns:1fr 1fr;}}
+  @media(prefers-reduced-motion:reduce){.strip-track{animation:none!important;}}
+</style>
 </head>
 <body>
 
-  <!-- ============ NAV ============ -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="logo" aria-label="AIROIOPS home"><svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="navUp" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#34e3e3"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#navUp)"/><path d="M6.5 15.5 L10.5 11 L13 13.5 L17.5 8.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.6 8.5 H17.5 V12.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>AIROI<span>OPS</span></a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a class="nav-item" href="#assessment" data-i18n="nav.assessment">Free Vision</a>
-        <a class="nav-item" href="/upsells" data-i18n="nav.builds">Builds</a>
-        <a class="nav-item" href="#how" data-i18n="nav.how">How it works</a>
-        <a class="nav-item" href="#proof" data-i18n="nav.proof">Proof</a>
-        <a class="nav-item" href="/customers/" data-i18n="nav.customers">Customers</a>
-        <a class="nav-item" href="/blog/" data-i18n="nav.blog">Blog</a>
-        <a class="nav-item" href="/faq" data-i18n="nav.faq">FAQ</a>
-        <div class="nav-lang" role="group" aria-label="Language">
-          <button data-lang="en" type="button" aria-label="English">EN</button>
-          <span class="nav-lang-sep" aria-hidden="true">&middot;</span>
-          <button data-lang="es" type="button" aria-label="Espanol">ES</button>
-        </div>
-        <a class="nav-cta" href="#book" data-i18n="nav.book">Book Call</a>
-      </div>
-    </div>
-  </nav>
+<div class="grain" aria-hidden="true"></div>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            <span data-i18n="hero.badge">The Operator's Vision &middot; free for Vegas service businesses</span>
-          </div>
-          <h1 data-i18n="hero.h1">Capture the leads <span class="grad">you're already losing.</span></h1>
-          <p class="hl" data-i18n="hero.lede">I am a Vegas service business operator. I built an AI ops layer for my own shop that catches every call and kills the back-office drain. Now I build a free Operator's Vision for other Vegas trades: a clear picture of your whole business running itself.</p>
-          <div class="cta-row">
-            <a href="#book" class="btn btn-primary">
-              <span data-i18n="hero.cta_primary">Get your free Operator's Vision</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#assessment" class="btn btn-glass" data-i18n="hero.cta_ghost">See the Operator's Vision</a>
-          </div>
-          <p class="cta-alt">
-            <span data-i18n="hero.cta_alt_pre">Or want the free leak audit instead?</span>
-            <a href="#chooser" data-i18n="hero.cta_alt_link">Get the free 48-hour leak audit &rarr;</a>
-          </p>
-          <div class="trust">
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div class="trust-text" data-i18n="hero.trust">Free &middot; built by an operator who runs his own AI ops stack &middot; English and Spanish</div>
-          </div>
-        </div>
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="wordmark" aria-label="AIROIOPS home" style="display:inline-flex;align-items:center;text-decoration:none"><svg width="158" height="29" viewBox="0 0 880 160" aria-hidden="true"><g fill="#f5efe6"><polygon points="62,20 88,20 138,140 110,140 75,49 40,140 12,140"/><rect x="158" y="20" width="26" height="120"/><path d="M 206 20 H 296 L 312 36 V 74 L 296 90 H 262 L 314 140 H 280 L 232 92 V 140 H 206 Z M 232 44 V 68 H 282 L 286 64 V 48 L 282 44 Z"/><g transform="translate(-16,0)"><path fill="#d4a537" d="M 352 36 L 368 20 H 432 L 448 36 V 124 L 432 140 H 368 L 352 124 Z M 378 44 L 378 116 L 422 116 L 422 44 Z"/><rect fill="#d4a537" x="470" y="20" width="26" height="120"/><path d="M 518 36 L 534 20 H 598 L 614 36 V 124 L 598 140 H 534 L 518 124 Z M 544 44 L 544 116 L 588 116 L 588 44 Z"/><path d="M 638 20 H 728 L 744 36 V 78 L 728 94 H 664 V 140 H 638 Z M 664 44 V 70 H 714 L 718 66 V 48 L 714 44 Z"/><path d="M 766 20 H 872 V 44 H 792 V 68 H 856 L 872 84 V 124 L 856 140 H 766 V 116 H 846 V 92 H 782 L 766 76 Z"/></g></g></svg></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/results">Results</a></li>
+      <li><a href="/how-it-works">How it works</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://calendly.com/airoiops/airoiops-discovery-call">Book the free call</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
 
-        <div class="hero-demo">
-          <div class="demo-phone" role="img" aria-label="Live demo of Annie, the AIROIOPS AI agent, finding a leak and building the Operator's Vision">
-            <div class="dp-bar">
-              <div class="dp-id">
-                <span class="dp-av">A</span>
-                <div class="dp-meta">
-                  <div class="dp-name" data-i18n="demo.header_name">Annie</div>
-                  <div class="dp-sub"><span class="dp-dot"></span><span data-i18n="demo.status">Active now</span></div>
-                </div>
-              </div>
-              <div class="dp-live" data-i18n="demo.badge">LIVE</div>
-            </div>
-            <div class="dp-thread">
-              <div class="dp-msg in" data-i18n="demo.b1">Hey, I'm Annie. What's the one thing slipping through the cracks in your shop?</div>
-              <div class="dp-msg out" data-i18n="demo.b2">Leads. We miss calls and texts at night.</div>
-              <div class="dp-msg in" data-i18n="demo.b3">That's the leak. About 12 missed leads a month at your ticket size is roughly $23,400 a year gone.</div>
-              <div class="dp-msg in" data-i18n="demo.b4">Your Operator's Vision maps every leak like this in 48 hours, then shows your whole business running without them. Want me to build yours?</div>
-              <div class="dp-msg out" data-i18n="demo.b5">Yes, let's do it.</div>
-              <div class="dp-typing" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="dp-msg in dp-last" data-i18n="demo.b6">Booked. Check your inbox in 48 hours.</div>
-            </div>
-            <a href="#chooser" class="dp-cta">
-              <span data-i18n="demo.cta">Talk to Annie now (2 min call)</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-          <p class="demo-cap" data-i18n="demo.caption">Live demo. Annie is the same AI agent we install inside your business.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow fade-up" style="animation-delay:.1s">AI operations for owner-led businesses</p>
 
-  <!-- ============ STATS ============ -->
-  <section class="stats">
-    <div class="wrap">
-      <div class="stats-grid">
-        <div class="stat"><div class="num" data-target="48">48</div><div class="lbl" data-i18n="stats.days">hour turnaround</div></div>
-        <div class="stat"><div class="num" data-target="5" data-suffix="+">5+</div><div class="lbl" data-i18n="stats.automations">Quick Wins per report</div></div>
-        <div class="stat"><div class="num">Free</div><div class="lbl" data-i18n="stats.price">yours to keep</div></div>
-        <div class="stat"><div class="num" data-target="100" data-suffix="%">100%</div><div class="lbl" data-i18n="stats.refund">yours forever</div></div>
-      </div>
-    </div>
-  </section>
+      <h1 style="margin-top: var(--s4)">
+        <span class="reveal-line"><span style="animation-delay:.18s">The leads you lose</span></span>
+        <span class="reveal-line"><span class="lead" style="animation-delay:.30s">while you are working.</span></span>
+        <span class="reveal-line"><span style="animation-delay:.46s">I build the <em>AI</em> that</span></span>
+        <span class="reveal-line"><span style="animation-delay:.58s">catches them.</span></span>
+      </h1>
 
-  <!-- ============ TRUST BAR ============ -->
-  <section class="trustbar" aria-label="Why operators trust AIROIOPS">
-    <div class="wrap">
-      <div class="trustbar-row">
-        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t1">Real Vegas operator, not an agency</span></span>
-        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t2">Built in your stack, you own every credential</span></span>
-        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t3">Milestone-gated payments</span></span>
-        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t4">48-hour delivery</span></span>
-        <span class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustbar.t5">English and Spanish</span></span>
-      </div>
-    </div>
-  </section>
+      <p class="hero-sub fade-up" style="animation-delay:.82s">
+        AI that runs the front office for owner-led businesses. It answers every call, DM, and text in seconds, day or night, books the work, follows up until people reply, and hands you your time back. Freeing your time, not replacing anyone.
+      </p>
 
-  <!-- ============ PROBLEMS ============ -->
-  <section id="problems">
-    <div class="wrap">
-      <div class="kicker" data-i18n="problems.kicker">What you're actually fighting</div>
-      <h2 class="h2" data-i18n="problems.h2">Most AI consulting <span class="grad">won't say this out loud.</span></h2>
-      <p class="lede" data-i18n="problems.lede">Four leaks are eating most businesses right now, at every size. The tech stack is incidental. The leak is the problem.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="card-num">10-15 hrs<span class="card-num-suf"> /wk</span></div>
-          <h3 data-i18n="problems.c1_title">Hours burned on manual work</h3>
-          <p data-i18n="problems.c1_body">Quotes, follow-ups, invoices, inbox triage, scheduling. Most of it doesn't need you. Most of it doesn't get done well anyway. The day ends and you wonder where it went.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">$20-50k<span class="card-num-suf"> /yr</span></div>
-          <h3 data-i18n="problems.c2_title">Money leaking out the back door</h3>
-          <p data-i18n="problems.c2_body">Dead ad spend. Leads who texted at 9pm and never heard back. $50-an-hour labor on $0 work. Every leak is small. Stack them up and they're a whole employee's salary.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">~78%<span class="card-num-suf"> cold</span></div>
-          <h3 data-i18n="problems.c3_title">No system that closes the loop</h3>
-          <p data-i18n="problems.c3_body">Lead drops in. Sits. Goes cold. Or you scramble at midnight to send a quote you'll forget you sent. Selling, but not converting, is the most expensive way to grow.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">$20k+<span class="card-num-suf"> floor</span></div>
-          <h3 data-i18n="problems.c4_title">Tools built for enterprise, not you</h3>
-          <p data-i18n="problems.c4_body">Most "AI for business" is sold by people who've never run one. Wrong stack, wrong price, wrong language. By the time you finish onboarding, the quarter's over.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ASSESSMENT ============ -->
-  <section id="assessment" class="band-tint">
-    <div class="wrap">
-      <div class="assess-grid">
-        <div class="assess-intro">
-          <div class="kicker" data-i18n="assessment.kicker">The Operator's Vision</div>
-          <h2 class="h2" data-i18n="assessment.h2">What you actually get, <span class="grad">free</span>.</h2>
-          <p class="lede" style="margin-bottom:28px;" data-i18n="assessment.lede">No 90-day discovery phase. No slide deck disguised as a deliverable. A clear picture of your business running itself, with live examples built on your own business, so you can see exactly what is possible before you spend a dollar.</p>
-          <div class="section-cta" style="margin-top:0;">
-            <a href="/assessment" class="btn btn-primary">
-              <span data-i18n="assessment.cta_pay">Get your free Operator's Vision</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#book" class="btn btn-ghost" data-i18n="assessment.cta">Or book a free Discovery Call first</a>
-            <a href="#chooser" class="btn btn-ghost" data-i18n="assessment.cta_alt">Or talk to our AI specialist</a>
-          </div>
-          <div class="report-visual" aria-hidden="true">
-            <div class="rv-doc">
-              <div class="rv-line g"></div>
-              <div class="rv-line"></div>
-              <div class="rv-line"></div>
-              <div class="rv-line"></div>
-              <div class="rv-line s"></div>
-            </div>
-            <div class="rv-cap">Operator's Vision &middot; built on your business</div>
-          </div>
-        </div>
-        <ol class="assess-steps">
-          <li data-n="01">
-            <h3 data-i18n="assessment.c1_title">Operations Audit</h3>
-            <p data-i18n="assessment.c1_body">Deep-dive on your tools, workflows, and data. We map every recurring task in your business and tag it for AI leverage.</p>
-          </li>
-          <li data-n="02">
-            <h3 data-i18n="assessment.c2_title">Quick Wins You Can Ship</h3>
-            <p data-i18n="assessment.c2_body">5-7 DIY recommendations ranked by ROI and effort. Tools you can subscribe to, integrations you can configure in an afternoon, prompts you can paste into ChatGPT today.</p>
-          </li>
-          <li data-n="03">
-            <h3 data-i18n="assessment.c3_title">The bigger results, built for you</h3>
-            <p data-i18n="assessment.c3_body">Want more than the free wins? We build the bigger results into your business: leads answered around the clock, the busywork gone, your numbers clean. You only pay if you want it, and you will know the cost on the call.</p>
-          </li>
-          <li data-n="04">
-            <h3 data-i18n="assessment.c4_title">AI Roadmap</h3>
-            <p data-i18n="assessment.c4_body">The sequenced path from your first Quick Win to a fully AI-leveraged ops stack. Phased milestones, prioritized backlog, no fluff.</p>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ HOW IT WORKS ============ -->
-  <section id="how">
-    <div class="wrap">
-      <div class="kicker" data-i18n="how.kicker">How it works</div>
-      <h2 class="h2" data-i18n="how.h2">Three steps. <span class="grad">The vision is free.</span></h2>
-      <div class="timeline">
-        <div class="tl-step">
-          <div class="tl-node">1</div>
-          <div class="tl-card">
-            <div class="tl-day" data-i18n="how.day1">Step 1</div>
-            <h3 data-i18n="how.s1_title">Get your free Operator's Vision</h3>
-            <p data-i18n="how.s1_body">Tell us about your business in a quick form, or talk it through with Annie. In 48 hours you get a clear picture of your whole operation running itself, built on your real business. Free, no card.</p>
-          </div>
-        </div>
-        <div class="tl-step">
-          <div class="tl-node">2</div>
-          <div class="tl-card">
-            <div class="tl-day" data-i18n="how.day2">Step 2</div>
-            <h3 data-i18n="how.s2_title">Walk through it together</h3>
-            <p data-i18n="how.s2_body">We hop on a short call and go through what is possible, what is leaking, and what it looks like once it is handled. No pressure. Just your business, clearer.</p>
-          </div>
-        </div>
-        <div class="tl-step">
-          <div class="tl-node">3</div>
-          <div class="tl-card">
-            <div class="tl-day" data-i18n="how.day3">Step 3</div>
-            <h3 data-i18n="how.s3_title">We build the parts you want</h3>
-            <p data-i18n="how.s3_body">Pick what you want made real and I do the hard work, wired into your business. That part is paid, and you will know exactly what it costs on the call. Only if you want it.</p>
-          </div>
-        </div>
-      </div>
-      <div class="section-cta">
-        <a href="#book" class="btn btn-primary">
-          <span data-i18n="how.cta">Get your free Operator's Vision</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="hero-cta fade-up" style="animation-delay:.96s">
+        <a class="btn btn-primary" href="https://calendly.com/airoiops/airoiops-discovery-call">
+          See your free Operator's Vision
+          <span class="arrow" aria-hidden="true">&#8599;</span>
         </a>
+        <a class="textlink" href="https://poopscoopdude.com">Talk to my AI &rarr;</a>
       </div>
     </div>
-  </section>
 
-  <!-- ============ OUTCOMES ============ -->
-  <section id="outcomes" class="band-tint">
-    <div class="wrap">
-      <div class="kicker" data-i18n="outcomes.kicker">What you actually get back</div>
-      <h2 class="h2" data-i18n="outcomes.h2">Forget the tools. <span class="grad">This is what you're buying.</span></h2>
-      <p class="lede" data-i18n="outcomes.lede">The roadmap, the report, the automations. None of that is why you'd hire us. You're buying these four things. Everything else is just how we deliver them.</p>
-      <div class="outcome-list">
-        <div class="outcome-row">
-          <div><div class="outcome-no">01</div><div class="outcome-key" data-i18n="outcomes.c1_label">Time</div></div>
-          <div>
-            <h3 data-i18n="outcomes.c1_title">Your nights and weekends back</h3>
-            <p data-i18n="outcomes.c1_body">Most operators we work with were burning 10 to 15 hours a week on quotes, follow-ups, invoices, and inbox triage. Most of that work doesn't need you. Get those hours back for family, for sleep, or for the moves only you can make.</p>
-          </div>
-        </div>
-        <div class="outcome-row">
-          <div><div class="outcome-no">02</div><div class="outcome-key" data-i18n="outcomes.c2_label">Money</div></div>
-          <div>
-            <h3 data-i18n="outcomes.c2_title">The leaks you didn't know you had</h3>
-            <p data-i18n="outcomes.c2_body">Dead ad spend. Leads who texted at 9pm and never heard back. Manual work paid at $50 an hour that should cost zero. The audit usually finds $20k to $50k a year in leak on the first pass. Plug it once, keep the savings every year after.</p>
-          </div>
-        </div>
-        <div class="outcome-row">
-          <div><div class="outcome-no">03</div><div class="outcome-key" data-i18n="outcomes.c3_label">Freedom</div></div>
-          <div>
-            <h3 data-i18n="outcomes.c3_title">A business that doesn't need you for everything</h3>
-            <p data-i18n="outcomes.c3_body">Lead follow-up runs without you. Quotes go out without you. The small stuff stops eating the day so you can work on the business instead of in it. The point isn't to do AI. It's to be free of the $20-an-hour tasks that have been holding you hostage.</p>
-          </div>
-        </div>
-        <div class="outcome-row">
-          <div><div class="outcome-no">04</div><div class="outcome-key" data-i18n="outcomes.c4_label">Leverage</div></div>
-          <div>
-            <h3 data-i18n="outcomes.c4_title">Compounding, not one-time</h3>
-            <p data-i18n="outcomes.c4_body">An employee costs you again every month. The plays we install keep paying every month at zero extra cost. Year two is pure margin. That's the difference between hiring help and building leverage.</p>
-          </div>
-        </div>
+    <!-- hero visual: two businesses, one system ledger -->
+    <aside class="ledger" aria-label="Two businesses, one AI system">
+      <div class="ledger-eyebrow">Two businesses, one system</div>
+
+      <div class="ledger-row">
+        <div class="ledger-biz"><span class="ledger-dot"></span> Poop Scoop Dude</div>
+        <div class="ledger-tag">Las Vegas service business</div>
       </div>
-      <div class="section-cta">
-        <a href="#book" class="btn btn-primary">
-          <span data-i18n="outcomes.cta">Book a free Discovery Call</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#assessment" class="btn btn-ghost" data-i18n="outcomes.cta_alt">See how we deliver it</a>
+      <div class="ledger-row">
+        <div class="ledger-biz"><span class="ledger-dot"></span> AIROIOPS</div>
+        <div class="ledger-tag">AI operations studio</div>
       </div>
+      <div class="ledger-row">
+        <div class="ledger-biz"><span class="ledger-dot"></span> Your business</div>
+        <div class="ledger-tag">Owner-led, built next</div>
+      </div>
+
+      <div class="ledger-sys">
+        <span class="pulse" aria-hidden="true"></span>
+        ONE AI front office, running live
+      </div>
+    </aside>
+  </div>
+</header>
+
+<!-- ===================== PROOF STRIP ===================== -->
+<div class="strip">
+  <div class="strip-mask">
+    <div class="strip-track" aria-label="Why owners work with AIROIOPS">
+      <div class="strip-cell"><div class="k">A real Vegas operator</div><div class="v">Not a faceless agency</div></div>
+      <div class="strip-cell"><div class="k">Built inside my own tools</div><div class="v">Proven on myself first</div></div>
+      <div class="strip-cell"><div class="k">English and Spanish</div><div class="v">Answers in both</div></div>
+      <div class="strip-cell"><div class="k">You own all of it</div><div class="v">Your accounts, your data</div></div>
+      <div class="strip-cell" aria-hidden="true"><div class="k">A real Vegas operator</div><div class="v">Not a faceless agency</div></div>
+      <div class="strip-cell" aria-hidden="true"><div class="k">Built inside my own tools</div><div class="v">Proven on myself first</div></div>
+      <div class="strip-cell" aria-hidden="true"><div class="k">English and Spanish</div><div class="v">Answers in both</div></div>
+      <div class="strip-cell" aria-hidden="true"><div class="k">You own all of it</div><div class="v">Your accounts, your data</div></div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ============ SURFACE / DEPARTMENTS ============ -->
-  <section id="surface">
-    <div class="wrap">
-      <div class="kicker" data-i18n="surface.kicker">Where AI lands hardest</div>
-      <h2 class="h2" data-i18n="surface.h2">AI for <span class="grad">every department.</span></h2>
-      <p class="lede" data-i18n="surface.lede">From sales to operations to finance, every team across your business unlocks more once AI plugs into the right workflow.</p>
+<!-- ===================== THE LEAK ===================== -->
+<section class="leak section-pad" id="leak">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">01 / The leak</span>
+      <h2>Most owner-led businesses leak <em>revenue</em> in the same four places.</h2>
+      <p>You are good at the work. The leak is everything happening around it, the calls you cannot pick up, the leads that go cold, the same answers typed by hand all day. Here is where it shows up.</p>
+    </div>
 
-      <div class="tabs" role="tablist" aria-label="Departments">
-        <button class="tab is-active" role="tab" aria-selected="true" data-panel="sales" type="button" data-i18n="surface.dept_sales">Sales</button>
-        <button class="tab" role="tab" aria-selected="false" data-panel="marketing" type="button" data-i18n="surface.dept_marketing">Marketing</button>
-        <button class="tab" role="tab" aria-selected="false" data-panel="support" type="button" data-i18n="surface.dept_support">Support</button>
-        <button class="tab" role="tab" aria-selected="false" data-panel="ops" type="button" data-i18n="surface.dept_ops">Operations</button>
-        <button class="tab" role="tab" aria-selected="false" data-panel="finance" type="button" data-i18n="surface.dept_finance">Finance</button>
-      </div>
-
-      <div class="panel is-active" data-panel="sales" role="tabpanel">
-        <div class="sp-card">
-          <div class="sp-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="surface.sales_title">Sales acceleration</h3>
-          <p data-i18n="surface.sales_body">Close deals faster with AI-powered lead recovery, automated outreach, and real-time response to every inbound lead. The leads that already paid you to acquire stop slipping through.</p>
-          <ul class="sp-bullets">
-            <li data-i18n="surface.sales_b1">Speed-to-Lead AI agent (voice and SMS)</li>
-            <li data-i18n="surface.sales_b2">Lead recovery cadence across cold leads</li>
-            <li data-i18n="surface.sales_b3">Automated outreach sequences</li>
-            <li data-i18n="surface.sales_b4">Conversation intelligence and follow-up</li>
-          </ul>
-          <a href="/upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
-        </div>
-        <div class="sp-side">
-          <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
-          <div class="sp-stat"><div class="num">100%</div><div class="lbl" data-i18n="surface.sales_s1_lbl">Inbound texts answered, day or night</div></div>
-          <div class="sp-stat"><div class="num">&lt;60s</div><div class="lbl" data-i18n="surface.sales_s2_lbl">Average response time on a new lead</div></div>
-          <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+    <div class="leak-grid sr d1">
+      <div class="leak-item">
+        <span class="leak-num">01</span>
+        <span class="leak-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 6.5a4 4 0 0 1 0 11"/><path d="M5 9v6a1 1 0 0 0 1 1h2.5L13 20V4L8.5 8H6a1 1 0 0 0-1 1Z"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+        </span>
+        <div class="leak-body">
+          <h3>After-hours calls and DMs missed</h3>
+          <p>The customer who calls at 8pm does not leave a voicemail. They call the next name on the list. Every missed ring after closing is a job you never knew you lost.</p>
         </div>
       </div>
 
-      <div class="panel" data-panel="marketing" role="tabpanel">
-        <div class="sp-card">
-          <div class="sp-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5zM15 9a3 3 0 010 6m4-9a7 7 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="surface.mkt_title">Marketing intelligence</h3>
-          <p data-i18n="surface.mkt_body">Replace the agency that has been billing you for three months without leads. We pull every reported conversion against real revenue and surface the spend that actually pays back.</p>
-          <ul class="sp-bullets">
-            <li data-i18n="surface.mkt_b1">Forensic Google and Meta ads audit</li>
-            <li data-i18n="surface.mkt_b2">Local SEO and Google Business Profile</li>
-            <li data-i18n="surface.mkt_b3">Content engine and repurposing</li>
-            <li data-i18n="surface.mkt_b4">Audience segmentation and retargeting</li>
-          </ul>
-          <a href="/upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
-        </div>
-        <div class="sp-side">
-          <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
-          <div class="sp-stat"><div class="num">$4,500+</div><div class="lbl" data-i18n="surface.mkt_s1_lbl">Ad waste identified and reallocated on a single audit</div></div>
-          <div class="sp-stat"><div class="num">6-12 mo</div><div class="lbl" data-i18n="surface.mkt_s2_lbl">Of paid spend audited line by line</div></div>
-          <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+      <div class="leak-item">
+        <span class="leak-num">02</span>
+        <span class="leak-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.9 4.9 2.8 2.8"/><path d="M2 12h4"/><circle cx="12" cy="14" r="6"/><path d="M12 11v3l2 1.5"/></svg>
+        </span>
+        <div class="leak-body">
+          <h3>Warm leads going cold before you reply</h3>
+          <p>Someone reaches out ready to buy. By the time you finish the job in front of you and circle back hours later, they have already booked with somebody who answered first.</p>
         </div>
       </div>
 
-      <div class="panel" data-panel="support" role="tabpanel">
-        <div class="sp-card">
-          <div class="sp-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="surface.sup_title">Customer support</h3>
-          <p data-i18n="surface.sup_body">A custom GPT trained on your FAQs, pricing, SOPs, and product docs. Lives in your stack, answers in your voice, never sounds like a chatbot. Covers the hours your team cannot.</p>
-          <ul class="sp-bullets">
-            <li data-i18n="surface.sup_b1">Custom GPT trained on your business</li>
-            <li data-i18n="surface.sup_b2">After-hours auto-reply with language detection</li>
-            <li data-i18n="surface.sup_b3">FAQ and pricing on autopilot</li>
-            <li data-i18n="surface.sup_b4">Sentiment-aware ticket triage</li>
-          </ul>
-          <a href="/upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
-        </div>
-        <div class="sp-side">
-          <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
-          <div class="sp-stat"><div class="num">24/7</div><div class="lbl" data-i18n="surface.sup_s1_lbl">Coverage on inbound questions, including weekends</div></div>
-          <div class="sp-stat"><div class="num">EN + ES</div><div class="lbl" data-i18n="surface.sup_s2_lbl">Auto language detection on every reply</div></div>
-          <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+      <div class="leak-item">
+        <span class="leak-num">03</span>
+        <span class="leak-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+        </span>
+        <div class="leak-body">
+          <h3>The same questions answered by hand all day</h3>
+          <p>What do you charge, do you cover my area, when can you come out. You answer the same handful of questions a hundred times a week, and every one pulls you off the actual work.</p>
         </div>
       </div>
 
-      <div class="panel" data-panel="ops" role="tabpanel">
-        <div class="sp-card">
-          <div class="sp-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11H5l4-7m6 16h-4l4-7M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="surface.ops_title">Operations optimization</h3>
-          <p data-i18n="surface.ops_body">Streamline every workflow. Pull data from a form, draft a quote, send the contract, sync to your accounting. The whole back-office stops eating you, every day.</p>
-          <ul class="sp-bullets">
-            <li data-i18n="surface.ops_b1">Quote and proposal automation</li>
-            <li data-i18n="surface.ops_b2">Make scenarios that orchestrate your stack</li>
-            <li data-i18n="surface.ops_b3">Workflow redesign end-to-end</li>
-            <li data-i18n="surface.ops_b4">Live operations dashboards</li>
-          </ul>
-          <a href="/upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
-        </div>
-        <div class="sp-side">
-          <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
-          <div class="sp-stat"><div class="num">4 &rarr; 1</div><div class="lbl" data-i18n="surface.ops_s1_lbl">Disconnected systems consolidated into one Make scenario</div></div>
-          <div class="sp-stat"><div class="num">3+ hrs</div><div class="lbl" data-i18n="surface.ops_s2_lbl">Per week reclaimed from manual data hand-offs</div></div>
-          <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
-        </div>
-      </div>
-
-      <div class="panel" data-panel="finance" role="tabpanel">
-        <div class="sp-card">
-          <div class="sp-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="surface.fin_title">Finance intelligence</h3>
-          <p data-i18n="surface.fin_body">Books that close themselves. Receipts auto-log to QuickBooks. Bank reconciliation runs on a schedule. Sunday spreadsheet sessions are over.</p>
-          <ul class="sp-bullets">
-            <li data-i18n="surface.fin_b1">QuickBooks auto-sync (Sales Receipts, not invoices)</li>
-            <li data-i18n="surface.fin_b2">Receipt capture from camera roll</li>
-            <li data-i18n="surface.fin_b3">Bank rules and monthly close</li>
-            <li data-i18n="surface.fin_b4">Cash velocity tracking</li>
-          </ul>
-          <a href="/upsells" class="btn btn-ghost" data-i18n="surface.cta_learn">Learn more</a>
-        </div>
-        <div class="sp-side">
-          <div class="sp-eyebrow" data-i18n="surface.outcomes_label">Typical outcomes</div>
-          <div class="sp-stat"><div class="num">24</div><div class="lbl" data-i18n="surface.fin_s1_lbl">Orphan QuickBooks invoices reconciled in a single cleanup</div></div>
-          <div class="sp-stat"><div class="num">Same-day</div><div class="lbl" data-i18n="surface.fin_s2_lbl">Receipt-to-QuickBooks posting on every transaction</div></div>
-          <div class="sp-disclaimer" data-i18n="surface.disclaimer">Numbers from real AIROIOPS engagements. Outcomes vary by scope and stack.</div>
+      <div class="leak-item">
+        <span class="leak-num">04</span>
+        <span class="leak-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4"/><path d="M17.5 10v4"/><path d="M6.5 10v4"/><path d="M10 17.5H7a1 1 0 0 1-1-1V14"/></svg>
+        </span>
+        <div class="leak-body">
+          <h3>Jumping between tools that do not talk</h3>
+          <p>The booking app, the texts, the spreadsheet, the inbox. Nothing connects, so you become the glue, copying details from one screen to the next instead of running your business.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ UPSELLS ============ -->
-  <section id="upsells" class="band-tint">
-    <div class="wrap center">
-      <div class="kicker" data-i18n="upsells.kicker">Optional Builds</div>
-      <h2 class="h2" data-i18n="upsells.h2">If you want it <span class="grad">done for you</span>, here's what changes.</h2>
-      <p class="lede" data-i18n="upsells.lede_short">Your free Operator's Vision shows you what's possible. These are the results we can build into your business, so the back office runs itself and you focus on the work that pays.</p>
-      <div class="section-cta">
-        <a href="/upsells" class="btn btn-primary">
-          <span data-i18n="upsells.cta_see_menu">See everything we build</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#book" class="btn btn-ghost" data-i18n="upsells.cta">Book a call to scope a build</a>
+<!-- ===================== WHAT I BUILD ===================== -->
+<section class="build section-pad" id="build">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">02 / What I build</span>
+      <h2>Not software you have to learn. <em>Outcomes</em> by department.</h2>
+      <p>You do not need new tools to babysit. You need the work that happens around the work to run itself. Here is what gets handled, framed by what it actually does for you.</p>
+    </div>
+
+    <div class="build-grid">
+      <article class="card sr d1">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.66A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        </div>
+        <h3>A front desk that never sleeps</h3>
+        <p>Every call, text, and DM gets answered in seconds, day or night, in English or Spanish. It quotes, it books, it captures the lead. Nothing rings out into silence again.</p>
+        <span class="dept">The front desk</span>
+      </article>
+
+      <article class="card sr d2">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>Follow-up that never forgets</h3>
+        <p>The warm lead who went quiet gets a real, friendly nudge until they reply or close. No more leads slipping through because the day got busy and you forgot to circle back.</p>
+        <span class="dept">Sales follow-up</span>
+      </article>
+
+      <article class="card sr d1">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-2 2-2-2"/><path d="M20 13V9"/></svg>
+        </div>
+        <h3>Win-back that runs itself</h3>
+        <p>Customers who went quiet are worth more than strangers. The system reaches back out on its own and reopens the relationship, turning past jobs into repeat revenue.</p>
+        <span class="dept">Retention</span>
+      </article>
+
+      <article class="card sr d2">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/><circle cx="7" cy="15" r="0.6" fill="currentColor"/></svg>
+        </div>
+        <h3>An owner dashboard so you can see it working</h3>
+        <p>One calm view of what came in, what got booked, what got followed up, and what got won back. You stay in control without living inside five different apps.</p>
+        <span class="dept">The owner view</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ME ===================== -->
+<section class="why section-pad" id="proof">
+  <div class="wrap why-grid">
+    <div class="sr">
+      <span class="sec-index">03 / Why me</span>
+      <h2 style="margin-top: var(--s3)">I run two opposite businesses on one AI system. <em>I built it on myself first.</em></h2>
+      <p class="lede">I am not an agency reselling someone else's software. I am a Las Vegas operator who got tired of leaking revenue, so I built the AI front office for my own business before I ever offered it to anyone else.</p>
+      <p>One of those businesses scoops dog waste across Las Vegas. The other is this. Same operator, same stack, two completely different worlds. If it can run a service business and a studio at the same time, it can run yours.</p>
+      <div class="why-cta">
+        <a class="textlink" href="https://poopscoopdude.com">Go talk to my own AI at poopscoopdude.com &rarr;</a>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROOF ============ -->
-  <section id="proof">
-    <div class="wrap">
-      <div class="kicker" data-i18n="proof.kicker">Proof Case</div>
-      <h2 class="h2" data-i18n="proof.h2">We use this on our own businesses <span class="grad">first.</span></h2>
-      <div class="proof-card">
-        <div class="proof-main">
-          <div class="proof-tag" data-i18n="proof.tag">SISTER BUSINESS &middot; LAS VEGAS RESIDENTIAL SERVICE</div>
-          <h3 data-i18n="proof.h3">The rebuild: 4 disconnected systems consolidated into one AI operating system.</h3>
-          <p data-i18n="proof.body">A Las Vegas residential service we ran our Operator's Vision on, then rebuilt all the way through. Lead-recovery automation live on a year of unconverted ad spend. A brittle Zapier glue retired. The CRM-to-QuickBooks integration replaced. Auto-replies live. SMS sender verified. A live operations dashboard refreshing without anyone touching it. Delivered in phased waves, each one standing alone.</p>
-          <div class="proof-metrics">
-            <div><span class="pm-num" data-target="4" data-suffix=" &rarr; 1">4 &rarr; 1</span><span class="pm-lbl" data-i18n="proof.m1">systems consolidated</span></div>
-            <div><span class="pm-num" data-target="4500" data-prefix="$" data-suffix="+" data-comma>$4,500+</span><span class="pm-lbl" data-i18n="proof.m2">ad waste reallocated</span></div>
-            <div><span class="pm-num" data-target="100" data-suffix="%">100%</span><span class="pm-lbl" data-i18n="proof.m3">inbound texts answered</span></div>
-          </div>
-          <a href="/customers/sister-business-rebuild" class="btn btn-ghost" data-i18n="proof.cta">Read the case study</a>
+    <div class="proof-panel sr d2">
+      <div class="label">Running live, right now</div>
+      <div class="proof-stack">
+        <div class="proof-biz">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="name">Poop Scoop Dude</span>
+          <span class="role">Service business</span>
         </div>
-        <div class="proof-visual" aria-hidden="true">
-          <div class="pv-row">
-            <div class="pv-tile"><div class="t">SYSTEMS</div><div class="v g">1</div></div>
-            <div class="pv-tile"><div class="t">TEXTS ANSWERED</div><div class="v">100%</div></div>
-          </div>
-          <div class="pv-tile">
-            <div class="t">AD SPEND RECLAIMED</div>
-            <div class="pv-bars">
-              <span style="height:36%"></span><span style="height:52%"></span>
-              <span style="height:44%"></span><span style="height:68%"></span>
-              <span style="height:80%"></span><span style="height:96%"></span>
-            </div>
-          </div>
-          <div class="pv-cap">Illustrative. Live operations dashboard.</div>
-        </div>
-      </div>
-      <div class="proof-browse">
-        <a href="/customers/" class="btn btn-ghost" data-i18n="proof.browse_all">Browse all customer stories</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIAL ============ -->
-  <section class="band-tint">
-    <div class="wrap center" style="margin-bottom:32px;"><div class="kicker" data-i18n="testimonial.kicker">In their own words</div></div>
-    <div class="wrap">
-      <div class="tcard">
-        <div class="tmark">&ldquo;</div>
-        <p class="tquote" data-i18n="testimonial.quote">Before this I was running my whole business off vibes and a brittle Zapier glue I didn't fully understand. Now I open one tab in the morning and I can see the whole company. That's the difference.</p>
-        <div class="tattr">
-          <div class="tav">A</div>
-          <div>
-            <div class="twho" data-i18n="testimonial.who">The operator</div>
-            <div class="trole" data-i18n="testimonial.role">Founder, AIROIOPS &amp; the sister business</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section>
-    <div class="wrap">
-      <div class="about-grid">
-        <div>
-          <div class="kicker" data-i18n="about.kicker">Who's behind this</div>
-          <h2 class="h2" data-i18n="about.h2">Built by an operator. <span class="grad">For operators.</span></h2>
-          <p data-i18n="about.body1">I'm Gianny. I run a residential service business in Las Vegas, and I'm building AIROIOPS to bring real AI leverage to business owners of any size, in any vertical, the people who actually need it most and get sold to last.</p>
-          <p data-i18n="about.body2">The Operator's Vision isn't a deck. It's the same playbook I run on my own ops, a clear picture of your business running itself, delivered in 48 hours. The quick wins are yours to ship today; the bigger builds are there if you'd rather hand off.</p>
-          <div class="section-cta" style="margin-top:26px;">
-            <a href="#book" class="btn btn-primary">
-              <span data-i18n="about.cta">Book Your Discovery Call</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="av-ring av-ring-1" aria-hidden="true"></div>
-          <div class="av-ring av-ring-2" aria-hidden="true"></div>
-          <div class="av-ring av-ring-3" aria-hidden="true"></div>
-          <img class="av-portrait" src="/images/gianny-founder.jpg" alt="Gianny Rodriguez, founder of AIROIOPS" width="220" height="220" loading="lazy">
+        <div class="proof-bridge">one AI system</div>
+        <div class="proof-biz">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="name">AIROIOPS</span>
+          <span class="role">AI operations</span>
         </div>
       </div>
+      <p class="proof-foot">
+        The same front office answering calls for a dog-waste business is the one I will build for you. Do not take my word for it. <a href="https://poopscoopdude.com">Go ask its AI a question yourself.</a>
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ FAQ ============ -->
-  <section id="faq" class="band-tint">
-    <div class="wrap center">
-      <div class="kicker" data-i18n="faq.kicker">FAQ</div>
-      <h2 class="h2" data-i18n="faq.h2">Common questions about <span class="grad">AI for business owners.</span></h2>
-      <p class="lede" data-i18n="faq.lede_short">Price, timeline, scope, who it is for, what software it works with, how the bigger builds are priced. Full answers on one page.</p>
-      <div class="section-cta">
-        <a href="/faq" class="btn btn-primary">
-          <span data-i18n="faq.cta_see">Read all 7 FAQs</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#book" class="btn btn-ghost" data-i18n="faq.cta">Still got questions? Book a free call</a>
+<!-- ===================== PROOF BY THE NUMBERS ===================== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">The receipts</span>
+      <h2>What it did on <em>my own business</em> first.</h2>
+      <p>Before I ever offered this to another owner, I ran it on my own Las Vegas service business. Real numbers from that rebuild, not projections.</p>
+    </div>
+    <div class="aio-pnum sr d1">
+      <div class="aio-stat"><div class="big">100%</div><div class="cap">Inbound texts answered automatically, day or night, including in Spanish</div></div>
+      <div class="aio-stat"><div class="big">13 hrs</div><div class="cap">Owner time per week the Operator's Vision found to reclaim</div></div>
+      <div class="aio-stat"><div class="big">$4,500+</div><div class="cap">Ad waste surfaced and reallocated after the audit</div></div>
+      <div class="aio-stat"><div class="big">4 &rarr; 1</div><div class="cap">Disconnected systems consolidated into one AI workflow</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW WE WORK (engagement ladder) ===================== -->
+<section class="section-pad" id="work">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">04 / How we work</span>
+      <h2>Start free. Take it as far as it <em>pays off</em>.</h2>
+      <p>No software to buy, no retainer before something is live, and you own every account from day one. Most owners start with the free Operator's Vision and decide from there.</p>
+    </div>
+    <div class="aio-ladder sr d1">
+      <div class="aio-step">
+        <span class="aio-tag">Free</span><div class="n">01</div>
+        <h3>The Operator's Vision</h3>
+        <p>I look at how work actually moves through your business and show you exactly where revenue leaks out.</p>
+        <ul>
+          <li>A clear map of where calls, leads, and hours are slipping</li>
+          <li>The handful of fixes that catch the most, ranked by impact</li>
+          <li>What an AI front office would handle for you, in plain English</li>
+        </ul>
+        <div class="out">You leave with the plan, <b>whether or not we work together.</b></div>
+      </div>
+      <div class="aio-step lit">
+        <span class="aio-tag">Built for you</span><div class="n">02</div>
+        <h3>The Build</h3>
+        <p>I build your AI front office on your own tools and accounts, wired to the way you already run.</p>
+        <ul>
+          <li>A front desk that answers every call, text, and DM</li>
+          <li>Follow-up and win-back that run on their own</li>
+          <li>An owner dashboard so you can see it working</li>
+        </ul>
+        <div class="out">Scoped and quoted to <b>your business, on our call.</b></div>
+      </div>
+      <div class="aio-step">
+        <span class="aio-tag">Ongoing</span><div class="n">03</div>
+        <h3>Operate</h3>
+        <p>I keep it running, tune what it does, and add to it as your business grows.</p>
+        <ul>
+          <li>The system stays sharp as your work changes</li>
+          <li>New jobs handed to the AI as they come up</li>
+          <li>One operator who knows your whole setup</li>
+        </ul>
+        <div class="out">You stay on the work. <b>The system handles the rest.</b></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ STAGE-1 CHOOSER ============ -->
-  <section id="chooser">
-    <div class="wrap center">
-      <div class="kicker" data-i18n="chooser.kicker">Pick your path</div>
-      <h2 class="h2" data-i18n="chooser.h2">Two ways to <span class="grad">get started.</span></h2>
-      <p class="lede" data-i18n="chooser.lede">Talk to our AI specialist right now, or grab a weekend slot with Gianny. Either way it is free.</p>
-      <div class="grid chooser-grid">
-        <div class="card chooser-card">
-          <h3 data-i18n="chooser.ai_title">Talk to our AI now</h3>
-          <p data-i18n="chooser.ai_sub">A quick chat with Annie, our AI specialist. No scheduling. It is also a live demo of what we build.</p>
-          <button type="button" id="discovery-annie-start" class="btn btn-primary">
-            <span data-i18n="chooser.ai_btn">Start the call</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <p id="discovery-annie-status" class="chooser-status" aria-live="polite"></p>
-        </div>
-        <div class="card chooser-card">
-          <h3 data-i18n="chooser.zoom_title">Book a call with Gianny</h3>
-          <p data-i18n="chooser.zoom_sub">Prefer a person. Grab a weekend slot.</p>
-          <a href="#book" class="btn btn-ghost">
-            <span data-i18n="chooser.zoom_btn">Get started</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
+<!-- ===================== THE MATH (comparison) ===================== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">05 / The math</span>
+      <h2>Faster than hiring. Saner than <em>building it yourself</em>.</h2>
+      <p>Every owner weighs the same three options. Here is the honest version of each.</p>
+    </div>
+    <div class="aio-vs sr d1">
+      <div class="aio-col">
+        <div class="lab">Hire it in-house</div>
+        <h3>A full-time AI hire</h3>
+        <p>An AI or automations person runs six figures a year, plus the months it takes to find a good one. Most owner-led businesses do not have enough of that work to justify the seat.</p>
+        <div class="cost">Six figures a year, before they start.</div>
+      </div>
+      <div class="aio-col">
+        <div class="lab">Build it yourself</div>
+        <h3>Nights and weekends</h3>
+        <p>You stitch the tools together after hours, then own it forever when something breaks at the worst possible moment. Time you do not have, pulled off the actual work.</p>
+        <div class="cost">Your own hours, and the upkeep never ends.</div>
+      </div>
+      <div class="aio-col win">
+        <div class="lab">Work with me</div>
+        <h3>One operator, fractional</h3>
+        <p>I already built this for my own two businesses. You get the same system on your stack, you own all of it, and there is no seat to fill or software to babysit.</p>
+        <div class="cost">Quoted to your business. You own every account.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ FINAL / BOOK ============ -->
-  <section id="book" class="final">
-    <div class="wrap">
-      <div class="final-inner">
-        <h2 class="h2" data-i18n="final.h2">Ready to see what AI can <span class="grad">actually</span> do for your business?</h2>
-        <p data-i18n="final.body">Tell us about your business, then book your call on the next page. We will have your answers ready so the call goes straight to solutions.</p>
+<!-- ===================== QUIET INSIGHT ===================== -->
+<section class="insight section-pad">
+  <div class="wrap insight-inner sr">
+    <blockquote>
+      The owners I talk to are not afraid of AI. They are tired of being the only person who can answer the phone, and tired of watching <span class="hl">good leads go cold</span> because the day got away from them.
+    </blockquote>
+    <div class="attrib">An honest read on the owner-led businesses I build for</div>
+    <div class="repnote">Illustrative, drawn from real conversations</div>
+  </div>
+</section>
 
-        <form name="assessment-qualifier" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="qual-form">
-          <input type="hidden" name="form-name" value="assessment-qualifier" />
-          <input type="hidden" name="language" value="en" />
-          <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+<!-- ===================== FAQ ===================== -->
+<section class="faq section-pad" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head sr" style="margin-bottom:0">
+      <span class="sec-index">06 / FAQ</span>
+      <h2 style="font-size: clamp(30px, 3.6vw, 46px)">The questions every owner asks me.</h2>
+      <p>Straight answers, no pressure. Anything not covered here, we cover on the call.</p>
+    </div>
 
-          <div class="qual-row">
-            <label class="qual-field">
-              <span data-i18n="form.first_label">First name</span>
-              <input type="text" name="first_name" required autocomplete="given-name" />
-            </label>
-            <label class="qual-field">
-              <span data-i18n="form.last_label">Last name</span>
-              <input type="text" name="last_name" required autocomplete="family-name" />
-            </label>
+    <div class="faq-list sr d1">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Why not just hire someone for this
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            A full time AI or automations hire runs six figures a year, and most owner-led businesses do not have enough of that work to justify the seat. That is the gap I fill. You do not need an AI person on payroll. I am one, fractional, and I run my own Las Vegas service business on the exact same systems I would build for you. You get the engineer without the salary.
           </div>
+        </div>
+      </div>
 
-          <div class="qual-row">
-            <label class="qual-field">
-              <span data-i18n="form.email_label">Email</span>
-              <input type="email" name="email" required autocomplete="email" />
-            </label>
-            <label class="qual-field">
-              <span data-i18n="form.business_label">Business name</span>
-              <input type="text" name="business" required autocomplete="organization" />
-            </label>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you replace my staff
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            No. The whole point is to augment the people you have, not get rid of anyone. The AI takes the repetitive load, the after-hours calls, the follow-ups, the same questions over and over, so your team gets to do the work that actually needs a human. It frees your time, it does not replace your people.
           </div>
+        </div>
+      </div>
 
-          <label class="qual-field">
-            <span data-i18n="form.what_label">In one sentence, what does your business do?</span>
-            <input type="text" name="what" maxlength="200" data-i18n-placeholder="form.what_ph" placeholder="We do [X] for [Y] in [Z]." required />
-          </label>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to understand AI
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            No. That part is my job. You stay the operator who knows your business better than anyone. I handle the AI side, build it inside tools you already understand, and hand you a system that just works. You will never have to become technical to use it.
+          </div>
+        </div>
+      </div>
 
-          <label class="qual-field">
-            <span data-i18n="form.team_label">How big is the team?</span>
-            <select name="team_size" required>
-              <option value="" data-i18n="form.select_default">Select...</option>
-              <option data-i18n="form.team_solo">Solo / just me</option>
-              <option data-i18n="form.team_small">2-5 people</option>
-              <option data-i18n="form.team_med">6-20 people</option>
-              <option data-i18n="form.team_lg">21-50 people</option>
-              <option data-i18n="form.team_xl">50+ people</option>
-            </select>
-          </label>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What does it cost
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            I quote it on the call, once I have actually seen your setup. Every owner-led business is different, so a real number only makes sense after I understand how yours runs. No surprises, no pressure, and you will know exactly what you are getting before anything moves forward.
+          </div>
+        </div>
+      </div>
 
-          <label class="qual-field">
-            <span data-i18n="form.timesink_label">What's the #1 task that eats your time every week?</span>
-            <textarea name="time_sink" rows="3" maxlength="500" data-i18n-placeholder="form.timesink_ph" placeholder="Be specific. 'Lead follow-up' or 'sending invoices' beats 'admin stuff'." required></textarea>
-          </label>
-
-          <label class="qual-field">
-            <span data-i18n="form.aitools_label">What AI tools are you using today? (Check any that apply)</span>
-            <div class="qual-checks">
-              <label><input type="checkbox" name="ai_tools" value="None" /><span data-i18n="form.ai_none">None / haven't started</span></label>
-              <label><input type="checkbox" name="ai_tools" value="ChatGPT occasional" /><span data-i18n="form.ai_occ">ChatGPT / Claude (occasional)</span></label>
-              <label><input type="checkbox" name="ai_tools" value="ChatGPT daily" /><span data-i18n="form.ai_daily">ChatGPT / Claude (daily)</span></label>
-              <label><input type="checkbox" name="ai_tools" value="Custom GPTs" /><span data-i18n="form.ai_gpt">Custom GPTs trained on my data</span></label>
-              <label><input type="checkbox" name="ai_tools" value="Zapier or Make" /><span data-i18n="form.ai_zap">Zapier or Make automations</span></label>
-              <label><input type="checkbox" name="ai_tools" value="AI voice agent" /><span data-i18n="form.ai_voice">AI voice agent (Retell, Vapi)</span></label>
-            </div>
-          </label>
-
-          <label class="qual-field">
-            <span data-i18n="form.heard_label">How did you hear about us?</span>
-            <div class="qual-checks">
-              <label><input type="radio" name="heard_from" value="Google search" required /><span data-i18n="form.heard_google">Google search</span></label>
-              <label><input type="radio" name="heard_from" value="LinkedIn" /><span data-i18n="form.heard_linkedin">LinkedIn</span></label>
-              <label><input type="radio" name="heard_from" value="Instagram" /><span data-i18n="form.heard_instagram">Instagram</span></label>
-              <label><input type="radio" name="heard_from" value="Facebook" /><span data-i18n="form.heard_facebook">Facebook</span></label>
-              <label><input type="radio" name="heard_from" value="Skool community" /><span data-i18n="form.heard_skool">Skool community</span></label>
-              <label><input type="radio" name="heard_from" value="Friend or referral" /><span data-i18n="form.heard_referral">Friend or referral</span></label>
-              <label><input type="radio" name="heard_from" value="Other" /><span data-i18n="form.heard_other">Other</span></label>
-            </div>
-            <input type="text" name="heard_from_other" class="heard-other-input" maxlength="200" data-i18n-placeholder="form.heard_other_ph" placeholder="Tell us where you heard about us" />
-            <input type="text" name="referral_name" class="referral-input" maxlength="120" data-i18n-placeholder="form.referral_ph" placeholder="Their name, so we can thank them" />
-          </label>
-
-          <label class="qual-field">
-            <span data-i18n="form.outcome_label">If this delivers, what does "worth it" look like to you?</span>
-            <textarea name="outcome" rows="3" maxlength="500" data-i18n-placeholder="form.outcome_ph" placeholder="10 hours back per week? $5k/mo new revenue? Stop missing leads at night?" required></textarea>
-          </label>
-
-          <button type="submit" class="btn btn-primary big">
-            <span data-i18n="form.submit">Submit and get your Calendly link</span>
-            <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </form>
-
-        <p class="final-alt">
-          <span data-i18n="final.alt_pre">Prefer to skip the form?</span>
-          <a href="#chooser" data-i18n="final.alt_link">Talk to our AI specialist instead &rarr;</a>
-        </p>
-        <div class="final-sub" data-i18n="final.sub">No spam. No agency rates. No 90-day discovery phases.</div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How long does it take
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            We scope that together on the call. It depends on how your business runs and what you want handled first. I will give you a clear, honest picture of the build once I understand the moving parts, rather than promise you a timeline before I know what we are working with.
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer>
-    <div class="foot-area" data-i18n="footer.area">Serving businesses of every size, across the United States. Headquartered in Las Vegas, NV.</div>
-    <div class="foot-links">
-      <a href="/terms">Terms of Service</a>
-      <span>&middot;</span>
-      <a href="/privacy">Privacy Policy</a>
+<!-- ===================== CALCULATOR LEAD MAGNET ===================== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">See the cost</span>
+      <h2>Put a number on the <em>busywork</em>.</h2>
+      <p>Before we even talk, see what the hours around the work are quietly costing you. A two minute calculator, no email required.</p>
+      <div style="margin-top:24px">
+        <a class="btn btn-primary" href="https://airoiops-cost-calculator.netlify.app" target="_blank" rel="noopener">Open the cost calculator <span class="arrow">&rarr;</span></a>
+      </div>
     </div>
-    <div class="foot-bottom">
-      <div>&copy; 2026 AIROIOPS</div>
-      <div class="foot-mid">AI &middot; ROI &middot; OPS</div>
-      <div data-i18n="footer.location">Built in Las Vegas, NV</div>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ===================== INTEGRATIONS ===================== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <span class="sec-index">Plugs into your stack</span>
+      <h2>It runs on the tools you <em>already use</em>.</h2>
+      <p>No rip and replace. I wire the AI into the tools you already run, on your own accounts, so nothing new lands on your team to babysit.</p>
+    </div>
+  </div>
+  <div class="strip sr">
+    <div class="strip-mask">
+      <div class="strip-track"><div class="strip-cell"><div class="k">Make</div></div><div class="strip-cell"><div class="k">n8n</div></div><div class="strip-cell"><div class="k">GoHighLevel</div></div><div class="strip-cell"><div class="k">QUO</div></div><div class="strip-cell"><div class="k">Retell AI</div></div><div class="strip-cell"><div class="k">ElevenLabs</div></div><div class="strip-cell"><div class="k">Twilio</div></div><div class="strip-cell"><div class="k">Notion</div></div><div class="strip-cell"><div class="k">Stripe</div></div><div class="strip-cell"><div class="k">QuickBooks</div></div><div class="strip-cell"><div class="k">Calendly</div></div><div class="strip-cell"><div class="k">Zapier</div></div><div class="strip-cell"><div class="k">Slack</div></div><div class="strip-cell"><div class="k">WhatsApp</div></div><div class="strip-cell"><div class="k">Gmail</div></div><div class="strip-cell"><div class="k">Google Sheets</div></div><div class="strip-cell"><div class="k">Make</div></div><div class="strip-cell"><div class="k">n8n</div></div><div class="strip-cell"><div class="k">GoHighLevel</div></div><div class="strip-cell"><div class="k">QUO</div></div><div class="strip-cell"><div class="k">Retell AI</div></div><div class="strip-cell"><div class="k">ElevenLabs</div></div><div class="strip-cell"><div class="k">Twilio</div></div><div class="strip-cell"><div class="k">Notion</div></div><div class="strip-cell"><div class="k">Stripe</div></div><div class="strip-cell"><div class="k">QuickBooks</div></div><div class="strip-cell"><div class="k">Calendly</div></div><div class="strip-cell"><div class="k">Zapier</div></div><div class="strip-cell"><div class="k">Slack</div></div><div class="strip-cell"><div class="k">WhatsApp</div></div><div class="strip-cell"><div class="k">Gmail</div></div><div class="strip-cell"><div class="k">Google Sheets</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="cta-band section-pad">
+  <div class="wrap cta-inner sr">
+    <span class="sec-index">07 / The free call</span>
+    <h2 style="margin-top: var(--s3)">Book the free <em>Operator's Vision</em>.</h2>
+    <p>Fifteen minutes. I look at how your business runs, show you where the revenue is leaking, and tell you exactly what I would build to catch it. No charge, no pitch deck, just an operator talking to an operator.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://calendly.com/airoiops/airoiops-discovery-call">
+        See your free Operator's Vision
+        <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      <a class="btn btn-ghost" href="https://poopscoopdude.com">Talk to my AI first</a>
+    </div>
+    <p class="cta-note">A real Las Vegas operator. Built on my own business first.</p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-mark">AIRO<b>I</b>OPS</div>
+        <p class="foot-tag">Las Vegas. AI operations for owner-led businesses.</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://calendly.com/airoiops/airoiops-discovery-call">Book the free Operator's Vision</a>
+        <a href="https://airoiops.com">airoiops.com</a>
+        <a href="https://poopscoopdude.com">Talk to my AI</a>
+      </nav>
+      <nav class="foot-links" aria-label="More">
+        <a href="/services">Services</a>
+        <a href="/results">Results</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+      </nav>
+    </div>
+    <div class="foot-base">
+      <span>AIROIOPS. AI that runs the front office, freeing your time, not replacing anyone.</span>
+      <span>Built by a real operator, proven on his own businesses first.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav background after scroll
+  (function () {
+    var nav = document.getElementById('nav');
+    var onScroll = function () {
+      if (window.scrollY > 40) { nav.classList.add('scrolled'); }
+      else { nav.classList.remove('scrolled'); }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // IntersectionObserver scroll reveal
+  (function () {
+    var els = document.querySelectorAll('.sr');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // FAQ accordion
+  (function () {
+    var items = document.querySelectorAll('.faq-item');
+    items.forEach(function (item) {
+      var q = item.querySelector('.faq-q');
+      var a = item.querySelector('.faq-a');
+      q.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        items.forEach(function (other) {
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+          q.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  })();
+</script>
+
+<!-- Live AI proof: the real assistant running Gianny's own business (something prospects can actually talk to) -->
+<style>
+  .airo-fab{position:fixed;right:20px;bottom:20px;z-index:1200;display:inline-flex;align-items:center;gap:9px;
+    padding:13px 19px 13px 15px;border-radius:100px;border:1px solid rgba(245,177,61,.5);cursor:pointer;
+    background:linear-gradient(180deg,#f5b13d,#e79a1f);color:#19130a;font-family:"Hanken Grotesk",system-ui,sans-serif;
+    font-weight:600;font-size:15px;box-shadow:0 16px 34px -10px rgba(245,177,61,.55);transition:transform .15s,box-shadow .15s;}
+  .airo-fab:hover{transform:translateY(-2px);box-shadow:0 22px 46px -10px rgba(245,177,61,.65);animation-play-state:paused;}
+  .airo-fab{animation:aioFabBob 3.6s ease-in-out infinite;}
+  @keyframes aioFabBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+  @media(prefers-reduced-motion:reduce){.airo-fab{animation:none!important;}}
+  .airo-fab svg{width:20px;height:20px;}
+  .sc-launch{display:none!important;}
+  @supports(padding:max(0px)){ .airo-fab{bottom:max(20px,env(safe-area-inset-bottom));} }
+
+/* design-judgment micro-tune 2026-06-11 */
+.stat-num, .num, [data-target], .metric, .kpi { font-variant-numeric: tabular-nums; }
+</style>
+<button type="button" class="airo-fab" data-open-chat aria-label="Talk to a live AI Gianny built"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><span>Talk to a live AI</span></button>
+<script>window.CHATBOT_ENDPOINT="https://airoiops-ai-frontdesk.netlify.app/.netlify/functions/chat";</script>
+<script src="https://airoiops-ai-frontdesk.netlify.app/assets/widget.js" defer></script>
+<script>
+(function(){
+  function openChat(){ var l=document.querySelector(".sc-launch"); if(l){ l.click(); return true; } return false; }
+  document.addEventListener("click", function(e){
+    var t = e.target.closest && e.target.closest("[data-open-chat]");
+    if(!t) return; e.preventDefault();
+    if(!openChat()){ var n=0, p=setInterval(function(){ if(openChat()||++n>16) clearInterval(p); }, 250); }
+  });
+})();
+</script>
+<style>
+/* mobile nav */
+.nav-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px;line-height:0;margin-left:4px;}
+.nav-toggle svg{width:26px;height:26px;}
+@media (max-width: 720px){
+  .nav-toggle{display:inline-flex;align-items:center;}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(12,13,18,0.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:6px 24px 16px;margin:0;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;width:100%;padding:14px 0;font-size:17px;color:var(--text);border-bottom:1px solid var(--line-soft);}
+}
+.btn{white-space:nowrap;}@media (max-width:720px){.nav-inner .btn-primary{padding:9px 15px;font-size:13px;}.nav-inner{gap:10px;}}</style>
+<script>
+//mobile nav
+
+(function(){var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');
+if(t&&l){t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
+</script>
 </body>
 </html>
