@@ -4,3 +4,10 @@
 /customers/_private-case-study        /customers/sister-business-rebuild         301
 /customers/_private-case-study/       /customers/sister-business-rebuild         301
 /customers/_private-case-study.html   /customers/sister-business-rebuild         301
+
+# 2026-06-14: retire old-design browse pages, send to the new Results page
+/case-study        /results   301
+/case-study.html   /results   301
+/case-study-es     /results   301
+/customers         /results   301
+/customers/        /results   301
