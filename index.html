@@ -16,8 +16,8 @@
     --card2:#1b1e27;
     --ink:#ece8e2;
     --mut:#a8a39b;
-    --gold:#f5b13d;
-    --goldDk:#ffc15e;
+    --gold:#ef4655;
+    --goldDk:#ff6b78;
     --green:#43d692;
     --line:rgba(255,255,255,.08);
     --serif:'Fraunces',Georgia,serif;
@@ -46,8 +46,8 @@
     inset:0;
     z-index:-2;
     background:
-      radial-gradient(900px 600px at 78% -8%, rgba(245,177,61,.16), transparent 60%),
-      radial-gradient(1100px 800px at 10% 18%, rgba(245,177,61,.06), transparent 55%),
+      radial-gradient(900px 600px at 78% -8%, rgba(239,70,85,.16), transparent 60%),
+      radial-gradient(1100px 800px at 10% 18%, rgba(239,70,85,.06), transparent 55%),
       linear-gradient(180deg, #0a0b10 0%, var(--bg) 38%, #0a0b0f 100%);
   }
 
@@ -62,7 +62,7 @@
     mix-blend-mode:overlay;
   }
 
-  ::selection{background:rgba(245,177,61,.28);color:#fff}
+  ::selection{background:rgba(239,70,85,.28);color:#fff}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
@@ -108,7 +108,7 @@
     width:30px;height:30px;border-radius:8px;
     background:linear-gradient(140deg,var(--goldDk),var(--gold));
     display:grid;place-items:center;color:#100c04;font-weight:700;font-size:14px;
-    box-shadow:0 0 22px rgba(245,177,61,.4);font-family:var(--sans);
+    box-shadow:0 0 22px rgba(239,70,85,.4);font-family:var(--sans);
   }
   .nav-links{display:flex;gap:34px;align-items:center}
   .nav-links a{color:var(--mut);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .25s}
@@ -123,16 +123,16 @@
   .btn-gold{
     background:linear-gradient(135deg,var(--goldDk),var(--gold));
     color:#160f02;
-    box-shadow:0 10px 30px -8px rgba(245,177,61,.5);
+    box-shadow:0 10px 30px -8px rgba(239,70,85,.5);
   }
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(245,177,61,.62);filter:brightness(1.05)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(239,70,85,.62);filter:brightness(1.05)}
   .btn-gold .arr{transition:transform .3s var(--ease)}
   .btn-gold:hover .arr{transform:translateX(4px)}
   .btn-ghost{
     background:transparent;color:var(--ink);
     border:1px solid var(--line);
   }
-  .btn-ghost:hover{border-color:rgba(245,177,61,.55);transform:translateY(-2px);color:#fff}
+  .btn-ghost:hover{border-color:rgba(239,70,85,.55);transform:translateY(-2px);color:#fff}
   .nav .btn{padding:11px 20px;font-size:14px}
   .nav-cta-mobile{display:none}
 
@@ -142,8 +142,8 @@
     display:inline-flex;align-items:center;gap:9px;
     font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
     color:var(--gold);font-weight:600;
-    padding:8px 16px;border:1px solid rgba(245,177,61,.28);
-    border-radius:999px;background:rgba(245,177,61,.05);margin-bottom:30px;
+    padding:8px 16px;border:1px solid rgba(239,70,85,.28);
+    border-radius:999px;background:rgba(239,70,85,.05);margin-bottom:30px;
   }
   .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:glowpulse 2.4s infinite}
   h1.hero-h{
@@ -228,7 +228,7 @@
   }
   .operator-card::after{
     content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;
-    background:radial-gradient(circle,rgba(245,177,61,.2),transparent 70%);
+    background:radial-gradient(circle,rgba(239,70,85,.2),transparent 70%);
   }
   .operator-card .label{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .operator-card .big{
@@ -239,7 +239,7 @@
     width:46px;height:46px;border-radius:50%;
     background:linear-gradient(140deg,var(--goldDk),var(--gold));
     display:grid;place-items:center;color:#160f02;font-weight:700;font-family:var(--serif);font-size:18px;
-    box-shadow:0 0 20px rgba(245,177,61,.35);
+    box-shadow:0 0 20px rgba(239,70,85,.35);
   }
   .operator-card .who .n{font-weight:600;color:var(--ink);font-size:15px}
   .operator-card .who .r{font-size:13px;color:var(--mut)}
@@ -257,21 +257,21 @@
   }
   .feat::before{
     content:"";position:absolute;inset:0;border-radius:20px;
-    background:radial-gradient(420px 200px at var(--mx,50%) -10%,rgba(245,177,61,.12),transparent 70%);
+    background:radial-gradient(420px 200px at var(--mx,50%) -10%,rgba(239,70,85,.12),transparent 70%);
     opacity:0;transition:opacity .45s;
   }
-  .feat:hover{transform:translateY(-6px);border-color:rgba(245,177,61,.32);box-shadow:0 24px 50px -22px rgba(0,0,0,.7)}
+  .feat:hover{transform:translateY(-6px);border-color:rgba(239,70,85,.32);box-shadow:0 24px 50px -22px rgba(0,0,0,.7)}
   .feat:hover::before{opacity:1}
   .feat .ic{
     width:48px;height:48px;border-radius:13px;display:grid;place-items:center;
-    background:rgba(245,177,61,.1);border:1px solid rgba(245,177,61,.22);
+    background:rgba(239,70,85,.1);border:1px solid rgba(239,70,85,.22);
     margin-bottom:22px;color:var(--gold);
   }
   .feat .ic svg{width:23px;height:23px}
   .feat h3{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-.01em}
   .feat p{margin-top:11px;color:var(--mut);font-size:15px;line-height:1.58}
   .feat.span2{grid-column:span 2}
-  .feat .tag{margin-top:18px;display:inline-block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;border:1px solid rgba(245,177,61,.25);padding:5px 11px;border-radius:999px}
+  .feat .tag{margin-top:18px;display:inline-block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;border:1px solid rgba(239,70,85,.25);padding:5px 11px;border-radius:999px}
 
   /* ================= HOW IT WORKS ================= */
   .how{padding:96px 0}
@@ -282,15 +282,15 @@
     padding:34px 30px;position:relative;
     transition:transform .4s var(--ease),border-color .4s;
   }
-  .step:hover{transform:translateY(-5px);border-color:rgba(245,177,61,.3)}
+  .step:hover{transform:translateY(-5px);border-color:rgba(239,70,85,.3)}
   .step .num{
     font-family:var(--serif);font-weight:400;font-style:italic;
-    font-size:54px;line-height:1;color:rgba(245,177,61,.32);
+    font-size:54px;line-height:1;color:rgba(239,70,85,.32);
   }
   .step h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-top:14px;letter-spacing:-.01em}
   .step h3 .free{font-size:12px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--green);vertical-align:middle;margin-left:8px;border:1px solid rgba(67,214,146,.3);padding:3px 9px;border-radius:999px;font-family:var(--sans);font-weight:600}
   .step p{margin-top:13px;color:var(--mut);font-size:15px;line-height:1.6}
-  .step .line-link{position:absolute;top:48px;right:-22px;width:22px;height:1px;background:linear-gradient(90deg,rgba(245,177,61,.5),transparent);display:none}
+  .step .line-link{position:absolute;top:48px;right:-22px;width:22px;height:1px;background:linear-gradient(90deg,rgba(239,70,85,.5),transparent);display:none}
 
   /* ================= OUTCOMES ================= */
   .outcomes{padding:60px 0 30px}
@@ -323,7 +323,7 @@
     display:grid;place-items:center;transition:transform .4s var(--ease),border-color .3s;
     color:var(--gold);font-size:18px;
   }
-  .qa.open .qa-q .ico{transform:translateY(-50%) rotate(45deg);border-color:rgba(245,177,61,.5)}
+  .qa.open .qa-q .ico{transform:translateY(-50%) rotate(45deg);border-color:rgba(239,70,85,.5)}
   .qa-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s;opacity:0}
   .qa.open .qa-a{opacity:1}
   .qa-a p{color:var(--mut);font-size:16px;line-height:1.7;padding:0 50px 28px 0}
@@ -333,9 +333,9 @@
   .final{padding:60px 0 110px}
   .final-card{
     position:relative;overflow:hidden;
-    border:1px solid rgba(245,177,61,.22);border-radius:28px;
+    border:1px solid rgba(239,70,85,.22);border-radius:28px;
     background:
-      radial-gradient(600px 300px at 50% -20%,rgba(245,177,61,.2),transparent 65%),
+      radial-gradient(600px 300px at 50% -20%,rgba(239,70,85,.2),transparent 65%),
       linear-gradient(160deg,var(--card2),#0f1117);
     padding:74px 40px;text-align:center;
   }
@@ -491,7 +491,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo rise d1" aria-label="AIROIOPS home"><svg width="158" height="29" viewBox="0 0 880 160" aria-hidden="true"><g fill="#f5efe6"><polygon points="62,20 88,20 138,140 110,140 75,49 40,140 12,140"/><rect x="158" y="20" width="26" height="120"/><path d="M 206 20 H 296 L 312 36 V 74 L 296 90 H 262 L 314 140 H 280 L 232 92 V 140 H 206 Z M 232 44 V 68 H 282 L 286 64 V 48 L 282 44 Z"/><g transform="translate(-16,0)"><path fill="#d4a537" d="M 352 36 L 368 20 H 432 L 448 36 V 124 L 432 140 H 368 L 352 124 Z M 378 44 L 378 116 L 422 116 L 422 44 Z"/><rect fill="#d4a537" x="470" y="20" width="26" height="120"/><path d="M 518 36 L 534 20 H 598 L 614 36 V 124 L 598 140 H 534 L 518 124 Z M 544 44 L 544 116 L 588 116 L 588 44 Z"/><path d="M 638 20 H 728 L 744 36 V 78 L 728 94 H 664 V 140 H 638 Z M 664 44 V 70 H 714 L 718 66 V 48 L 714 44 Z"/><path d="M 766 20 H 872 V 44 H 792 V 68 H 856 L 872 84 V 124 L 856 140 H 766 V 116 H 846 V 92 H 782 L 766 76 Z"/></g></g></svg></a>
+    <a href="#top" class="logo rise d1" aria-label="AIROIOPS home"><svg width="158" height="29" viewBox="0 0 880 160" aria-hidden="true"><g fill="#f5efe6"><polygon points="62,20 88,20 138,140 110,140 75,49 40,140 12,140"/><rect x="158" y="20" width="26" height="120"/><path d="M 206 20 H 296 L 312 36 V 74 L 296 90 H 262 L 314 140 H 280 L 232 92 V 140 H 206 Z M 232 44 V 68 H 282 L 286 64 V 48 L 282 44 Z"/><g transform="translate(-16,0)"><path fill="#ef4655" d="M 352 36 L 368 20 H 432 L 448 36 V 124 L 432 140 H 368 L 352 124 Z M 378 44 L 378 116 L 422 116 L 422 44 Z"/><rect fill="#ef4655" x="470" y="20" width="26" height="120"/><path d="M 518 36 L 534 20 H 598 L 614 36 V 124 L 598 140 H 534 L 518 124 Z M 544 44 L 544 116 L 588 116 L 588 44 Z"/><path d="M 638 20 H 728 L 744 36 V 78 L 728 94 H 664 V 140 H 638 Z M 664 44 V 70 H 714 L 718 66 V 48 L 714 44 Z"/><path d="M 766 20 H 872 V 44 H 792 V 68 H 856 L 872 84 V 124 L 856 140 H 766 V 116 H 846 V 92 H 782 L 766 76 Z"/></g></g></svg></a>
     <nav class="nav-links rise d2">
       <a href="#services">Services</a>
       <a href="#how">How it works</a>
@@ -724,7 +724,7 @@
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap foot-inner">
-    <div class="logo"><svg width="158" height="29" viewBox="0 0 880 160" aria-hidden="true"><g fill="#f5efe6"><polygon points="62,20 88,20 138,140 110,140 75,49 40,140 12,140"/><rect x="158" y="20" width="26" height="120"/><path d="M 206 20 H 296 L 312 36 V 74 L 296 90 H 262 L 314 140 H 280 L 232 92 V 140 H 206 Z M 232 44 V 68 H 282 L 286 64 V 48 L 282 44 Z"/><g transform="translate(-16,0)"><path fill="#d4a537" d="M 352 36 L 368 20 H 432 L 448 36 V 124 L 432 140 H 368 L 352 124 Z M 378 44 L 378 116 L 422 116 L 422 44 Z"/><rect fill="#d4a537" x="470" y="20" width="26" height="120"/><path d="M 518 36 L 534 20 H 598 L 614 36 V 124 L 598 140 H 534 L 518 124 Z M 544 44 L 544 116 L 588 116 L 588 44 Z"/><path d="M 638 20 H 728 L 744 36 V 78 L 728 94 H 664 V 140 H 638 Z M 664 44 V 70 H 714 L 718 66 V 48 L 714 44 Z"/><path d="M 766 20 H 872 V 44 H 792 V 68 H 856 L 872 84 V 124 L 856 140 H 766 V 116 H 846 V 92 H 782 L 766 76 Z"/></g></g></svg></div>
+    <div class="logo"><svg width="158" height="29" viewBox="0 0 880 160" aria-hidden="true"><g fill="#f5efe6"><polygon points="62,20 88,20 138,140 110,140 75,49 40,140 12,140"/><rect x="158" y="20" width="26" height="120"/><path d="M 206 20 H 296 L 312 36 V 74 L 296 90 H 262 L 314 140 H 280 L 232 92 V 140 H 206 Z M 232 44 V 68 H 282 L 286 64 V 48 L 282 44 Z"/><g transform="translate(-16,0)"><path fill="#ef4655" d="M 352 36 L 368 20 H 432 L 448 36 V 124 L 432 140 H 368 L 352 124 Z M 378 44 L 378 116 L 422 116 L 422 44 Z"/><rect fill="#ef4655" x="470" y="20" width="26" height="120"/><path d="M 518 36 L 534 20 H 598 L 614 36 V 124 L 598 140 H 534 L 518 124 Z M 544 44 L 544 116 L 588 116 L 588 44 Z"/><path d="M 638 20 H 728 L 744 36 V 78 L 728 94 H 664 V 140 H 638 Z M 664 44 V 70 H 714 L 718 66 V 48 L 714 44 Z"/><path d="M 766 20 H 872 V 44 H 792 V 68 H 856 L 872 84 V 124 L 856 140 H 766 V 116 H 846 V 92 H 782 L 766 76 Z"/></g></g></svg></div>
     <p class="foot-tag">Front desk to back office. <span class="gold">Your business, run on AI.</span></p>
     <p class="small">&copy; 2026 AIROIOPS &middot; Las Vegas, NV</p>
   </div>
