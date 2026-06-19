@@ -770,5 +770,40 @@
     });
   });
 </script>
+
+<!-- MOBILE-NAV (injected: hamburger menu for phones) -->
+<style>
+  .m-burger{display:none;}
+  .m-menu{position:fixed;inset:0;z-index:1399;background:rgba(10,11,16,.975);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    display:none;flex-direction:column;justify-content:center;gap:4px;padding:84px 32px 40px;}
+  .m-menu.open{display:flex;}
+  .m-menu a{color:#f3eee6;text-decoration:none;font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:700;font-size:25px;
+    padding:15px 6px;border-bottom:1px solid rgba(255,255,255,.09);}
+  .m-menu a.m-book{color:#fff;background:linear-gradient(95deg,#f5b13d,#ef4655);border:2px solid rgba(255,255,255,.85);
+    border-radius:100px;text-align:center;margin-top:20px;border-bottom:2px solid rgba(255,255,255,.85);font-weight:800;}
+  .m-x{position:absolute;top:18px;right:22px;font-size:38px;line-height:1;color:#f3eee6;background:none;border:0;cursor:pointer;}
+  @media(max-width:760px){
+    .m-burger{display:inline-flex;align-items:center;justify-content:center;position:fixed;top:13px;right:16px;z-index:1401;
+      width:46px;height:46px;border-radius:12px;background:rgba(20,22,29,.92);border:1px solid rgba(255,255,255,.15);
+      -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;}
+    .m-burger b{display:block;width:21px;height:2px;background:#f3eee6;position:relative;}
+    .m-burger b::before,.m-burger b::after{content:"";position:absolute;left:0;width:21px;height:2px;background:#f3eee6;}
+    .m-burger b::before{top:-6px;} .m-burger b::after{top:6px;}
+    .nav-links{display:none!important;}
+    .nav-cta-mobile{display:none!important;}
+  }
+</style>
+<button class="m-burger" aria-label="Open menu" onclick="document.getElementById('mMenu').classList.add('open')"><b></b></button>
+<div class="m-menu" id="mMenu">
+  <button class="m-x" aria-label="Close menu" onclick="document.getElementById('mMenu').classList.remove('open')">&times;</button>
+  <a href="/">Home</a>
+  <a href="/services">Services</a>
+  <a href="/results">Results</a>
+  <a href="/how-it-works">How it works</a>
+  <a href="/about">About</a>
+  <a href="/faq">FAQ</a>
+  <a class="m-book" href="https://calendly.com/airoiops/airoiops-discovery-call" target="_blank" rel="noopener">Book a walkthrough &rarr;</a>
+</div>
+<!-- /MOBILE-NAV -->
 </body>
 </html>
