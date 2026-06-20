@@ -11,3 +11,6 @@
 /case-study-es     /results   301!
 /customers         /results   301!
 /customers/        /results   301!
+
+# React SPA fallback (last; real files + 301s above win)
+/*    /index.html    200
