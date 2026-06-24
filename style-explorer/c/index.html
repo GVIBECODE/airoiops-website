@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIROIOPS · Style C · Boutique Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3eee5;
+    --paper-2:#e9e2d4;
+    --ink:#181613;
+    --ink-2:#5a544a;
+    --rule:#cdc6b6;
+    --pop:#d6452b;
+    --pop-2:#e87a3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  body{font-size:16px;line-height:1.55}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+  a{color:inherit;text-decoration:none}
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .pop{color:var(--pop)}
+
+  header.topbar{border-bottom:1px solid var(--rule);background:var(--paper)}
+  header .row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{font-family:'Fraunces',serif;font-weight:700;font-size:24px;letter-spacing:-0.01em}
+  .brand span{color:var(--pop)}
+  nav.links{display:flex;gap:28px;font-size:14px}
+  .btn{display:inline-block;padding:11px 22px;font-size:14px;font-weight:500;border-radius:999px;background:var(--ink);color:var(--paper);transition:.15s}
+  .btn:hover{background:var(--pop)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+  /* Hero */
+  .hero{padding:60px 0 80px;border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
+  .hero .issue{display:flex;justify-content:space-between;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:36px}
+  .hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:120px;line-height:.96;letter-spacing:-0.04em;font-variation-settings:"opsz" 144}
+  .hero h1 .italic{font-style:italic;color:var(--pop);font-weight:500}
+  .hero h1 .underline{text-decoration:underline;text-decoration-thickness:6px;text-underline-offset:8px;text-decoration-color:var(--pop)}
+  .hero .meta-row{display:grid;grid-template-columns:2fr 3fr;gap:48px;margin-top:48px;align-items:end}
+  .hero .lede{font-size:21px;line-height:1.4;color:var(--ink);max-width:34ch}
+  .hero .lede::first-letter{font-family:'Fraunces',serif;font-size:72px;float:left;line-height:.85;padding:6px 12px 0 0;color:var(--pop);font-weight:500}
+  .hero .ctas{display:flex;gap:12px;justify-content:flex-end}
+
+  /* Marquee strip */
+  .strip{background:var(--ink);color:var(--paper);padding:14px 0;font-family:'Fraunces',serif;font-style:italic;font-size:22px;white-space:nowrap;overflow:hidden;font-weight:500}
+  .strip .track{display:inline-flex;gap:40px;padding-left:32px;animation:marq 28s linear infinite}
+  .strip .track span{display:inline-flex;align-items:center;gap:40px}
+  .strip .dot{width:6px;height:6px;background:var(--pop);border-radius:50%;display:inline-block}
+  @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  section{padding:96px 0;border-bottom:1px solid var(--rule)}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pop);font-weight:600;margin-bottom:16px;display:inline-block}
+  h2{font-family:'Fraunces',serif;font-weight:500;font-size:56px;line-height:1.05;letter-spacing:-0.025em;max-width:18ch}
+  .sub{margin-top:14px;color:var(--ink-2);font-size:18px;max-width:54ch}
+
+  /* Offers as editorial cards */
+  .offers{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--rule)}
+  .offer{padding:36px 24px 36px 0;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+  .offer:last-child{border-right:none}
+  .offer .num{font-family:'Fraunces',serif;font-style:italic;font-size:42px;color:var(--pop);margin-bottom:8px;font-weight:500}
+  .offer .ttl{font-family:'Fraunces',serif;font-size:24px;font-weight:500;line-height:1.15;margin-bottom:8px}
+  .offer .price{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px;font-weight:500}
+  .offer p{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+
+  /* How section as numbered list */
+  .how{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .how .item{padding-top:18px;border-top:2px solid var(--ink)}
+  .how .item .n{font-family:'Fraunces',serif;font-style:italic;font-size:32px;color:var(--pop);margin-bottom:8px;font-weight:500;display:block}
+  .how .item h4{font-family:'Fraunces',serif;font-size:22px;font-weight:500;margin-bottom:8px}
+  .how .item p{font-size:14.5px;color:var(--ink-2)}
+
+  /* Pullquote */
+  .pull{background:var(--paper-2);padding:88px 0;text-align:center;border-bottom:1px solid var(--rule)}
+  .pull blockquote{font-family:'Fraunces',serif;font-size:44px;line-height:1.15;font-weight:500;max-width:22ch;margin:0 auto;letter-spacing:-0.02em}
+  .pull blockquote::before{content:'\201C';font-size:120px;color:var(--pop);display:block;line-height:.4;margin-bottom:24px}
+  .pull cite{display:block;margin-top:32px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);font-style:normal}
+
+  /* Stats / proof */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:48px}
+  .stat .n{font-family:'Fraunces',serif;font-size:96px;font-weight:500;line-height:1;color:var(--ink);letter-spacing:-0.04em}
+  .stat .n .sm{font-size:36px;color:var(--pop);font-style:italic}
+  .stat .lbl{font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-top:10px;max-width:18ch}
+
+  /* CTA */
+  .cta{background:var(--ink);color:var(--paper);padding:104px 0;text-align:center;border-bottom:none}
+  .cta h2{color:var(--paper);max-width:18ch;margin:0 auto 16px}
+  .cta h2 em{color:var(--pop-2);font-style:italic}
+  .cta p{color:#c8c2b5;font-size:18px;max-width:46ch;margin:0 auto 32px}
+  .cta .btn{background:var(--pop);color:#fff}
+  .cta .btn:hover{background:#fff;color:var(--ink)}
+  .cta .btn.ghost{background:transparent;color:var(--paper);border:1px solid var(--paper)}
+  .cta .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--ink);color:#9b958a;padding:40px 0;font-size:13.5px;border-top:1px solid #2a2722}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{color:var(--paper)}
+
+  @media (max-width:860px){
+    .hero h1{font-size:54px}
+    .hero .meta-row{grid-template-columns:1fr}
+    .hero .ctas{justify-content:flex-start}
+    h2{font-size:34px}
+    .offers,.how,.stats{grid-template-columns:1fr 1fr}
+    .pull blockquote{font-size:28px}
+    .stat .n{font-size:64px}
+    nav.links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a href="#" class="brand">AIROI<span>OPS</span></a>
+    <nav class="links">
+      <a href="#offers">Services</a>
+      <a href="#how">Method</a>
+      <a href="#proof">Proof</a>
+      <a href="#cta">Contact</a>
+    </nav>
+    <a href="#cta" class="btn">Book a Call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="issue">
+      <span>Vol. 01 · Issue 05 · Las Vegas</span>
+      <span>2026</span>
+    </div>
+    <h1 class="serif">Real <span class="italic">AI ROI.</span><br>In <span class="underline">48 hours.</span><br>Yours to keep.</h1>
+    <div class="meta-row">
+      <p class="lede">We audit your operations, find your highest-leverage AI plays, and deliver a custom 12 to 18 page roadmap inside two business days. No retainers. No 90-day discovery phases. Quantified in writing before any build.</p>
+      <div class="ctas">
+        <a href="#cta" class="btn">Book a Call</a>
+        <a href="#offers" class="btn ghost">Read the Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span>AI Business Assessment <span class="dot"></span> Forensic Ad Audit <span class="dot"></span> Zapier &amp; Make Automation <span class="dot"></span> Custom GPT <span class="dot"></span> Speed-to-Lead Agents <span class="dot"></span></span>
+    <span>AI Business Assessment <span class="dot"></span> Forensic Ad Audit <span class="dot"></span> Zapier &amp; Make Automation <span class="dot"></span> Custom GPT <span class="dot"></span> Speed-to-Lead Agents <span class="dot"></span></span>
+  </div>
+</div>
+
+<section id="offers">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="serif">Four ways to put AI to work, all priced flat.</h2>
+    <p class="sub">Every engagement begins with a quantified roadmap. You see projected ROI in writing before any build is scoped or contracted.</p>
+    <div class="offers">
+      <div class="offer">
+        <div class="num">01</div>
+        <div class="ttl">AI Business Assessment</div>
+        <div class="price">$1,000 · 48 Hours</div>
+        <p>Operations audit, 5 to 7 DIY Quick Wins ranked by ROI, transparent upsell menu, sequenced roadmap. 12 to 18 pages.</p>
+      </div>
+      <div class="offer">
+        <div class="num">02</div>
+        <div class="ttl">Forensic Ad Audit</div>
+        <div class="price">$750 · 48 Hours</div>
+        <p>Paid ad spend reconciled against your actual paying-customer ledger. Find waste before spending another dollar.</p>
+      </div>
+      <div class="offer">
+        <div class="num">03</div>
+        <div class="ttl">Automation Build</div>
+        <div class="price">From $1,500</div>
+        <p>Scoped Zapier or Make builds priced at the floor or 20% of projected first-year ROI, whichever is greater.</p>
+      </div>
+      <div class="offer">
+        <div class="num">04</div>
+        <div class="ttl">Custom GPT &amp; Agents</div>
+        <div class="price">From $2,500</div>
+        <p>Internal GPTs trained on your SOPs, plus Speed-to-Lead agents that respond inside 60 seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <span class="eyebrow">Method</span>
+    <h2 class="serif">A four-step engagement. Time-boxed. No surprise invoices.</h2>
+    <div class="how">
+      <div class="item"><span class="n">I</span><h4>Intake</h4><p>20-minute call or asynchronous form. We map your stack, revenue lines, and bottlenecks.</p></div>
+      <div class="item"><span class="n">II</span><h4>Audit</h4><p>We reconcile your tools, ad spend, and ledger to find where AI moves the needle.</p></div>
+      <div class="item"><span class="n">III</span><h4>Roadmap</h4><p>12 to 18 page PDF inside 48 hours, with Quick Wins, projected ROI, and an optional build menu.</p></div>
+      <div class="item"><span class="n">IV</span><h4>Build</h4><p>Optional. Fixed-fee. Scoped. Always quantified before any work begins.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap">
+    <blockquote>The roadmap was sharper than anything we got from a Big-Four advisor, and it was in our inbox before the week was out.</blockquote>
+    <cite>Operator · Las Vegas residential services</cite>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <span class="eyebrow">Numbers</span>
+    <h2 class="serif">Built by an operator. Priced like software.</h2>
+    <p class="sub">AIROIOPS is built and run by Gianny, owner of an active Las Vegas service business. Every recommendation has been tested on a real P&amp;L first.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">$1,000<span class="sm">.</span></div><div class="lbl">Flat-rate assessment</div></div>
+      <div class="stat"><div class="n">48<span class="sm">hr</span></div><div class="lbl">Roadmap turnaround</div></div>
+      <div class="stat"><div class="n">100<span class="sm">%</span></div><div class="lbl">You own every credential</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--pop-2)">Now booking 3 case-study spots</span>
+    <h2 class="serif">See your highest-leverage AI play <em>this week.</em></h2>
+    <p>Twenty minutes on the phone, or skip the call and fill the intake on your own time.</p>
+    <div class="ctas">
+      <a href="#" class="btn">Book a Call</a>
+      <a href="#" class="btn ghost">Skip the Call · Fill Intake</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div class="brand">AIROI<span style="color:var(--pop)">OPS</span></div>
+    <div>Las Vegas · Henderson · Summerlin · Remote Nationwide</div>
+    <div>&copy; 2026 AIROIOPS</div>
+  </div>
+</footer>
+
+</body>
+</html>

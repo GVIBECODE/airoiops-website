@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIROIOPS · Style Explorer · 2026-05-15</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0b0d12;--card:#11141b;--line:#1f2531;--line-2:#2a3142;--ink:#e6e8ee;--ink-2:#9aa3b5;--ink-3:#6b7385;--accent:#7c8cff;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  body{font-size:15.5px;line-height:1.55}
+  .wrap{max-width:1280px;margin:0 auto;padding:48px 28px 80px}
+  a{color:inherit;text-decoration:none}
+  header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  h1{font-family:'Source Serif 4',serif;font-size:38px;font-weight:600;letter-spacing:-0.02em;line-height:1.1}
+  h1 span{color:var(--accent)}
+  .lede{color:var(--ink-2);font-size:16px;margin-top:10px;max-width:62ch}
+  .meta{font-family:ui-monospace,monospace;font-size:12.5px;color:var(--ink-3);text-align:right}
+  .meta strong{color:var(--ink);display:block;font-weight:500}
+  .legend{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+  .leg{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--ink-2)}
+  .leg .k{font-family:ui-monospace,monospace;font-size:11px;color:var(--accent);margin-bottom:4px;letter-spacing:.08em;text-transform:uppercase}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .frameWrap{position:relative;height:520px;background:#fff;overflow:hidden;border-bottom:1px solid var(--line)}
+  .frameWrap iframe{position:absolute;top:0;left:0;width:1600px;height:1733px;border:0;transform:scale(.625);transform-origin:top left;pointer-events:none}
+  .meta-row{padding:20px 22px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+  .meta-row .l .tag{font-family:ui-monospace,monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;display:block}
+  .meta-row .l h2{font-family:'Source Serif 4',serif;font-size:22px;font-weight:600;line-height:1.2;margin-bottom:6px}
+  .meta-row .l p{color:var(--ink-2);font-size:14px;line-height:1.5;max-width:48ch}
+  .openbtn{flex-shrink:0;padding:10px 16px;background:var(--ink);color:var(--bg);border-radius:999px;font-size:13.5px;font-weight:600;white-space:nowrap;transition:.15s}
+  .openbtn:hover{background:var(--accent);color:var(--bg)}
+  .palette{display:flex;gap:6px;margin-top:14px}
+  .palette .sw{width:22px;height:22px;border-radius:6px;border:1px solid rgba(255,255,255,.08)}
+  .feedback{margin-top:56px;padding:32px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+  .feedback h3{font-family:'Source Serif 4',serif;font-size:20px;font-weight:600;margin-bottom:10px}
+  .feedback p{color:var(--ink-2);font-size:14.5px}
+  .feedback ol{margin:14px 0 0 18px;color:var(--ink-2);font-size:14.5px;line-height:1.7}
+  .feedback ol b{color:var(--ink);font-weight:600}
+  @media (max-width:860px){
+    .grid{grid-template-columns:1fr}
+    .legend{grid-template-columns:1fr 1fr}
+    .frameWrap{height:420px}
+    .frameWrap iframe{transform:scale(.45)}
+    h1{font-size:28px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>AIROIOPS <span>style explorer</span></h1>
+      <p class="lede">Four homepage directions for the AIROIOPS site, all using the same content. Same hero, same offers, same proof. Just different aesthetics. Pick the one that lands closest to "professional" for you, and we will build it out as the real site.</p>
+    </div>
+    <div class="meta"><strong>2026-05-15</strong>preview branch · not pushed live</div>
+  </header>
+
+  <div class="legend">
+    <div class="leg"><div class="k">A</div>Corporate consulting · McKinsey, Deloitte energy</div>
+    <div class="leg"><div class="k">B</div>Modern B2B SaaS · Linear, Stripe, Vercel</div>
+    <div class="leg"><div class="k">C</div>Boutique editorial · Pitch, Ueno, Doist</div>
+    <div class="leg"><div class="k">D</div>Operator-led warm premium · Anthropic, Levels</div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="frameWrap"><iframe src="./a/" title="Style A"></iframe></div>
+      <div class="meta-row">
+        <div class="l">
+          <span class="tag">Style A</span>
+          <h2>Corporate Consulting</h2>
+          <p>White, navy, gold accent. Serif headlines, generous whitespace, numbered sections. Reads like a Big-Four advisory firm with a soft luxury edge.</p>
+          <div class="palette"><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#0a1f3b"></span><span class="sw" style="background:#b48a3b"></span><span class="sw" style="background:#f5f6f8"></span></div>
+        </div>
+        <a href="./a/" target="_blank" class="openbtn">Open &nearr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="frameWrap"><iframe src="./b/" title="Style B"></iframe></div>
+      <div class="meta-row">
+        <div class="l">
+          <span class="tag">Style B</span>
+          <h2>Modern B2B SaaS</h2>
+          <p>Dark navy canvas, restrained periwinkle accent, mono details, sharp cards. Feels like Linear, Stripe, or Vercel. Precise, technical, modern.</p>
+          <div class="palette"><span class="sw" style="background:#0b0d12"></span><span class="sw" style="background:#11141b"></span><span class="sw" style="background:#7c8cff"></span><span class="sw" style="background:#e6e8ee"></span></div>
+        </div>
+        <a href="./b/" target="_blank" class="openbtn">Open &nearr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="frameWrap"><iframe src="./c/" title="Style C"></iframe></div>
+      <div class="meta-row">
+        <div class="l">
+          <span class="tag">Style C</span>
+          <h2>Boutique Editorial</h2>
+          <p>Cream paper, deep ink, brick-red pop. Oversized italic serif headlines, scrolling marquee strip, magazine-grid offers. Confident and opinionated.</p>
+          <div class="palette"><span class="sw" style="background:#f3eee5"></span><span class="sw" style="background:#181613"></span><span class="sw" style="background:#d6452b"></span><span class="sw" style="background:#cdc6b6"></span></div>
+        </div>
+        <a href="./c/" target="_blank" class="openbtn">Open &nearr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="frameWrap"><iframe src="./d/" title="Style D"></iframe></div>
+      <div class="meta-row">
+        <div class="l">
+          <span class="tag">Style D</span>
+          <h2>Operator-led, Warm Premium</h2>
+          <p>Warm off-white paper, terracotta accent, rounded cards, soft serif. Anthropic and Levels energy. Friendly, premium, no AI-futuristic tropes.</p>
+          <div class="palette"><span class="sw" style="background:#faf8f3"></span><span class="sw" style="background:#1b1a17"></span><span class="sw" style="background:#c75a3e"></span><span class="sw" style="background:#5b6c4f"></span></div>
+        </div>
+        <a href="./d/" target="_blank" class="openbtn">Open &nearr;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="feedback">
+    <h3>How to pick</h3>
+    <p>Click <b>Open</b> on each one and scroll. Then reply with:</p>
+    <ol>
+      <li><b>The letter</b> that feels closest to "professional" for AIROIOPS.</li>
+      <li><b>Anything you want changed</b> on that direction. Colors, type, copy density, whatever.</li>
+      <li>Or if none of them land, <b>describe what is missing</b> and I will spin a Style E.</li>
+    </ol>
+  </div>
+
+</div>
+
+</body>
+</html>
